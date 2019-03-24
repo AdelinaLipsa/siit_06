@@ -9,6 +9,6 @@
 
 - Saptamana 1
   - Teme Saptamana 1
-    - [Tema 01](https://miualinionut.github.io/siit_06/constantin.mircea/s1/t01/index.html)
-    - [Tema 02](https://miualinionut.github.io/siit_06/constantin.mircea/s1/t02/index.html)
-    - [Tema 03](https://miualinionut.github.io/siit_06/constantin.mircea/s1/t03/index.html)
+    - [Tema 01](https://miualinionut.github.io/siit_06/Constantin.Mircea/s1/t01/index.html)
+    - [Tema 02](https://miualinionut.github.io/siit_06/Constantin.Mircea/s1/t02/index.html)
+    - [Tema 03](https://miualinionut.github.io/siit_06/Constantin.Mircea/s1/t03/index.html)
