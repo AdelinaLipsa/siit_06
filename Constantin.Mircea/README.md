@@ -1,9 +1,9 @@
 <p align="center">
-  <img align="center" height=30px src='https://i.imgur.com/sXGX7wA.png'> 
+  <img align="center" height=30px src='https://i.imgur.com/sXGX7wA.png'>
   <h1 align="center">Mircea Constantin</h1>
 </p>
 
-# Portofolio
+# Portfolio
 
 > Scoala Informala de IT
 

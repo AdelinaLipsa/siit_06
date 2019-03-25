@@ -1,14 +1,83 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
 <head>
+  <meta name="authro" content="Mircea Constantin">
+  <meta charset="utf-8">
+  <title>Mircea Constantin | Portfolio</title>
 </head>
+<style media="screen">
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+  body {
+    background-image: linear-gradient(to right, #bdc3c7, #2c3e50);
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  header span {
+    color: #fff;
+  }
+  
+  .container {
+    text-align: center;
+  }
+
+  div.card {
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin: 0 auto;
+    display: inline-grid;
+  }
+
+  div.header {
+    background: linear-gradient(to bottom, #43cea2, #185a9d);
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  div.containerCard {
+    padding: 15px;
+    display: block;
+    background: #fff;
+  }
+
+  .containerCard a {
+    text-decoration: none;
+    display: block;
+    color: black;
+
+  }
+</style>
 
 <body>
-    <h1>Hello world!</h1>
-    <a href="s1/t01/index.html" target="_blank">Tema 01</a>
-    <a href="s1/t02/index.html" target="_blank">Tema 02</a>
-    <a href="s1/t03/index.html" target="_blank">Tema 03</a>
-
+  <header>
+    <h1>Mircea Constantin</h1>
+    <span>Scoala Informala de IT</span>
+  </header>
+  <section>
+    <div class="container">
+      <div class="card">
+        <div class="header">
+          <h2>Saptamana 1</h2>
+        </div>
+        <div class="containerCard">
+          <a href="#">Tema 01</a>
+          <a href="#">Tema 02</a>
+          <a href="#">Tema 03</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>
