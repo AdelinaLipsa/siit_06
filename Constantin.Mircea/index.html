@@ -8,26 +8,58 @@
 </head>
 <style media="screen">
   * {
-    box-sizing: border-box;
-    margin: 0;
+
     font-family: sans-serif;
   }
 
   body {
-    background-image: linear-gradient(to right, #bdc3c7, #2c3e50);
+    margin: 0;
+    background-image: linear-gradient(to bottom right, #bdc3c7, #2c3e50);
+    height: calc(100vh - 25px);
+    text-align: center;
+
   }
 
   header {
     text-align: center;
+    margin-top: 25px;
     margin-bottom: 25px;
   }
 
-  header span {
-    color: #fff;
+  header h1::first-letter {
+    color: #69052a;
+    font-size: 60px;
   }
-  
+
+  header h1 a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  header p {
+    color: #fff;
+    font-style: italic;
+  }
+
+  header p span {
+    color: #69052a;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  header span {
+    color: rgb(51, 41, 41);
+    font-style: italic;
+  }
+
+  img {
+    width: 60px;
+  }
+
+
   .container {
-    text-align: center;
+    display: inline-block;
   }
 
   div.card {
@@ -39,41 +71,54 @@
   }
 
   div.header {
-    background: linear-gradient(to bottom, #43cea2, #185a9d);
+    background: linear-gradient(to bottom right, #43cea2, #185a9d);
     color: white;
     padding: 20px;
     font-size: 18px;
+  }
+
+  .header h2 span {
+    color: #69052a;
   }
 
   div.containerCard {
     padding: 15px;
     display: block;
     background: #fff;
+
   }
 
   .containerCard a {
     text-decoration: none;
     display: block;
     color: black;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
 
+  a:hover {
+    color: #69052a;
   }
 </style>
 
 <body>
   <header>
-    <h1>Mircea Constantin</h1>
-    <span>Scoala Informala de IT</span>
+    <img src='https://i.imgur.com/sXGX7wA.png'>
+    <h1><a href="https://github.com/MirceaConstantin" target="_blank">Mircea Constantin</a>
+    </h1>
+    <span>Portfolio</span>
+    <p>Scoala Informala de <span>IT</span></p>
   </header>
   <section>
     <div class="container">
       <div class="card">
         <div class="header">
-          <h2>Saptamana 1</h2>
+          <h2>Saptamana <span>1</span></h2>
         </div>
         <div class="containerCard">
-          <a href="#">Tema 01</a>
-          <a href="#">Tema 02</a>
-          <a href="#">Tema 03</a>
+          <a href="https://miualinionut.github.io/siit_06/Constantin.Mircea/s1/t01/index.html">Tema 01</a>
+          <a href="https://miualinionut.github.io/siit_06/Constantin.Mircea/s1/t02/index.html">Tema 02</a>
+          <a href="https://miualinionut.github.io/siit_06/Constantin.Mircea/s1/t03/index.html">Tema 03</a>
         </div>
       </div>
     </div>
