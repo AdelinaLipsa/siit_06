@@ -1,7 +1,7 @@
-<div style="text-align: center;
-    box-sizing: border-box;
-    margin: 0;
-    font-family: sans-serif;">
+<div text-align='center';
+    box-sizing='border-box';
+    margin=0;
+    font-family='sans-serif;'>
   <img width=60px src='https://i.imgur.com/sXGX7wA.png'>
   <h1><a color="black" text-decoration="none;" href="https://github.com/MirceaConstantin" target="_blank">Mircea Constantin</a></h1>
   <span style="color: grey;
