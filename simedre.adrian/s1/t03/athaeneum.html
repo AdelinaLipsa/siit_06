@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bucharest Experience</title>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Adrian Simedre">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        .btn{
+            background-color: orange;
+            border: none;
+            color: white;
+            padding: 12px 16px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn:hover{
+            background-color: rgb(141, 93, 3);
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .row > .column {
+            padding: 0 8px;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .column {
+            float: left;
+            width: 25%;
+        }
+        .hover-shadow:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
+</head>
+<body>
+    <div class="header" id="myHeader">
+        <img src="img/logo.png" class="center">
+    </div>
+    <div class="left_side">
+            <p><button onclick="window.location.href = 'index.html';" class="btn"><i class="fa fa-home"></i> Home</button></p>
+            <p>
+                <input type="text">
+                <input type="button" value="Search" class="button">
+            </p>
+            <p id="first">Read about:</p>
+            <p><a href="palace.html">Palace of Parliament</a></p>
+            <p><a href="vilage.html">Village Museum</a></p>
+            <p><a href="athaeneum.html">Romanian Atheneum</a></p>
+            <p><a href="cotroceni.html">“Cotroceni” Palace</a></p>
+            <p><a href="cathedral.html">Patriarchal Cathedral</a></p>
+            <p><a href="arch.html">Arch of Triumph</a></p>
+    </div>
+    <div class="main">
+            <div class="row">
+                <div class="column">
+                    <img src="img/ath1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                </div>
+                <div class="column">
+                  <img src="img/ath2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                </div>
+                <div class="column">
+                    <img src="img/ath3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                </div>
+                <div class="column">
+                  <img src="img/ath4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                </div>
+            </div>
+        <div class="content">
+
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2015 Bucharest</p>
+    </div>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction(){
+            if (window.pageYOffset > sticky){
+                header.classList.add("sticky");
+            }
+            else{
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
