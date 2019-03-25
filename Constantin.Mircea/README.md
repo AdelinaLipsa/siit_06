@@ -2,8 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     font-family: sans-serif;">
-  <img style="width: 60px;" src='https://i.imgur.com/sXGX7wA.png'>
-  <h1><a style="color: black; text-decoration: none;" href="https://github.com/MirceaConstantin" target="_blank">Mircea Constantin</a></h1>
+  <img width=60px src='https://i.imgur.com/sXGX7wA.png'>
+  <h1><a color="black" text-decoration="none;" href="https://github.com/MirceaConstantin" target="_blank">Mircea Constantin</a></h1>
   <span style="color: grey;
     font-style: italic;">Portfolio</span>
   <p style="font-style: italic;">Scoala Informala de <span style="    color: #69052a;
@@ -13,11 +13,11 @@
 </div>
 
 <div class="container" style="text-align: center;">
-  <div class="card" style="width: 250px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-    margin: 0 auto;
-    display: inline-grid;">
+  <div class="card" width=250px;
+    box-shadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
+    text-align= "center";
+    margin= 0 auto;
+    display="inline-grid;">
     <div class="header" style="    background: linear-gradient(to bottom, #43cea2, #185a9d);
     color: white;
     padding: 20px;
