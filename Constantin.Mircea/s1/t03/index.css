@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, #181716, #2a2727, #393433, #453f3d, #57504d);
+
+}
+
+header {
+  text-align: left;
+}
+nav {
+  margin: 0 auto;
+  padding: 5px 0 5px 0;
+  background: #0e0f10;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  padding: 5px 10px 5px 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: black;
+  background-color: white;
+  transition: 1s all ease-in-out;
+}
+
+.fade img {
+  width: 100%;
+}
