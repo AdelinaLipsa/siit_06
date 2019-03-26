@@ -1,14 +1,11 @@
 <p align="center">
   <img align="center" height=30px src='https://i.imgur.com/sXGX7wA.png'>
-  <h1 align="center">Mircea Constantin</h1>
+  <h1 align="center" ><a href="https://miualinionut.github.io/siit_06/Constantin.Mircea/" style="color:black;">Mircea Constantin</a></h1>
+  <p align="center" style="color: rgb(51, 41, 41);
+      font-style: italic;">Portfolio</p>
 </p>
 
-# Portfolio
-
-> Scoala Informala de IT
-
-- Saptamana 1
-  - Teme Saptamana 1
-    - [Tema 01](https://miualinionut.github.io/siit_06/Constantin.Mircea/s1/t01/index.html)
-    - [Tema 02](https://miualinionut.github.io/siit_06/Constantin.Mircea/s1/t02/index.html)
-    - [Tema 03](https://miualinionut.github.io/siit_06/Constantin.Mircea/s1/t03/index.html)
+<p align="center">
+  <p align="center">Scoala Informala de IT</p>
+  <h2 align="center">Saptamana <span style="color: #69052a;">1</span></h2>
+</p>
