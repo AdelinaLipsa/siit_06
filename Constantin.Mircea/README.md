@@ -1,5 +1,5 @@
 <p align="center">
-  <img align="center" height=30px src='https://i.imgur.com/sXGX7wA.png'>
+  <img align="center" height=30px src='https://i.imgur.com/sXGX7wA.png'></img>
   <h1 align="center" ><a href="https://miualinionut.github.io/siit_06/Constantin.Mircea/">Mircea Constantin</a></h1>
   <p align="center" >Portfolio</p>
 </p>
