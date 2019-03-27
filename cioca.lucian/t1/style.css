@@ -51,3 +51,7 @@ h3 {
 a {
     padding-left: 10px;
 }
+
+.content p {
+    font-size: 15px;
+}
