@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    display: block;
+    background: #EDEDED;
+    width: 100%;
+    height: 100px;
+    margin: 0px;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.header img{
+    width: auto;
+    height: 100px;
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.left_side{
+    display: block;
+    background-color: #CECECE;
+    width: 25%;
+    height: 100%;
+    margin: 0px;
+    float: left;
+}
+.left_side p{
+    margin: 0px;
+    text-align: center;
+    font: bold;
+    margin-top: 20px;
+}
+.left_side p input{
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 75%;
+}
+.left_side a{
+    color: orange;
+    text-decoration: none;
+}
+.left_side a:hover{
+    border-radius: 50px;
+    padding: 5px;
+    background-color: white;
+    color: black;
+}
+.button{
+    background: white;
+}
+.button:hover{
+    background: #848484;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+#first{
+    margin-top: 20px;
+}
+.footer{
+    background: black;
+    width: 100%;
+    height: 35px;
+    float: left;
+}
+.footer p{
+    color: white;
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+}
+.main{
+    width: 75%;
+    display: block;
+    float: right;
+}
+.main h1{
+    margin: 10px;
+}
+.main p a{
+    color: orange;
+}
+.main ul li a{
+    color: orange;
+}
+.main ul{
+    list-style-type: circle;    
+}
+.content{
+    padding: 20px;
+}
