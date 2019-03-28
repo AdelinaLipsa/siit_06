@@ -51,5 +51,15 @@ div.bt {
 .bot_nav {
     margin-left: 170px;
     font-size: 10px;
-    
+    display: inline-flex;
+}
+#bar {
+    padding: 0%;
+    margin: 0%;
+    height: 19px;
+    width: 313px;
+}
+#scris {
+    margin-bottom: 0;
+    padding: 0px;
 }
