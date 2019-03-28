@@ -6,7 +6,7 @@ body {
     width: 20%;
     height: 100%;
     float: left;
-    background-color: aqua;
+    background-color: #326967;
 }
 .content {
     padding-top: 15px;
@@ -54,4 +54,12 @@ a {
 
 .content p {
     font-size: 15px;
+}
+
+a:visited {
+    color: #ffffff;
+}
+
+a:hover {
+    color: black;
 }
