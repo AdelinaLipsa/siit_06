@@ -1,0 +1,57 @@
+body {
+    margin: 0px;
+}
+.menu {
+    padding-top: 15px;
+    width: 20%;
+    height: 100%;
+    float: left;
+    background-color: aqua;
+}
+.content {
+    padding-top: 15px;
+    width: 78%; 
+    height: 100%;
+    float: right;
+}
+
+.mid {
+    text-align: center;
+
+}
+
+p {
+    margin: 0%;
+}
+
+.menu ul li {    
+    margin-left: 0%;
+    padding: 0%;
+    color: white;
+}
+
+.menu ul {
+    margin: 0px;
+    padding-inline-start: 0px;
+}
+
+#pic {
+    width: 150px;
+}
+.menu #logo {
+    padding-bottom: 20px;
+}
+h3 {
+    padding-left: 15px;
+}
+
+.tutorials {
+    margin-bottom: 15px;
+}
+a {
+    padding-left: 10px;
+}
+
+.content p {
+    font-size: 15px;
+}

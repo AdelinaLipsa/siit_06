@@ -2,127 +2,139 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="authro" content="Mircea Constantin">
+  <meta name="author" content="Mircea Constantin">
   <meta charset="utf-8">
+  <link rel="icon" href="https://i.imgur.com/sXGX7wA.png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <title>Mircea Constantin | Portfolio</title>
 </head>
-<style media="screen">
+<style>
   * {
+    text-align: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
 
-    font-family: sans-serif;
   }
 
   body {
-    margin: 0;
-    background-image: linear-gradient(to bottom right, #bdc3c7, #2c3e50);
+    background-image: linear-gradient(to top right, black, grey);
     height: calc(100vh - 25px);
-    text-align: center;
-
   }
 
   header {
-    text-align: center;
     margin-top: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 
-  header h1::first-letter {
-    color: #69052a;
-    font-size: 60px;
+  header h1 {
+    margin-top: 15px;
+  }
+
+  header h1:first-letter {
+    color: #00c0bb;
   }
 
   header h1 a {
     text-decoration: none;
-    color: #000;
+  }
+
+  header h1 a:hover{
+    color: #fe1c3c;
+    cursor: pointer;
+  }
+
+  header span:nth-child(3) {
+    color: grey;
+    font-style: italic;
+    font-size: 20px;
   }
 
   header p {
-    color: #fff;
-    font-style: italic;
+    margin-top: 15px;
+    font-size: 20px;
   }
 
   header p span {
-    color: #69052a;
-    font-style: normal;
+    color: #fe1c3c;
     font-weight: bold;
-    font-size: 24px;
   }
 
-  header span {
-    color: rgb(51, 41, 41);
-    font-style: italic;
-  }
-
-  img {
-    width: 60px;
-  }
-
-
-  .container {
-    display: inline-block;
+  section {
+    display: inline-flex;
   }
 
   div.card {
     width: 250px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
-    margin: 0 auto;
-    display: inline-grid;
+    margin-right: 5px;
   }
 
   div.header {
-    background: linear-gradient(to bottom right, #43cea2, #185a9d);
+    background-image: linear-gradient(to bottom right, #11090c, #00c0bb);
     color: white;
-    padding: 20px;
-    font-size: 18px;
+    padding: 15px;
+    font-size: 20px;
   }
 
   .header h2 span {
     color: #69052a;
   }
 
-  div.containerCard {
-    padding: 15px;
-    display: block;
-    background: #fff;
-
+  .container {
+    background: white;
   }
 
-  .containerCard a {
+  .container a {
+    display: block;
     text-decoration: none;
-    display: block;
+    padding: 10px 0 10px 0;
     color: black;
-    font-weight: bold;
-    margin-bottom: 10px;
   }
 
-  a:hover {
+  .container a:hover {
+    color:#00c0bb;
+  }
+
+  .container a span {
     color: #69052a;
+    font-weight: bold;
+  }
+
+  footer {
+    bottom: 10px;
+    position: fixed;
+    width: 100%;
   }
 </style>
 
 <body>
   <header>
-    <img src='https://i.imgur.com/sXGX7wA.png'>
-    <h1><a href="https://github.com/MirceaConstantin" target="_blank">Mircea Constantin</a>
-    </h1>
+    <img align="center" height=30px src='https://i.imgur.com/sXGX7wA.png'></img>
+    <h1><a href="https://github.com/MirceaConstantin">Mircea Constantin</a></h1>
     <span>Portfolio</span>
     <p>Scoala Informala de <span>IT</span></p>
   </header>
   <section>
-    <div class="container">
-      <div class="card">
-        <div class="header">
-          <h2>Saptamana <span>1</span></h2>
-        </div>
-        <div class="containerCard">
-          <a href="https://miualinionut.github.io/siit_06/Constantin.Mircea/s1/t01/index.html">Tema 01</a>
-          <a href="https://miualinionut.github.io/siit_06/Constantin.Mircea/s1/t02/index.html">Tema 02</a>
-          <a href="https://miualinionut.github.io/siit_06/Constantin.Mircea/s1/t03/index.html">Tema 03</a>
-        </div>
+    <div class="card">
+      <div class="header">
+        <h2>Saptamana <span>1</span></h2>
+      </div>
+
+      <div class="container">
+        <a href="https://miualinionut.github.io/siit_06/Constantin.Mircea/s1/t01/index.html">Tema <span>01</span></a>
+        <a href="https://miualinionut.github.io/siit_06/Constantin.Mircea/s1/t02/index.html">Tema <span>02</span></a>
+        <a href="https://miualinionut.github.io/siit_06/Constantin.Mircea/s1/t03/index.html">Tema <span>03</span></a>
       </div>
     </div>
   </section>
+
+  <footer>
+    <p>&copy; Mircea Constantin 2019</p>
+  </footer>
+
 </body>
 
 </html>
