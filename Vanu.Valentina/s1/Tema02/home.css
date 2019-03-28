@@ -58,10 +58,11 @@ article {
     font-size: 18px;
     border-bottom: 1px solid grey;
     line-height: 1.5;
+    padding-bottom: 20px;
 }
 
 article ul {
-    margin: 10px 0 30px 0;
+    margin-top: 10px;
 }
 
 article ul li {
@@ -77,7 +78,22 @@ article ul li a:active {
     color: red;
 }
 
+.poetImg {
+    float: left;
+    padding: 8px 40px 5px 0;
+}
+
+.poetBasic {
+    padding-bottom: 150px;
+}
+
+/* .poetMorestaff {
+    margin-bottom: 100px;
+} */
+
 footer {
     font-size: 10px;
     margin: 15px 0 0 200px;
+    width: 100%;
+    display: grid;
 }
