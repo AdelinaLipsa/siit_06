@@ -97,3 +97,7 @@ footer {
     width: 100%;
     display: grid;
 }
+
+footer a {
+    color: purple;
+}
