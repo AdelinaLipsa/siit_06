@@ -1,0 +1,72 @@
+#top_region {
+    background-color: #F0F0F0;
+    border: 1px dotted #D0D0D0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 38px;
+    padding: 5px;
+}
+
+#site_name {
+    padding: 10x;
+    margin: 1px;
+}
+
+.buttons {
+    margin-top: 10px;
+    float: left;
+    font-family: inherit;
+    font-weight: 100;
+    font-size: 20px;
+    display: inline-grid;
+}
+
+.button1,
+.button2,
+.button3,
+.button4 {
+    border: solid 1px;
+    border-radius: 15px;
+    padding: 5px 30px;
+    background-color: whitesmoke;
+    color: black;
+    text-decoration: none;
+    display: inline-grid;
+    margin-top: 5px;
+}
+
+.h1 {
+    display: inline-grid;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#center {
+    padding-left: 5px;
+    font-size: 18px;
+    float: left;
+    margin-left: 10px;
+    border-bottom: 2px gray;
+}
+
+.list {
+    display: block;
+    list-style-type: disc;
+}
+
+.bottom {
+    margin-top: 1px solid black;
+    display: block;
+
+}
+
+.picture img{
+    float:left;
+    border-radius: 25%;
+    border: solid 1px silver;  
+    width: 200px; 
+    margin: 10px; 
+}
+
+.content {
+    margin-top: 10px;
+}
