@@ -38,28 +38,32 @@
 
     <!--CONTENT -->
     <td width="80%" valign="top" bgcolor="	#478FC9">
-        <img src="http://www.primariagalati.ro/portal/images/termoficare.png" alt="termoficare" align="right">
-        <h5 style="color:crimson">Anunt public!!</h5>
-        <p>Primaria Municipiului Galati pune la dispozitia persoanelor interesate <em>Raportul privind obligatiile de
-                serviciu public de transport local de calatori in Municipiul Galati conform Regulamentului (CE) nr.
-                1370/2007 privind serviciile publice de transport feroviar si rutier de calatori.</em>
-            Mai multe detalii puteti afla accesand urmatorul link: <a
-                href="http://www.primariagalati.ro/portal/act/Raport_TLC0319.pdf">Raport.</a></p>
-        <h5 style="color:crimson"> In atentia agentilor economici !!</h5>
-        <p>Agentii economici care desfasoar activitati comerciale, prestari servicii, alimentatie publica si care au
-            obtinut acordul privind exercitarea activitatii de comercializare in locuri publice, respectiv autorizatia
-            privind desfasurarea de activitati de alimentatie publica sau recreative, eliberate incepand cu anul 2016,
-            pentru vizarea anuala trebuie sa prezinte actele administrative, in original, sa completeze cererea de
-            prelungire a acordului (de pe site-ul www.primariagalati.ro), daca nu au intervenit modificari fata de
-            documentatia initiala si sa achite taxele stabilite pentru anul 2019 fara a prezenta alte acte.
-            In situatia in care au intervenit modificari fata de documentatia initiala agentii economici trebuie sa
-            prezinte documentele justificative in vederea actualizarii datelor inscrise pe actul administrativ eliberat
-            anterior.
+        <div>
+            <h4>Formular de contact:</h4>
+            <select name="Destinatar:">
+                <option value="1" selected>Primarie</option>
+                <option value="2">Arhitect Sef</option>
+                <option value="3">Directia Urbanism</option>
+                <option value="3">Directia Tehnica</option>
+                <option value="3">Directia Administrare publica locala</option>
+            </select>
+        </div>
+        <form>
+            <fieldset>
+                <legend>Nume si prenume:</legend>
+                <input type="text" id="Name" />
+                <legend>Telefon</legend>
+                <input type="text" id="Phone" />
+            </fieldset>
+            <p>
+                <textarea name="terms" cols="30" rows="4" readonly="readonly">Scrie mesajul aici....</textarea>
+            </p>
+            <p>
+                <input type="submit" name="submit" value="Send Form" />
+                <input type="reset" value="Clear Form" />
+            </p>
+        </form>
 
-            <p style="color:blue">PROGRAM CU PUBLICUL<br>
-                MARTI 09:00 - 12:00; 13:00 - 15:00<br>
-                JOI 9:00 - 12:00</p>
-        </p>
     </td>
 
     <!-- ============ FOOTER SECTION ============== -->
