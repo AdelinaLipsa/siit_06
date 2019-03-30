@@ -1,0 +1,57 @@
+.blue {
+    color: blue;
+}
+
+.container {
+    width: 100%;
+}
+.column {
+    text-align: center;
+    width: 300px;
+    float: left;
+    border: 1px solid blue;
+
+}
+#c1 {
+    background-color: blue;
+}
+#c2 {
+    background-color: red;
+}
+#c3 {
+    background-color: yellow; 
+}
+#E01 { 
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    top: 100px;
+    left: 300px;
+    position: fixed;
+}
+#E02 { 
+    text-align: center;
+    width: 200px;
+    height: 230px;
+    background-color: chartreuse;
+    position: relative;
+    right: 100px;
+    margin-left: 0px;
+    z-index: 0;
+    bottom: 100px;
+    
+}
+#E03 { 
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    top: 200px;
+    left: 100px;
+    position: absolute;
+}
+.D01 { 
+    background-color: red;
+    margin: 10px; 
+    display: list;
+}

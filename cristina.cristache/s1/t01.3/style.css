@@ -1,0 +1,167 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.m-sec{
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("magurele.jpg");
+    height: 95vh;
+    border-radius: 0 0 500px 0;
+    background-size: cover;
+	background-position: center;
+}
+.m-sec-is{
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("magurele-trecut.jpg");
+    height: 100vh;
+    
+    background-size: cover;
+	background-position: center;
+}
+
+.m-sec-ins{
+    background-color: black;
+    height: 60vh;
+    
+    background-size: cover;
+	background-position: center;
+}
+
+.m-sec-s{
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("magurele.jpg");
+    height: 60vh;
+    
+    background-size: cover;
+    background-position: center;
+}
+.m-sec-f{
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("fac.jpg");
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+}
+.menu-custom li{
+	display: inline-block;
+	padding: 40px 20px 0 20px;
+}
+.menu-custom a{
+	text-transform: uppercase;
+	color: #F3F5F5;
+	letter-spacing: 1px;
+	line-height: 16px;
+	font-size: 13px;
+	font-weight: 100;
+	text-align: center;
+}
+.menu-custom-f a{
+	text-transform: uppercase;
+	color: black;
+	letter-spacing: 1px;
+	line-height: 16px;
+	font-size: 13px;
+	font-weight: 100;
+	font-family: 'Nunito', sans-serif;
+	text-align: center;
+}
+
+.menu-custom-f li{
+	display: inline-block;
+    padding: 40px 20px 0 20px;
+}
+.logo a{
+    text-decoration: none;
+    color: white;
+}
+.logo a:hover{
+    color: #0B1B34;
+    text-decoration: none;
+
+}
+.sec-2 img{
+    width: 150pxpx;
+    height: 150px;
+    margin-left: 15%;
+}
+
+.sec-2{
+    margin-top: 20%;
+    margin-bottom: 15%;
+}
+
+.sec-2-is h1{
+    padding: 50px 0 20px 0;
+}
+
+.sec-2-is{
+    margin-bottom: 10%;
+}
+.fac{
+    margin-left: 10%;
+}
+.bg-dark{
+    background-color: #222222;
+   }
+   .bg-dark a{
+    text-transform: uppercase;
+    font-size: 12px;
+   }
+  .bg-dark h2{
+    font-family: "sweet";
+    color: #C5C5C5;
+      font-size: 30px;
+      letter-spacing: 0.1em;
+      line-height: 1;
+      text-transform: uppercase;
+      text-align: left;
+      padding-bottom: 12px;
+      padding-top: 20px;
+  }
+  .bg-dark p{
+    color: #C4C4C4 !important;
+    font-size: 14px;
+    line-height: 22px;
+    
+  }
+  .bg-dark h3{
+    color: #C5C5C5 !important;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 15px 0;
+  }
+  .bg-dark a{
+    color:#646464;
+    text-decoration: none;
+  }
+  .bg-dark a:hover{
+    color: white;
+  }
+  .mrg{
+    margin:  0 30px; 
+  }
+  
+  .iss p{
+    font-size: 18px;
+    line-height: 1.9;
+  }
+  .iss span{
+      font-weight: 700;
+  }
+  .iss h2{
+      padding: 35px 0 18px 0;
+  }
+  .despre-iss{
+      font-size: 14px !important;
+  }
+  .bg-darker{
+    background-color: #161616;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  /*  height: 15vh;*/
+  }
+  .bg-darker a{
+    color: #646464;
+  }
+  .bg-darker a:hover{
+    color: white;
+  }
+
+  

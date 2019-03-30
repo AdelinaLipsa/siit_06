@@ -1,0 +1,70 @@
+body {
+    display: block;
+    margin:0;
+}
+/* NAV START */
+img {
+   height: 80px;
+   
+}
+
+small {
+    letter-spacing: 2px;
+    color:white;
+    
+}
+input {
+    width: 135px;
+    height: 25px;
+    box-sizing: border-box;
+    border-color: rgb(172, 172, 172);
+    box-shadow: inset 2px 2px   black;
+    
+}
+
+.button {
+    background-color: rgb(37, 37, 37);
+    color: white;
+    border-radius: 4px;
+    width: 80px;
+    border-color: rgb(70, 70, 70);
+}
+#nav {
+     box-shadow: 2px 2px 2px;
+     width: 200px;
+     height: 100%;
+     padding:20px;
+     position: fixed;
+     overflow: hidden; 
+     
+}
+h3 {
+    margin:0;
+}
+a {
+    display:block;
+    margin-bottom: 2px;
+    color: white;
+ 
+}
+
+ a:hover {
+    color: rgb(255, 255, 167);
+}
+/* NAV END */
+
+/* POSITIONING */
+.center {
+    text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* POSITIONING */
+/* MAIN START */
+
+.main {
+    margin-left:230px;
+    padding:30px;
+    width: 800px;
+}

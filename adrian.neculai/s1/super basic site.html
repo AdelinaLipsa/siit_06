@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style the header */
+        header {
+            background-color: rgb(255, 255, 255);
+            padding: 0;
+            text-align: center;
+            font-size: 35px;
+            color: rgb(104, 16, 16);
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+            float: left;
+            width: 16%;
+            height: 350px;
+            /* only for demonstration, should be removed */
+            background: #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Style the list inside the menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 84%;
+            background-color: #f1f1f1;
+            height: 350px;
+            /* only for demonstration, should be removed */
+        }
+
+        /* Clear floats after the columns */
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: rgb(255, 255, 255);
+            padding: 10px;
+            text-align: center;
+            color: rgb(0, 0, 0);
+
+        }
+
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            color: rgb(252, 18, 221);
+        }
+
+        .bottom-left {
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+        }
+
+        .top-left {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+        }
+
+        .top-right {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+        }
+
+        .bottom-right {
+            position: absolute;
+            bottom: 8px;
+            right: 16px;
+        }
+
+        .centered {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+
+        <div class="container">
+            <img src="shu-Romania-Bucharest-Unirii-508403050-EDITORIALONLY-1440x823.jpg" alt="Snow"
+                style="width:100%; height:100%">
+            <div class="centered">
+                <h1
+                    style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 50pt; letter-spacing: 40px">
+                    Bucureşti</h1>
+            </div>
+        </div>
+
+
+    </header>
+
+
+    <section>
+        <nav>
+                <h3>Locații de interes</h3>
+
+                <H4>Parcuri</H4>
+                <ul>
+
+                    <li><a href="Tineretului.html">Tineretului</a></li>
+                    <li><a href="Cismigiu.html">Cişmigiu</a></li>
+                    <li><a href="Herastrau.html">Herăstrău</a></li>
+                </ul>
+
+                <H4>Muzee</H4>
+                <ul>
+
+                    <li><a href="taranului.html">Satului</a></li>
+                    <li><a href="Antipa.html">Antipa</a></li>
+                    <li><a href="Istoric.html">Istorie</a></li>
+                </ul>
+
+            <Table>
+
+                <tr>
+
+                    <td>
+                        
+
+                    </td>
+                    <td>
+
+                    </td>
+
+
+
+
+                </tr>
+            </Table>
+        </nav>
+
+        <article>
+            <h1>Bucureşti</h1>
+            <p>București este capitala României. Este cel mai populat oraș și cel mai important centru industrial și
+                comercial al țării. Populația de 1.883.425 de locuitori (2011)<br>
+                face ca Bucureștiul să fie al zecelea oraș ca populație din Uniunea Europeană.
+            </p>
+            <p> Conform unor estimări ale unor specialiști, Bucureștiul adună zilnic peste trei milioane de oameni, iar
+                în următorii cinci ani, acest număr va depăși patru milioane.[6] La acestea se adaugă faptul că
+                localitățile din preajma orașului, care vor face parte din viitoarea Zonă Metropolitană, însumează o
+                populație de aproximativ 430.000 de locuitori.</p>
+        </article>
+    </section>
+
+    <footer>
+        <p><a href="super basic site.html">Acasa</a></p>
+    </footer>
+
+</body>
+
+</html>

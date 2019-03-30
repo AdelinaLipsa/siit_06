@@ -1,0 +1,21 @@
+#contaner div {
+    border: 1px solid;
+    margin: 1px;
+}
+#bodyleft { 
+    float: left;
+    margin: 1px;
+}
+#bodyright {
+    float: right;
+    margin: 1px;
+    columns: 2;
+}
+#bodycontainer {
+    width: 100%;
+    margin: 1px;
+    column-span: 2;
+}
+#footer {
+    clear: both;
+}

@@ -1,0 +1,65 @@
+body {
+    font-family: serif;
+    font-size: 18px;
+    padding: 0px;
+}
+
+.top_nav {
+    margin: 5px;
+    border:  1px dotted lightgray;    
+    height: 60px;
+}
+p.site_name {
+    font-size: 48px;
+
+}
+
+a.a{
+    width: 150px;
+    margin: 5px;
+    font-size: 15px;
+}
+
+.content {
+    border-bottom: 1px solid lightgray;
+    margin-left: 170px;
+    margin-right: 5px;
+    float: top right;
+    left: 115px;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+div.bt {
+    width: 110px;
+    position: absolute;
+    top: 80px;
+    
+}
+
+.content ul li {
+    margin: 5px;
+}
+
+.content img {
+    width: 150px;
+    height: 188px;
+    margin-right: 5px;
+}
+
+.bot_nav {
+    margin-left: 170px;
+    font-size: 10px;
+    display: inline-flex;
+}
+#bar {
+    padding: 0%;
+    margin: 0%;
+    height: 19px;
+    width: 313px;
+}
+#scris {
+    margin-bottom: 0;
+    padding: 0px;
+}
