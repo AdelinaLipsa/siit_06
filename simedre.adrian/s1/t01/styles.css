@@ -9,9 +9,10 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color:#245A7A;
+    background-color:#21636b;
     overflow-x: hidden;
     padding-top: 30px;
+    text-align: center;
   }  
   .book{
     padding-top: 0px;
@@ -77,12 +78,12 @@ body {
       margin-bottom: 20px;  
   }
   .main {
-    margin-left: 160px; /* Same as the width of the sidenav */
-    font-size: 20px; /* Increased text to enable scrolling */
+    margin-left: 160px; 
+    font-size: 20px;
     padding: 0px 10px;
   }
   #blue1{
-    color:#245A7A;
+    color:#21636b;
     padding-top: 20px;
     padding-right: 0px;
     padding-bottom:  0px;
@@ -97,7 +98,7 @@ body {
       margin: 0px;
 }
 #blue2{
-    color:#245A7A;
+    color:#21636b;
     padding-top: -15px;
     padding-right: 0px;
     padding-bottom:  0px;
