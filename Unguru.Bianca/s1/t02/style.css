@@ -1,0 +1,57 @@
+
+.vertical-menu {
+  height: 100%;
+  width: 200px;
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  left: 15px;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+
+
+.main {
+  margin-left: 200px; 
+  font-size: 18px; 
+  padding: 0px 10px;
+  font-family: serif;
+}
+
+#top {
+  background-color: #F0F0F0;
+  border: 1px dotted #D0D0D0;
+  padding: 3px;
+  margin: 3px;
+  
+
+}
+#top #site_name {
+  font-size: 48px;
+  margin: 0;
+  font-family: serif;
+}
+
+
+.button {
+  background-color: rgb(212, 212, 212);
+  color: rgb(0, 0, 0);
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  font-family: serif;
+  border: 1px solid black;
+  border-radius: 12px;  
+  margin: 5px;
+  width: 150px;
+  
+  }
+  
+footer {
+  
+  font-family: serif;
+  font-size: 10px;
+}
+  
