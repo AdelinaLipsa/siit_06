@@ -1,0 +1,66 @@
+p {
+    color: green;
+}
+
+#blueP {
+    color: blue;
+}
+
+#container {
+    width: 100%;
+
+}
+
+.column {
+    text-align: center;
+    width: 32%;
+    float: left;
+    border: 1px solid black;
+    display: inline;
+}
+#c1 {
+    background-color: red;
+}
+
+#c2 {
+    background-color: yellow;
+}
+
+#c3 {
+    background-color: blue;
+}
+
+#e01 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    top: 10px;
+    right: 100px;
+    position: fixed;
+}
+
+#e02 {
+    margin-top: 100px;
+    width: 200px;
+    height: 200px;
+    background-color:blue;
+    z-index: 10;
+    position: relative;
+}
+
+#e03 {
+    width: 100px;
+    height: 100px;
+    background-color:yellow;
+   position: relative;
+    z-index: 19;
+    top: -40px;
+    right: -40px;
+}
+
+.d {
+    background-color: red;
+    margin:  10px;
+    display: inline;
+
+}
