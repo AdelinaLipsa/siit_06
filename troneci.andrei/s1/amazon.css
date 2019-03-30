@@ -1,0 +1,113 @@
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#245A7A;
+    overflow-x: hidden;
+    padding-top: 30px;
+  }  
+  .book{
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom:  0px;
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-right: 30px;
+    margin-bottom:  0px;
+    margin-left: 30px;
+    background-color: red;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 2px 2px 8px yellow;
+  }
+  img {
+    width: 100px;
+    height: auto;
+    margin-top: 0px;
+    margin-right: 30px;
+    margin-bottom:  0px;
+    margin-left: 30px
+  }
+  .acenter{
+    text-align: center;
+    color: white;   
+    margin-top: 0px;
+    margin-right: 30px;
+    margin-bottom:  0px;
+    margin-left: 30px;
+  }
+  form{
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom:  0px;
+    padding-left: 0px;
+    margin-top: 50px;
+    margin-right: 20px;
+    margin-bottom:  0px;
+    margin-left: 20px;
+    color: white;
+  }
+  input{
+      width: 120px;
+  }
+  button{
+    margin-top: 0px;
+    margin-right: 20px;
+    margin-bottom:  0px;
+    margin-left: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+  }
+  .aleft{
+    color: white;
+    text-align: left;
+  }
+  #ptutor{
+      color: orange;
+  }
+  .tutorial{
+      margin-bottom: 20px;  
+  }
+  .main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  #blue1{
+    color:#245A7A;
+    padding-top: 20px;
+    padding-right: 0px;
+    padding-bottom:  0px;
+    padding-left: 0px;
+    margin: 0px;
+  }
+  .design{
+      text-decoration: underline;
+      color: #CECECE;
+      font-size: 70px;
+      padding: 0px;
+      margin: 0px;
+}
+#blue2{
+    color:#245A7A;
+    padding-top: -15px;
+    padding-right: 0px;
+    padding-bottom:  0px;
+    padding-left: 240px;
+    margin-top: -15px;
+    margin-right: 0px;
+    margin-bottom:  0px;
+    margin-left: 0px;
+
+}
+a:hover{
+    color: #04376C;
+}
