@@ -26,13 +26,6 @@
     margin: 0;
     list-style-type: none;
   }
-  .vertical_menu li {
-    list-style: none;
-    margin: 0;
-  }
-  .vertical_menu li a img {
-    border: none;
-  }
   #main {
     margin: 0 5px 5px 170px;
     padding: 5px;
