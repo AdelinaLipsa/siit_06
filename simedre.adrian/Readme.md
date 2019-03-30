@@ -15,3 +15,4 @@
     - [Tema 03](https://miualinionut.github.io/siit_06/simedre.adrian/s1/t03/index.html)
 - Saptamana 2
   - [Home](https://miualinionut.github.io/siit_06/simedre.adrian/s2/index.html)
+  - Teme Saptamana 2
