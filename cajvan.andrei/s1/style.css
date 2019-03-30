@@ -1,0 +1,18 @@
+body {
+    font-family: verdana;
+}
+
+aside {
+    background-color: teal;
+    color: whitesmoke;
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+article {
+    background-color: whitesmoke;
+    width:68%;
+    display: inline-block;
+    vertical-align: top;
+}
