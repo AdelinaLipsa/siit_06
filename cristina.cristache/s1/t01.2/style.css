@@ -1,0 +1,88 @@
+body{
+    font-family: 'PT Serif', serif;
+}
+
+ul{
+    line-height: 2;
+}
+
+hr{
+
+}
+a{
+    color: black;
+    text-decoration: none !important;
+    font-size: 18px;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+
+}
+a:hover{
+    color: black !important;
+}
+.bnr{
+    background-color: #F0F0F0;
+    font-size: 48px;
+    color: black;
+    margin-bottom: 14px;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    border: 1px dotted gray;
+    margin: 5px 5px 13px 5px;
+
+}
+
+.btn {
+width: 149px;
+height: 40px;
+border: 1px solid black !important;
+border-radius: 7px !important;
+background: rgba(255,255,255,1);
+margin-bottom: 9px !important;
+color: black;
+text-decoration: none;
+font-family: 'PT Serif', serif;
+font-weight: 400;
+background-image: linear-gradient(#d6d6c2, white) !important;
+}
+
+.welcome h1{
+    margin-top: 8px;
+}
+.welcome a{
+    text-decoration: underline !important;
+    color: #551A8B;
+}
+.contact{
+    font-family: 'PT Serif', serif;
+}
+.contact input{
+    width: 313px;
+    height: 18px;
+
+}
+
+.contact h1{
+    font-size: 36px;
+    font-weight: 700;
+}
+textarea{
+    -webkit-appearance: textarea;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    flex-direction: column;
+    resize: auto;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+    padding: 2px;
+    height: 76px;
+}
+button{
+    margin-top: 10px !important;
+}
+
