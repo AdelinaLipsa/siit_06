@@ -115,9 +115,29 @@
     padding-right: 30px;
     height: 140px;
 }
-}
 
 .picture-obj img {
     height: inherit;
     width: inherit;
+}
+
+.picture-obj1 img {
+    height: 150px;
+    width: 150px;
+}
+
+.content-text1 {
+    padding: 50px;
+}
+.picture-obj1 {
+    float: left;
+    padding-right: 30px;
+    height: 140px;
+}
+
+.contact-text {
+        padding-top: 60px;
+        text-align: center;
+        font-weight: bold;
+        font-size: x-large;
 }
