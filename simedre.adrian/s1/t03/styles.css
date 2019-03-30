@@ -27,22 +27,37 @@ body{
 .left_side{
     display: block;
     background-color: #CECECE;
+<<<<<<< HEAD
     width: 20%;
     height: 100%;
     margin: 0px;
     float: left;
     position: fixed;
     z-index: 999;
+=======
+    width: 25%;
+    height: 100%;
+    margin: 0px;
+    float: left;
+>>>>>>> 92ed8ccb5f3ee039d1a36cb724d782669b61ef82
 }
 .left_side p{
     margin: 0px;
     text-align: center;
     font: bold;
+<<<<<<< HEAD
+=======
+    margin-top: 20px;
+>>>>>>> 92ed8ccb5f3ee039d1a36cb724d782669b61ef82
 }
 .left_side p input{
     margin-top: 10px;
     border-radius: 10px;
+<<<<<<< HEAD
     width: 80%;
+=======
+    width: 75%;
+>>>>>>> 92ed8ccb5f3ee039d1a36cb724d782669b61ef82
 }
 .left_side a{
     color: orange;
@@ -69,9 +84,13 @@ body{
     background: black;
     width: 100%;
     height: 35px;
+<<<<<<< HEAD
     bottom: 0px;
     position: fixed;
     z-index: 999;
+=======
+    float: left;
+>>>>>>> 92ed8ccb5f3ee039d1a36cb724d782669b61ef82
 }
 .footer p{
     color: white;
@@ -80,9 +99,14 @@ body{
     padding: 10px;
 }
 .main{
+<<<<<<< HEAD
     float: right;
     width: 80%;
+=======
+    width: 75%;
+>>>>>>> 92ed8ccb5f3ee039d1a36cb724d782669b61ef82
     display: block;
+    float: right;
 }
 .main h1{
     margin: 10px;

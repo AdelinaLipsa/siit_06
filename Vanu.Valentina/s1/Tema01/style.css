@@ -1,0 +1,122 @@
+html, body {
+    height: 100%;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 200px auto;
+}
+
+.nav {
+    background: #21636b;
+    height: 100%;
+    text-align: center;
+    padding-left: 15px;
+    line-height: 1.5;
+}
+
+.nav a {
+    color: #fff;
+}
+a:hover {
+    color: #c7d695;
+}
+
+a:active {
+    color: #ffce08;
+}
+
+.logo {
+    padding: 10px 0 0 0;
+    width: 140px;
+    margin-left: 20px;
+}
+
+.logo p {
+    font-family: sans-serif;
+    text-align: center;
+    background: #ce0000;
+    font-size: 30px;
+    text-shadow: 5px 5px 10px yellow;
+    line-height: 0.8;
+
+}
+.logo img {
+    background: #fff;
+    width: 140px;
+    height: 30px;
+}
+.search {
+    margin: 15px 0 15px 0;
+    color: #fff;
+    /* width: 80%; */
+}
+.search input {
+    width:80%;
+}
+
+button {
+    background-color: #313131;
+    border-radius: 5px;
+    width: 60%;
+    color: #fff;
+
+}
+
+.nav .search+a:nth-child(4) {
+    color: #5bcefb;
+    font-size: 25px;
+
+}
+
+.tutorials {
+    display: inline-grid;
+    text-align: left;
+    width: 100%;
+    margin: 10px 0 0 7px;
+}
+
+.tutorials span{
+    font-weight: bold;
+    color: #ffce08;
+    margin: 10px 0 0 0;
+}
+
+.tutorials a:nth-child(8) {
+    margin-top: 25px;
+}
+.article {
+    margin: 0 0 0 55px;
+    font-size: 20px;
+}
+
+.title {
+    padding: 10px 0 40px 0;
+    line-height: 55px;
+}
+
+.title p:nth-child(odd) {
+    color: #21636b;
+    font-style: italic;
+    font-size: 30px;
+}
+
+.title p:nth-child(3) {
+    padding-left: 338px;
+}
+
+.title p:nth-child(even) {
+    color: #cecece;
+    font-size: 100px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.content ul li {
+    list-style-type: circle;
+}
