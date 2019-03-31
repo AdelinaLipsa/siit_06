@@ -1,3 +1,5 @@
+
+
 #page-wrap {
   width: 800px;
   margin: 0 auto;
@@ -26,6 +28,7 @@ nav li {
  display: inline-block;
  margin-right: 70px;
  padding-top: 18px;
+ position: float;
  
 }
 

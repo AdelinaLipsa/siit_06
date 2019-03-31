@@ -1,0 +1,64 @@
+#blueP { color: blue;}
+
+#container{
+    width: 100%
+
+}
+
+.text{
+
+    text-align: center;
+}
+
+
+.column{
+width: 350px;
+float: right;
+/* border: 1px solid black */
+text-align: center;
+}
+#c1 {
+height: 30px;
+    background-color: red
+}
+#c2 {
+    height: 30px;
+
+    background-color: blue
+}
+#c3 {
+    height: 30px;
+
+    background-color: yellow}
+
+#e01{
+    width: 100px;
+    height: 100px;  
+    background-color: red;
+    top: 10px;  
+    right: 10px;
+    position: fixed
+}
+#e02{
+    margin-top: 100px;
+    width: 300px;
+    height: 300px;  
+    background-color:greenyellow;
+    position: relative;
+    z-index: 0;;
+}
+#e03{
+    width: 100px;
+    height: 100px;  
+    background-color: blue;
+    top: -90px;
+    right: -220px;
+    position: relative;
+    z-index: 1;;
+}
+.d{
+
+    background-color:red;
+    margin:10px;
+    display: block;
+}
