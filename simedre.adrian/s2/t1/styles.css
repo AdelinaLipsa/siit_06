@@ -1,0 +1,120 @@
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#getCh{
+    background-color: #4273DC;
+    width: 100%;
+    font-size: 13px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;  
+}
+#getCh p{
+    padding-left: 15px;
+    padding-top: 10px;
+    margin-left: 10px;
+    color: white;
+    display: inline;
+}
+#getCh a{
+    background-color: #2855BC;
+    color: #AECAFF;
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 10px;
+}
+#getCh .right{
+    float: right;
+    background-color: #4273DC;
+    padding: 0px;
+    margin-right: 20px;
+}
+#nav{
+    padding-top: 20px;
+    padding-right: 40px;
+    font-weight: bold;
+}
+#nav a{
+    float: right;
+    color: #747474;
+    text-decoration: none;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+#nav .sign{
+    background-color: #4273DC;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+#nav .menu{
+    background-image: url('logos.png');
+    background-position: -132px -33px;
+    width: 30px;
+    height: 30px;
+    background-size: 528px 68px;
+    opacity: .55;
+}
+#footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background-color: #F2F2F2;
+    font-size: 12px;
+}
+#footer .left{
+    float: left;
+}
+#footer .right{
+    float: right;
+}
+#footer a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #747474;
+}
+#footer .left a{
+    padding-left: 20px;
+}
+#footer .right a{
+    padding-right: 20px;
+}
+#main{
+    position: absolute;
+    top: 30%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+#main #logo img{
+    height: 92px;
+    width: 272px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#main input{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 20px;
+    border: 1px solid #45A2B3;
+}
+#src{
+    text-align: center;
+    margin-top: 20px;
+}
+#src a{
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: #747474;
+    background-color: #F2F2F2;
+    margin-left: 15px;
+    padding: 8px;
+    border: 1px solid #DDDDDD;
+}
