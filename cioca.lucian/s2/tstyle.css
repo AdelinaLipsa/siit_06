@@ -1,0 +1,31 @@
+#header {
+    width: 100%;
+    border: 1px solid black;
+}
+
+#navbar {
+    width: 100%;
+    border: 1px solid black;
+}
+
+#bodyContainer {
+    width: 100%;
+    border: 1px solid black;
+}
+
+#bodyleft {
+    float: left;
+    width: 49.5%;
+    border: 1px solid black;
+}
+
+#bodyright {
+    float: right;   
+    width: 49.5%;
+    border: 1px solid black;
+}
+
+#footer {
+    border: 1px solid black;
+    width: 100%;
+}
