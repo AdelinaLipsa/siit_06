@@ -71,8 +71,6 @@
 #footer {
     position: relative;
     background-color: rgb(203, 222, 80);
-    height: 20px;
-    margin: auto;
     padding: 10px;
     margin-left: 10px;
     margin-right: 10px;
@@ -126,8 +124,6 @@
 
 #leftTitle {
     background-color: rgb(210, 211, 94);
-    height: 45px;
-    padding-top: 0px;
     position: relative;
     margin-top: 0px;
     top: -20px;
