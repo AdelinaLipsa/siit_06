@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facebook</title>
+    <link rel="icon" href="favicon.ico" type="image/icon" sizes="16x16">
+    <meta name="author" content="Simedre Adrian">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="sus">
+        <div id="logo">
+            <p>facebook</p>
+        </div>
+        <div id="login">
+            <table>
+                <tr>
+                    <td>
+                        <label for="user">Email or Phone</label>
+                    </td>
+                    <td>
+                        <label for="pass">Password</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="EorP" id="user">
+                    </td>
+                    <td>
+                        <input type="password" name="password" id="pass">
+                    </td>
+                    <td>
+                        <input type="submit" value="Log in" id="submit">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <a href="index.html">Forgotten account?</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="main">
+        <div id="mainText">
+            Facebook helps you connect and share with the people in your life.
+        </div>
+        <div id="mainMap">
+            <img src="map.png">
+        </div>
+    </div>
+    <div id="create">
+        <h1>Create an account</h1>
+        <p id="free">It's free and always will be.</p>
+        <form>
+            <input type="text" name="name" value="First Name" id="name" onfocus="if(this.value==this.defaultValue){this.value='';}" onblur="if(this.value==''){this.value=this.defaultValue;}">
+            <input type="text" name="surname" value="Surname" id="surname" onfocus="if(this.value==this.defaultValue){this.value='';}" onblur="if(this.value==''){this.value=this.defaultValue;}"><br>
+            <input type="text" name="user2" value="Mobile number or email adress" id="user2" onfocus="if(this.value==this.defaultValue){this.value='';}" onblur="if(this.value==''){this.value=this.defaultValue;}"><br>
+            <input type="text" name="newPass" value="New password" id="newPass" onfocus="if(this.value==this.defaultValue){this.value='';}" onblur="if(this.value==''){this.value=this.defaultValue;}">
+        </form>
+        <h3>Birthday</h3>
+        <select>
+            <option value="day">Day</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+        </select>
+        <select>
+            <option value="month">Month</option>
+            <option value="Jan">Jan</option>
+            <option value="Feb">Feb</option>
+            <option value="Mar">Mar</option>
+            <option value="Apr">Apr</option>
+            <option value="May">May</option>
+            <option value="Jun">Jun</option>
+            <option value="Jul">Jul</option>
+            <option value="Aug">Aug</option>
+            <option value="Sep">Sep</option>
+            <option value="Oct">Oct</option>
+            <option value="Nov">Nov</option>
+            <option value="Dec">Dec</option>
+        </select>
+        <select>
+            <option value="year">Year</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+            <option value="2031">2031</option>
+        </select>
+        <a href="index.html" class="bDay">Why do I need to provide my date of birth?</a><br>
+        <input type="radio" name="gender" value="male" class="gender">
+            <label for="gender">Male</label>
+        <input type="radio" name="gender" value="female" class="gender">
+            <label for="gender">Female</label>
+        <p id="p1">By clicking Create an account, you agree to our <a href="index.html">Terms</a> and confirm that you have read our <a href="index.html">Data Policy</a>, including our <a href="index.html">Cookie Use Policy</a>. You may receive SMS message notifications from Facebook and can opt out at any time.</p>
+        <button type="submit">Create an account</button>
+        <p id="p2"><a href="index.html">Create a Page</a> for a celebrity, band or business.</p>
+    </div>
+    <div class="footer">
+        <div class="language">
+            <a href="index.html">Ramana</a>
+            <a href="index.html">English (US)</a>
+            <a href="index.html">Magyar</a>
+            <a href="index.html">Italiano</a>
+            <a href="index.html">Español (España)</a>
+            <a href="index.html">Français (France)</a>
+            <a href="index.html">Deutsch</a>
+            <a href="index.html">Türkçe</a>
+            <a href="index.html">Português (Brasil)</a>
+            <a href="index.html">لعربية</a>
+            <a href="index.html">हिन्दी</a>
+            <a href="index.html" id="extra">+</a>
+        </div>
+        <div class="line"></div>
+        <div class="more">
+            <a href="index.html">Sign Up</a>
+            <a href="index.html">Log In</a>
+            <a href="index.html">Messenger</a>
+            <a href="index.html">Facebook Lite</a>
+            <a href="index.html">Find Friends</a>
+            <a href="index.html">People</a>
+            <a href="index.html">Profiles</a>
+            <a href="index.html">Pages</a>
+            <a href="index.html">Page Categories</a>
+            <a href="index.html">Places</a>
+            <a href="index.html">Games</a>
+            <a href="index.html">Locations</a>
+            <a href="index.html">Marketplace</a>
+            <a href="index.html">Groups</a>
+            <a href="index.html">Instagram</a>
+            <a href="index.html">Local</a>
+            <a href="index.html">Fundraisers</a>
+            <a href="index.html">About</a>
+            <a href="index.html">Create Ad</a>
+            <a href="index.html">Create Page</a>
+            <a href="index.html">Developers</a>
+            <a href="index.html">Careers</a>
+            <a href="index.html">Privacy</a>
+            <a href="index.html">Cookies</a>
+            <a href="index.html">Ad Choices</a>
+            <a href="index.html">Terms</a>
+            <a href="index.html">Account Security</a>
+            <a href="index.html">Login Help</a>
+            <a href="index.html">HelpSettings</a>
+        </div>
+        <p>Facebook @ 2019</p>
+    </div>
+
+</body>
+</html>
