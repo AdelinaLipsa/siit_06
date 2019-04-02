@@ -1,0 +1,150 @@
+#header {
+    height: 169px;
+    width: 768px;
+    background-image: url("head verde.png");
+    z-index: 0;
+    position: relative;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+#header2 {
+    position: absolute;
+    right: 110px;
+    top: 30px;
+    font-family: sans-serif;
+}
+
+.p {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    line-height: 60%;
+    right: 500px;
+}
+
+#whiteContainer {
+    background-color: rgb(240, 232, 195);
+    width: 764px;
+    margin: auto;
+    height: 610px;
+    border-style: outset none none outset;
+    border-width: 1.5px;
+}
+
+.column {
+    width: 123px;
+    height: 40px;
+    text-align: center;
+    float: left;
+    font-family: sans-serif;
+    margin-top: 10px;
+    color: darkblue;
+}
+
+.row {
+    clear: both;
+}
+
+#nav {
+    width: 740px;
+    margin: auto;
+    margin-top: 10px;
+    border-style: outset outset none outset;
+    border-width: 1.5px;
+    height: 40px;
+}
+
+#leftStuff {
+    height: 500px;
+    width: 25%;
+    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    border-style: none outset none none;
+    border-width: 2px;
+    border-color: rgba(66, 66, 66, 0.1);
+    padding-top: 0px;
+}
+
+#footer {
+    position: relative;
+    background-color: rgb(203, 222, 80);
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#content {
+    top: 0px;
+    right: 0px;
+    margin: 10px;
+    width: 67%;
+    position: relative;
+}
+
+.f {
+    float: left;
+}
+
+.h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+}
+
+
+.h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    padding-top: 0;
+}
+.p2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 130%;
+    font-size: 10pt;
+}
+
+#subStanga {
+    position: relative;
+    width: 44%;
+    padding-right: 15px;
+    padding-left: 5px;
+    border-style: none outset none none;
+    border-width: 2px;
+    border-color: rgba(66, 66, 66, 0.1);
+}
+
+#subDreapta {
+    position: relative;
+    width: 44%;
+    padding-right: 5px;
+    padding-left: 15px;
+}
+
+#leftTitle {
+    background-color: rgb(210, 211, 94);
+    position: relative;
+    margin-top: 0px;
+    top: -20px;
+}
+
+#leftTitle2 {
+    background-color: rgb(210, 211, 94);
+    height: 45px;
+    padding-top: 0px;
+    position: relative;
+    margin-top: 0px;
+    top: 0px;
+}
+
+.read {
+    padding: 2px;
+    background-color: rgb(210, 211, 94);
+    border-width: 20px;
+    border-color: rgb(66, 66, 66);
+    font-family: sans-serif;
+    width: 40%;
+    text-align: center;
+    
+}
