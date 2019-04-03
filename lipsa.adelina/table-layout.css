@@ -1,0 +1,25 @@
+#divLayout {
+    border: 1px solid black;
+    margin: 1px;
+
+}
+
+#bodyContainer {
+    height:22px;
+
+}
+#bodyLeft {
+    float:left;
+    width: 49%;
+}
+
+#bodyRight {
+    float:left;
+    width: 49%;
+    border: none! important;
+}
+
+#nothing {
+    clear:both;
+
+}

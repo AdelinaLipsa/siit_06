@@ -6,5 +6,7 @@
 
 # Tema_s2
 
+- [06 Simple template](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s2/06/index.html)
+- [07 HTML Form](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s2/07/index.html)
 - [08 Facebook](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s2/08/index.html)
 - [09 Google](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s2/09/index.html)
