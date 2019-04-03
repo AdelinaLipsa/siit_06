@@ -1,10 +1,3 @@
-# siit_0<html>
-
-<head>
-    <meta charset="utf-8">
-    <title>Portfolio</title>
-</head>
-
 <body>
     <h1>Portfolio</h1>
     <h2>Session 1 homework</h2>
