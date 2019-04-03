@@ -1,0 +1,107 @@
+.left {
+    width: 72%;
+}
+
+.right {
+    width: 25%;
+    margin-left: 10px;
+}
+
+.header {
+    background-image: radial-gradient(farthest-corner at -50% -50%, white, rgb(208, 235, 142));
+    border-style: solid;
+    border-color: rgb(209, 229, 176);
+    float: left;
+    text-align: left;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 5px;
+    font-size: 50px;
+    font-family: sans-serif;
+    color: rgb(106, 133, 16);
+    font-weight: bolder;
+    font-style: italic;
+    border-radius: 30px 0px 0px 0px;
+}
+
+.corner {
+    background-image: linear-gradient(to top, rgb(255, 116, 0), rgb(253, 198, 144));
+    border-style: solid;
+    border-color: rgb(255, 116, 0);
+    float: left;
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 5px;
+}
+
+.baraMenu {
+    background-image: linear-gradient(to top, rgb(255, 116, 0), rgb(253, 198, 144));
+    border-style: solid;
+    border-color: rgb(255, 116, 0);
+    float: left;
+    width: 100%;
+    height: 40px;
+    font-weight: bolder;
+}
+
+.elementeMenu {
+    float: left;
+    list-style: none;
+    padding: 5px;
+    padding-left: 0;
+    margin: 0px;
+    color: white;
+}
+
+#content {
+    padding-left: 60px;
+    padding-top: 60px;
+}
+
+#child {
+    line-height: 200px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 15pt;
+}
+
+#botRight {
+    border-style: solid;
+    border-color: rgb(209, 229, 176);
+    background-image: radial-gradient(farthest-corner at 50% -200%, white, rgb(208, 235, 142));
+    padding-left: 40px;
+    padding-top: 40px;
+    height: 1000px;
+    padding-right: 30px;
+    width: 78%;
+}
+
+.contentTitle {
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 40px;
+    color: rgb(60, 94, 139);
+    font-family: sans-serif;
+}
+
+.gap {
+    padding-left: 80px;
+}
+
+.rightLead {
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 30px;
+    color: rgb(60, 94, 139);
+    font-family: sans-serif;
+}
+
+.greenFont {
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 20px;
+    color: rgb(151, 177, 68);
+    font-family: sans-serif;
+}
