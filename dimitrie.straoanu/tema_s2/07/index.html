@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>HTML Form</title>
+  <meta name="author" content="Dimitrie Straoanu" />
+  <meta name="description" content="This is a HTML form" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>HTML Form</h1>
+      <p>Sign up to the newsletter form to receive the latest news from our company.</p>
+    </div>
+    <div class="content">
+      <form action="">
+
+        <div class="email">
+          <label class="floatL" for="email">Email</label>
+          <input class="floatL" type="email" name="email" placeholder="youremail@email.com">
+          <span class="floatL">We will send you an email describing how to activate your newsletter subscription</span>
+        </div>
+
+        <div class="name">
+          <label class="floatL" for="firstName">Name</label>
+          <input class="floatL" type="text" name="firstName" id="firstName" placeholder="your first name">
+          <input class="floatL" type="text" name="lastName" id="lastName" placeholder="your last name">
+        </div>
+        
+          <div class="preference">
+            <p>Prefered newsletter format</p>
+            <div class="floatL">
+              <input type="radio" name="format">
+              <label for="text">Text</label>
+            </div>
+            <div class="floatL">
+              <input type="radio" name="format">
+              <label for="html">HTML</label>
+            </div>
+          </div>
+        
+        <div class="submitButton">
+          <input type="submit" value="SUBMIT">
+          <span>or</span>
+          <input onclick="this.blur();" type="reset" value="Clear and start from scratch">
+          
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
