@@ -48,20 +48,19 @@ header {
 
 article {
     display: flex;
-    align-content: center;
+    align-content: left;
     flex-direction: column;
     flex-flow: wrap;
     padding: 2em 0em 2em 0em;
 }
 .fbleft {
     flex-direction: column;
-    align-items: center;
     color: #314268;
-    
 }
 .fbleft img {
     width:50%;
 }
 .fbright {
     flex-direction: column;
+    align-content: left;
 }
