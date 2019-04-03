@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+    <link rel="icon" href="icon.png" type="image/icon" sizes="16x16">
+    <meta name="author" content="Simedre Adrian">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html" class="dot"></a>
+        <a href="index.html" class="dot"></a>
+        <a href="index.html" class="dot"></a>
+    </div>
+    <div class="body">
+        <div class="head">
+            <h1>HTML Form</h1>
+            <p>Sign up to the newsletter form below to receive the latest new from our company</p>
+        </div>
+        <div class="content">
+            <div class="email">
+                <h3>Email</h3>
+                <input type="text" value="Your Email" onfocus="if(this.value==this.defaultValue){this.value='';}" onblur="if(this.value==''){this.value=this.defaultValue;}">
+                <p>We will send you an email describing how to activate you newsletter subscription</p>
+            </div>
+            <div class="name">
+                <h3>Name</h3>
+                <input type="text" value="First" onfocus="if(this.value==this.defaultValue){this.value='';}" onblur="if(this.value==''){this.value=this.defaultValue;}">
+                <input type="text" value="Last" onfocus="if(this.value==this.defaultValue){this.value='';}" onblur="if(this.value==''){this.value=this.defaultValue;}">
+            </div>
+            <div class="format">
+                <h3>Preferred newsletter format</h3>
+                <input type="radio">Text<br>
+                <input type="radio">HTML
+            </div>
+            <button type="submit">SUBMIT</button>
+            <a href="index.html" class="scratch">or Clear and start from scratch</a>
+        </div>
+    </div>
+</body>
+</html>

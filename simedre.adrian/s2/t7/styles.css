@@ -1,0 +1,113 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3E4346;
+}
+.nav{
+    width: 95%;
+    height: 35px;;
+    border: 3px solid #ECECEC;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px 10px 0px 0px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    border: 2px solid #ECECEC;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+  }
+.body{
+    background-image: url("coffe.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 97%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #ECECEC;
+}
+.head{
+    background-color: #CDECFF;
+    width: 70%;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 1%;
+    opacity: 0.8;
+    border: 2px solid #C9DEEF;
+}
+.head h1{
+    margin-top: 0px;
+}
+.content{
+    background-color: white;
+    width: 65%;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5%;
+    padding-top: 1.5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+    opacity: 0.8;
+    border: 2px solid #C9DEEF;
+}
+.email{
+    background-color: #E7E7E9;
+    margin-left: -30px;
+    margin-right: -30px;
+    opacity: 0.8;
+    width: 103%;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+.email input{
+    width: 300px;
+    height: 25px;
+    cursor: text;
+    padding: 5px;
+}
+.email p{
+    font-size: 12px;
+    padding-top: 5px;
+}
+.name input{
+    width: 145px;
+    height: 25px;
+    cursor: text;
+    padding: 5px;
+}
+.format{
+    border-bottom: 1px solid #E7E7E9;
+}
+.format input{
+    margin-bottom: 10px;
+}
+button{
+    background-color: #CDECFF;
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.scratch{
+    padding-left: 10px;
+    color: #A5CFA1;
+}
+input{
+    border-radius: 5px;
+    border: 1px solid black;
+}
