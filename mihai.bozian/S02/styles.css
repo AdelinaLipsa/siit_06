@@ -1,0 +1,17 @@
+#body{
+    margin: 0 auto;
+}
+
+#navbar{
+    width: 100%;
+    height: 10%;
+    background-color: aliceblue;
+}
+
+#bluebar{
+    width: 100%;
+    height: 5%;
+    background-color: blue;
+    text-align: left;
+    margin-top: 0px;
+}
