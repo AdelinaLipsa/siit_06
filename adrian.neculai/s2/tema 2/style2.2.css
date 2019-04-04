@@ -1,0 +1,60 @@
+.head {
+    background-color: rgb(169, 192, 86);
+    text-align: center;
+    padding-top: 40px;
+    font-size: 30pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 160px;
+    color: rgb(240, 232, 195);
+    border-bottom: 4px;
+    border-style: none none groove none;
+    border-color: rgba(105, 105, 105, 0.192);
+}
+
+.column {
+    float: left;
+    border: .5em;
+    /*  border-style: dotted  */
+}
+
+.row {
+    clear: both;
+    margin: auto;
+    width: 85%;
+    padding-top: 65px;
+    /*   background-color: aquamarine; */
+}
+
+.leftPannel {
+    background-color: rgb(78, 83, 89);
+    padding: 1em;
+    color: white;
+    padding-right: 8em;
+    border: 2pt;
+    border-style: outset;
+    border-color: rgba(105, 105, 105, 0.192);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.greyTopBot {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(78, 83, 89);
+    font-size: 10pt;
+}
+
+.greenStuff {
+    padding-top: 1.5em;
+    padding-left: 1.5em;
+    padding-bottom: 1.5em;
+    color: rgb(169, 192, 86);
+    font-family: sans-serif;
+    font-size: 20pt;
+}
+
+.blueStuff {
+    padding-top: 1.5em;
+    font-family: sans-serif;
+    color: darkblue;
+    font-size: 11pt;
+    line-height: 160%;
+}
