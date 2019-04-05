@@ -1,0 +1,25 @@
+#logo{
+    padding-top: 109px;
+    height: 92px;
+    width: 272px;
+}
+.linkuri{
+    text-align: right;
+    color: black;
+    line-height: 24px;
+    font-family: arial,sans-serif;
+    padding-right: 15px;
+    font-size: 13px;
+    
+}
+.sign{
+    color: black;
+    background-color: blue;
+    padding: 5px;
+}
+#search{
+    inline-size: 400px;
+}
+#aplicatii{
+    table-layout: auto;
+}
