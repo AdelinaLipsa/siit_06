@@ -1,11 +1,19 @@
 html, body {
     width: 100%;
     height: 100%;
+    background: linear-gradient(white, #D3D8E8);
 }
 * {
-    font-family: serif;
+    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     margin: 0;
+}
+
+body {
+    height: 100%;
+    font-size: 3vw;
+    
+    /* Why isnt my backgroun all over since it s in body?? */
 }
 
 header {
@@ -13,23 +21,22 @@ header {
     background-color: #3b5999;
     color: white;
     align-items: stretch;
-    padding: 0.5em;
-    
+    padding: 0.7em;
+    font-size: 13px;
 }
 
 .fheader {
     display:flex;
     flex-direction: column;
     padding-top: 0.5em;
-    padding-left: 6em;
-    font-size: 1.2em;
+    padding-left: 10em;
+    font-size: 1.3em;
 }
 .form {
     display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    flex-flow: wrap;
-    padding-left: 2em;
+    flex-direction: column; 
+    /* align-items: center; nope nope*/
+    flex-flow: nowrap;
     
 }
 .form1 {
@@ -48,19 +55,54 @@ header {
 
 article {
     display: flex;
-    align-content: left;
+    align-items: stretch;
     flex-direction: column;
-    flex-flow: wrap;
+    flex-flow: nowrap;
     padding: 2em 0em 2em 0em;
+    font-size: 13px;
+    color: #333;
 }
 .fbleft {
-    flex-direction: column;
+    align-content: center;
     color: #314268;
+    flex-direction: column;
+    padding-left: 13em;
+    /* trying to center it by using padding */
 }
 .fbleft img {
     width:50%;
 }
 .fbright {
     flex-direction: column;
-    align-content: left;
+    align-content: center;
+    padding-right: 12em; 
+    /* trying to center it by using padding */
+    margin-left: -6em;
 }
+.fbright h1 {
+    font-size: 30px;
+}
+#specialp {
+    font-size: 19px;
+    padding: 0.5em 0 0.8em 0;
+}
+.createform input{
+    margin: 5px;
+    border-radius: 5px;
+}
+.createform h3{
+    padding: 300px 0 8px 0;
+}
+
+#why {
+    padding: 10px;
+}
+
+.createform2 a{
+    /* display: inline-block; */
+    text-decoration: none;
+    vertical-align: middle;
+    width: 200px;
+}
+
+/* too tired to finish :( */
