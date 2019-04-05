@@ -1,0 +1,63 @@
+#hContainer {
+    margin-top: 40px;
+    ;
+    padding: 20px;
+    background-color: rgb(40, 40, 40);
+    color: white;
+    width: 60%;
+}
+
+.gold {
+    color: rgb(224, 178, 118);
+}
+
+#content {
+    margin-top: 30px;
+}
+
+#menu {
+    width: 20%;
+    float: left;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#text {
+    float: left;
+    width: 75%;
+    height: 500px;
+    background-color: white;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.capPatrat {
+    font-size: 140%;
+    font-family: serif;
+    margin-bottom: 20px;
+}
+
+.tag {
+    background-color: rgb(1, 47, 83);
+    padding: 5px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+
+.speish {
+    margin-bottom: 20px;
+}
+
+#subMenu {
+    padding-right: 70px;
+    text-align: right;
+    margin-left: 60px;
+}
+
+.superbold {
+    font-weight: bolder;
+}
+
+.blue {
+    color: rgb(14, 85, 139);
+}

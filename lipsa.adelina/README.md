@@ -1,3 +1,4 @@
+<html>
 <body>
     <h1>Portfolio</h1>
     <h2>Session 1 homework</h2>
@@ -9,4 +10,3 @@
     </ul>
 </body>
 </html>
-

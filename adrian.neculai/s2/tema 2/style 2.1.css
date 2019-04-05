@@ -27,9 +27,9 @@
     background-color: rgb(240, 232, 195);
     width: 764px;
     margin: auto;
-    height: 610px;
     border-style: outset none none outset;
     border-width: 1.5px;
+    padding-bottom: 3px;
 }
 
 .column {
@@ -56,16 +56,15 @@
 }
 
 #leftStuff {
-    height: 500px;
     width: 25%;
     margin-left: 10px;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     padding-right: 10px;
     border-style: none outset none none;
     border-width: 2px;
     border-color: rgba(66, 66, 66, 0.1);
-    padding-top: 0px;
+    padding-left: 0px;
 }
 
 #footer {
@@ -74,6 +73,12 @@
     padding: 10px;
     margin-left: 10px;
     margin-right: 10px;
+    border-style: outset;
+    border-width: 1px;
+    border-color: rgba(66, 66, 66, 0.2);
+    margin-bottom: 10px;
+    font-size: 9.5pt;
+    text-align: center;
 }
 
 #content {
@@ -93,16 +98,17 @@
     padding: 0;
 }
 
-
 .h3 {
+    font-size: 16pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 0;
     padding-top: 0;
 }
+
 .p2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    line-height: 130%;
-    font-size: 10pt;
+    line-height: 170%;
+    font-size: 9pt;
 }
 
 #subStanga {
@@ -126,7 +132,14 @@
     background-color: rgb(210, 211, 94);
     position: relative;
     margin-top: 0px;
-    top: -20px;
+    top: 0px;
+    padding: 8px;
+    padding-left: 10px;
+    border-style: outset;
+    border-width: 1px;
+    border-color: rgba(66, 66, 66, 0.2);
+    font-family: sans-serif;
+    margin-bottom: 10px;
 }
 
 #leftTitle2 {
@@ -139,12 +152,13 @@
 }
 
 .read {
-    padding: 2px;
-    background-color: rgb(210, 211, 94);
-    border-width: 20px;
-    border-color: rgb(66, 66, 66);
+    padding: .5em;
+    background-color: rgb(189, 216, 43);
+    border-style: outset;
+    border-width: 1px;
+    border-color: rgba(66, 66, 66, 0.2);
     font-family: sans-serif;
-    width: 40%;
+    width: 35%;
     text-align: center;
-    
+    font-size: 10pt;
 }
