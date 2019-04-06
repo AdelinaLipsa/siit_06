@@ -104,3 +104,10 @@ footer p{
     width: 50%;
     height: 120px;
 }
+
+.footerr {
+    height: 50px;
+    border: 2px solid;
+    width: 80%;
+    margin: 0 auto;
+}
