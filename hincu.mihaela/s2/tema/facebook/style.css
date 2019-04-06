@@ -1,0 +1,174 @@
+html{ height:100%; }
+body{ min-height:100%; padding:0; margin:0;  }
+body::after{ content:''; display:block; height:100px; }
+
+
+
+#header {
+    background:#3D5B99;
+    height: 5rem;
+  
+}
+
+
+.block  {
+    float:right;
+    display: block;
+}
+.logo {
+margin-left:10%;
+}
+
+input {
+    margin-right:5px;
+}
+
+.container div{
+    display:inline;
+    
+}
+
+.inline {
+    float:right;
+    display:inline;
+}
+
+
+small {
+    font-size: 15px;
+    color: white;
+    margin-top: 1rem;
+}
+
+/* MAIN */
+#right-side {
+    float:right;
+    margin-right:24%;
+}
+
+#left-side {
+    float:left;
+}
+
+#main {
+    background:linear-gradient(#FDFEFE,#E6EAF3,#E6EAF3);
+    width:100%;
+    height:45rem;
+
+}
+
+.connect {
+    margin-left:43%
+ 
+}
+
+
+
+#namebox{
+	width:189px;
+	height:10px;
+	border-radius:5px 5px 5px 5px;
+	background:white;
+	padding:10px;
+	font-size:18px;
+
+	border-width: 1px;
+	border-style:solid;
+	border-color: gray;
+}
+#mailbox{
+	width:408px;
+	height:20px;
+	border-radius:5px 5px 5px 5px;
+	background:white;
+	padding:10px;
+	font-size:18px;
+	margin-top:8px;
+	border-width: 1px;
+	border-style:solid;
+    border-color: gray;
+    display:block;
+}
+
+span.inst { 
+    font-size: 11px; 
+    color: blue; 
+    
+    width:10px;
+  } 
+
+  select {
+  
+    height:30px;
+	font-size:18px;
+
+	border-width: 1px;
+	border-style:solid;
+	border-color: gray;
+  }
+
+  .agree {
+      width:430px;
+  }
+
+.button1 {
+    color:white;
+    cursor:pointer;
+    outline:none;
+    background-color: rgb(99, 129, 189);
+    border-color: black;
+    border-width: 1px;
+    height:20px;
+
+}
+  .button2{
+	width:250px;
+	height:40px;
+	left:750px;
+	top:625px;
+    background: linear-gradient(#67ae55, #578843);
+    background-color: #69a74e;
+    box-shadow: inset 0 1px 1px #a4e388;
+    border-color: #3b6e22 #3b6e22 #2c5115;
+	font-size:18px;
+	color:white;
+	border-radius:5px 5px 5px 5px;
+	border-width: 1px;
+	border-style:solid;
+	border-color: gray;
+	cursor:pointer;
+	outline:none;
+	
+}
+
+.button2:hover {
+    background: linear-gradient(#84c563, #578843);
+}
+
+#sex{
+	margin-top: 30px;
+
+    
+}
+
+footer {
+    margin-left:10%;
+    margin-right:20%;
+}
+
+
+.languages a {
+    margin-right:10px;
+    text-decoration:none;
+}
+
+.options a{
+   
+    text-decoration:none;
+    margin-right: 35px;
+   
+}
+
+.options {
+    text-decoration:none;
+     }
