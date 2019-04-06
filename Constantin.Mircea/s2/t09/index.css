@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100%;
+}
+
+nav {
+  background: #4273dc;
+  font-weight: bold;
+  display: inline-flex;
+  width: 100%;
+}
+
+nav p {
+  padding: 10px 15px 0 15px;
+  color: #fff;
+}
+
+nav a {
+  text-decoration: none;
+  opacity: 0.5;
+  color: #fff;
+  background: #2255cb;
+  padding: 10px;
+  margin-left: 15px;
+}
+
+nav a:last-child {
+  position: absolute;
+  right: 15px;
+  background: transparent;
+}
+
+section.right {
+  position: absolute;
+  right: 0px;
+  display: inline-flex;
+  margin-top: 25px;
+}
+
+section.right a {
+  padding: 10px 15px 10px 15px;
+}
+
+section.right div:nth-child(2) {
+  margin-right: 25px;
+}
+
+section.right div:nth-child(2) a:last-child {
+  background: #4386f9;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+section.right img {
+  height: 20px;
+  opacity: 0.5;
+  vertical-align: middle;
+}
+
+main {
+  padding: 200px;
+  text-align: center;
+}
+
+div input[type="text"] {
+  width: 484px;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  height: 44px;
+  margin-top: 20px;
+  outline: none;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.searchButtons {
+  border: none;
+  margin-top: 20px;
+}
+
+.searchButtons input[type="button"] {
+  border: 1px solid #d9d9d9;
+  padding: 10px;
+  background: #f4f4f4;
+  color: #5f6368;
+  margin: 0 5px;
+}
+
+.right a,
+.left a {
+  text-decoration: none;
+  color: #000;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: inline-flex;
+  background: #f2f2f2;
+  border-top: 1px solid #e4e4e4;
+}
+
+footer div {
+  padding: 15px;
+}
+
+footer div a {
+  padding: 15px;
+  opacity: 0.5;
+}
+
+footer div.right {
+  right: 0;
+  position: absolute;
+}

@@ -6,12 +6,15 @@
 
 <p align="center">
   <p align="center">Scoala Informala de IT</p>
-  <h2 align="center">Saptamana <span>1</span></h2>
-  <h3 align="center"></h3>
 
 </p>
-<div align="center">
+<div  align="center">
+  <h4 bgcolor="grey" align="center">Saptamana <span>1</span></h4>
   <a href="https://miualinionut.github.io/siit_06/Constantin.Mircea/s1/t01/index.html">Tema 01</a><br>
   <a href="https://miualinionut.github.io/siit_06/Constantin.Mircea/s1/t02/index.html">Tema 02</a><br>
   <a href="https://miualinionut.github.io/siit_06/Constantin.Mircea/s1/t03/index.html">Tema 03</a>
+
+  <h4 bgcolor="grey" align="center">Saptamana <span>2</span></h4>
+  <a href="https://miualinionut.github.io/siit_06/Constantin.Mircea/s2/t08/index.html">Tema 08</a><br>
+  <a href="https://miualinionut.github.io/siit_06/Constantin.Mircea/s2/t09/index.html">Tema 09</a>
 </div>
