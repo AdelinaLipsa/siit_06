@@ -1,0 +1,64 @@
+* {
+    font-size: 1.2em;
+    font-family: Helvetica, Arial, sans-serif;
+    color: darkolivegreen;
+
+}
+
+#blueP {
+    color: indigo
+}
+
+.column {
+    width: 32%;
+    text-align: center;
+    float: left;
+    border: 1px solid seagreen;
+        
+}
+
+#c1 {
+    background-color: lavender;
+    z-index: 11;
+}
+
+#c2 {
+    background-color: aquamarine;
+}
+
+#c3 {
+    background-color: beige;
+}
+
+#e1 {
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+    top: 87px;
+    left: 24px;
+    position: fixed;
+    z-index: 10;
+}
+#e2 {
+    margin: 38px;
+    width: 200px;
+    height: 165px;
+    background-color: lightseagreen;
+    position: relative;
+    z-index: 8;
+}
+#e3 {
+    width: 100px;
+    height: 100px;
+    background-color: lightpink;
+    position: absolute;
+    top: 260px;
+    left: 16px;
+    z-index: 9;
+}
+
+.d {
+    background-color: burlywood;
+    margin: 13px;
+    display: inline;
+}
