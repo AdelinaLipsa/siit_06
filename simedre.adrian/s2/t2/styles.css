@@ -1,0 +1,90 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F3F3F5;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.head{
+    background-color: #A9C056;
+    width: 100%;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 70px;
+    margin-left: 0px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    text-align: center;
+    top: 0;
+}
+.head h1{
+    margin-top: 0px;
+    color: white;
+    font-weight: normal;
+}
+.side{
+    width: 20%;
+    margin-left: 10%;
+    background-color: #4E5359;
+    display: inline-block;
+    position: fixed;  
+    float: left;  
+}
+.side a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    border-top: 3px solid #51565C;
+    border-left: 3px solid black;
+}
+.side a:hover{
+    border-left: 3px solid #A9C056;
+}
+.content{
+    display: inline-block;
+    width: 60%;
+    margin-left: 32%;
+}
+.content h1{
+    margin-top: 0px;
+    color: #BBBAC0;
+}
+.clicker {
+    width: 100%;;
+    background-color:white;
+    color: #A9C056;
+    outline:none;
+    cursor:pointer;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.hiddendiv{
+    display:none;
+    background-color:white;
+    width: 100%;
+    padding: 20px;
+}
+.hiddendiv p{
+    padding-top: 0px;
+    padding-bottom: 10px;
+    margin: 0px;
+}
+.clicker:focus + .hiddendiv{
+    display:block;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.clicker:focus{
+    margin-bottom: 0px;
+}
+.footer{
+    text-align: center;
+    padding-bottom: 30px;
+}
+.footer a{
+    text-decoration: none;
+    color: #4E5359;
+}
