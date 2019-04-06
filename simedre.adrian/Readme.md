@@ -18,6 +18,7 @@
   - Teme Saptamana 2
     - [Tema 01](https://miualinionut.github.io/siit_06/simedre.adrian/s2/t1/index.html)
     - [Tema 02](https://miualinionut.github.io/siit_06/simedre.adrian/s2/t2/index.html)
+    - [Tema 03](https://miualinionut.github.io/siit_06/simedre.adrian/s2/t3/index.html)
     - [Tema 04](https://miualinionut.github.io/siit_06/simedre.adrian/s2/t4/index.html)
     - [Tema 06](https://miualinionut.github.io/siit_06/simedre.adrian/s2/t6/index.html)
     - [Tema 07](https://miualinionut.github.io/siit_06/simedre.adrian/s2/t7/index.html)
