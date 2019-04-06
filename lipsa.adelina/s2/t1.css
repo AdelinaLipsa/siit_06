@@ -1,0 +1,23 @@
+#header_container {
+    height: 170px;
+    width: 760px;
+    background-image: url(featured4.jpg);
+    position: relative;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+#header {
+    position: absolute;
+    right: 100px;
+    top:30px;
+    font-family: sans-serif;
+    
+}
+
+#content {
+    width: 764px;
+    margin: auto;
+    border-width: 1.5px;
+    padding-bottom: 3px;
+}
