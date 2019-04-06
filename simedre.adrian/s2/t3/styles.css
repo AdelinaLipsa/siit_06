@@ -1,0 +1,78 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #DFF0F8;
+}
+.body{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.leftNav{
+    float: left;
+    background-color: #D0EB8E;
+    color: #627E05;
+    height: 200px;
+    padding-left: 30px;
+    width: 77%;
+    border: 2px solid #627E05;
+}
+.leftNav h1{
+    margin-top: 80px;
+}
+.rightNav{
+    float: right;
+    background-color: #FF973E;
+    height: 200px;
+    width: 20%;
+    text-align: center;
+    border: 2px solid #E58342;
+}
+.rightNav a{
+    display: block;
+    margin-top: 80px;
+    text-decoration: none;
+    color: white;
+}
+.nav{
+    width: 77.7%;
+    background-color: #FF973E;
+    border: 2px solid #E58342;
+    text-align: center;
+    padding-left: 30px;
+    margin-top: 3px;
+    float: left;
+    padding: 10px;
+}
+.nav a{
+    color: white;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.rightSide{
+    float: right;
+    width: 18%;
+    background-color: #D0EB8E;
+    border: 2px solid #627E05;
+    margin-top: 3px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+.rightSide h1{
+    color: blue;
+}
+.rightSide h3{
+    color: #627E05;
+}
+.content{
+    background-color: white;
+    float: left;
+    width: 75%;
+    padding-left: 35px;
+    padding-right: 25px;
+}
+.content h1{
+    color: blue;
+}
+.content h3{
+    margin-top: 50px;
+}
