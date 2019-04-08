@@ -41,13 +41,13 @@ var compareValuesAgain = function () {
 
             if (Number(a) < Number(b)) {
                 result = -1;
-                alert("Your result: " + result);
+                alert("Your result: " + result + "\nFirst number is smaller");
             } else if (Number(a) === Number(b)) {
                 result = 0;
-                alert("Your result: " + result);
+                alert("Your result: " + result + "\nNumbers are equal");
             } else {
                 result = 1;
-                alert("Your result: " + result);
+                alert("Your result: " + result + "\nFirst number is bigger");
             }
 
         } else {
