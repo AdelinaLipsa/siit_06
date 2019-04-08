@@ -1,11 +1,12 @@
 var a = 3;
 var b = 12;
-var N = 8;
+var N = 7;
+str = "abc"
 
 console.log("valoare initiala a=" + a);
 console.log("valoare initiala b=" + b);
 console.log("valoare initiala N=" + N);
-
+console.log("valoare initiala a str=" + str);
 console.log("");
 
 var temaI = function () {
@@ -117,3 +118,27 @@ var temaVII = function () {
     console.log("tema-punctul-7:" + " " + "suma este" + " " + temp);
 }
 temaVII();
+
+
+var temaVIII = function () {
+    var temp;
+    var invers = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+        temp = str.substr(i, 1);
+        var invers = invers + temp;
+    }
+    console.log("tema-punctul-8: " + invers);
+}
+
+temaVIII();
+
+var temaIX = function () {
+    temp = 0;
+    for (var i = 0; i <= N; i++) {
+        if (i % 2 != 0) {
+            temp = temp + i;
+        }
+    }
+    console.log("tema-punctul-9: " + "suma primelor N numere impare este " + temp);
+}
+temaIX();
