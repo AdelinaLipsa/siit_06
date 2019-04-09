@@ -1,30 +1,21 @@
 var compareValues = function () {
 
     var result;
-    var a = prompt("Insert first number:");
 
+    var a = prompt("Input first number:\nEx: 3");
+    a = Number(a);
 
-    if (parseInt(a)===0 || Number(a)) {
+    var b = prompt("Input second number:\nEx: 6");
+    b = Number(b);
 
-        var b = prompt("Insert second number:");
-
-        if (parseInt(b)===0 || Number(b)) {
-
-            if (Number(a) === Number(b)) {
-                result = true;
-                alert(result + "\nNumbers are the same!");
-            } else {
-                result = false;
-                alert(result + "\nNumbers are different!");
-            }
-
-        } else {
-            alert("This is not a number!\nTry again.");
-        }
-
+    if (a === b) {
+        result = true;
+        alert(result + "\nNumbers are the equal.");
     } else {
-        alert("This is not a number!\nTry again.");
+        result = false;
+        alert(result + "\nNumbers are different.");
     }
+
 }
 
 //---------------------------------------------------------------------------
@@ -32,121 +23,129 @@ var compareValues = function () {
 var compareValuesAgain = function () {
 
     var result;
-    var a = prompt("Insert first number:");
 
-    if (parseInt(a)===0 || Number(a)) {
+    var a = prompt("Input first number:\nEx: 3");
+    a = Number(a);
 
-        var b = prompt("Insert second second:");
+    var b = prompt("Input second number:\nEx: 6");
+    b = Number(b);
 
-        if (parseInt(b)===0 || Number(b)) {
+    if (a < b) {
+        result = -1;
+        alert("Your result: " + result + "\nFirst number is smaller.");
 
-            if (Number(a) < Number(b)) {
-                result = -1;
-                alert("Your result: " + result + "\nFirst number is smaller");
-            } else if (Number(a) === Number(b)) {
-                result = 0;
-                alert("Your result: " + result + "\nNumbers are equal");
-            } else {
-                result = 1;
-                alert("Your result: " + result + "\nFirst number is bigger");
-            }
-
-        } else {
-            alert("This is not a number!\nTry again.");
-        }
+    } else if (a === b) {
+        result = 0;
+        alert("Your result: " + result + "\nNumbers are equal.");
 
     } else {
-        alert("This is not a number!\nTry again.");
+        result = 1;
+        alert("Your result: " + result + "\nFirst number is bigger.");
     }
+
 }
 
 //---------------------------------------------------------------------------
 
 var returnMax = function () {
 
-    var a = prompt("Insert first number:");
+    var a = prompt("Input first number:\nEx: 3");
+    a = Number(a);
 
-    if (parseInt(a)===0 || Number(a)) {
+    var b = prompt("Input second number:\nEx: 6");
+    b = Number(b);
 
-        var b = prompt("Insert second second:");
-
-        if (parseInt(b)===0 || Number(b)) {
-
-            if (a > b) {
-                alert("Maximum is: " + a);
-            } else {
-                alert("Maximum is: " + b);
-            }
-
-        } else {
-            alert("This is not a number!\nTry again.");
-        }
-
+    if (a > b) {
+        alert("Maximum is: " + a);
     } else {
-        alert("This is not a number!\nTry again.");
+        alert("Maximum is: " + b);
     }
+
 }
 
 //---------------------------------------------------------------------------
 
 var returnMin = function () {
 
-    var a = prompt("Insert first number:");
+    var a = prompt("Input first number:\nEx: 3");
+    a = Number(a);
 
-    if (parseInt(a)===0 || Number(a)) {
+    var b = prompt("Input second number:\nEx: 6");
+    b = Number(b);
 
-        var b = prompt("Insert second number:");
-
-        if (parseInt(b)===0 || Number(b)) {
-
-            if (a < b) {
-                alert("Minimum is: " + a);
-            } else {
-                alert("Minimum is: " + b);
-            }
-
-        } else {
-            alert("This is not a number!\nTry again.");
-        }
-
+    if (a < b) {
+        alert("Minimum is: " + a);
     } else {
-        alert("This is not a number!\nTry again.");
+        alert("Minimum is: " + b);
     }
+
 }
 
 //---------------------------------------------------------------------------
 
 var sumNaturalNumbersN = function () {
 
-    var a = prompt("Insert limit number:");
+    var a = prompt("Input limit:\nEx: 8");
+    a = Number(a);
+
     var sum = 0;
     var natNr = 0;
 
-    if (parseInt(a)===0 || Number(a)) {
-        for (var i = 1; i <= Number(a); i++) {
-            natNr++;
-            sum = sum + natNr;
-        };
-        alert("Sum of first " + a + " natural numbers is: " + sum);
-    } else {
-        alert("This is not a number!\nTry again.");
-
+    for (var i = 1; i <= a; i++) {
+        natNr++;
+        sum = sum + natNr;
     }
+
+    alert("Sum of first " + a + " natural numbers is: " + sum);
+
 }
 
 //---------------------------------------------------------------------------
 
 var primeNumberCheck = function () {
 
-    var a = prompt("Insert number to check.")
+    var a = prompt("Input number to check:\nEx: 7")
+    a = Number(a);
+
     var divisor = 2;
     var isPrimeNumber = true;
 
-    if (parseInt(a)===0 || Number(a)) {
+    for (var i = 2; i < a; i++) {
 
-        for (var i = 2; i < Number(a); i++) {
+        if (a % divisor === 0) {
+            isPrimeNumber = false;
+        } else {
+            divisor++;
+        }
 
-            if ( Number(a) % divisor === 0 ) {
+    }
+
+    if (a !== 0 && a !== 1 && isPrimeNumber === true) {
+        alert("Number " + a + " is prime.")
+    } else {
+        alert("Nope! " + a + " not a prime number.")
+    }
+
+}
+
+//---------------------------------------------------------------------------
+
+var sumPrimeNumbersN = function () {
+
+    var a = prompt("Input limit:\nEx: 15");
+    a = Number(a);
+
+    var number = 2;
+    var divisor = 2;
+    var primeNumbersFound = 0;
+    var isPrimeNumber = true;
+    var sum = 0;
+
+    while (primeNumbersFound < a) {
+
+        for (var i = 2; i < number; i++) {
+
+            if ((number % divisor) === 0) {
                 isPrimeNumber = false;
             } else {
                 divisor++;
@@ -154,58 +153,95 @@ var primeNumberCheck = function () {
 
         }
 
-        if (Number(a)!==0 && Number(a)!==1 && isPrimeNumber === true) {
-            alert("Number " + a + " is prime.")
-        } else {
-            alert("Nope! " + a + " not a prime number.")
+        if (isPrimeNumber === true) {
+            primeNumbersFound++;
+            sum = sum + number;
         }
 
-    } else {
-        alert("This is not a number!\nTry again.");
+        number++;
+        divisor = 2;
+        isPrimeNumber = true;
+
     }
+
+    alert("Suma primelor " + a + " numere prime este: " + sum);
+
 }
 
 //---------------------------------------------------------------------------
 
-var sumPrimeNumbersN = function () {
+var reverseString = function () {
 
-    var a = prompt("Insert limit number");
-    var number = 2;
-    var divisor = 2;
-    var primeNumbersFound = 0;
-    var isPrimeNumber = true;
+    var string = prompt("Input string:\nEx: abcdef");
+    string = Array.from(string);
+
+    var stringReversed = [];
+    var lastElement;
+
+
+    while (string.length > 0) {
+        lastElement = string[string.length - 1];
+        stringReversed.push(lastElement);
+        string.pop();
+    }
+
+
+    alert("Reversed string: " + stringReversed.join(""));
+
+}
+
+//---------------------------------------------------------------------------
+
+var sumOddPositiveNumbersN = function () {
+
+    var a = prompt("Input limit:\nEx: 12");
+    a = Number(a);
+
+    var number = 0;
+    var oddNumbersFound = 0;
     var sum = 0;
 
-    if (parseInt(a)===0 || Number(a)) {
+    while (oddNumbersFound < Number(a)) {
 
-        while (primeNumbersFound < Number(a)) {
+        if (number % 2 !== 0) {
 
-            for (var i = 2; i < number; i++) {
-
-                if ((number % divisor) === 0) {
-                    isPrimeNumber = false;
-                } else {
-                    divisor++;
-                }
-
-            }
-
-            if (isPrimeNumber === true) {
-                primeNumbersFound++;
-                sum = sum + number;
-            }
-
-            number++;
-            divisor = 2;
-            isPrimeNumber = true;
-
+            oddNumbersFound++;
+            sum = sum + number;
         }
 
-        alert("Suma primelor " + a + " numere prime este: " + sum);
-
-    } else {
-
-        alert("This is not a number!\nTry again.");
+        number++;
 
     }
+
+    alert("Sum of first " + a + " positive odd numbers is: " + sum);
+
+}
+
+//---------------------------------------------------------------------------
+
+var findInArray = function () {
+
+    var arr = prompt("Input array of numbers:\nEx: 1,2,34,5,67");
+    arr = arr.split(",");
+    arr = arr.map(Number);
+
+    var x = prompt("Input number to find in array:\nEx: 5");
+    x = Number(x);
+
+    var isInArr;
+
+    for (i = 1; i < arr.length; i++) {
+
+        if (x === arr[i - 1]) {
+            isInArr = true;
+        }
+    }
+
+    if (isInArr === true) {
+        alert("Number " + x + " is in array!")
+
+    } else {
+        alert("Nope, not in array.")
+    }
+
 }
