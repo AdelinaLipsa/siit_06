@@ -27,6 +27,7 @@ var compareValues = function () {
     }
 }
 
+//---------------------------------------------------------------------------
 
 var compareValuesAgain = function () {
 
@@ -59,6 +60,8 @@ var compareValuesAgain = function () {
     }
 }
 
+//---------------------------------------------------------------------------
+
 var returnMax = function () {
 
     var a = prompt("Insert first number:");
@@ -82,8 +85,9 @@ var returnMax = function () {
     } else {
         alert("This is not a number!\nTry again.");
     }
-
 }
+
+//---------------------------------------------------------------------------
 
 var returnMin = function () {
 
@@ -108,9 +112,9 @@ var returnMin = function () {
     } else {
         alert("This is not a number!\nTry again.");
     }
-
 }
 
+//---------------------------------------------------------------------------
 
 var sumNaturalNumbersN = function () {
 
@@ -128,8 +132,9 @@ var sumNaturalNumbersN = function () {
         alert("This is not a number!\nTry again.");
 
     }
-
 }
+
+//---------------------------------------------------------------------------
 
 var primeNumberCheck = function () {
 
@@ -137,7 +142,7 @@ var primeNumberCheck = function () {
     var divisor = 2;
     var isPrimeNumber = true;
 
-    if (Number(a)) {
+    if (parseInt(a)===0 || Number(a)) {
 
         for (var i = 2; i < Number(a); i++) {
 
@@ -149,16 +154,18 @@ var primeNumberCheck = function () {
 
         }
 
-        if (Number(a)!==1 && isPrimeNumber === true) {
+        if (Number(a)!==0 && Number(a)!==1 && isPrimeNumber === true) {
             alert("Number " + a + " is prime.")
         } else {
             alert("Nope! " + a + " not a prime number.")
         }
 
     } else {
-        alert("This is not a valid number!\nTry again.");
+        alert("This is not a number!\nTry again.");
     }
 }
+
+//---------------------------------------------------------------------------
 
 var sumPrimeNumbersN = function () {
 
