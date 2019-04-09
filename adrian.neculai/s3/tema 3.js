@@ -1,7 +1,7 @@
 var a = 3;
 var b = 12;
 var N = 7;
-str = "abc"
+str = "hannah"
 var matrice = [4, 3, 2];
 var elMatrice = 11;
 
@@ -240,11 +240,19 @@ temaXIV();
 
 var temaXV = function () {
     var suma = 0;
-    for (var i = 0; i <= matrice.length - 1; i++) {
-        suma = suma + matrice[i];
+    for (var i = 0; i <= str.length - 1; i++) {
+        /*      console.log(str.substr(i, 1));
+              console.log(str.substr(str.length - i - 1, 1));  */
+        if (str.substr(i, 1) != str.substr(str.length - i - 1, 1)) {
+            gage = true;
+        } else {
+            gage = false;
+        }
     }
-
-    console.log("tema-punctul-15: suma este " + suma);
-
+    if (gage == true) {
+        console.log("tema-punctul-15: stringul NU este palintrom");
+    } else {
+        console.log("tema-punctul-15: stringul este palintrom");
+    }
 }
 temaXV();
