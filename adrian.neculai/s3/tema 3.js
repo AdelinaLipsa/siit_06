@@ -191,7 +191,6 @@ var temaXII = function () {
     for (var j = 0; j <= matrice.length - 1; j++) {
         if (matrice[j] < min) {
             min = matrice[j];
-            console.log("pe aici nu se trece");
         }
     }
     suma = max + min;
@@ -250,9 +249,9 @@ var temaXV = function () {
         }
     }
     if (gage == true) {
-        console.log("tema-punctul-15: stringul NU este palintrom");
+        console.log("tema-punctul-15: stringul NU este palindrom");
     } else {
-        console.log("tema-punctul-15: stringul este palintrom");
+        console.log("tema-punctul-15: stringul este palindrom");
     }
 }
 temaXV();
