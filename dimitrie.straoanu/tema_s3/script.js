@@ -1,4 +1,4 @@
-var compareValues = function () {
+var compareNumbers = function () {
 
     var result;
 
@@ -20,7 +20,7 @@ var compareValues = function () {
 
 //---------------------------------------------------------------------------
 
-var compareValuesAgain = function () {
+var compareNumbersAgain = function () {
 
     var result;
 
@@ -206,7 +206,7 @@ var sumOddPositiveNumbersN = function () {
         if (number % 2 !== 0) {
 
             oddNumbersFound++;
-            sum = sum + number;
+            sum += number;
         }
 
         number++;
@@ -221,7 +221,7 @@ var sumOddPositiveNumbersN = function () {
 
 var findInArray = function () {
 
-    var arr = prompt("Input array of numbers:\nEx: 1,2,34,5,67");
+    var arr = prompt("Input array of numbers:\nEx: 1,8,14,5,27");
     arr = arr.split(",");
     arr = arr.map(Number);
 
@@ -229,21 +229,153 @@ var findInArray = function () {
     x = Number(x);
 
     var isInArr;
-    var instances=0;
+    var duplicates = 0;
 
-    for (i = 1; i <= arr.length; i++) {
+    for (var i = 0; i < arr.length; i++) {
 
-        if (x === arr[i - 1]) {
+        if (x === arr[i]) {
             isInArr = true;
-            instances++;
+            duplicates++;
         }
     }
 
     if (isInArr === true) {
-        alert("Number " + x + " is in array " + instances + " times.")
+        alert("Number " + x + " is in array " + duplicates + " times.")
 
     } else {
         alert("Nope, not in array.")
     }
 
+}
+
+//---------------------------------------------------------------------------
+
+var maxInArray = function () {
+
+    var arr = prompt("Input array of numbers:\nEx: 1,8,14,5,27");
+    arr = arr.split(",");
+    arr = arr.map(Number);
+
+    var max = 0;
+
+    for (var i = 0; i < arr.length; i++) {
+
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+
+    }
+
+    alert("Maximum number in array is: " + max);
+
+
+}
+
+//---------------------------------------------------------------------------
+
+
+var sumMaxMinArray = function () {
+
+    var arr = prompt("Input array of numbers:\nEx: 1,8,14,5,27");
+    arr = arr.split(",");
+    arr = arr.map(Number);
+
+    var max = arr[0];
+    var min = arr[0];
+    var sum;
+
+
+    for (var i = 0; i < arr.length; i++) {
+
+        if (arr[i] > max) {
+            max = arr[i];
+        } else if (arr[i] < min) {
+            min = arr[i];
+        }
+
+    }
+
+    sum = min + max;
+
+    alert("Maximum number in array is: " + max + "\nMinimum number in array is: " + min + "\nSum is: " + sum);
+
+}
+
+var duplicateCheckArray = function () {
+
+    var arr = prompt("Input array of numbers:\nEx: 1,8,14,5,27");
+    arr = arr.split(",");
+    arr = arr.map(Number);
+
+    var x = 0;
+    var duplicates = 0;
+
+    while (x < arr.length) {
+
+        for (var i = 0; i < arr.length; i++) {
+
+            if (arr[i] === arr[x]) {
+                duplicates++;
+            }
+
+        }
+
+        x++;
+
+    }
+
+    if (duplicates > arr.length) {
+
+        alert("Array has duplicates");
+    } else {
+        alert("Nope, no duplicates found");
+    }
+
+}
+
+var multiplyPosNumArray = function () {
+
+    var arr = prompt("Input array of numbers:\nEx: 1,-8,14,5,-27");
+    arr = arr.split(",");
+    arr = arr.map(Number);
+    product = 1;
+
+    for (var i = 0; i < arr.length; i++) {
+
+        if (arr[i] > 0) {
+
+            product *= arr[i];
+
+        }
+    }
+
+    alert("Product of positive numbers in array is: " + product);
+
+}
+
+var palindromeCheck = function () {
+
+    var arr = prompt("Input string:\nEx: abcdcba");
+    arr = Array.from(arr);
+    
+    var firstElement = [];
+    var lastElement = [];
+    var isPalindrome = true;
+
+    while (arr.length > 1 && isPalindrome === true ) {
+        firstElement = arr[0];
+        lastElement = arr[arr.length - 1];
+
+        if (firstElement === lastElement) {
+            arr.shift();
+            arr.pop();
+        } else {
+            isPalindrome = false;
+        }
+    }
+    if (isPalindrome === true) {
+        alert("String is palindrome.");
+    } else {
+        alert("Nope, not a palindrome.");
+    }
 }
