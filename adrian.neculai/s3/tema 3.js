@@ -2,10 +2,15 @@ var a = 3;
 var b = 12;
 var N = 7;
 str = "abc"
+var matrice = [4, 3, 2];
+var elMatrice = 11;
 
 console.log("valoare initiala a=" + a);
 console.log("valoare initiala b=" + b);
 console.log("valoare initiala N=" + N);
+console.log("valoare initiala matrice=" + matrice);
+console.log("valoare initiala elMatrice=" + elMatrice);
+
 console.log("valoare initiala a str=" + str);
 console.log("");
 
@@ -139,6 +144,107 @@ var temaIX = function () {
             temp = temp + i;
         }
     }
-    console.log("tema-punctul-9: " + "suma primelor N numere impare este " + temp);
+    console.log("tema-punctul-9: " + "suma primelor " + N + " numere impare este " + temp);
 }
 temaIX();
+
+var temaX = function () {
+    for (var i = 0; i <= matrice.length - 1; i++) {
+        if (matrice[i] == elMatrice) {
+            counter = true;
+            break;
+        } else {
+            counter = false;
+        }
+    }
+    if (counter == true) {
+        console.log("tema-punctul-10: elementul este in array");
+    } else {
+        console.log("tema-punctul-10: elementul NU este in array");
+
+    }
+}
+temaX();
+
+
+var temaXI = function () {
+    max = 0;
+    for (var i = 0; i <= matrice.length - 1; i++) {
+        if (matrice[i] > max) {
+            max = matrice[i];
+        }
+    }
+    console.log("tema-punctul-11: maximul este " + max);
+}
+temaXI();
+
+
+var temaXII = function () {
+    var max = 0;
+    var min = matrice[0] + 1;
+    var suma = 0;
+    for (var i = 0; i <= matrice.length - 1; i++) {
+        if (matrice[i] > max) {
+            max = matrice[i];
+        }
+    }
+    for (var j = 0; j <= matrice.length - 1; j++) {
+        if (matrice[j] < min) {
+            min = matrice[j];
+            console.log("pe aici nu se trece");
+        }
+    }
+    suma = max + min;
+    console.log("tema-punctul-12: suma este " + suma);
+}
+temaXII();
+
+
+var temaXIII = function () {
+
+    for (var i = 0; i <= matrice.length - 1; i++) {
+        for (var j = 0; j <= matrice.length - 1; j++) {
+            /*       console.log("matrice i " + matrice[i]);
+                   console.log("matrice j " + matrice[j]);  */
+            if (matrice[i] == matrice[j] && i != j) {
+                counter = true;
+                console.log(counter);
+
+                break;
+            }
+
+        }
+    }
+    if (counter == true) {
+        console.log("tema-punctul-13: existe duplicate in array");
+    } else {
+        console.log("tema-punctul-13: nu exista duplicate in array");
+    }
+}
+temaXIII();
+
+
+
+var temaXIV = function () {
+    var suma = 0;
+    for (var i = 0; i <= matrice.length - 1; i++) {
+        suma = suma + matrice[i];
+    }
+
+    console.log("tema-punctul-14: suma este " + suma);
+
+}
+temaXIV();
+
+
+
+var temaXV = function () {
+    var suma = 0;
+    for (var i = 0; i <= matrice.length - 1; i++) {
+        suma = suma + matrice[i];
+    }
+
+    console.log("tema-punctul-15: suma este " + suma);
+
+}
+temaXV();
