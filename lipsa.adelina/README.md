@@ -10,8 +10,8 @@
     </ul>
     <h2>Session 2 </h2>
     <ul>
-        <li><a href="t8.html" target ="_blank">Fakebook</a></li>
-        <li><a href="t9.html" target ="_blank">Google</a></li>
+        <li><a href="s2/t8.html" target ="_blank">Fakebook</a></li>
+        <li><a href="s2/t9.html" target ="_blank">Google</a></li>
     </ul>
     <h2>Session 3 </h2>
     <ul>
