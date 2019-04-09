@@ -229,16 +229,18 @@ var findInArray = function () {
     x = Number(x);
 
     var isInArr;
+    var instances=0;
 
-    for (i = 1; i < arr.length; i++) {
+    for (i = 1; i <= arr.length; i++) {
 
         if (x === arr[i - 1]) {
             isInArr = true;
+            instances++;
         }
     }
 
     if (isInArr === true) {
-        alert("Number " + x + " is in array!")
+        alert("Number " + x + " is in array " + instances + " times.")
 
     } else {
         alert("Nope, not in array.")
