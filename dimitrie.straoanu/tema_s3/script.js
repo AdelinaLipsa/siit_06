@@ -4,11 +4,11 @@ var compareValues = function () {
     var a = prompt("Insert first number:");
 
 
-    if (Number(a)) {
+    if (parseInt(a)===0 || Number(a)) {
 
         var b = prompt("Insert second number:");
 
-        if (Number(b)) {
+        if (parseInt(b)===0 || Number(b)) {
 
             if (Number(a) === Number(b)) {
                 result = true;
@@ -33,11 +33,11 @@ var compareValuesAgain = function () {
     var result;
     var a = prompt("Insert first number:");
 
-    if (Number(a)) {
+    if (parseInt(a)===0 || Number(a)) {
 
         var b = prompt("Insert second second:");
 
-        if (Number(b)) {
+        if (parseInt(b)===0 || Number(b)) {
 
             if (Number(a) < Number(b)) {
                 result = -1;
@@ -63,11 +63,11 @@ var returnMax = function () {
 
     var a = prompt("Insert first number:");
 
-    if (Number(a)) {
+    if (parseInt(a)===0 || Number(a)) {
 
         var b = prompt("Insert second second:");
 
-        if (Number(b)) {
+        if (parseInt(b)===0 || Number(b)) {
 
             if (a > b) {
                 alert("Maximum is: " + a);
@@ -89,11 +89,11 @@ var returnMin = function () {
 
     var a = prompt("Insert first number:");
 
-    if (Number(a)) {
+    if (parseInt(a)===0 || Number(a)) {
 
         var b = prompt("Insert second number:");
 
-        if (Number(b)) {
+        if (parseInt(b)===0 || Number(b)) {
 
             if (a < b) {
                 alert("Minimum is: " + a);
@@ -118,7 +118,7 @@ var sumNaturalNumbersN = function () {
     var sum = 0;
     var natNr = 0;
 
-    if (Number(a)) {
+    if (parseInt(a)===0 || Number(a)) {
         for (var i = 1; i <= Number(a); i++) {
             natNr++;
             sum = sum + natNr;
@@ -141,7 +141,7 @@ var primeNumberCheck = function () {
 
         for (var i = 2; i < Number(a); i++) {
 
-            if ((Number(a) % divisor) === 0) {
+            if ( Number(a) % divisor === 0 ) {
                 isPrimeNumber = false;
             } else {
                 divisor++;
@@ -149,14 +149,14 @@ var primeNumberCheck = function () {
 
         }
 
-        if (isPrimeNumber === true) {
+        if (Number(a)!==1 && isPrimeNumber === true) {
             alert("Number " + a + " is prime.")
         } else {
             alert("Nope! " + a + " not a prime number.")
         }
 
     } else {
-        alert("This is not a number!\nTry again.");
+        alert("This is not a valid number!\nTry again.");
     }
 }
 
@@ -169,7 +169,7 @@ var sumPrimeNumbersN = function () {
     var isPrimeNumber = true;
     var sum = 0;
 
-    if (Number(a)) {
+    if (parseInt(a)===0 || Number(a)) {
 
         while (primeNumbersFound < Number(a)) {
 
