@@ -1,3 +1,4 @@
+//01---------------------------------------------------------------------------
 var compareNumbers = function () {
 
     var result;
@@ -18,7 +19,7 @@ var compareNumbers = function () {
 
 }
 
-//---------------------------------------------------------------------------
+//02---------------------------------------------------------------------------
 
 var compareNumbersAgain = function () {
 
@@ -45,7 +46,7 @@ var compareNumbersAgain = function () {
 
 }
 
-//---------------------------------------------------------------------------
+//03---------------------------------------------------------------------------
 
 var returnMax = function () {
 
@@ -63,7 +64,7 @@ var returnMax = function () {
 
 }
 
-//---------------------------------------------------------------------------
+//04---------------------------------------------------------------------------
 
 var returnMin = function () {
 
@@ -81,7 +82,7 @@ var returnMin = function () {
 
 }
 
-//---------------------------------------------------------------------------
+//05---------------------------------------------------------------------------
 
 var sumNaturalNumbersN = function () {
 
@@ -100,7 +101,7 @@ var sumNaturalNumbersN = function () {
 
 }
 
-//---------------------------------------------------------------------------
+//06---------------------------------------------------------------------------
 
 var primeNumberCheck = function () {
 
@@ -112,8 +113,9 @@ var primeNumberCheck = function () {
 
     for (var i = 2; i < a; i++) {
 
-        if (a % divisor === 0) {
+        if ((a % divisor) === 0) {
             isPrimeNumber = false;
+            break;
         } else {
             divisor++;
         }
@@ -128,7 +130,7 @@ var primeNumberCheck = function () {
 
 }
 
-//---------------------------------------------------------------------------
+//07---------------------------------------------------------------------------
 
 var sumPrimeNumbersN = function () {
 
@@ -147,10 +149,10 @@ var sumPrimeNumbersN = function () {
 
             if ((number % divisor) === 0) {
                 isPrimeNumber = false;
-            } else {
-                divisor++;
-            }
-
+                break;
+            } 
+            divisor++;
+            
         }
 
         if (isPrimeNumber === true) {
@@ -161,14 +163,15 @@ var sumPrimeNumbersN = function () {
         number++;
         divisor = 2;
         isPrimeNumber = true;
-
     }
 
     alert("Suma primelor " + a + " numere prime este: " + sum);
-
 }
 
-//---------------------------------------------------------------------------
+
+
+
+//08---------------------------------------------------------------------------
 
 var reverseString = function () {
 
@@ -176,7 +179,7 @@ var reverseString = function () {
     string = Array.from(string);
 
     var stringReversed = [];
-    var lastElement;
+    var lastElement = [];
 
 
     while (string.length > 0) {
@@ -190,9 +193,9 @@ var reverseString = function () {
 
 }
 
-//---------------------------------------------------------------------------
+//09---------------------------------------------------------------------------
 
-var sumOddPositiveNumbersN = function () {
+var sumOddNumbersN = function () {
 
     var a = prompt("Input limit:\nEx: 12");
     a = Number(a);
@@ -217,7 +220,7 @@ var sumOddPositiveNumbersN = function () {
 
 }
 
-//---------------------------------------------------------------------------
+//10---------------------------------------------------------------------------
 
 var findInArray = function () {
 
@@ -248,7 +251,7 @@ var findInArray = function () {
 
 }
 
-//---------------------------------------------------------------------------
+//11---------------------------------------------------------------------------
 
 var maxInArray = function () {
 
@@ -271,7 +274,7 @@ var maxInArray = function () {
 
 }
 
-//---------------------------------------------------------------------------
+//12---------------------------------------------------------------------------
 
 
 var sumMaxMinArray = function () {
@@ -300,6 +303,9 @@ var sumMaxMinArray = function () {
     alert("Maximum number in array is: " + max + "\nMinimum number in array is: " + min + "\nSum is: " + sum);
 
 }
+
+//13---------------------------------------------------------------------------
+
 
 var duplicateCheckArray = function () {
 
@@ -333,6 +339,9 @@ var duplicateCheckArray = function () {
 
 }
 
+//14---------------------------------------------------------------------------
+
+
 var multiplyPosNumArray = function () {
 
     var arr = prompt("Input array of numbers:\nEx: 1,-8,14,5,-27");
@@ -353,16 +362,18 @@ var multiplyPosNumArray = function () {
 
 }
 
+//15---------------------------------------------------------------------------
+
 var palindromeCheck = function () {
 
     var arr = prompt("Input string:\nEx: abcdcba");
     arr = Array.from(arr);
-    
+
     var firstElement = [];
     var lastElement = [];
     var isPalindrome = true;
 
-    while (arr.length > 1 && isPalindrome === true ) {
+    while (arr.length > 1 && isPalindrome === true) {
         firstElement = arr[0];
         lastElement = arr[arr.length - 1];
 
