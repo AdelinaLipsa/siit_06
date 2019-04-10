@@ -116,9 +116,9 @@ var primeNumberCheck = function () {
         if ((a % divisor) === 0) {
             isPrimeNumber = false;
             break;
-        } else {
-            divisor++;
         }
+        divisor++;
+
 
     }
 
@@ -150,9 +150,9 @@ var sumPrimeNumbersN = function () {
             if ((number % divisor) === 0) {
                 isPrimeNumber = false;
                 break;
-            } 
+            }
             divisor++;
-            
+
         }
 
         if (isPrimeNumber === true) {
