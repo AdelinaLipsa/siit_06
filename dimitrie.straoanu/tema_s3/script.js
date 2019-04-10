@@ -33,15 +33,15 @@ var compareNumbersAgain = function () {
 
     if (a < b) {
         result = -1;
-        alert("Your result: " + result + "\nFirst number is smaller.");
+        alert(result + "\nFirst number is smaller.");
 
     } else if (a === b) {
         result = 0;
-        alert("Your result: " + result + "\nNumbers are equal.");
+        alert(result + "\nNumbers are equal.");
 
     } else {
         result = 1;
-        alert("Your result: " + result + "\nFirst number is bigger.");
+        alert(result + "\nFirst number is bigger.");
     }
 
 }
