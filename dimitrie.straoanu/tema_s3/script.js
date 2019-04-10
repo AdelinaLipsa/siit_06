@@ -11,7 +11,7 @@ var compareNumbers = function () {
 
     if (a === b) {
         result = true;
-        alert(result + "\nNumbers are the equal.");
+        alert(result + "\nNumbers are equal.");
     } else {
         result = false;
         alert(result + "\nNumbers are different.");
@@ -168,9 +168,6 @@ var sumPrimeNumbersN = function () {
     alert("Suma primelor " + a + " numere prime este: " + sum);
 }
 
-
-
-
 //08---------------------------------------------------------------------------
 
 var reverseString = function () {
@@ -271,11 +268,9 @@ var maxInArray = function () {
 
     alert("Maximum number in array is: " + max);
 
-
 }
 
 //12---------------------------------------------------------------------------
-
 
 var sumMaxMinArray = function () {
 
@@ -286,7 +281,6 @@ var sumMaxMinArray = function () {
     var max = arr[0];
     var min = arr[0];
     var sum;
-
 
     for (var i = 0; i < arr.length; i++) {
 
@@ -305,7 +299,6 @@ var sumMaxMinArray = function () {
 }
 
 //13---------------------------------------------------------------------------
-
 
 var duplicateCheckArray = function () {
 
@@ -340,7 +333,6 @@ var duplicateCheckArray = function () {
 }
 
 //14---------------------------------------------------------------------------
-
 
 var multiplyPosNumArray = function () {
 

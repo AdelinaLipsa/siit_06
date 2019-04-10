@@ -7,7 +7,6 @@
 body {
     font-family: 'Lato', sans-serif;
     color: #333;
-
 }
 
 h1,
@@ -20,44 +19,37 @@ p {
 h1 {
     text-transform: uppercase;
     background: rgb(218, 247, 210);
-    
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
     background: #e4e4e4;
-    
-
 }
 
 p {
     line-height: 1.5em;
 }
+
 .clearFix::after {
-content: "";
-display: table;
-clear:both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .container {
     margin: 1em;
     /* border: 1px dashed; */
 }
-.col{
-    float:left;
-    width:33.33%;
-    
+
+.col {
+    float: left;
+    width: 33.33%;
 }
 
 .content {
-    
-    
-    margin:1em;
+    margin: 1em;
     padding: 1em;
     background: lightgray;
-    
-    
-
 }
 
 button {
@@ -68,61 +60,50 @@ button {
     font-weight: 900;
     background: rgb(218, 247, 210);
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    
-   
-    
-
 }
 
 button:hover {
-
     transform: scale(1.1);
-
-
 }
 
 button:focus {
     outline: none;
 }
 
-.col:nth-of-type(3n+1){
-    clear:left;
+.col:nth-of-type(3n+1) {
+    clear: left;
 }
 
-@media only screen and (max-width:1150px) and (min-width:640px){
+@media only screen and (max-width:1150px) and (min-width:640px) {
 
-    .col:nth-of-type(3n+1){
-        clear:none;
+    .col:nth-of-type(3n+1) {
+        clear: none;
     }
 
-    .col:nth-of-type(2n+1){
-        clear:left;
+    .col:nth-of-type(2n+1) {
+        clear: left;
     }
 
-    .col{
-        float:left;
-        width:50%;
-        
+    .col {
+        float: left;
+        width: 50%;
     }
-    
-
 
 }
 
-@media only screen and (max-width:639px){
+@media only screen and (max-width:639px) {
 
-    .col:nth-of-type(3n+1){
-        clear:none;
+    .col:nth-of-type(3n+1) {
+        clear: none;
     }
-    .container{
+
+    .container {
         text-align: center;
     }
- 
 
-    .col{
-        float:left;
+    .col {
+        float: left;
         width: 100%;
-        
     }
 
 }
