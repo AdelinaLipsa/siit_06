@@ -1,5 +1,5 @@
 //O functie care intoarce suma primelor N numere naturale pozitive
-var N;
+var N= 2;
 
 function input(N) {
     var sum=0;

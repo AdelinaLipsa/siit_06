@@ -7,3 +7,5 @@ function nrPrim (n) {
     return n>1;
 }
 console.log (nrPrim(n));
+
+//formula matematica n(n+1)/2
