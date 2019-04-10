@@ -90,11 +90,11 @@ var sumNaturalNumbersN = function () {
     a = Number(a);
 
     var sum = 0;
-    var natNr = 0;
+    
 
     for (var i = 1; i <= a; i++) {
-        natNr++;
-        sum = sum + natNr;
+        
+        sum += i;
     }
 
     alert("Sum of first " + a + " natural numbers is: " + sum);
