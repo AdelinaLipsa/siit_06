@@ -11,7 +11,7 @@ var compareNumbers = function () {
 
     if (a === b) {
         result = true;
-        alert(result + "\nNumbers are the equal.");
+        alert(result + "\nNumbers are equal.");
     } else {
         result = false;
         alert(result + "\nNumbers are different.");
