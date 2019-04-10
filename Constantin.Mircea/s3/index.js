@@ -1,3 +1,5 @@
+const reset = document.getElementsByClassName('myForm');
+
 var trueORfalse = function() {
   /*Tema 1
   O functie care compara 2 valori si returneaza true daca sunt egale si false daca nu sunt egale.*/
@@ -11,6 +13,10 @@ var trueORfalse = function() {
     output.style.color = "red";
     output.innerHTML = false;
   }
+  setTimeout(function() {
+    reset[0].reset();
+    output.innerHTML = "";
+  }, 3000);
 };
 
 var greaterORless = function() {
@@ -31,6 +37,10 @@ var greaterORless = function() {
     output.style.color = "green";
     output.innerHTML = 1;
   }
+  setTimeout(function() {
+    reset[1].reset();
+    output.innerHTML = "";
+  }, 3000);
 };
 
 var maxNumber = function() {
@@ -41,6 +51,10 @@ var maxNumber = function() {
   let getNumber = document.getElementsByClassName("number");
 
   output.innerHTML = Math.max(getNumber[4].value, getNumber[5].value);
+  setTimeout(function() {
+    reset[2].reset();
+    output.innerHTML = "";
+  }, 3000);
 };
 
 var minNumber = function() {
@@ -51,6 +65,10 @@ var minNumber = function() {
   let getNumber = document.getElementsByClassName("number");
 
   output.innerHTML = Math.min(getNumber[6].value, getNumber[7].value);
+  setTimeout(function() {
+    reset[3].reset();
+    output.innerHTML = "";
+  }, 3000);
 };
 
 var primNumbersPositive = function() {
@@ -63,6 +81,10 @@ var primNumbersPositive = function() {
   for (let i = 1; i <= getNumber[8].value; i++) {
     output.innerHTML = sum += i;
   }
+  setTimeout(function() {
+    reset[4].reset();
+    output.innerHTML = "";
+  }, 3000);
 };
 
 var nPrimNumbers = function() {
@@ -84,6 +106,10 @@ var nPrimNumbers = function() {
   } else {
     output.innerHTML = getNumber[9].value + " " + "nu este prim.";
   }
+  setTimeout(function() {
+    reset[5].reset();
+    output.innerHTML = "";
+  }, 3000);
 };
 
 var primNumbers = function() {
@@ -110,6 +136,10 @@ var primNumbers = function() {
     n++;
   }
   output.innerHTML = sum;
+  setTimeout(function() {
+    reset[6].reset();
+    output.innerHTML = "";
+  }, 3000);
 };
 
 var reverseString = function() {
@@ -124,6 +154,10 @@ var reverseString = function() {
     v += s[i];
   }
   output.innerHTML = v;
+  setTimeout(function() {
+    reset[7].reset();
+    output.innerHTML = "";
+  }, 3000);
 }
 
 var oddPositiveNumbers = function() {
@@ -139,6 +173,10 @@ var oddPositiveNumbers = function() {
     cifra += 2;
   }
   output.innerHTML = sum;
+  setTimeout(function() {
+    reset[8].reset();
+    output.innerHTML = "";
+  }, 3000);
 }
 
 var xInArray = document.getElementById("xInArray").onclick = function() {
@@ -161,6 +199,10 @@ var xInArray = document.getElementById("xInArray").onclick = function() {
     output.innerHTML = x + ' nu apartine vectorului.';
   }
   checkXInArray();
+  setTimeout(function() {
+    reset[9].reset();
+    output.innerHTML = "";
+  }, 3000);
 }
 
 var maxOfArray = function(arr) {
@@ -177,6 +219,10 @@ var maxOfArray = function(arr) {
     }
   }
   output.innerHTML = Number(max);
+  setTimeout(function() {
+    reset[10].reset();
+    output.innerHTML = "";
+  }, 3000);
 }
 
 var sumMaxMinArray = function(arr) {
@@ -199,6 +245,10 @@ var sumMaxMinArray = function(arr) {
   }
   sum = Number(max) + Number(min);
   output.innerHTML = sum;
+  setTimeout(function() {
+    reset[11].reset();
+    output.innerHTML = "";
+  }, 3000);
 }
 
 var doubleInArray = function(arr) {
@@ -218,6 +268,10 @@ var doubleInArray = function(arr) {
       }
     }
   }
+  setTimeout(function() {
+    reset[12].reset();
+    output.innerHTML = "";
+  }, 3000);
 }
 
 var produsOfArray = function(arr) {
@@ -232,6 +286,10 @@ var produsOfArray = function(arr) {
     sum *= Number(arr[i]);
   }
   output.innerHTML = sum;
+  setTimeout(function() {
+    reset[13].reset();
+    output.innerHTML = "";
+  }, 3000);
 }
 
 
@@ -249,4 +307,8 @@ var palindrom = function(palindromString) {
     }
   }
   output.innerHTML = 'Palindrome';
+  setTimeout(function() {
+    reset[14].reset();
+    output.innerHTML = "";
+  }, 3000);
 }
