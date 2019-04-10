@@ -191,19 +191,19 @@ var sumOddNumbersN = function () {
     var a = prompt("Input limit:\nEx: 12");
     a = Number(a);
 
-    var number = 0;
+    var n = 0;
     var oddNumbersFound = 0;
     var sum = 0;
 
-    while (oddNumbersFound < Number(a)) {
+    while (oddNumbersFound < a) {
 
-        if (number % 2 !== 0) {
+        if (n % 2 !== 0) {
 
             oddNumbersFound++;
-            sum += number;
+            sum += n;
         }
 
-        number++;
+        n++;
 
     }
 
