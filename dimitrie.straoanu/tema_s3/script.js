@@ -108,17 +108,14 @@ var primeNumberCheck = function () {
     var a = prompt("Input number to check:\nEx: 7")
     a = Number(a);
 
-    var divisor = 2;
     var isPrimeNumber = true;
 
-    for (var i = 2; i < a; i++) {
+    for (var i = 2; i <= a/2; i++) {
 
-        if ((a % divisor) === 0) {
+        if ((a % i) === 0) {
             isPrimeNumber = false;
             break;
         }
-        divisor++;
-
 
     }
 
@@ -137,31 +134,28 @@ var sumPrimeNumbersN = function () {
     var a = prompt("Input limit:\nEx: 15");
     a = Number(a);
 
-    var number = 2;
-    var divisor = 2;
+    var n = 2;
     var primeNumbersFound = 0;
     var isPrimeNumber = true;
     var sum = 0;
 
     while (primeNumbersFound < a) {
 
-        for (var i = 2; i < number; i++) {
+        for (var i = 2; i <= n/2; i++) {
 
-            if ((number % divisor) === 0) {
+            if ((n % i) === 0) {
                 isPrimeNumber = false;
                 break;
             }
-            divisor++;
 
         }
 
         if (isPrimeNumber === true) {
             primeNumbersFound++;
-            sum = sum + number;
+            sum += n;
         }
 
-        number++;
-        divisor = 2;
+        n++;
         isPrimeNumber = true;
     }
 
