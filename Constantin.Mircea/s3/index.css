@@ -1,0 +1,146 @@
+* {
+  margin: auto;
+  padding: 0;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+body {
+  background-color: #dfdfdf;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, .5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, .5) 0.5px, transparent 0.5px),
+    linear-gradient(rgba(0, 0, 0, .5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, .5) 0.5px, transparent 0.5px);
+  background-size: 100px 0px, 100px 0px, 20px 20px, 20px 20px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  height: 100vh;
+}
+
+.popup {
+  width: calc(100% - 10px);
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.719);
+  display: none;
+  position: absolute;
+  padding: 10px 5px;
+}
+
+.header:hover+.popup {
+  display: block;
+  z-index: 1;
+}
+
+.rand {
+  display: flex;
+  padding-top: 5px;
+  max-width: 1300px;
+  width: 90%;
+}
+
+div.card {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  border-radius: 15px;
+  margin: 10px 15px auto;
+  position: relative;
+}
+
+div.header {
+  background-image: linear-gradient(to bottom, #003B35, #007669);
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom: solid 1px #000;
+}
+
+div.container {
+  background-color: #007244;
+  padding: 10px;
+}
+
+input[type="number"] {
+  outline: none;
+  padding: 5px 5px;
+  margin: 5px 0 0 0;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  text-align: center;
+  font-weight: bold;
+  background: transparent;
+  color: #fff;
+
+}
+
+input[type="number"]:focus {
+  transition: .5s;
+  color: #fff;
+  border-bottom-style: solid;
+}
+
+
+input[type="text"] {
+  outline: none;
+  padding: 5px 5px;
+  margin: 5px 0 0 0;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  text-align: center;
+  font-weight: bold;
+  background: transparent;
+  color: #fff;
+}
+
+::placeholder {
+  color: white;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="text"]:focus {
+  transition: .5s;
+  color: #fff;
+  border-bottom-style: solid;
+}
+
+input[type="button"] {
+  border: none;
+  padding: 5px 15px;
+  margin-top: 5px;
+  background: #4CAF50;
+  color: #fff;
+  font-weight: bold;
+  width: 187px;
+  border-radius: 5px;
+  opacity: 0.9;
+
+}
+
+input[type="button"]:hover {
+  opacity: 1;
+  transition: .5s;
+}
+
+input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.output {
+  min-height: 25px;
+  padding: 10px 0;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-image: linear-gradient(to bottom, #b9b9b9, #616161);
+  border-top: solid 1px #000;
+
+}

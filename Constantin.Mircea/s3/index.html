@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="author" content="Mircea Constantin" />
+  <meta charset="utf-8" />
+  <title>JavaScript 1</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <section>
+    <div class="rand">
+      <!--Tema 1-->
+      <div class="card">
+        <div class="header">
+          <span>1.</span>
+          True <b>OR</b> False
+        </div>
+        <div class="popup">
+          O functie care compara 2 valori si returneaza true daca sunt egale
+          si false daca nu sunt egale.
+        </div>
+        <div class="container">
+          <form class="myForm" action="index.html" method="post">
+            <input class="number" type="number" placeholder="Number" />
+            <input class="number" type="number" placeholder="Number" />
+            <input type="button" onclick="trueORfalse()" name="" value="Check" />
+          </form>
+        </div>
+        <div class="output"></div>
+      </div>
+      <!--Tema 2-->
+      <div class="card">
+        <div class="header">
+          <span>2.</span>
+          Greater <b>OR</b> Less
+        </div>
+        <div class="popup">
+          O functie care compara 2 valori si returneaza -1 daca primul e mai
+          mic ca al doilea, 0 daca sunt egale si 1 daca primul e mai mare ca
+          al doilea.
+        </div>
+        <div class="container">
+          <form class="myForm" action="index.html" method="post">
+            <input class="number" type="number" placeholder="Number" />
+            <input class="number" type="number" placeholder="Number" />
+            <input type="button" onclick="greaterORless()" name="" value="Check" />
+          </form>
+        </div>
+        <div class="output"></div>
+      </div>
+      <!--Tema 3-->
+      <div class="card">
+        <div class="header">
+          <span>3.</span>
+          Max Number
+        </div>
+        <div class="popup">
+          O functie care primeste 2 valori si returneaza maximul dintre cele
+          2.
+        </div>
+        <div class="container">
+          <form class="myForm" action="index.html" method="post">
+            <input class="number" type="number" placeholder="Number" />
+            <input class="number" type="number" placeholder="Number" />
+            <input type="button" onclick="maxNumber()" name="" value="Check" />
+          </form>
+        </div>
+        <div class="output"></div>
+      </div>
+      <!--Tema 4-->
+      <div class="card">
+        <div class="header">
+          <span>4.</span>
+          Min Number
+        </div>
+        <div class="popup">
+          O functie care primeste 2 valori si returneaza minimul dintre cele
+          2.
+        </div>
+        <div class="container">
+          <form class="myForm" action="index.html" method="post">
+            <input class="number" type="number" placeholder="Number" />
+            <input class="number" type="number" placeholder="Number" />
+            <input type="button" onclick="minNumber()" name="" value="Check" />
+          </form>
+        </div>
+        <div class="output"></div>
+      </div>
+      <!--Tema 5-->
+      <div class="card">
+        <div class="header">
+          <span>5.</span>
+          Prime Numbers Positive
+        </div>
+        <div class="popup">
+          O functie care intoarce suma primelor N numere naturale pozitive.
+        </div>
+        <div class="container">
+          <form class="myForm" action="index.html" method="post">
+            <input class="number" type="number" placeholder="Number" />
+            <input type="button" onclick="primNumbersPositive()" name="" value="Check" />
+          </form>
+        </div>
+        <div class="output"></div>
+      </div>
+    </div>
+    <div class="rand">
+      <!--Tema 6-->
+      <div class="card">
+        <div class="header">
+          <span>6.</span>
+          N Prime Number
+        </div>
+        <div class="popup">
+          O functie care verifica daca N este numar prim (restul impartirii la
+          1 si la N ==0).
+        </div>
+        <div class="container">
+          <form class="myForm" action="index.html" method="post">
+            <input class="number" type="number" placeholder="Number" />
+            <input type="button" onclick="nPrimNumbers()" name="" value="Check" />
+          </form>
+        </div>
+        <div class="output"></div>
+      </div>
+      <!--Tema 7-->
+      <div class="card">
+        <div class="header">
+          <span>7.</span>
+          Prime Numbers
+        </div>
+        <div class="popup">
+          O functie care intoarce suma primelor N numere prime.
+        </div>
+        <div class="container">
+          <form class="myForm" action="index.html" method="post">
+            <input class="number" type="number" placeholder="Number" />
+            <input type="button" onclick="primNumbers()" name="" value="Check" />
+          </form>
+        </div>
+        <div class="output"></div>
+      </div>
+      <!--Tema 8-->
+      <div class="card">
+        <div class="header">
+          <span>8.</span>
+          Reverse String
+        </div>
+        <div class="popup">
+          O functie care primeste un parametru de tip string si intoarce inversul acestuia (abc => cba).
+        </div>
+        <div class="container">
+          <form class="myForm" action="index.html" method="post">
+            <input class="number" type="text" placeholder="String" />
+            <input type="button" onclick="reverseString()" name="" value="Check" />
+          </form>
+        </div>
+        <div class="output"></div>
+      </div>
+      <!--Tema 9-->
+      <div class="card">
+        <div class="header">
+          <span>9.</span>
+          Odd Positive Numbers
+        </div>
+        <div class="popup">
+          O functie care intoarce produsul primelor N numere impare pozitive.
+        </div>
+        <div class="container">
+          <form class="myForm" action="index.html" method="post">
+            <input class="number" type="number" placeholder="Number" />
+            <input type="button" onclick="oddPositiveNumbers()" name="" value="Check" />
+          </form>
+        </div>
+        <div class="output"></div>
+      </div>
+      <!--Tema 10-->
+      <div class="card">
+        <div class="header">
+          <span>10.</span>
+          X in Array
+        </div>
+        <div class="popup">
+          O functie care primeste 2 parametri(arr - array de nr intregi si x - numar) si verifica daca x exista in
+          array.
+        </div>
+        <div class="container">
+          <form class="myForm" action="index.html" method="post">
+            <input class="number" type="text" placeholder="Number" />
+            <input class="number" type="number" placeholder="Number" />
+            <input type="button" id="xInArray" value="Check" />
+          </form>
+        </div>
+        <div class="output"></div>
+      </div>
+    </div>
+    <div class="rand">
+      <!--Tema 11-->
+      <div class="card">
+        <div class="header">
+          <span>11.</span>
+          Max in Array
+        </div>
+        <div class="popup">
+          O functie care intoarce maximul dintr-un array primit ca parametru.
+        </div>
+        <div class="container">
+          <form class="myForm" action="index.html" method="post">
+            <input class="number" type="text" placeholder="Number" />
+            <input type="button" onclick="maxOfArray()" name="" value="Check" />
+          </form>
+        </div>
+        <div class="output"></div>
+      </div>
+      <!--Tema 12-->
+      <div class="card">
+        <div class="header">
+          <span>12.</span>
+          Sum of Max & Min Array
+        </div>
+        <div class="popup">
+          O functie care intoarce suma dintre max si min, dintr-un array primit ca parametru.
+        </div>
+        <div class="container">
+          <form class="myForm" action="index.html" method="post">
+            <input class="number" type="text" placeholder="Number" />
+            <input type="button" onclick="sumMaxMinArray()" name="" value="Check" />
+          </form>
+        </div>
+        <div class="output"></div>
+      </div>
+      <!--Tema 13-->
+      <div class="card">
+        <div class="header">
+          <span>13.</span>
+          Double in Array
+        </div>
+        <div class="popup">
+          O functie care verifica daca exista duplicate intr-un array primit ca parametru.
+        </div>
+        <div class="container">
+          <form class="myForm" action="index.html" method="post">
+            <input class="number" type="text" placeholder="Number" />
+            <input type="button" onclick="doubleInArray()" name="" value="Check" />
+          </form>
+        </div>
+        <div class="output"></div>
+      </div>
+      <!--Tema 14-->
+      <div class="card">
+        <div class="header">
+          <span>14.</span>
+          Product of Array
+        </div>
+        <div class="popup">
+          O functie care intoarce produsul numerelor pozitive intr-un array primit ca parametru.
+        </div>
+        <div class="container">
+          <form class="myForm" action="index.html" method="post">
+            <input class="number" type="text" placeholder="Number" />
+            <input type="button" onclick="produsOfArray()" value="Check" />
+          </form>
+        </div>
+        <div class="output"></div>
+      </div>
+      <!--Tema 15-->
+      <div class="card">
+        <div class="header">
+          <span>15.</span>
+          Palindrome
+        </div>
+        <div class="popup">
+          O functie care verifica daca un string primit ca parametru este palindrom (inversul == originalul, ex: abcba
+          == abcba, abca != acba.
+        </div>
+        <div class="container">
+          <form class="myForm" action="index.html" method="post">
+            <input class="number" type="text" placeholder="String" />
+            <input type="button" onclick="palindrom()" value="Check" />
+          </form>
+        </div>
+        <div class="output"></div>
+      </div>
+    </div>
+  </section>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>
