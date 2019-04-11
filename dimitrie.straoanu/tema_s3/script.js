@@ -381,24 +381,34 @@ var palindromeCheck = function () {
 
 function primeCheck_V2(number) {
 
+    if (number < 2) return false;
+
     if ((number === 2) || (number === 3)) return true;
-    
-    var isPrime;
 
-    for (divisor = 2; divisor <= number/2 ; divisor++) {
+    for (divisor = 2; divisor <= number / 2; divisor++) {
 
-        if (number % divisor === 0){
-            isPrime = false;
-            break;
-        } else {
-            isPrime = true;
-        }      
-        
-    }    
+        if (number % divisor === 0) {
+            return false;
+        }
 
-    if (isPrime === true){
-        return true;
-    } else {
-        return false;
     }
+
+    return true;
+
+}
+
+function sumPrimeN_V2(n){
+    
+    var sum = 0;
+    var primeFound=0;
+
+    for(var i = 2; primeFound<n; i++){
+
+        if (primeCheck_V2(i)===true){
+            sum+=i;
+            primeFound++;
+        }
+    }
+    return sum;
+
 }
