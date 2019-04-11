@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<head>
+    <title>Tema JS part 1</title>
+    <meta name="author" content="Simedre Adrian">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <h1>Tema JS part 1</h1>
+    <p>1.O functie care compara 2 valori si returneaza true daca sunt egale si false daca nu sunt egale</p>
+    <input type="number" id="number1" value="">
+    <input type="number" id="number2" value=""></br>
+    <button onclick="compara1()">Verifica</button>
+    <p>Rezultat:</p>
+    <p id="demo1" class="result"></p>
+<hr>
+    <p>2.O functie care compara 2 valori si returneaza -1 daca primul e mai mic ca al doilea, 0 daca sunt egale si 1 daca primul e mai mare ca al doilea</p>
+    <input type="number" id="number3" value="">
+    <input type="number" id="number4" value=""></br>
+    <button onclick="compara2()">Verifica</button>
+    <p>Rezultat:</p>
+    <p id="demo2" class="result"></p>
+<hr>
+    <p>3.O functie care primeste 2 valori si returneaza maximul dintre cele 2</p>
+    <input type="number" id="number5" value="">
+    <input type="number" id="number6" value=""></br>
+    <button onclick="compara3()">Verifica</button>
+    <p>Rezultat:</p>
+    <p id="demo3" class="result"></p>
+<hr>
+    <p>4.O functie care primeste 2 valori si returneaza minimul dintre cele 2</p>
+    <input type="number" id="number7" value="">
+    <input type="number" id="number8" value=""></br>
+    <button onclick="compara4()">Verifica</button>
+    <p>Rezultat:</p>
+    <p id="demo4" class="result"></p>
+<hr>
+    <p>5.O functie care intoarce suma primelor N numere naturale pozitive</p>
+    <input type="number" id="number9" value=""></br>
+    <button onclick="suma1()">Verifica</button>
+    <p>Rezultat:</p>
+    <p id="demo5" class="result"></p>
+<hr>
+    <p>6.O functie care verifica daca N este numar prim (restul impartirii la 1 si la N ==0)</p>
+    <input type="number" id="number10" value=""></br>
+    <button onclick="prim()">Verifica</button>
+    <p>Rezultat:</p>
+    <p id="demo6" class="result"></p>
+<hr>
+    <p>7.O functie care intoarce suma primelor N numere prime</p>
+    <input type="number" id="number11" value=""></br>
+    <button onclick="sumPrimes()">Verifica</button>
+    <p>Rezultat:</p>
+    <p id="demo7" class="result"></p>
+    <p id="demo8" class="result"></p>
+<hr>
+    <p>8.O functie care primeste un parametru de tip string si intoarce inversul acestuia (abc => cba)</p>
+    <input type="textarea" id="text1" value=""></br>
+    <button onclick="reverseString()">Verifica</button>
+    <p>Rezultat:</p>
+    <p id="demo9" class="result"></p>
+<hr>
+    <p>9.O functie care intoarce produsul primelor N numere impare pozitive</p>
+    <input type="number" id="number12" value=""></br>
+    <button onclick="oddSum()">Verifica</button>
+    <p>Rezultat:</p>
+    <p id="demo10" class="result"></p>
+<hr>
+    <p>10.O functie care primeste 2 parametri(arr - array de nr intregi si x - numar) si verifica daca x exista in array</p>
+    <p>Elementele din array</p>
+    <input type="text" id="text2" value="">
+    <input type="text" id="text3" value="">
+    <input type="text" id="text4" value="">
+    <input type="text" id="text5" value="">
+    <p>Verifica daca array-ul nostru contine: </p>
+    <input type="text" id="text6" value=""></br>
+    <button onclick="ver()">Verifica</button>
+    <p>Rezultat:</p>    
+    <p id="demo11" class="result"></p>
+<hr>
+    <p>11.O functie care intoarce maximul dintr-un array primit ca parametru</p>
+    <p>Elementele din array</p>
+    <input type="text" id="text7" value="">
+    <input type="text" id="text8" value="">
+    <input type="text" id="text9" value="">
+    <input type="text" id="text10" value=""></br>
+    <button onclick="maxLenght()">Verifica</button>
+    <p>Rezultat:</p>
+    <p id="demo12" class="result"></p>
+<hr>
+    <p>12.O functie care intoarce suma dintre max si min, dintr-un array primit ca parametru</p>
+    <p>Elementele din array</p>
+    <input type="number" id="number13" value="">
+    <input type="number" id="number14" value="">
+    <input type="number" id="number15" value="">
+    <input type="number" id="number16" value=""></br>
+    <button onclick="sumMaxMin()">Verifica</button>
+    <p>Rezultat:</p>
+    <p id="demo13" class="result"></p>
+    <p id="demo14" class="result"></p>
+    <p id="demo15" class="result"></p>
+<hr>
+    <p>13.O functie care verifica daca exista duplicate intr-un array primit ca parametru</p>
+    <input type="number" id="number17" value="">
+    <input type="number" id="number18" value="">
+    <input type="number" id="number19" value="">
+    <input type="number" id="number20" value=""></br>
+    <button onclick="duplicate()">Verifica</button>
+    <p>Rezultat:</p>    
+    <p id="demo16" class="result"></p>
+<hr>
+    <p>14.O functie care intoarce produsul numerelor pozitive intr-un array primit ca parametru</p>
+    <input type="number" id="number21" value="">
+    <input type="number" id="number22" value="">
+    <input type="number" id="number23" value="">
+    <input type="number" id="number24" value=""></br>
+    <button onclick="mySum()">Verifica</button>
+    <p>Rezultat:</p>    
+    <p id="demo17" class="result"></p>
+<hr>
+    <p>15.O functie care verifica daca un string primit ca parametru este palindrom (inversul == originalul, ex: abcba == abcba, abca != acba</p>
+    <input type="text" id="text11" value=""></br>
+    <button onclick="isPalindrome()">Verifica</button>
+    <p>Rezultat:</p>    
+    <p id="demo18" class="result"></p>
+</body>
+</html>

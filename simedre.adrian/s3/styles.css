@@ -1,0 +1,30 @@
+
+hr{
+    height: 5px;
+    background-color: black;
+}
+.result{
+    font-weight: bold;
+}
+input{
+    height: 20px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+button{
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+button:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    box-shadow: 5px 5px 10px gray;
+}
