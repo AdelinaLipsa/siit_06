@@ -1,0 +1,18 @@
+7.O functie care intoarce suma primelor N numere prime
+
+function sumP(n){
+var sum=0;
+var isPrim;
+	for(var i=1;i<=n;i++){
+		isPrim=true;
+		for(var j=2; j<=(i/2); j++) {
+			if (i%j==0)
+				isPrim=false;
+		}
+		if(isPrim==true){
+			sum=sum+i;
+		}
+	}
+	
+return sum;
+}
