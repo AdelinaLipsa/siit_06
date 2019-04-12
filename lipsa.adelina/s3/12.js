@@ -1,6 +1,6 @@
 //O functie care intoarce suma dintre max si min, dintr-un array primit ca parametru
 
-//Varianta usoara
+//Varianta usoara #1
 var array = [100, 55, 34, 102, -1, -5, 10, 233]
 
 function sumMinMax(array) {
@@ -16,34 +16,15 @@ function sumMinMax(array) {
 }
 console.log(sumMinMax(array));
 
-//Varianta complicata
-var array = [100, 55, 34, 102, -1, -5, 10, 233];
+// #2 care produce cele mai mici erori cu valori mai mari recomandat de MDN
+function arrayMax(array) {
+    return array.reduce(function (a, b) {
+        return Math.max(a, b);
+    });
 
-function sum(array) {
-    var sum = 0;
-
-    function findMax(array) {
-        var max = 0;
-        var a = array.length;
-        for (var i = 0; i < a; i++) {
-            if (array[i] > max) {
-                max = array[i];
-            }
-        }
-        return max;
+    function arrayMin(array) {
+        return array.reduce(function (a, b) {
+            return Math.min(a, b);
+        });
     }
-
-    function findMin(array) {
-        var min = 0;
-        var a = array.length;
-        for (var i = 0; i < a; i++) {
-            if (array[i] < min) {
-                min = array[i];
-            }
-        }
-        return min;
-    }
-    sum = findMax(array) + findMin(array);
-    return sum;
 }
-console.log(sum(array));
