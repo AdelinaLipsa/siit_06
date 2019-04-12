@@ -101,15 +101,21 @@ function primeSum() {
 }
 
 
-function invers() {
-  var str = document.getElementById('myString').value;
+function inversStr(str) {
   var n = str.length;
   var newstr = '';
   for (var i = n-1; i >= 0; i--){
   	newstr =newstr + str[i];
   }
-  document.getElementById('demo8').innerHTML = newstr;
+  return newstr;
 }
+
+function invers() {
+	var str = document.getElementById('myString').value;
+	let x = inversStr(str);
+	document.getElementById('demo8').innerHTML = x;
+}
+
 
 function pro() {
 	var n = document.getElementById('numberN').value;
@@ -122,34 +128,138 @@ function pro() {
 	}
 	document.getElementById('demo9').innerHTML = produs;
 }
+// ex 10
 
-var a = [];
+function arrayCreate() {
+    let txt = document.getElementById('userinput').value; 
+    let p = 0;
+    let np= 0;
+    let a = [];
+    let b = txt.length;
 
-function addTo() {
-	   a.push(document.getElementById("userinput").value);
-	   console.log(a);
-	  // console.log(a)
-	  document.getElementById('userinput').value = '';
-	  console.log(a.length);
-	  return a;
-	}
+    for (let i = 0; i < b; i++){
+        if ( txt[i] == ','|| txt[i]==' '){
+            np = i;
+            let t = txt.slice(p,np);
+            p = np+1;
+            a.push(Number(t));
+        } 
+    }
+    let x = txt.slice(p,b);
+    a.push(Number(x));
+    return a;
 
-function arr(a,n) {
+}
 
-	var n = document.getElementById('arrayN').value;
-	var x = 0;
+function arrayFind() {
+    let arr = arrayCreate();
+    let n = document.getElementById('arrayN').value;
+    let p = 0;
+    for ( let i = 0; i < arr.length; i++){
+        if ( arr[i] == n ){
+            p++;
+        }
+    }
+    if (p != 0 ){
+        document.getElementById('demo10').innerHTML = 'Numarul se afla in Array!';
+    } else {
+        document.getElementById('demo10').innerHTML = 'Numarul nu se afla in Array!';
+    }
+}
 
-	for ( var i = 0; i < a.length; i++ ) {
-		if ( a[i] == n ) {
-			x++;
+//EX 11
+
+function arrayMax () {
+	let z = arrayCreate();
+	let max = z[0];
+	let x = z.length;
+    console.log(z);
+    for (	let i = 1; i < x; i++){
+        if ( z[i] > max ){
+            max = z[i];
+		}
+    }
+	return max;
+}
+function arrayMaxx(){
+	let max = arrayMax();
+	document.getElementById('demo11').innerHTML = max;
+}
+
+function arrayMin () {
+	let z = arrayCreate();
+	let min = z[0];
+	let x = z.length;
+    console.log(z);
+    for (	let i = 1; i < x; i++){
+        if ( z[i] < min ){
+            min = z[i];
+		}
+    }
+	return min;
+}
+// Ex12
+
+function sumMM(){
+	let x = arrayMax();
+	let y = arrayMin();
+	document.getElementById('demo12').innerHTML = x+y;
+}
+
+// Ex13
+
+function duplicate(){
+	let a = arrayCreate();
+	let d = 0;
+	for ( let i = 0;i < a.length; i++){
+		for ( let j = i+1; j < a.length; j++){
+			if ( a[i] == a[j] ){
+				d++;
+			}
 		}
 	}
-
-	if ( x == 0 ) {
-		document.getElementById('demo10').innerHTML = 'Numarul nu se afla in array';
+	if ( d == 0){
+		document.getElementById('demo13').innerHTML = 'Nu exista duplicate';
 	} else {
-		document.getElementById('demo10').innerHTML = 'Numarul se afla in array';
+		document.getElementById('demo13').innerHTML = 'Exista duplicate';
 	}
 }
- 
-	
+
+// Ex14
+
+function produs(){
+	let x = arrayCreate();
+	let p = 1;
+	for ( let i = 0; i < x.length; i++){
+		if ( x[i] > 0 ) {
+			p = p * x[i];
+			console.log(p);
+ 		}
+	}
+	document.getElementById('demo14').innerHTML = p;
+	return p;
+}
+
+// Ex15
+
+// function palindrom(){
+// 	let x = document.getElementById('palindrom').value;
+// 	var n = x.length;
+// 	var newstr = '';
+// 		for (var i = n-1; i >= 0; i--){
+// 			newstr =newstr + x[i];
+// 		}
+// 	if ( x == newstr ){
+// 		document.getElementById('demo15').innerHTML = 'Cuvantul este palindrom';
+// 	}
+// }
+
+function palindrom(t){
+	let x = document.getElementById('palindrom').value;
+	let p = inversStr(x);
+	if ( x == p ){
+		document.getElementById('demo15').innerHTML = 'Cuvantul este palindrom';	
+	} else {
+		document.getElementById('demo15').innerHTML = 'Cuvantul nu este palindrom';	
+	}
+}
