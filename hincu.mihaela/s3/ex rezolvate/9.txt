@@ -1,0 +1,9 @@
+9.O functie care intoarce produsul primelor N numere impare pozitive
+
+function prodImp(N){
+var prod=1;
+	for(var i=1;i<=N;i=i+2){
+		prod = prod * i;
+	}
+return prod;
+}
