@@ -1,10 +1,12 @@
-
+body{
+    background-color: white;
+}
 hr{
     height: 5px;
     background-color: black;
 }
-.result{
-    font-weight: bold;
+.demo{
+    margin: 20px;
 }
 input{
     height: 20px;
@@ -12,9 +14,12 @@ input{
     border: 1px solid black;
     border-radius: 5px;
     margin-right: 10px;
+    padding: 5px;
+    background-color: white;
 }
 button{
     margin-top: 10px;
+    margin-bottom: 10px;
     padding: 5px;
     border: 1px solid black;
     border-radius: 5px;
@@ -27,4 +32,32 @@ button:hover{
     background-color: black;
     color: white;
     box-shadow: 5px 5px 10px gray;
+}
+.hiddendiv{
+    display: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding-right: 30px;
+    width: auto;
+    box-shadow: 10px 10px 10px grey;
+    background-color: white;
+}
+.show{
+    display: inline-block;
+}
+.function{
+    margin-left: 30px;
+}
+.tab1{
+    margin-left: 30px;
+}
+.tab2{
+    margin-left: 60px;
+}
+.tab3{
+    margin-left: 90px;
+}
+.tab4{
+    margin-left: 120px;
 }

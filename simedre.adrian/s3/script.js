@@ -3,9 +3,9 @@ function compara1() {
     var x = document.getElementById("number1").value;
     var y = document.getElementById("number2").value;
     if ( x == y ){
-        document.getElementById("demo1").innerHTML = x+" = "+y+" TRUE";
+        document.getElementById("demo1").innerHTML ="Rezultat:</br> "+ x+" = "+y+" TRUE";
     } else {
-        document.getElementById("demo1").innerHTML = x+" = "+y+" FALSE";
+        document.getElementById("demo1").innerHTML ="Rezultat:</br> "+ x+" = "+y+" FALSE";
     }
 }
 // 2.O functie care compara 2 valori si returneaza -1 daca primul e mai mic ca al doilea, 0 daca sunt egale si 1 daca primul e mai mare ca al doilea
@@ -263,5 +263,130 @@ function isPalindrome (){
         document.getElementById("demo18").innerHTML = "Valoarea " + a + " este palindrom.";
     } else {
         document.getElementById("demo18").innerHTML = "Valoarea " + a + " nu este palindrom.";
+    }
+}
+
+
+
+
+
+function show1(){
+    var x = document.getElementById("show1");
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+    } else { 
+        x.className = x.className.replace("show", "hiddendiv");
+    }
+}
+function show2(){
+    var x = document.getElementById("show2");
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+    } else { 
+        x.className = x.className.replace("show", "hiddendiv");
+    }
+}
+function show3(){
+    var x = document.getElementById("show3");
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+    } else { 
+        x.className = x.className.replace("show", "hiddendiv");
+    }
+}
+function show4(){
+    var x = document.getElementById("show4");
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+    } else { 
+        x.className = x.className.replace("show", "hiddendiv");
+    }
+}
+function show5(){
+    var x = document.getElementById("show5");
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+    } else { 
+        x.className = x.className.replace("show", "hiddendiv");
+    }
+}
+function show6(){
+    var x = document.getElementById("show6");
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+    } else { 
+        x.className = x.className.replace("show", "hiddendiv");
+    }
+}
+function show7(){
+    var x = document.getElementById("show7");
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+    } else { 
+        x.className = x.className.replace("show", "hiddendiv");
+    }
+}
+function show8(){
+    var x = document.getElementById("show8");
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+    } else { 
+        x.className = x.className.replace("show", "hiddendiv");
+    }
+}
+function show9(){
+    var x = document.getElementById("show9");
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+    } else { 
+        x.className = x.className.replace("show", "hiddendiv");
+    }
+}
+function show10(){
+    var x = document.getElementById("show10");
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+    } else { 
+        x.className = x.className.replace("show", "hiddendiv");
+    }
+}
+function show11(){
+    var x = document.getElementById("show11");
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+    } else { 
+        x.className = x.className.replace("show", "hiddendiv");
+    }
+}
+function show12(){
+    var x = document.getElementById("show12");
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+    } else { 
+        x.className = x.className.replace("show", "hiddendiv");
+    }
+}
+function show13(){
+    var x = document.getElementById("show13");
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+    } else { 
+        x.className = x.className.replace("show", "hiddendiv");
+    }
+}
+function show14(){
+    var x = document.getElementById("show14");
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+    } else { 
+        x.className = x.className.replace("show", "hiddendiv");
+    }
+}
+function show15(){
+    var x = document.getElementById("show15");
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+    } else { 
+        x.className = x.className.replace("show", "hiddendiv");
     }
 }
