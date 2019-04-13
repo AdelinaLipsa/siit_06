@@ -1,0 +1,8 @@
+4. O functie care primeste 2 valori si returneaza minimul dintre cele 2
+
+function compare(number1,number2) {
+	if (number1 < number2)
+		return number1;
+	else 
+		return number2;
+};

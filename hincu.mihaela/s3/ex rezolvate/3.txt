@@ -1,0 +1,8 @@
+3. O functie care primeste 2 valori si returneaza maximul dintre cele 2
+
+function compare(number1,number2) {
+	if (number1 < number2)
+		return number2;
+	else
+		return number1;
+};

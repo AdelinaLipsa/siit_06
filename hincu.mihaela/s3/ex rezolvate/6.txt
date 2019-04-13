@@ -1,0 +1,15 @@
+6.O functie care verifica daca N este numar prim (restul impartirii la 1 si la N ==0)
+
+
+function prim(number) {
+var estePrim=true;
+	for(var i=2; i<=(number/2); i++) {
+		if (number%i==0)
+		estePrim=false;
+	}
+
+if (estePrim==true)
+	console.log ("Numarul este prim!");
+else  
+	console.log ("Numarul nu este prim!");
+};
