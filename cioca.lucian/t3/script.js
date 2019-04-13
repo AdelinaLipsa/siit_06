@@ -1,5 +1,5 @@
 
-function myFunction1() {
+function compareEqual() {
 	var a = document.getElementById('myNumber1').value;
 	var b = document.getElementById('myNumber2').value;
 	
@@ -10,7 +10,7 @@ function myFunction1() {
 	} 
 }
 
-function myFunction2() {
+function compare() {
 	var a = document.getElementById('myNumber1').value;
 	var b = document.getElementById('myNumber2').value;
 	
@@ -23,7 +23,7 @@ function myFunction2() {
 	}
 }
 
-function myFunction3(a, b) {
+function maxim(a, b) {
 	var a = document.getElementById('myNumber1').value;
 	var b = document.getElementById('myNumber2').value;
 	
@@ -34,7 +34,7 @@ function myFunction3(a, b) {
 	}
 }
 
-function myFunction4(a, b) {
+function minim(a, b) {
 	var a = document.getElementById('myNumber1').value;
 	var b = document.getElementById('myNumber2').value;
 	
@@ -45,7 +45,7 @@ function myFunction4(a, b) {
 	}
 }
 
-function myFunction5() {
+function sum() {
 	var n = document.getElementById('myNumberN').value;
 	var sum = 0;
 
@@ -67,6 +67,7 @@ function numarPrim(n) {
 		for ( var i = 2; i <= n/2; i++) {
 			if ( n % i ==0){
 				m++;
+				break;
 			}
 		}
 		
@@ -241,18 +242,6 @@ function produs(){
 }
 
 // Ex15
-
-// function palindrom(){
-// 	let x = document.getElementById('palindrom').value;
-// 	var n = x.length;
-// 	var newstr = '';
-// 		for (var i = n-1; i >= 0; i--){
-// 			newstr =newstr + x[i];
-// 		}
-// 	if ( x == newstr ){
-// 		document.getElementById('demo15').innerHTML = 'Cuvantul este palindrom';
-// 	}
-// }
 
 function palindrom(t){
 	let x = document.getElementById('palindrom').value;
