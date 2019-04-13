@@ -15,14 +15,20 @@ function compare (a,b){
     
     
     //exercitiul 2-O functie care compara 2 valori si returneaza -1 daca primul e mai mic ca al doilea, 0 daca sunt egale si 1 daca primul e mai mare ca al doilea
-    function numSum(n){
-        var sum = 0;
-          for(i = 0; i <= n; i++){
-            sum += i; 
-             }
-        console.log(sum)
-             }
-    numSum(65);
+    var a = 4;
+    var b = 3;
+    
+    
+    if (a == b)
+    {
+        console.log(0);
+    }
+    else if (a<b)
+    {
+        console.log(-1);
+    }else{
+      console.log(1);
+    }
     
     
     
