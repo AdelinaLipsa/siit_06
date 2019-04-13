@@ -380,12 +380,8 @@ var palindromeCheck = function () {
 //------------------
 
 function primeCheck_V2(number) {
-
-    if (number < 2) return false;
-
-    if ((number === 2) || (number === 3)) return true;
-
-    for (divisor = 2; divisor <= number / 2; divisor++) {
+    
+    for (divisor = 2; divisor < Math.sqrt(number); divisor++) {
 
         if (number % divisor === 0) {
             return false;
@@ -393,16 +389,19 @@ function primeCheck_V2(number) {
 
     }
 
-    return true;
+    if (number >= 2) return true;
+    
+    return false;
+
 
 }
 
 function sumPrimeN_V2(n){
     
-    var sum = 0;
-    var primeFound=0;
+    var sum = 2;
+    var primeFound=1;
 
-    for(var i = 2; primeFound<n; i++){
+    for(var i = 3; primeFound<n; i+=2){
 
         if (primeCheck_V2(i)===true){
             sum+=i;
