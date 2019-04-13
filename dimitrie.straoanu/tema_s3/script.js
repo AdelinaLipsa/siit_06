@@ -381,7 +381,7 @@ var palindromeCheck = function () {
 
 function primeCheck_V2(number) {
     
-    for (divisor = 2; divisor < Math.sqrt(number); divisor++) {
+    for (divisor = 2; divisor <= Math.sqrt(number); divisor++) {
 
         if (number % divisor === 0) {
             return false;
