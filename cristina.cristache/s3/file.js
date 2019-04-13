@@ -70,7 +70,7 @@ function sumOfPrime(n){
 	var primes = []
 	var sum;
 	if(n>0){
-		for(i=2; primes.lenth>n; i++){
+		for(var i=2; primes.lenth>n; i++){
 
 		}
 	}
@@ -82,7 +82,7 @@ function sumOfPrime(n){
 function reverseString(str){
 	var reversed = "";
 
-	for (i = str.length - 1; i>=0; i--){
+	for (var i = str.length - 1; i>=0; i--){
 		reversed += str[i];
 	}
 	return reversed;
@@ -95,7 +95,7 @@ function sumOfOdds(n){
 	var sum = 0;
 	
 
-	for (i = 1; odds.length<n; i+=2){
+	for (var i = 1; odds.length<n; i+=2){
 		if(i%2!=0){
 			odds.push(i);
 			sum += i;
@@ -107,7 +107,7 @@ function sumOfOdds(n){
 
 //Exercitiul #10//
 function checkArray(arr,x){
-	for(i=0; i<arr.length;i++){
+	for(var i=0; i<arr.length;i++){
 		if(arr[i]==x){
 			return true;
 		}
@@ -144,7 +144,7 @@ function checkForClone(arr){
 //Exercitiul #14//
 function multiply(arr){
 	var result = 1;
-	for(i=0; i<arr.length; i++){
+	for(var i=0; i<arr.length; i++){
 		if (arr[i]>0){
 			result *= arr[i];
 		}
@@ -157,7 +157,7 @@ function multiply(arr){
 function checkString(str){
 	var len = str.length-1;
 	var revStr = "";
-	for (i=len; i>=0; i--){
+	for (var i=len; i>=0; i--){
 		revStr += str[i];
 	}
 	if(revStr===str){
