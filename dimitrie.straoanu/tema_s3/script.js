@@ -90,10 +90,10 @@ var sumNaturalNumbersN = function () {
     a = Number(a);
 
     var sum = 0;
-    
+
 
     for (var i = 1; i <= a; i++) {
-        
+
         sum += i;
     }
 
@@ -110,7 +110,7 @@ var primeNumberCheck = function () {
 
     var isPrimeNumber = true;
 
-    for (var i = 2; i <= a/2; i++) {
+    for (var i = 2; i <= a / 2; i++) {
 
         if ((a % i) === 0) {
             isPrimeNumber = false;
@@ -141,7 +141,7 @@ var sumPrimeNumbersN = function () {
 
     while (primeNumbersFound < a) {
 
-        for (var i = 2; i <= n/2; i++) {
+        for (var i = 2; i <= n / 2; i++) {
 
             if ((n % i) === 0) {
                 isPrimeNumber = false;
@@ -375,4 +375,39 @@ var palindromeCheck = function () {
     } else {
         alert("Nope, not a palindrome.");
     }
+}
+
+//------------------
+
+function primeCheck_V2(number) {
+    
+    for (divisor = 2; divisor <= Math.sqrt(number); divisor++) {
+
+        if (number % divisor === 0) {
+            return false;
+        }
+
+    }
+
+    if (number >= 2) return true;
+    
+    return false;
+
+
+}
+
+function sumPrimeN_V2(n){
+    
+    var sum = 2;
+    var primeFound=1;
+
+    for(var i = 3; primeFound<n; i+=2){
+
+        if (primeCheck_V2(i)===true){
+            sum+=i;
+            primeFound++;
+        }
+    }
+    return sum;
+
 }
