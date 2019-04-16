@@ -6,9 +6,9 @@ var myLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 
 var testString = "a-s?]dA{_34F'G/t,21-0h ds04";
 
+var testString2 = "1234567890987654321";
+
 var testArr = ["2dolphin", "5shark", "whale", "octo4pus", "je7llyfi0sh"];
-
-
 
 function validate(arr, a) {
 
@@ -136,3 +136,132 @@ function findNumbersInArr(arr) {
 }
 
 console.log(findNumbersInArr(testArr));
+
+// 06 --------------------------------------
+
+function invert(arr) {
+
+    var outputArr = [];
+
+    for (var i = arr.length - 1; i >= 0; i--) {
+
+        var arrElement = arr[i];
+        var invertedElement = "";
+
+        for (var j = arrElement.length - 1; j >= 0; j--) {
+
+            invertedElement += arrElement[j];
+
+        }
+
+        outputArr.push(invertedElement);
+    }
+
+    return outputArr;
+
+}
+
+console.log(invert(testArr));
+
+// 07 --------------------------------------
+//using recursive function
+
+function factorial(x) {
+
+    if (x < 0) return false;
+    else if (x === 0) return 1;
+    else return x * factorial(x - 1);
+
+}
+
+console.log(factorial(5));
+
+//------------------------------------------
+//using for loop
+
+function factorialV2(x) {
+
+    if (x < 0) return false;
+    else {
+
+        var result = 1;
+
+        for (var i = x; i > 0; i--) {
+
+            result *= i;
+        }
+
+        return result;
+    }
+}
+
+console.log(factorialV2(5));
+
+// 08 --------------------------------------
+
+function greatestCommonDivisor(x, y) {
+
+    if (x === y) return x;
+    else {
+
+        var min;
+
+        if (x < y) min = x;
+        else min = y;
+
+        var gcd;
+
+        for (var i = 1; i <= min; i++) {
+            if (x % i === 0 && y % i === 0) gcd = i;
+        }
+    }
+
+    return gcd;
+}
+
+console.log(greatestCommonDivisor(84, 196));
+
+// 09 --------------------------------------
+
+function leastCommonMultiple(x, y) {
+
+    if (x === y) return x;
+    else return x * y / greatestCommonDivisor(x, y);
+
+}
+
+console.log(leastCommonMultiple(84, 196));
+
+// 10 --------------------------------------
+
+function divisors(x) {
+
+    var arr = [];
+
+    for (var i = 2; i <= x / 2; i++) {
+
+        if (x % i === 0) arr.push(i);
+    }
+
+    return arr;
+
+}
+
+console.log(divisors(64));
+
+// 11 --------------------------------------
+
+function palindrom(x) {
+
+    var string = x + "";
+
+    for (i = 0; i < Math.floor(string.length / 2); i++) {
+
+        if (string[i] != string[string.length - 1 - i]) return false;
+    }
+
+    return true;
+
+}
+// max number no more than 16 characters long or use a string
+console.log(palindrom(123454321));
