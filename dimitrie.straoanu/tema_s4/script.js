@@ -1,10 +1,14 @@
 //-----------------------------------------
-// this is needed for some functions
+
 var myNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 var myLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-var testString = "a-s?]dA[ 34F G/t,,,21-0h ds04"
+var testString = "a-s?]dA{_34F'G/t,21-0h ds04";
+
+var testArr = ["2dolphin", "5shark", "whale", "octo4pus", "je7llyfi0sh"];
+
+
 
 function validate(arr, a) {
 
@@ -28,7 +32,7 @@ function validate(arr, a) {
 
 // 01 --------------------------------------
 
-function onlyNumbers(string) {
+function findNumbers(string) {
 
     var outputString = "";
 
@@ -44,11 +48,11 @@ function onlyNumbers(string) {
 
 }
 
-console.log(onlyNumbers(testString));
+console.log(findNumbers(testString));
 
 // 02 --------------------------------------
 
-function onlyLetters(string) {
+function findLetters(string) {
 
     var outputString = "";
 
@@ -64,11 +68,11 @@ function onlyLetters(string) {
 
 }
 
-console.log(onlyLetters(testString));
+console.log(findLetters(testString));
 
 // 03 --------------------------------------
 
-function FirstNLetters(string, n) {
+function findFirstNLetters(string, n) {
 
     if (n > 0) {
 
@@ -88,4 +92,47 @@ function FirstNLetters(string, n) {
 
 }
 
-console.log(FirstNLetters(testString,5));
+console.log(findFirstNLetters(testString, 5));
+
+// 04 --------------------------------------
+
+function concatenate(arr) {
+
+    var outputString = "";
+
+    for (var i = 0; i < arr.length; i++) {
+
+        outputString += arr[i];
+    }
+
+    return outputString;
+
+}
+
+console.log(concatenate(testArr));
+
+// 05 --------------------------------------
+
+function findNumbersInArr(arr) {
+
+    var outputString = "";
+
+    for (var i = 0; i < arr.length; i++) {
+
+        var element = arr[i];
+
+        for (var j = 0; j < element.length; j++) {
+
+            if (validate(myNumbers, element[j])) {
+
+                outputString += element[j];
+
+            }
+        }
+    }
+
+    return outputString;
+
+}
+
+console.log(findNumbersInArr(testArr));
