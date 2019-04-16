@@ -5,7 +5,11 @@ var sort = [22, 13, 14, 6, 9, 3, 8, 5, 12];
 var divA = 12;
 var divB = 1;
 var pal = 14141;
-
+var bin = [13, 4, 21, 6, 5, 32, 44]
+var biNr = 21;
+var varCount = 0;
+var binRec = [29, 21, 15, 4, 2, 78, 44, 32, 17, 122, 45, 67, 23]
+var biNrRec = 32;
 
 console.log(a);
 console.log("");
@@ -124,7 +128,7 @@ function calculFactorial(p) {
 }
 console.log("7. Calculeaza factorialul unui numar");
 console.log("");
-console.log("numarul este: " + nr)
+console.log("--numarul este: " + nr)
 console.log("");
 calculFactorial(nr);
 console.log("");
@@ -153,14 +157,14 @@ function celMaiMareDiv(p, n) {
             }
         }
     }
-    console.log("cmmdc este: " + cmmdc);
+    console.log("--cmmdc este: " + cmmdc);
     console.log(sirP + " |||| " + sirN);
 }
 
 console.log("8. Calculeaza cel mai mare divizor comun al 2 numere");
 console.log("");
-console.log(" primul numar este: " + divA);
-console.log(" al doilea numar este: " + divB);
+console.log("--primul numar este: " + divA);
+console.log("--al doilea numar este: " + divB);
 console.log("");
 celMaiMareDiv(divA, divB);
 console.log("");
@@ -177,14 +181,14 @@ function celMaiMicMultiplu(p, n) {
 
     }
 
-    console.log("cmmmc este: " + sir[sir.length - 1]);
+    console.log("--cmmmc este: " + sir[sir.length - 1]);
 
 }
 
 console.log("9. Calculeaza cel mai mic multiplu comun al 2 numere");
 console.log("");
-console.log(" primul numar este: " + divA);
-console.log(" al doilea numar este: " + divB);
+console.log("--primul numar este: " + divA);
+console.log("--al doilea numar este: " + divB);
 console.log("");
 celMaiMicMultiplu(divA, divB);
 console.log("");
@@ -200,16 +204,16 @@ function divizori(p) {
 
     }
     if (sir.length != 0) {
-        console.log("divizorii sunt: " + sir);
+        console.log("--divizorii sunt: " + sir);
     } else {
 
-        console.log("Este numar prim!!!")
+        console.log("--Este numar prim!!!")
     }
 }
 
 console.log("10. Returneaza un array care sa contina toti divizorii unui numar (ex pentru 64: trebuie sa returneze [2,4,8,16,32])");
 console.log("");
-console.log(" Numarul este: " + divA);
+console.log("--Numarul este: " + divA);
 console.log("");
 divizori(divA);
 console.log("");
@@ -228,79 +232,156 @@ function chackPali(p) {
         }
     }
     if (gage == true) {
-        console.log("numarul NU este palindrom");
+        console.log("--numarul NU este palindrom");
     } else {
-        console.log("numarul este palindrom");
+        console.log("--numarul este palindrom");
     }
 }
 console.log("11. O functie care verifica daca un numar este palindrom (ex: 121, 1234321)");
 console.log("");
-console.log(" Numarul este: " + pal);
+console.log("--Numarul este: " + pal);
 console.log("");
 chackPali(pal);
 console.log("");
 
 function sortarePar(p) {
     var sirPar = [];
-    for (i = 0; i < p.length; i++) {
+    for (var i = 0; i < p.length; i++) {
         if (p[i] % 2 == 0) {
             sirPar.push(p[i]);
         }
     }
-    console.log(" Sirul de numere pare este: " + sirPar);
+    console.log("--Sirul de numere pare este: " + sirPar);
 }
 console.log("12. O functie care sorteaza numerele pare dintr-un sir de numere primit ca parametru.");
 console.log("");
-console.log("Sirul de numere este: " + sort);
+console.log("--Sirul de numere este: " + sort);
 console.log("");
 sortarePar(sort);
 console.log("");
-
-
-function sorAscSir(p) {
-
-
-    for (i = 0; i < p.length; i++) {
-
-
-
-    }
-
-}
-
 
 
 function sortAscParDescImp(p) {
     var sirComplet = [];
     var sirImpar = [];
     var sirPar = [];
-    for (i = 0; i < p.length; i++) {
+    var move = 0;
+
+    for (var j = 0; j < p.length; j++) {
+        for (var l = 0; l < p.length; l++) {
+            if (p[l] > p[l + 1]) {
+                move = p[l];
+                p[l] = p[l + 1];
+                p[l + 1] = move;
+            }
+        }
+    }
+
+    console.log(p);
+    for (var i = 0; i < p.length; i++) {
         if (p[i] % 2 == 0) {
             sirPar.push(p[i]);
         }
     }
-    console.log(" Sirul de numere pare este: " + sirPar);
 
-    for (i = p.length - 1; i > 0; i--) {
+    console.log("--Sirul de numere pare este: " + sirPar);
+    for (var i = p.length - 1; i > 0; i--) {
         if (p[i] % 2 != 0) {
             sirImpar.push(p[i]);
         }
     }
-    console.log(" Sirul de numere impare este: " + sirImpar);
-
+    console.log("--Sirul de numere impare este: " + sirImpar);
     sirComplet.push(sirPar);
     sirComplet.push(sirImpar);
     concatenareListaSiruri(sirComplet);
-
-
-
 }
 console.log("13. functie care primeste ca parametru un array de numere. Aceasta sorteaza ascendent numerele pare si descendent numerele impare, in cadrul aceluiasi array primit ca parameru.");
 console.log("");
-console.log("Sirul de numere este: " + sort);
+console.log("--Sirul de numere este: " + sort);
 console.log("");
 sortAscParDescImp(sort);
 console.log("");
 
 
+function sortareCresc(p) {
+    for (var j = 0; j < p.length; j++) {
+        for (var l = 0; l < p.length; l++) {
+            if (p[l] > p[l + 1]) {
+                var move = p[l];
+                p[l] = p[l + 1];
+                p[l + 1] = move;
+            }
+        }
+    }
+    console.log(p);
+    return p;
+}
 
+
+function binarySearch(p, n) {
+
+    // console.log(p[Math.floor(p.length / 2)]);
+
+    if (p[Math.floor(p.length / 2)] == n) {
+        console.log("--numarul exista in array");
+    } else if (p.length == 1) {
+        console.log("-- numarul nu se afla in lista");
+    } else if (p[Math.floor(p.length / 2)] > n) {
+        p.splice(Math.floor(p.length / 2), p.length - 1);
+        //    console.log("cazul > " + p)
+        //    console.log("lungimea este: " + p.length);
+        binarySearch(p, n);
+    }
+    else {
+        p.splice(0, p.length / 2);
+        //   console.log("cazul <" + p);
+        //     console.log("lungimea este: " + p.length);
+        binarySearch(p, n);
+    }
+}
+
+console.log("14. O functie care primeste 2 parametri(un array si un numar). Folosind binary search verificati daca numarul primit ca parametru se gaseste in array. ");
+console.log("");
+console.log("--Sirul de numere este: " + bin);
+console.log("");
+console.log("--Numarul cautat este: " + biNr);
+console.log("");
+sortareCresc(bin);
+binarySearch(bin, biNr);
+console.log("");
+
+
+
+function binarySearchCount(p, n) {
+
+    varCount++;
+
+    console.log(p[Math.floor(p.length / 2)]);
+
+    if (p[Math.floor(p.length / 2)] == n) {
+        console.log("--numarul exista in array");
+
+    } else if (p.length == 1) {
+        console.log("-- numarul nu se afla in lista");
+
+    } else if (p[Math.floor(p.length / 2)] > n) {
+        p.splice(Math.floor(p.length / 2), p.length - 1);
+        binarySearchCount(p, n);
+    }
+    else {
+        p.splice(0, p.length / 2);
+        binarySearchCount(p, n);
+    }
+}
+
+console.log("15. O functie care implementeaza binary search pentru a verifica daca un numar se regaseste intr-un array. Dupa ce se termina executia functiei trebuie sa puteti afisa de cate ori s-a apelat functia recursiv. (hint: puteti folosi 2 functii sau variabila globala)");
+console.log("");
+console.log("--Sirul de numere este: " + binRec);
+console.log("");
+console.log("--Numarul cautat este: " + biNrRec);
+console.log("");
+sortareCresc(binRec);
+binarySearchCount(binRec, biNrRec);
+console.log("--functia s-a apelat de " + varCount + " ori");
+
+console.log("");
