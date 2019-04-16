@@ -88,7 +88,7 @@ function findFirstNLetters(string, n) {
         }
 
         return outputString;
-    } else return n > 0;
+    } else return false;
 
 }
 
@@ -119,13 +119,13 @@ function findNumbersInArr(arr) {
 
     for (var i = 0; i < arr.length; i++) {
 
-        var element = arr[i];
+        var arrElement = arr[i];
 
-        for (var j = 0; j < element.length; j++) {
+        for (var j = 0; j < arrElement.length; j++) {
 
-            if (validate(myNumbers, element[j])) {
+            if (validate(myNumbers, arrElement[j])) {
 
-                outputString += element[j];
+                outputString += arrElement[j];
 
             }
         }

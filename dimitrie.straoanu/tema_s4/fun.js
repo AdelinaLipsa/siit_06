@@ -23,7 +23,7 @@ function bubbleSort(arr) {
     return arr;
 }
 
-bubbleSort(testArr);
+console.log(bubbleSort(testArr));
 
 //----------------------------------------------------------
 
@@ -48,7 +48,7 @@ function binarySearch(arr, n) {
 
 }
 
-binarySearch(testArr, 17);
+console.log(binarySearch(testArr, 17));
 
 //----------------------------------------------------------
 
@@ -60,7 +60,7 @@ function power(x, n) {
 
 }
 
-power(5, 4);
+console.log(power(5, 4));
 
 //----------------------------------------------------------
 
@@ -72,7 +72,7 @@ function factorial(x) {
 
 }
 
-factorial(15);
+console.log(factorial(15));
 
 //----------------------------------------------------------
 
@@ -96,7 +96,7 @@ function fizzBuzz(x) {
 
         return output;
 
-    } else return x > 0;
+    } else return false;
 }
 
-fizzBuzz(35);
+console.log(fizzBuzz(35));
