@@ -6,29 +6,7 @@ var myLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 
 var testString = "a-s?]dA{_34F'G/t,21-0h ds04";
 
-var testString2 = "1234567890987654321";
-
 var testArr = ["2dolphin", "5shark", "whale", "octo4pus", "je7llyfi0sh"];
-
-function validate(arr, a) {
-
-    if (arr.length === 0 || arr[0] !== a && arr.length === 1) return false;
-    else {
-
-        var midIndex = Math.floor(arr.length / 2);
-
-        if (arr[midIndex] === a) return true;
-        else {
-
-            var leftArr = arr.slice(0, midIndex);
-            var rightArr = arr.slice(midIndex);
-
-            if (a > arr[midIndex]) return validate(rightArr, a);
-            else return validate(leftArr, a);
-
-        }
-    }
-}
 
 // 01 --------------------------------------
 
@@ -238,7 +216,7 @@ function divisors(x) {
 
     var arr = [];
 
-    for (var i = 2; i <= x / 2; i++) {
+    for (var i = 1; i <= x; i++) {
 
         if (x % i === 0) arr.push(i);
     }
@@ -251,9 +229,7 @@ console.log(divisors(64));
 
 // 11 --------------------------------------
 
-function palindrom(x) {
-
-    var string = x + "";
+function palindrom(string) {
 
     for (i = 0; i < Math.floor(string.length / 2); i++) {
 
@@ -263,5 +239,100 @@ function palindrom(x) {
     return true;
 
 }
-// max number no more than 16 characters long or use a string
-console.log(palindrom(123454321));
+
+console.log(palindrom("1234567890987654321"));
+
+// 12 --------------------------------------
+
+function sortEvenNumbers(string) {
+
+    var arr = [];
+
+    for (var i = 0; i < string.length; i++) {
+
+        if (string[i] % 2 === 0 && validate(myNumbers, string[i])) arr.push(string[i]);
+
+    }
+
+    for (var i = 0; i < arr.length; i++) {
+
+        for (var j = i + 1; j < arr.length; j++) {
+
+            var max;
+
+            if (arr[i] > arr[j]) {
+
+                max = arr[i];
+                arr[i] = arr[j];
+                arr[j] = max;
+
+            }
+        }
+    }
+
+    return arr;
+
+}
+
+console.log(sortEvenNumbers("2507496183"));
+
+// 13 --------------------------------------
+
+
+
+// 14 --------------------------------------
+
+function validate(arr, a) {
+
+    if (arr.length === 0 || arr[0] !== a && arr.length === 1) return false;
+    else {
+
+        var midIndex = Math.floor(arr.length / 2);
+
+        if (arr[midIndex] === a) return true;
+        else {
+
+            var leftArr = arr.slice(0, midIndex);
+            var rightArr = arr.slice(midIndex);
+
+            if (a > arr[midIndex]) return validate(rightArr, a);
+            else return validate(leftArr, a);
+
+        }
+    }
+}
+
+// 15 --------------------------------------
+
+function checkRecursion(arr,a) {
+
+    var recursion = 0;
+
+    function validate(arr, a) {
+
+        recursion++;
+        
+        if (arr.length === 0 || arr[0] !== a && arr.length === 1) return false;
+        else {
+
+            var midIndex = Math.floor(arr.length / 2);
+
+            if (arr[midIndex] === a) return true;
+            else {
+
+                var leftArr = arr.slice(0, midIndex);
+                var rightArr = arr.slice(midIndex);
+
+                if (a > arr[midIndex]) return validate(rightArr, a);
+                else return validate(leftArr, a);
+
+            }
+        }
+    }
+
+    validate(arr,a);
+    return recursion;
+
+}
+
+console.log(checkRecursion([1,3,4,6],3));
