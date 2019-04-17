@@ -157,7 +157,7 @@ function factorial(x) {
 
 }
 
-console.log(factorial(5));
+factorial(5);
 
 //using a for loop
 function factorialV2(x) {
@@ -177,7 +177,7 @@ function factorialV2(x) {
     }
 }
 
-console.log(factorialV2(5));
+factorialV2(5);
 
 // 08 --------------------------------------
 
