@@ -1,11 +1,12 @@
 //-----------------------------------------
-// required by function validate!
+// required for some functions!
+
 var myNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 var myLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 // 01 --------------------------------------
-// this function needs function validate to work!
+// needs function validate to work!
 
 function findNumbers(string) {
 
@@ -16,6 +17,7 @@ function findNumbers(string) {
         if (validate(myNumbers, string[i])) {
 
             outputString += string[i];
+
         }
     }
 
@@ -26,7 +28,7 @@ function findNumbers(string) {
 findNumbers("a-s?]dA{_34F'G/t,21-0h ds04");
 
 // 02 --------------------------------------
-// this function needs function validate to work!
+// needs function validate to work!
 
 function findLetters(string) {
 
@@ -47,7 +49,7 @@ function findLetters(string) {
 findLetters("a-s?]dA{_34F'G/t,21-0h ds04");
 
 // 03 --------------------------------------
-// this function needs function validate to work!
+// needs function validate to work!
 
 function findFirstNLetters(string, n) {
 
@@ -61,10 +63,12 @@ function findFirstNLetters(string, n) {
 
                 outputString += string[i];
                 if (outputString.length === n) break;
+
             }
         }
 
         return outputString;
+
     } else return false;
 
 }
@@ -89,7 +93,7 @@ function concatenate(arr) {
 concatenate(["2dolphin", "5shark", "whale", "octo4pus", "je7llyfi0sh"]);
 
 // 05 --------------------------------------
-// this function needs function validate to work!
+// needs function validate to work!
 
 function findNumbersInArr(arr) {
 
@@ -133,6 +137,7 @@ function invert(arr) {
         }
 
         outputArr.push(invertedElement);
+
     }
 
     return outputArr;
@@ -168,6 +173,7 @@ function factorialV2(x) {
         }
 
         return result;
+
     }
 }
 
@@ -188,17 +194,19 @@ function greatestCommonDivisor(x, y) {
         var gcd;
 
         for (var i = 1; i <= min; i++) {
+
             if (x % i === 0 && y % i === 0) gcd = i;
+
         }
     }
 
     return gcd;
 }
 
-console.log(greatestCommonDivisor(84, 196));
+greatestCommonDivisor(84, 196);
 
 // 09 --------------------------------------
-// this function needs function greatestCommonDivisor to work!
+// needs function greatestCommonDivisor to work!
 
 function leastCommonMultiple(x, y) {
 
@@ -207,7 +215,7 @@ function leastCommonMultiple(x, y) {
 
 }
 
-console.log(leastCommonMultiple(84, 196));
+leastCommonMultiple(84, 196);
 
 // 10 --------------------------------------
 
@@ -215,16 +223,17 @@ function divisors(x) {
 
     var arr = [];
 
-    for (var i = 2; i <= x/2; i++) {
+    for (var i = 2; i <= x / 2; i++) {
 
         if (x % i === 0) arr.push(i);
+
     }
 
     return arr;
 
 }
 
-console.log(divisors(64));
+divisors(64);
 
 // 11 --------------------------------------
 
@@ -233,6 +242,7 @@ function palindrom(string) {
     for (i = 0; i < Math.floor(string.length / 2); i++) {
 
         if (string[i] !== string[string.length - 1 - i]) return false;
+
     }
 
     return true;
@@ -242,7 +252,7 @@ function palindrom(string) {
 palindrom("1234567890987654321");
 
 // 12 --------------------------------------
-// this function needs function validate to work!
+// needs function validate to work!
 
 
 function sortEvenNumbers(string) {
@@ -287,15 +297,16 @@ function customSort(arr) {
     for (var i = 0; i < arr.length; i++) {
 
         for (var j = i + 1; j < arr.length; j++) {
-            
+
             if (arr[i] % 2 === 0) break;
             else if (arr[j] % 2 === 0) {
 
                 temp = arr[i];
                 arr[i] = arr[j];
-                arr[j] = temp; 
-                index = i+1;               
+                arr[j] = temp;
+                index = i+1;
                 break;
+
             }
         }
     }
@@ -306,13 +317,13 @@ function customSort(arr) {
 
         for (var j = i + 1; j < index; j++) {
 
-            if (arr[i]>arr[j]){
+            if (arr[i] > arr[j]) {
+
                 temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
 
             }
-
         }
     }
 
@@ -322,20 +333,20 @@ function customSort(arr) {
 
         for (var j = i + 1; j < arr.length; j++) {
 
-            if (arr[i]<arr[j]){
+            if (arr[i] < arr[j]) {
+
                 temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
 
             }
-
         }
     }
 
     return arr;
 }
 
-customSort([2,16,35,1,66,20,71,4,0,37,15,8,91,86,10]);
+customSort([2, 16, 35, 1, 66, 20, 71, 4, 0, 37, 15, 8, 91, 86, 10]);
 
 // 14 --------------------------------------
 
@@ -359,7 +370,7 @@ function validate(arr, a) {
     }
 }
 
-validate([1,5,8,12,22,25,31,45,59,75,83], 5);
+validate([1, 5, 8, 12, 22, 25, 31, 45, 59, 75, 83], 5);
 
 // 15 --------------------------------------
 
@@ -394,4 +405,4 @@ function checkRecursion(arr, a) {
 
 }
 
-checkRecursion([1,5,8,12,22,25,31,45,59,75,83], 5);
+checkRecursion([1, 5, 8, 12, 22, 25, 31, 45, 59, 75, 83], 5);
