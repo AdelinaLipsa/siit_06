@@ -18,3 +18,16 @@ function bubbleSort(arr) {
 bubbleSort(arr);
 console.log(arr);
 
+// ex clasa 
+
+function bubbleSort(arr){
+	var aux;
+	for(let i=0; i<arr.length-1; i++){
+		for(var j=i+1; j<arr.length; j++){
+			if(arr[i]<arr[j]]){
+				arr[i] = aux;
+				arr[i] = arr[j];
+				arr[j] = aux;
+			}
+		}
+	}

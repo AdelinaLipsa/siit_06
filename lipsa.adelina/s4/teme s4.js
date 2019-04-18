@@ -34,7 +34,6 @@ function returnNums(str) {
 }
 console.log(returnNums(str));
 
-
 //6.O functie care primeste o lista de siruri de caractere si returneaza lista de siruri de caractere inversate
 var str = [
     ["21$$"],
@@ -117,3 +116,74 @@ function palindrom(arr) {
 console.log(palindrom(arr));
 
 //12.O functie care sorteaza numerele pare dintr-un sir de numere primit ca parametru.
+var n = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+//using .filter function to eliminate all odd numbers
+function evenOnly(n) {
+    let result = n.filter(n => n % 2 == 0);
+    return result;
+}
+console.log(evenOnly(n));
+
+//13.O functie care primeste ca parametru un array de numere. Aceasta sorteaza ascendent numerele pare si descendent numerele impare, in cadrul aceluiasi array primit ca parameru.
+
+let n = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let odds = n.filter((a) => a % 2 !== 0).sort((a, b) => b - a);
+let even = n.filter((a) => a % 2 == 0).sort((a, b) => a - b);
+let sorted = even.concat(odds);
+console.log(sorted);
+
+//another method using ternary 
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+arr.sort((a, b) => (a % 2 - b % 2) || (a % 2 ? b - a : a - b))
+console.log(arr); // arr.sort( compareA || compare B)
+
+
+//14.O functie care primeste 2 parametri(un array si un numar). Folosind binary search verificati daca numarul primit ca parametru se gaseste in array. 
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+var value = 10;
+
+function binarySearch(numbers, value) {
+    var firstIndex = 0,
+        lastIndex = numbers.length - 1,
+        middleIndex = Math.floor((lastIndex + firstIndex) / 2);
+
+    while (numbers[middleIndex] != value && firstIndex < lastIndex) {
+        if (value < numbers[middleIndex]) {
+            lastIndex = middleIndex - 1;
+        } else if (value > numbers[middleIndex]) {
+            firstIndex = middleIndex + 1;
+        }
+        middleIndex = Math.floor((lastIndex + firstIndex) / 2);
+    }
+    return (numbers[middleIndex] != value) ? -1 : middleIndex;
+}
+
+console.log(binarySearch(numbers, value));
+
+//15.O functie care implementeaza binary search pentru a verifica daca un numar se regaseste intr-un array. Dupa ce se termina executia functiei trebuie sa puteti afisa de cate ori s-a apelat functia recursiv. (hint: puteti folosi 2 functii sau variabila globala)
+
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+var value = 10;
+var myFuncCalls = 0;
+
+function binarySearch(numbers, value) {
+    myFuncCalls++;
+    var firstIndex = 0,
+        lastIndex = numbers.length - 1,
+        middleIndex = Math.floor((lastIndex + firstIndex) / 2);
+
+    while (numbers[middleIndex] != value && firstIndex < lastIndex) {
+        if (value < numbers[middleIndex]) {
+            lastIndex = middleIndex - 1;
+        } else if (value > numbers[middleIndex]) {
+            firstIndex = middleIndex + 1;
+        }
+        middleIndex = Math.floor((lastIndex + firstIndex) / 2);
+    }
+    return (numbers[middleIndex] != value) ? -1 : middleIndex;
+
+}
+
+console.log(binarySearch(numbers, value));
+console.log("I have been called " + myFuncCalls + " times");

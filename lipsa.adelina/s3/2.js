@@ -6,7 +6,7 @@ var c= 3;
 function f (a,b,c) {
     if( a < b) {
         return ("The first number is smaller than the second number, so " + -1);
-    } else if (a===b) {
+    } else if (a==b) {
         return ("They are equal, so " + 0);
     }else if(a > b){
         return 1 ("The first number is bigger than the second one, so "+ 0);

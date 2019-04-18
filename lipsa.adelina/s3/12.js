@@ -17,7 +17,7 @@ function sumMinMax(array) {
 console.log(sumMinMax(array));
 
 // #2 care produce cele mai mici erori cu valori mai mari recomandat de MDN
-function arrayMax(array) {
+/* function arrayMax(array) {
     return array.reduce(function (a, b) {
         return Math.max(a, b);
     });
@@ -26,5 +26,7 @@ function arrayMax(array) {
         return array.reduce(function (a, b) {
             return Math.min(a, b);
         });
-    }
+        sum = Math.max(a,b) + Math.min(a,b);
+    } 
 }
+*/
