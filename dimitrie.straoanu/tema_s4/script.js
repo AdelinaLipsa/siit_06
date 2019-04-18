@@ -69,7 +69,7 @@ function findLetters() {
 function findFirstNLetters() {
 
     var string = document.getElementById("03_string").value;
-    var n = parseInt(document.getElementById("03_number").value);
+    var n = Number(document.getElementById("03_number").value);
 
     if (n > 0) {
 
@@ -168,7 +168,7 @@ function invert() {
 //using a recursive function
 function factorial() {
 
-    var x = parseInt(document.getElementById("07_number").value);
+    var x = Number(document.getElementById("07_number").value);
 
     function recursive(x) {
 
@@ -178,7 +178,7 @@ function factorial() {
     }
 
     document.getElementById("07_result").innerText = recursive(x);
-
+    
 }
 
 //using a for loop
@@ -204,8 +204,8 @@ function factorialV2(x) {
 
 function greatestCommonDivisor() {
 
-    var x = parseInt(document.getElementById("08_number1").value);
-    var y = parseInt(document.getElementById("08_number2").value);
+    var x = Number(document.getElementById("08_number1").value);
+    var y = Number(document.getElementById("08_number2").value);
     var result;
     var min;
 
@@ -230,8 +230,8 @@ function greatestCommonDivisor() {
 
 function leastCommonMultiple() {
 
-    var x = parseInt(document.getElementById("09_number1").value);
-    var y = parseInt(document.getElementById("09_number2").value);
+    var x = Number(document.getElementById("09_number1").value);
+    var y = Number(document.getElementById("09_number2").value);
     var result;
 
     function gcd(x, y) {
@@ -267,7 +267,7 @@ function leastCommonMultiple() {
 
 function divisors() {
 
-    var x = parseInt(document.getElementById("10_number").value);
+    var x = Number(document.getElementById("10_number").value);
 
     var arr = [];
 
@@ -401,7 +401,7 @@ function binarySearch() {
     var arr = document.getElementById("14_arr").value;
     arr = arr.split(",");
     arr = arr.map(Number);
-    var x = parseInt(document.getElementById("14_number").value);
+    var x = Number(document.getElementById("14_number").value);
 
     function recursive(arr, x) {
 
@@ -433,7 +433,7 @@ function checkRecursion() {
     var arr = document.getElementById("15_arr").value;
     arr = arr.split(",");
     arr = arr.map(Number);
-    var x = parseInt(document.getElementById("15_number").value);
+    var x = Number(document.getElementById("15_number").value);
     var recursion = 0;
 
     function recursive(arr, x) {
