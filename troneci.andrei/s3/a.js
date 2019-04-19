@@ -1,6 +1,7 @@
 var a = 5;
 var b = 8;
 var N = 6;
+var i = 4;
 
 console.log("valoare initiala a=" + a);
 console.log("valoare initiala b=" + b);
@@ -164,8 +165,13 @@ var temaXIII=function(arr) {
 
 var  TemaXIV=function(arr){ 
             var a=1;
-            for (i=0; i<arr.length; i++){
+            for (var i=0; i<arr.length; i++){
             if (arr[i]>0) {
             a=a*arr[i] }} 
             console.log(a);}
         
+
+            for ( var i = 0; i < users.lenght; i++ ) 
+    console.log(users[i].sex + "[" + users[i].firstName + users[i].lastName + "]" + " [" + users[i].height + "," + users[i].weight + "]") 
+
+    
