@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tema JS part 2</title>
+    <meta name="author" content="Simedre Adrian">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <h1>Tema JS part 2</h1>
+    <p>1.O functie care primeste un sir de caractere si returneaza cifrele din sirul respectiv</p>
+        <input type="text" id="text1" value="" placeholder="var x"></br>
+        <button onclick="extractNumber()">Verifica</button>
+        <p id="demo1" class="result"></p>
+        <button onclick="extractNumber2()">Verifica2</button>
+        <p id="demo2" class="result"></p>
+<hr>
+    <p>2.O functie care primeste un sir de caractere si returneaza doar literele din sirul respectiv</p>
+    <input type="text" id="text2" value="" placeholder="var x"></br>
+    <button onclick="extractLetters()">Verifica</button></br>
+    <p id="demo3" class="result"></p>
+<hr>
+    <p>3.O functie care primeste un sir de caractere si returneaza primele 5 litere(daca exista)</p>
+    <input type="text" id="text3" value="" placeholder="var x"></br>
+    <button onclick="extractFirst5Letters()">Verifica</button></br>
+    <p id="demo4" class="result"></p>
+<hr>
+    <p>4.O functie care primeste o lista de siruri de caractere si returneaza sirurile concatenate</p>
+    <input type="text" id="text4" placeholder="var a / var e" class="concatenate">
+    <input type="text" id="text5" placeholder="var b / var e" class="concatenate">
+    <input type="text" id="text6" placeholder="var c / var e" class="concatenate">
+    <input type="text" id="text7" placeholder="var d / var e" class="concatenate"></br>
+    <button onclick="concatenate()">Verifica</button></br>
+    <p id="demo5" class="result"></p>
+    <button onclick="concatenate2()">Verifica2</button></br>
+    <p id="demo6" class="result"></p>
+<hr>
+    <p>5.O functie care primeste o lista de siruri de caractere si returneaza cifrele din toate sirurile</p>
+    <input type="text" id="text8" placeholder="var e" class="numList">
+    <input type="text" id="text9" placeholder="var e" class="numList">
+    <input type="text" id="text10" placeholder="var e" class="numList">
+    <input type="text" id="text11" placeholder="var e" class="numList"></br>
+    <button onclick="numList()">Verifica</button></br>
+    <p id="demo7" class="result"></p>
+<hr>
+    <p>6.O functie care primeste o lista de siruri de caractere si returneaza lista de siruri de caractere inversate</p>
+    <input type="text" placeholder="var e" class="strListRev">
+    <input type="text" placeholder="var e" class="strListRev">
+    <input type="text" placeholder="var e" class="strListRev">
+    <input type="text" placeholder="var e" class="strListRev"></br>
+    <button onclick="strListRev()">Verifica</button></br>
+    <p id="demo8" class="result"></p>
+<hr>
+    <p>7.Calculeaza factorialul unui numar</p>
+    <input type="number" id="num1" placeholder="var e">
+    <button onclick="factorial()">Verifica</button></br>
+    <p id="demo9" class="result"></p>
+<hr>
+    <p>8.Calculeaza cel mai mare divizor comun al 2 numere</p>
+    <input type="number" id="num2" placeholder="var a">
+    <input type="number" id="num3" placeholder="var b"></br>
+    <button onclick="div()">Verifica</button></br>
+    <p id="demo10" class="result"></p>
+<hr>
+    <p>9.Calculeaza cel mai mic multiplu comun al 2 numere</p>
+    <input type="number" id="num4" placeholder="var x">
+    <input type="number" id="num5" placeholder="var y"></br>
+    <button onclick="lcm_two_numbers()">Verifica</button></br>
+    <p id="demo11" class="result"></p>
+<hr>
+    <p>10.Returneaza un array care sa contina toti divizorii unui numar (ex pentru 64: trebuie sa returneze [2,4,8,16,32])</p>
+    <input type="number" id="num6" placeholder="var x"></br>
+    <button onclick="allDiv()">Verifica</button></br>
+    <p id="demo12" class="result"></p>
+<hr>
+    <p>11.O functie care verifica daca un numar este palindrom (ex: 121, 1234321)</p>
+    <input type="number" id="num7" placeholder="var a"></br>
+    <button onclick="isPalindrome()">Verifica</button></br>
+    <p id="demo13" class="result"></p>
+<hr>
+    <p>12.O functie care sorteaza numerele pare dintr-un sir de numere primit ca parametru.</p>
+    <input type="number" id="num8" placeholder="var x"></br>
+    <button onclick="par()">Verifica</button></br>
+    <p id="demo14" class="result"></p>
+<hr>
+    <p>13.O functie care primeste ca parametru un array de numere. Aceasta sorteaza ascendent numerele pare si descendent numerele impare, in cadrul aceluiasi array primit ca parameru.</p>
+    <input type="number" id="num9" placeholder="var a">
+    <input type="number" id="num10" placeholder="var b">
+    <input type="number" id="num11" placeholder="var c">
+    <input type="number" id="num12" placeholder="var d">
+    <input type="number" id="num13" placeholder="var e">
+    <input type="number" id="num14" placeholder="var f">
+    <input type="number" id="num15" placeholder="var g">
+    <input type="number" id="num16" placeholder="var h"></br>
+    <button onclick="sortAZ()">Verifica</button></br>
+    <p id="demo15" class="result"></p>
+<hr>
+    <p>14.O functie care primeste 2 parametri(un array si un numar). Folosind binary search verificati daca numarul primit ca parametru se gaseste in array. </p>
+    <p>Array-ul nostru:</p>
+    <input type="number" id="num17" placeholder="var a">
+    <input type="number" id="num18" placeholder="var b">
+    <input type="number" id="num19" placeholder="var c">
+    <input type="number" id="num20" placeholder="var d">
+    <input type="number" id="num21" placeholder="var e">
+    <input type="number" id="num22" placeholder="var f">
+    <input type="number" id="num23" placeholder="var g"></br>
+    <p>Valoarea gautata</p>
+    <input type="number" id="num24" placeholder="var x"></br>
+    <button onclick="binar()">Verifica</button></br>
+    <p id="demo16" class="result"></p>
+    <p id="demo17" class="result"></p>
+<hr>
+    <p>15.O functie care implementeaza binary search pentru a verifica daca un numar se regaseste intr-un array. Dupa ce se termina executia functiei trebuie sa puteti afisa de cate ori s-a apelat functia recursiv. (hint: puteti folosi 2 functii sau variabila globala)</p>
+    <input type="number" id="num32" placeholder="var a">
+    <input type="number" id="num25" placeholder="var b">
+    <input type="number" id="num26" placeholder="var c">
+    <input type="number" id="num27" placeholder="var d">
+    <input type="number" id="num28" placeholder="var e">
+    <input type="number" id="num29" placeholder="var f">
+    <input type="number" id="num30" placeholder="var g"></br>
+    <p>Valoarea gautata</p>
+    <input type="number" id="num31" placeholder="var x"></br>
+    <button onclick="binarShow()">Verifica</button></br>
+    <p id="demo19" class="result"></p>
+    <p id="demo18" class="result"></p>
+<hr>
+
+</body>
+</html>
