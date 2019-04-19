@@ -185,6 +185,18 @@ console.log("");
  console.log(lcm_two_numbers(3,15));
  console.log(lcm_two_numbers(10,15));
 
+ //10.Returneaza un array care sa contina toti divizorii unui numar (ex pentru 64: trebuie sa returneze [2,4,8,16,32])
+function divisors(integer) {
+    var array = [];
+
+    for (let i = 2; i < integer; i++) {
+        Number.isInteger(integer / i) && array.push(i)
+
+    }
+    return array;
+}
+console.log(divisors(12));
+
  function palindrome(str) {
     var re = /[^A-Za-z0-9]/g;
     str = str.toLowerCase().replace(re, '');
