@@ -26,3 +26,5 @@
     - [Tema 09](https://miualinionut.github.io/siit_06/simedre.adrian/s2/t9/index.html)
 - Saptamana 3
     - [Tema JS part 1](https://miualinionut.github.io/siit_06/simedre.adrian/s3/index.html)
+- Saptamana 4
+    - [Tema JS part 2](https://miualinionut.github.io/siit_06/simedre.adrian/s4/index.html)
