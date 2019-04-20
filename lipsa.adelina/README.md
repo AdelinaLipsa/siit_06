@@ -40,5 +40,10 @@
         <li><a href="s3/bubble-sort.js" target ="_blank">Bubble Sort JS</a></li>
     </ul>
 </p>     
+<p>
+    <h2 align="center">Session 4</h2>
+    <ul align="center" type="none">
+        <li><a href="s4/teme s4.js">Tema S4 - JS Basics 02</a></li>
+        </ul>
 </body>
 </html>
