@@ -178,7 +178,6 @@ var temaXI = function () {
 }
 temaXI();
 
-
 var temaXII = function () {
     var max = 0;
     var min = matrice[0] + 1;

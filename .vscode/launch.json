@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}\\adrian.neculai\\s3\\tema 3.js"
+            "program": "C:\\siit_06\\adrian.neculai\\s3\\tema 3.js"
         }
     ]
 }
