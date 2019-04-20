@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Page Title</title>
+		<title>Tema 4 Js</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	
@@ -11,82 +13,99 @@
 
 		<div class="content">
 			<div class="block">
-				<p>1. O functie care primeste un sir de caractere si returneaza cifrele din sirul respectiv</p>
-				<input type="text" id="text1" value="Introduceti sirul">
-				<button type="button" onclick="cifre()">Ex1</button>
+				<p class="text-ex">1. O functie care primeste un sir de caractere si returneaza cifrele din sirul respectiv</p>
+				<input type="text" id="text1" value="Introduceti sirul"></br>
+				<button class="btn btn-primary" type="button" onclick="cifre()">Ex1</button>
 				<p id="demo1">Raspuns</p>
 			</div>
 			<div class="block">
-				<p>2. O functie care primeste un sir de caractere si returneaza doar literele din sirul respectiv</p>
-				<input type="text" id="text2" value="Introduceti sirul">
-				<button type="button" onclick="litere()">Ex2</button>
+				<p class="text-ex">2. O functie care primeste un sir de caractere si returneaza doar literele din sirul respectiv</p>
+				<input type="text" id="text2" value="Introduceti sirul"></br>
+				<button class="btn btn-primary" type="button" onclick="litere()">Ex2</button>
 				<p id="demo2">Raspuns</p>
 			</div>
 			<div class="block">
-				<p>3. O functie care primeste un sir de caractere si returneaza primele 5 litere(daca exista)</p>
-				<input type="text" id="text3" value="Introduceti sirul">
-				<button type="button" onclick="litere5()">Ex3</button>
+				<p class="text-ex">3. O functie care primeste un sir de caractere si returneaza primele 5 litere(daca exista)</p>
+				<input type="text" id="text3" value="Introduceti sirul"></br>
+				<button class="btn btn-primary" type="button" onclick="litere5()">Ex3</button>
 				<p id="demo3">Raspuns</p>
 			</div>
 			<div class="block">
-				<p>4. O functie care primeste o lista de siruri de caractere si returneaza sirurile concatenate</p>
-				<input type="text" id="text4" value="Introduceti sirul">
-				<button type="button" onclick="sirConcatenat()">Ex4</button>
+				<p class="text-ex">4. O functie care primeste o lista de siruri de caractere si returneaza sirurile concatenate</p>
+				<input type="text" id="text4" value="Introduceti sirul"></br>
+				<button class="btn btn-primary" type="button" onclick="sirConcatenat()">Ex4</button>
 				<p id="demo4">Raspuns</p>
 			</div>
 			<div class="block">
-				<p>5. O functie care primeste o lista de siruri de caractere si returneaza cifrele din toate sirurile</p>
-				<input type="text" id="text5" value="Introduceti sirul">
-				<button type="button" onclick="cifreSir()">Ex5</button>
+				<p class="text-ex">5. O functie care primeste o lista de siruri de caractere si returneaza cifrele din toate sirurile</p>
+				<input type="text" id="text5" value="Introduceti sirul"></br>
+				<button class="btn btn-primary" type="button" onclick="cifreSir()">Ex5</button>
 				<p id="demo5">Raspuns</p>
 			</div>
 			<div class="block">
-				<p>6. O functie care primeste o lista de siruri de caractere si returneaza lista de siruri de caractere inversate</p>
-				<input type="text" id="text6" value="Introduceti sirul">
-				<button type="button" onclick="inversSir()">Ex6</button>
+				<p class="text-ex">6. O functie care primeste o lista de siruri de caractere si returneaza lista de siruri de caractere inversate</p>
+				<input type="text" id="text6" value="Introduceti sirul"></br>
+				<button class="btn btn-primary" type="button" onclick="inversSir()">Ex6</button>
 				<p id="demo6">Raspuns</p>
 			</div>
-		</div>
-		<div class="content">
 			<div class="block">
-				<p>7. Calculeaza factorialul unui numar</p>
-				<input type="number" id="num7" value="">
-				<button type="button" onclick="factorial()">Ex7</button>
+				<p class="text-ex">7. Calculeaza factorialul unui numar</p>
+				<input type="number" id="num7" value=""></br>
+				<button class="btn btn-primary" type="button" onclick="factorial()">Ex7</button>
 				<p id="demo7">Raspuns</p>
 			</div>
 			<div class="block">
-				<p>8. Calculeaza cel mai mare divizor comun al 2 numere</p>
+				<p class="text-ex">8. Calculeaza cel mai mare divizor comun al 2 numere</p>
 				<input type="number" id="num8" value="">
-				<input type="number" id="num88" value="">
-				<button type="button" onclick="cmmdc()">Ex8</button>
+				<input type="number" id="num88" value=""></br>
+				<button class="btn btn-primary" type="button" onclick="cmmdc()">Ex8</button>
 				<p id="demo8">Raspuns</p>
 			</div>
 			<div class="block">
-				<p>9. Calculeaza cel mai mic multiplu comun al 2 numere</p>
+				<p class="text-ex">9. Calculeaza cel mai mic multiplu comun al 2 numere</p>
 				<input type="number" id="num9" value="">
-				<input type="number" id="num99" value="">
-				<button type="button" onclick="cmmmc()">Ex9</button>
+				<input type="number" id="num99" value=""></br>
+				<button class="btn btn-primary" type="button" onclick="cmmmc()">Ex9</button>
 				<p id="demo9">Raspuns</p>
 			</div>
 			<div class="block">
-				<p>10.Returneaza un array care sa contina toti divizorii unui numar </p>
-				<input type="number" id="num10" value="">
-				<button type="button" onclick="divizori()">Ex10</button>
+				<p class="text-ex">10.Returneaza un array care sa contina toti divizorii unui numar </p>
+				<input type="number" id="num10" value=""></br>
+				<button class="btn btn-primary" type="button" onclick="divizori()">Ex10</button>
 				<p id="demo10">Raspuns</p>
 			</div>
 			<div class="block">
-				<p>11. O functie care verifica daca un numar este palindrom </p>
-				<input type="number" id="num11" value="">
-				<button type="button" onclick="palindroM()">Ex11</button>
+				<p class="text-ex">11. O functie care verifica daca un numar este palindrom </p>
+				<input type="number" id="num11" value=""></br>
+				<button class="btn btn-primary" type="button" onclick="palindroM()">Ex11</button>
 				<p id="demo11">Raspuns</p>
 			</div>
 			<div class="block">
-				<p>12 </p>
-				<input type="number" id="num11" value="">
-				<button type="button" onclick="palindroM()">Ex12</button>
-				<p id="demo11">Raspuns</p>
+				<p class="text-ex">12. O functie care sorteaza numerele pare dintr-un sir de numere primit ca parametru.</p>
+				<input type="text" id="text12" value=""></br>
+				<button class="btn btn-primary" type="button" onclick="primeNumbers()">Ex12</button>
+				<p id="demo12">Raspuns</p>
 			</div>
-			
+			<div class="block">
+				<p class="text-ex">13. O functie care primeste ca parametru un array de numere. Aceasta sorteaza ascendent numerele pare si descendent numerele impare, in cadrul aceluiasi array primit ca parameru.</p>
+				<input type="text" id="text13" value=""></br>
+				<button class="btn btn-primary" class="btn btn-primary" type="button" onclick="numbersSort()">Ex13</button>
+				<p id="demo13">Raspuns</p>
+			</div>
+			<div class="block">
+				<p class="text-ex">14. O functie care primeste 2 parametri(un array si un numar). Folosind binary search verificati daca numarul primit ca parametru se gaseste in array.</p>
+				<input type="text" id="text14" value="" placeholder="Inroduceti sirul">
+				<input type="number" id="num14" value="" placeholder="intoduceti numarul"></br>
+				<button class="btn btn-primary" class="btn btn-primary" type="button" onclick="searchNum()">Ex13</button>
+				<p id="demo14">Raspuns</p>
+			</div>
+			<div class="block">
+				<p class="text-ex">15.O functie care implementeaza binary search pentru a verifica daca un numar se regaseste intr-un array. Dupa ce se termina executia functiei trebuie sa puteti afisa de cate ori s-a apelat functia recursiv. </p>
+				<input type="text" id="text15" value="" placeholder="Inroduceti sirul">
+				<input type="number" id="num15" value="" placeholder="intoduceti numarul"></br>
+				<button class="btn btn-primary" class="btn btn-primary" type="button" onclick="searchPoz()">Ex13</button>
+				<p id="demo15">Raspuns</p>
+			</div>
 		</div>
 		
 		<script src="script.js"></script>
