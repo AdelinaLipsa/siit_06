@@ -1,8 +1,7 @@
 // O functie care intoarce suma primelor N numere prime
 function allPrimes (num) {
-    let total= 0;
+    var total= 0;
 
-    var n= 23;
     function nrPrim (n) {
         for(var i=2; i<n; i++) 
         if (n % i ===0) return false;

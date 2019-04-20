@@ -1,6 +1,5 @@
 // O functie care compara 2 valori si returneaza true daca sunt egale si false daca nu sunt egale
-var a = 6;
-var b = 5;
+
 function equal(a,b) {
     if(a === b) {
         return true;
@@ -8,6 +7,6 @@ function equal(a,b) {
         return false;
     }
 }
-console.log('This is ' + equal(a,b));
+console.log('This is ' + equal(5,4));
 
 
