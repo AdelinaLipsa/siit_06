@@ -7,32 +7,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tema S5</title>
     <meta name="author" content="Dimitrie Straonu">
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <form id="myForm">
-        <p>Nume:</p>
-        <input type="text" id="numeForm">
-        <p>Prenume:</p>
-        <input type="text" id="prenumeForm">
-        <p>Varsta:</p>
-        <input type="text" id="varstaForm">
-        <p>Telefon:</p>
-        <input type="text" id="telefonForm">
-        <p id="error"></p>
-        <input type="submit" id ="submit" value="Add client">
-    </form>
-    <table id="myTable">
-        <thead id="tableHead">
-            <th id="nume">Nume</th>
-            <th id="prenume">Prenume</th>
-            <th id="varsta">Varsta</th>
-            <th id="telefon">Telefon</th>
-        </thead>
-        <tbody id="tableBody"></tbody>
-    </table>
+    <div class="container clearFix">
+        <div class="content">
+            <form id="myForm">
+                <p>Nume:</p>
+                <input type="text" id="numeForm">
+                <p>Prenume:</p>
+                <input type="text" id="prenumeForm">
+                <p>Varsta:</p>
+                <input type="text" id="varstaForm">
+                <p>Telefon:</p>
+                <input type="text" id="telefonForm">
+                <p id="error"></p>
+                <input type="submit" id ="submit" value="ADD NEW CLIENT">
+            </form>
+            <table id="myTable">
+                <thead id="tableHead">
+                    <tr>
+                        <th id="nume">Nume</th>
+                        <th id="prenume">Prenume</th>
+                        <th id="varsta">Varsta</th>
+                        <th id="telefon">Telefon</th>
+                        <td colspan="2"></td>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+    </div>
 
 
 </body>

@@ -95,6 +95,7 @@ var editMode;
 
 function tableClicked(event) {
 
+    //table delete
     index = Number(event.target.parentElement.rowIndex - 1);
 
     if (event.target.id == "delete") {
@@ -102,23 +103,37 @@ function tableClicked(event) {
         makeTable(listaClienti);
     }
 
+    //table edit mode
     if (event.target.id == "edit") {
         document.getElementById("numeForm").value = listaClienti[index].nume;
         document.getElementById("prenumeForm").value = listaClienti[index].prenume;
         document.getElementById("varstaForm").value = listaClienti[index].varsta;
         document.getElementById("telefonForm").value = listaClienti[index].telefon;
-        
-        document.getElementById("submit").value = "Save";
 
+        document.getElementById("submit").value = "SAVE";
+
+        rows=document.getElementsByTagName("tr");
+        for (var i = 0; i < rows.length; i++) {
+            rows[i].classList.remove("selectedRow");
+        }        
+        event.target.parentElement.classList.add("selectedRow");
+        
         editMode = true;
 
     }
 
+    //table sorting
     if (event.target.tagName == "TH") {
 
-        if (sortDirection == "up") {
-            sortDirection = "down";
-        } else { sortDirection = "up"; }
+        var headers = document.getElementsByTagName("th");
+        for (var i = 0; i < headers.length; i++) {
+            headers[i].classList.remove("selected");
+        }
+
+        event.target.classList.add("selected");
+
+        if (sortDirection == "up") sortDirection = "down";
+        else sortDirection = "up";
 
         var parameter = event.target.id;
         sort(listaClienti, parameter, sortDirection);
@@ -132,6 +147,7 @@ document.getElementById("myForm").addEventListener("click", formClicked);
 
 function formClicked(event) {
 
+    //add new client or modify existing
     if (event.target.id == "submit") {
 
         event.preventDefault();
@@ -146,14 +162,14 @@ function formClicked(event) {
         if (nume && prenume && varsta && telefon) {
 
             if (editMode == true) {
-                
+
                 listaClienti[index].nume = nume;
                 listaClienti[index].prenume = prenume;
                 listaClienti[index].varsta = varsta;
                 listaClienti[index].telefon = telefon;
-
-                document.getElementById("submit").value = "Add client";
+                document.getElementById("submit").value = "ADD NEW CLIENT";
                 editMode = false;
+                
             } else {
 
                 var newClient = { nume: nume, prenume: prenume, varsta: varsta, telefon: telefon }
@@ -163,13 +179,14 @@ function formClicked(event) {
             //redraw the table
             makeTable(listaClienti);
 
+            //reset input fields
             document.getElementById("error").innerText = "";
             document.getElementById("numeForm").value = "";
             document.getElementById("prenumeForm").value = "";
             document.getElementById("varstaForm").value = "";
             document.getElementById("telefonForm").value = "";
 
-        } else { document.getElementById("error").innerText = "All fields are required!" }
+        } else { document.getElementById("error").innerText = "All fields required!" }
     }
 }
 

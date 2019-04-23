@@ -1,10 +1,20 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+body{
+    font-family: 'Cutive Mono', monospace;
+}
 
-body {
-    margin: 1em;
+input{
+    font-family: 'Cutive Mono', monospace;
+}
+
+.clearFix::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 p {
@@ -13,47 +23,58 @@ p {
 
 form {
     float: left;
-    border: 1px solid black;
+    border: 1px solid #a7a7a7;
     padding: 1em;
-
 }
 
 input {
     margin-bottom: 1em;
+    padding:0.4em;
 }
 
-
 table {
+    border: 1px solid #a7a7a7;
     float: left;
     margin-left: 1em;
     border-collapse: collapse;
 }
 
 th {
-    border: 1px solid black;
-    padding: 0.3em;
+    text-align: left;
+    border-bottom: 1px solid #a7a7a7;
+    padding: 0.6em;
     background: rgb(212, 243, 212);
     cursor: pointer;
 }
 
 th:hover {
     background: lightgreen;
+    
+}
+
+thead td {
+    background: rgb(212, 243, 212);
 }
 
 td {
-    border: 1px solid black;
-    padding: 0.3em;
+    border-bottom: 1px solid #a7a7a7;
+    padding: 0.6em;
 }
 
 #error {
+    margin-bottom:0.6em; 
+    font-size: 90%;
     height: 1em;
     color: tomato;
+    
 }
 
 #edit {
     font-size: 80%;
+    font-weight: bold;
     cursor: pointer;
     background: rgb(204, 224, 238);
+    border-left: 1px solid #a7a7a7;
 }
 
 #edit:hover {
@@ -62,15 +83,48 @@ td {
 
 #delete {
     font-size: 80%;
+    font-weight: bold;
     cursor: pointer;
     background: rgb(236, 201, 201);
+    border-left: 1px solid #a7a7a7
 }
 
 #delete:hover {
     background: lightcoral;
 }
 
-#submit{
+#submit {   
+    font-weight: bold; 
     cursor: pointer;
     padding: 0.4em;
+    background:  rgb(212, 243, 212);
+    border: 1px solid #a7a7a7;
+}
+
+#submit:hover{
+    background: lightgreen;
+}
+
+#submit:active{
+    background: rgb(212, 243, 212);
+}
+
+#submit:focus{
+    outline: none;
+}
+
+.selected {
+    background: lightgreen;
+}
+
+.selectedRow {
+    background: rgb(204, 224, 238);;
+}
+
+.content {
+    float: left;
+}
+
+.container {
+    padding: 2em;
 }
