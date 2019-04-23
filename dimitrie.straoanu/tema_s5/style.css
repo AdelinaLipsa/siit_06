@@ -2,21 +2,23 @@
     margin: 0;
     padding: 0;
 }
-body{
-    margin:1em;
+
+body {
+    margin: 1em;
 }
 
 p {
-    
     margin-bottom: 0.3em;
 }
-form{
+
+form {
     float: left;
     border: 1px solid black;
     padding: 1em;
-    
+
 }
-input{
+
+input {
     margin-bottom: 1em;
 }
 
@@ -30,11 +32,45 @@ table {
 th {
     border: 1px solid black;
     padding: 0.3em;
-    background: lightcyan;
+    background: rgb(212, 243, 212);
     cursor: pointer;
+}
+
+th:hover {
+    background: lightgreen;
 }
 
 td {
     border: 1px solid black;
     padding: 0.3em;
+}
+
+#error {
+    height: 1em;
+    color: tomato;
+}
+
+#edit {
+    font-size: 80%;
+    cursor: pointer;
+    background: rgb(204, 224, 238);
+}
+
+#edit:hover {
+    background: lightskyblue;
+}
+
+#delete {
+    font-size: 80%;
+    cursor: pointer;
+    background: rgb(236, 201, 201);
+}
+
+#delete:hover {
+    background: lightcoral;
+}
+
+#submit{
+    cursor: pointer;
+    padding: 0.4em;
 }
