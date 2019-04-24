@@ -13,7 +13,6 @@ img {
     padding: 0.5em;
     width: 150px;
     height: 100px;
-
 }
 
 input {
@@ -34,16 +33,20 @@ form {
     float: left;
     border: 1px solid #a7a7a7;
     padding: 1em;
+    box-shadow: 12px 12px rgb(236, 236, 236);
 }
 
 input {
     margin-bottom: 1em;
     padding: 0.4em;
+    border: 1px solid #a7a7a7;
+
 }
 
 table {
     border: 1px solid #a7a7a7;
     border-collapse: collapse;
+    box-shadow: 12px 12px rgb(236, 236, 236);
 }
 
 th {
@@ -138,6 +141,11 @@ td {
 .content div {
     border: 1px solid #a7a7a7;
     padding: 1em;
+    box-shadow: 12px 12px rgb(236, 236, 236);
+}
+
+.content div input:last-of-type {
+    margin-bottom: 0.2em;
 }
 
 .container {
@@ -156,4 +164,11 @@ td {
 .red {
     font-weight: bold;
     color: lightcoral;
+}
+
+@media only screen and (max-width:1200px) {
+
+    .content:nth-of-type(2n+1) {
+        clear: left;
+    }
 }

@@ -148,6 +148,17 @@ function tableClicked() {
 }
 
 //------------------------------------------
+document.getElementById("varstaForm").addEventListener("keydown", checkInput);
+document.getElementById("varstaForm").addEventListener("input", checkInput);
+
+function checkInput(){
+
+    if (/[^0-9]/.test(event.key) && event.keyCode !== 8) {
+
+        event.preventDefault();
+    }
+
+}
 
 document.getElementById("myForm").addEventListener("click", formClicked);
 
@@ -199,6 +210,7 @@ function formClicked() {
 //------------------------------------------
 //table with img
 function createTable(rowsNumber, colsNumber, id, node) {
+
     var div = document.createElement("DIV");
     div.classList.add("content");
     var table = document.createElement("TABLE");
@@ -206,7 +218,6 @@ function createTable(rowsNumber, colsNumber, id, node) {
     var tbody = document.createElement("TBODY");
     table.appendChild(tbody);
     div.appendChild(table);
-
     document.querySelector(node).appendChild(div);
 
     for (var i = 0; i < rowsNumber; i++) {
@@ -223,7 +234,7 @@ function createTable(rowsNumber, colsNumber, id, node) {
 }
 createTable(3, 3, "myTable2", "div");
 
-var myTable3 = document.getElementById("myTable3");
+var myTable2 = document.getElementById("myTable2");
 var td = myTable2.getElementsByTagName("td");
 
 for (var i = 0; i < td.length; i++) {
@@ -247,6 +258,7 @@ function mouseOnImage() {
         } else { event.target.src = "images/initial.jpg" }
     }
 }
+
 //-----------------------------------------------------------
 document.querySelector(".content div").addEventListener("keydown", filterInput);
 document.querySelector(".content div").addEventListener("input", filterInput);
@@ -286,16 +298,19 @@ function filterInput() {
         var input04 = document.getElementById("input04");
 
         if (Number(input01.value) > Number(input02.value)) {
+
             input01.classList.add("green");
             input02.classList.remove("green");
             input03.value = input01.value;
 
         } else if (Number(input01.value) < Number(input02.value)) {
+
             input01.classList.remove("green");
             input02.classList.add("green");
             input03.value = input02.value;
 
         } else {
+
             input01.classList.add("green");
             input02.classList.add("green");
         }
