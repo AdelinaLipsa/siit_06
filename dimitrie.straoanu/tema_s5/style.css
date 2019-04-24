@@ -3,11 +3,20 @@
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     font-family: 'Cutive Mono', monospace;
 }
 
-input{
+img {
+    display: block;
+    padding: 0.5em;
+    width: 150px;
+    height: 100px;
+
+}
+
+input {
     font-family: 'Cutive Mono', monospace;
 }
 
@@ -29,13 +38,11 @@ form {
 
 input {
     margin-bottom: 1em;
-    padding:0.4em;
+    padding: 0.4em;
 }
 
 table {
     border: 1px solid #a7a7a7;
-    float: left;
-    margin-left: 1em;
     border-collapse: collapse;
 }
 
@@ -49,7 +56,7 @@ th {
 
 th:hover {
     background: lightgreen;
-    
+
 }
 
 thead td {
@@ -62,11 +69,11 @@ td {
 }
 
 #error {
-    margin-bottom:0.6em; 
+    margin-bottom: 0.6em;
     font-size: 90%;
     height: 1em;
     color: tomato;
-    
+
 }
 
 #edit {
@@ -93,23 +100,23 @@ td {
     background: lightcoral;
 }
 
-#submit {   
-    font-weight: bold; 
+#submit {
+    font-weight: bold;
     cursor: pointer;
     padding: 0.4em;
-    background:  rgb(212, 243, 212);
+    background: rgb(212, 243, 212);
     border: 1px solid #a7a7a7;
 }
 
-#submit:hover{
+#submit:hover {
     background: lightgreen;
 }
 
-#submit:active{
+#submit:active {
     background: rgb(212, 243, 212);
 }
 
-#submit:focus{
+#submit:focus {
     outline: none;
 }
 
@@ -118,13 +125,35 @@ td {
 }
 
 .selectedRow {
-    background: rgb(204, 224, 238);;
+    background: rgb(204, 224, 238);
+    ;
 }
 
 .content {
+    /* border: 1px dashed; */
     float: left;
+    padding: 1em;
+}
+
+.content div {
+    border: 1px solid #a7a7a7;
+    padding: 1em;
 }
 
 .container {
-    padding: 2em;
+    padding: 1em;
+}
+
+#myTable2 td {
+    border: 1px solid #a7a7a7;
+    padding: 0;
+}
+
+.green {
+    background: rgb(212, 243, 212);
+}
+
+.red {
+    font-weight: bold;
+    color: lightcoral;
 }
