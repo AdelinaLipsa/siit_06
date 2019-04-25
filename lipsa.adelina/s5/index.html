@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="text/css" href="style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Fake comment section</title>
+</head>
+
+<body>
+    <header id="main-header">
+        <div class="container">
+            <h1 id="header-title">Comment section</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div id="main">
+            <h2 class="body">Add a comment:</h2>
+            <form class="form">
+                <input type="text" id="title" class="form-control" placeholder="Title">
+                <input type="text" id="body" class="form-control" placeholder="Body">
+                <input type="text" id="author" class="form-control" placeholder="Author">
+                <input type="submit" class="btn" value="submit">
+            </form>
+            <h2 class="title">Comments</h2>
+            <ul id="comments" class="comment-list" style="list-style: none;">
+                <li class="list-group-item">Demo comment 1</li>
+                <li class="list-group-item">Demo content for comment 1 </li>
+            </ul>
+        </div>
+    </div>
+    <script src="dom.js"></script>
+</body>
+
+</html>
