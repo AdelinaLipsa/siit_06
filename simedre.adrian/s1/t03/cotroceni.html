@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bucharest Experience</title>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Adrian Simedre">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="gallery.css">
+
+
+    <style>
+        .btn{
+            background-color: orange;
+            border: none;
+            color: white;
+            padding: 12px 16px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn:hover{
+            background-color: rgb(141, 93, 3);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header" id="myHeader">
+        <img src="img/logo.png" class="center">
+    </div>
+    <div class="left_side">
+            <p><button onclick="window.location.href = 'index.html';" class="btn"><i class="fa fa-home"></i> Home</button></p>
+            <p>
+                <input type="text"><br>
+                <input type="button" value="Search" class="button">
+            </p>
+            <p id="first">Read about:</p>
+            <p><a href="palace.html">Palace of Parliament</a></p>
+            <p><a href="vilage.html">Village Museum</a></p>
+            <p><a href="athaeneum.html">Romanian Atheneum</a></p>
+            <p><a href="cotroceni.html">“Cotroceni” Palace</a></p>
+            <p><a href="cathedral.html">Patriarchal Cathedral</a></p>
+            <p><a href="arch.html">Arch of Triumph</a></p>
+    </div>
+    <div class="main">
+        <div class="gallery">
+            <a href="img/cot1.jpg">
+                <figure>
+                    <img src="img/cot1.jpg">
+                    <figcaption>
+                            “Cotroceni” Palace
+                    </figcaption>
+                </figure>
+            </a>
+            <a href="img/cot2.jpg">
+                <figure>
+                    <img src="img/cot2.jpg">
+                    <figcaption>
+                            “Cotroceni” Palace
+                    </figcaption>
+                </figure>
+            </a>
+            <a href="img/cot3.jpg">
+                <figure>
+                    <img src="img/cot3.jpg">
+                    <figcaption>
+                            “Cotroceni” Palace
+                    </figcaption>
+                </figure>
+            </a>
+            <a href="img/cot4.jpg">
+                <figure>
+                    <img src="img/cot4.jpg">
+                    <figcaption>
+                            “Cotroceni” Palace
+                    </figcaption>
+                </figure>
+            </a>        
+        </div>
+        <div class="content">
+            <h1>History</h1>
+            <p><b>The Cotroceni Monastery (1679–1682)</b></p>
+            <p>In 1679, a monastery was built by Şerban Cantacuzino on Cotroceni Hill in the first year of his rule on the place of an old wooden hermitage. The plans of this new monastery kept many of the traditional architectural elements found in the principalities of Romania at the time. The Cotroceni monastery was completed in 1682, and has since been visited frequently by many pilgrims and documented in various Chronicles.</p>
+            <p><b>The royal palace (1883–1895)</b></p>
+            <p>Cotroceni Hill was also the place of residence of many of Romania's rulers for a time until 1883, when King Carol I of Romania received the residences and ordered them demolished with plans to build a much larger edifice in their stead which would serve to house the future heirs to his throne.</p>
+            <p>Construction of this new royal palace was commissioned to begin in the year 1893, the project being placed under the direction of French architect Paul Gottereau.</p>
+            <p><b>The north wing (1915–1926)</b></p>
+            <p>During the rule of King Ferdinand I and Queen Marie, further improvements were made to the royal palace. At the request of Queen Marie, the north wing of the palace was completed with the space that would be used to house the maids of honor and adjutants in duplex apartments of sorts. A gymnastics hall at the semi-basement was also built, taking up the space where it is assumed that a chapel would have resided on the ground floor. On October 1915, the space was refitted to accommodate central heating.</p>
+            <p>In 1925, Grigore Cerchez began his work on the Cotroceni Palace by adding a living room with a gazebo on the first floor. On the second floor, he added a small terrace on the northern face along with an additional gazebo. Cerchez continued to work on the two adjacent salons on the first floor of the north wing, as well as the Grand Reception Hall that distinguished this part of the building, until 1926.</p>
+            <p>In 1929, Grigore Cerchez has achieved the functional completion of the north-eastern corner of the palace, having created a loggia at the library's level. Above the library, a large storage area was built as an annex to the royal dormitory.</p>
+            <p><b>The socialist occupation (1947–1948)</b></p>
+            <p>At the 30th day of December 1947, King Michael I was forced to abdicate by the communists. At that point, the new government had control of the palace which was then uninhabited by the royal family.</p>
+            <p>On February 13, 1948, the new government held a meeting in which the destiny of the palace would be decided while an inventory of the royal goods was taking place. There were multiple requests for different functions the palace could serve, from a University of Medicine to a headquarters for the National Union of Romanian Students. On May 26 that year, decree number 38 was issued, in which the Presidium of the Grand National Assembly of the People's Republic of Romania has decided that "all goods and estates that were found from the date of March 6, 1945 in the possession of the former king Mihai and other members of the former royal family shall be passed into the possession of the Romanian state." Finally, on June 18, 1948, the Council of Ministers has decided that the Cotroceni Palace, its "five bodies, 150 rooms, park, the property of the state" would be placed under the administration of the Ministry of Interior. The same decree stipulated that other valuables found within the palace would be redistributed among various ministries, including the Ministry of Agriculture and the Ministry of Health.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2015 Bucharest</p>
+    </div>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction(){
+            if (window.pageYOffset > sticky){
+                header.classList.add("sticky");
+            }
+            else{
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

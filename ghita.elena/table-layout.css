@@ -1,0 +1,19 @@
+#divLayout div {
+    border:1px solid;
+    margin:1px;
+}
+#bodyLeft{
+    float: left;
+    width: 49%;
+    border: none !important;
+}
+#bodyRight{
+    float:left ;
+    width: 49%;
+}
+#bodyContainer{
+    height: 22px;
+}
+#footer {
+    clear: both;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <link href="style.css" rel="stylesheet">
+    </link>
+    <style>
+        p {
+            color: green;
+
+        }
+
+        .column {
+            text-align: center;
+            width: 33%;
+            float: left;
+            border: 1px solid black;
+
+        }
+
+        #container {
+            width: 100%;
+        }
+
+        #c1{
+            background-color: yellow;
+        }
+
+        #c2{
+
+            background-color: blue;
+        }
+
+        #c3 {
+
+            background-color: blueviolet;
+        }
+
+        #e01 {
+
+            width:380px; 
+            height:100px;
+            background-color: green;
+            top: 30px;
+            left: 100px;
+            position: fixed;
+        }
+
+        #e02 {
+            margin-top: 100px;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: relative;
+            z-index: 10;
+        }
+
+        #e03 {    
+        width: 100px;
+        height: 100px;
+        background-color: blueviolet;
+        position: absolute;
+
+        top: 40px;
+        right: -40px;
+        z-index: 19;
+
+        top: -40px;
+        position: relative;
+        }
+
+        #d {
+
+            background-color: black;
+            margin: 10px;
+            border: 1px;
+            display:inline;
+        }
+
+    </style>
+</head>
+
+<body>
+    <p style="color:red">Hello World</p>
+    <p>Green world</p>
+
+    <div id="container">
+        <div id="c1" class="column">div01</div>
+        <div id="c2" class="column">div02</div>
+        <div id="c3" class="column">div03</div>
+        <div style="clear:both;"></div>
+    </div>
+
+    
+    
+    <div id="e01">E01</div>
+    <div id="e02">E02</div>
+    <div id="e03">E03</div>
+
+    <div id="d">D01</div>
+    <div id="d">D02</div>
+    <div id="d">D03</div>
+
+
+
+
+</body>
+
+</html>

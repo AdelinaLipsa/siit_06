@@ -1,0 +1,138 @@
+/* Global reset */
+html{
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    min-height: 100%;
+    min-width: 640px;
+    position: relative;
+            
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+/* Top menu styling */
+
+#topMenu {
+    background: #4273DC;
+    font-size: 14px;
+
+        
+}
+
+#topMenu span {
+    color: white;
+    display: inline-block;
+    padding: 7px;
+    margin-left: 15px;
+        
+}
+
+
+.button {
+    display: inline-block;
+    padding:7px;
+    background: #2255CB;
+    margin-left: 15px; 
+    color: #B7C9F7;
+}
+.buttonX {
+    display: inline-block;
+    padding:7px;
+    float: right;
+}
+
+/* Right menu styling */
+
+#rightMenu {
+    font-size: 14px;
+    overflow: hidden;
+    
+}
+
+.rightMenu_item {
+    float: right;
+    padding: 8px;
+    margin: 15px 5px;
+    color: #727272;
+    
+}
+
+.signIn{
+    
+    background: #4273DC;
+    border-radius: 3px;
+    color: white;
+    margin-right: 30px;
+}
+
+/* Content styling */
+
+#content {
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 65px;
+}
+
+#content img{
+    margin: 200px auto 20px;
+    
+}
+input:first-child{
+    font-size: 18px;
+    height: 30px;
+    width: 600px;
+    display: block;
+    margin: 10px auto;
+    
+}
+
+input[type="submit"]{
+    height: 30px;
+    margin:10px;
+    cursor: pointer
+}
+
+/* Footer styling */
+
+#footer a{
+    color: #727272;
+    margin:10px
+}
+
+#footer {
+    width: 100%;
+    overflow: hidden;
+    border-top: 2px solid #E4E4E4;
+    background: #F0F0F0;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    
+    
+
+}
+
+.colRight {
+    padding: 20px;
+    float: right;
+}
+.colLeft {
+    padding: 20px;
+    float: left;
+}
+

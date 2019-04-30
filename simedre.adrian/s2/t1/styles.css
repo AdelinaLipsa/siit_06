@@ -1,0 +1,120 @@
+body{
+    background-color: #E0D48A;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.head{
+    background-color: #BAD82B;
+    width: 70%;
+    height: 200px;
+    margin-top: 1%;
+    margin-left: auto;
+    margin-bottom: 5px;
+    margin-right: auto;
+    padding-top: 30px;
+    /* text-align: right; */
+    color: #384300;
+    border: 1PX solid #B2B94F;
+}
+.head h1, .head p{
+    margin-left: 60%;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    padding-bottom: 0px;
+}
+.body{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: repeating-linear-gradient(
+        to right,
+        #F7EECD ,
+        #F7EECD ,
+        #EAE1C0 ,
+        #EAE1C0 3px
+    );
+}
+.nav{
+    width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #EAE6CB;
+    border: 1px solid #B4B095;
+    padding: 20px;
+    text-align: center;
+}
+.nav a{
+    text-decoration: none;
+    color: #1B3031;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+.side{
+    margin-top: 20px;
+    margin-left: 1.03%;
+    margin-right: 1.03%;
+    margin-bottom: 30px;
+    width: 25%;
+    color: #1D1600;
+    padding-right: 10px;
+    border-right: 1px solid #CBC2A1;
+    display: inline-block;
+}
+.side img{
+    width: 16px;
+    height: 16px;
+}
+.mainMenu{
+    background-color: #D2D35E;
+    padding: 15px;
+}
+.mainMenu img, .mainMenu h1{
+    display: inline;
+}
+.menuList, .side2Con{
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: #F0E8C3;
+}
+.menuList a{
+    display: block;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.footer{
+    width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #D2D35E;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.content{
+    display: inline-block;
+    width: 65%;
+}
+.mainArt{
+    padding-bottom: 30px;
+}
+.col1{
+    display: inline-block;
+    width: 45%;
+    padding-right: 20px;
+    border-right: 1px solid #CBC2A1;
+}
+.col2{
+    display: inline-block;
+    width: 45%;
+    padding-left: 10px;
+}
+button{
+    cursor: pointer;
+    padding: 10px;
+    background-color: #BDDB2B;
+    border: 1px solid #828536;
+    color: #041400;
+    font-weight: bold;
+}

@@ -1,0 +1,113 @@
+header {
+    background-color: aquamarine;
+    height: 200px;
+    width: 80%;
+    margin: 0px auto;
+    margin-top: 15px;
+}
+header h1 {
+    color: black;
+    font-size: 30px;
+    text-align: right;
+    padding-top: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0px; 
+}
+header h2{
+    color: black;
+    text-align: right;    
+    margin: 0px;
+}
+#content{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: bisque;
+    height: 350px;
+    margin: 0 auto;
+    width: 80%;
+}
+#navbar{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+#sidebar{
+    width: 20%;
+    height: 300px;
+    background-color: tomato; 
+    float: left;
+}
+#mainmenu{
+    width: 138px;
+    background-color: gray;
+    height: 150px;
+    position: fixed;
+    border-top: 0px;
+}
+
+#block{
+    width: 138px;
+    background-color: brown;
+    height: 150px;
+    border-bottom: 0px;
+    position: fixed;
+    bottom: 158px;
+}
+
+#maincontent{
+    width: 80%;
+    height: 180px;
+    background-color: blue;
+    float: right;
+}
+
+#gallery {
+    background-color: turquoise;
+    margin: 0 auto;
+    float: left;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+}
+
+#bottom {
+    background-color: azure;
+    width: 80%;
+    height: 120px;
+    float: right;
+}
+
+.clearfix {
+    overflow: auto;
+}
+footer {
+    background-color: aquamarine;
+    margin: 0px auto;
+    margin-bottom: 15px;
+    height: 100px;
+    width: 80%;
+}
+footer p{
+    margin: 0;
+    text-align: center;
+    padding: 35px;
+}
+
+#bottom #subscription{
+    float: left;
+    width: 50%;
+    height: 120px;
+}
+
+#bottom #otherservices {
+    background-color: chartreuse;
+    float: right;
+    width: 50%;
+    height: 120px;
+}
+
+.footerr {
+    height: 50px;
+    border: 2px solid;
+    width: 80%;
+    margin: 0 auto;
+}

@@ -1,0 +1,109 @@
+#banda {
+    background-color: rgb(66, 115, 220);
+    overflow: hidden;
+}
+
+.font {
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+#banda1 {
+    color: white;
+    float: left;
+    padding: 10px;
+}
+
+#banda2 {
+    padding: 10px;
+    float: left;
+    color: rgb(155, 183, 245);
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(34, 85, 203);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#x {
+    color: white;
+    float: right;
+    padding: 10px;
+}
+
+#bandaSub {
+    margin-top: 20px;
+    margin-right: 20px;
+    float: right;
+}
+
+#bSub {
+    padding: 10px;
+    float: right;
+}
+
+#bSub2 {
+    padding: 10px;
+    float: right;
+}
+
+#bSub {
+    background-color: rgb(66, 115, 220);
+    color: white;
+}
+
+#body {
+    clear: both;
+    text-align: center;
+    margin-top: 200px;
+    min-height: 100%;
+}
+
+#container {
+    display: inline;
+}
+
+#baraCautari {
+    width: 450px;
+    height: 20px;
+    margin-bottom: 20px;
+}
+
+#butSub {
+    display: inline;
+    background-color: rgb(243, 243, 243);
+    border-style: solid;
+    border-color: rgb(216, 216, 216);
+    border: 1px;
+    padding: 8px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    color: rgb(100, 100, 100);
+    font-size: 80%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#footer {
+    clear: both;
+    padding: 8px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    color: rgb(87, 86, 86);
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(242, 242, 242);
+    width: 100%;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: rgba(110, 110, 110, 0.233);
+
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}

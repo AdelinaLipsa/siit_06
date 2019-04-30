@@ -1,0 +1,67 @@
+#blueP {
+
+color: blue;
+}
+
+#container {
+
+    width:100%;
+
+}
+.column {
+
+    text-align: center;
+    width: 380px;
+    float: right;
+    HEIGHT: 30PX;
+
+
+}
+
+#c1 {
+    background-color: red;
+}
+
+#c2 {
+    background-color: blue;
+}
+
+#c3 {
+    background-color: yellow;
+}
+
+#E01 {
+
+    width: 100px;
+    height: 100px;
+    background-color:red;
+    top: 0px;
+    right: 0px;
+    position: fixed;
+}
+
+#E02 {
+ margin-top: 100px;
+    width:200px;
+    height: 200px;
+    background-color:yellow;
+    z-index: 11;
+    position: relative;
+}
+
+#E03 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    right: -40px;
+    z-index: 9;
+    position: relative; 
+    top: -40px;
+}
+
+.d {
+background-color: red;
+margin: 10px;
+display: inline;
+
+}

@@ -1,0 +1,69 @@
+html{ height:100%; }
+body{ min-height:100%; padding:0; margin:0; position:relative; }
+body::after{ content:''; display:block; height:100px; }
+
+nav h4,  h4{
+    display:inline;
+    color: black;
+    
+    
+}
+
+div {
+    padding-top:30px;
+}
+p, h4{
+    margin-left:10px;
+    margin-right:10px;
+}
+nav {
+    background:blue;
+    width:100%;
+    height:30px;
+    position: absolute;
+}
+
+.background {
+    background-color: darkcyan;
+    padding:13px;
+}
+
+
+
+p, i, .float{
+    float:right;
+
+}
+
+
+img {
+    margin-left: 35%;
+    
+    margin-top:10%;
+}
+
+input {
+    margin-left: 34%;
+    
+}
+
+.ml {
+    margin-left: 42%;
+}
+
+button {
+    margin-left: 15px;
+    margin-top:10px;
+    height: 25px;
+}
+
+footer {
+  
+    bottom:0; 
+    width:100%; 
+    height:50px; 
+    position: fixed;
+    bottom: 0;
+    background: #f2f2f2;
+}
+

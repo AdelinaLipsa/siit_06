@@ -1,0 +1,21 @@
+
+#container { 
+    width: 100%;
+}
+
+
+#barasusstanga {
+    background-color: rgba(211, 211, 211, 0.63);
+    float: left; 
+    width: 20%;
+    height: 30 px;
+    border: 1px solid black;
+}
+
+#barasusdreapta {
+    background-color: grey;
+    float: left; 
+    width: 80%;
+    height: 30px;
+    border: 1 px solid black;
+}

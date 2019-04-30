@@ -1,0 +1,13 @@
+13.O functie care verifica daca exista duplicate intr-un array primit ca parametru
+
+function dup(arr){
+var exista = false;
+	for(var i=0;i<arr.length-1;i++)
+		for(var j=i+1;j<arr.length;j++)
+			if(arr[i]==arr[j])
+				exista=true;
+if(exista == true)
+	console.log("Exista duplicate in array");
+else
+	console.log("Nu exista duplicate");
+}

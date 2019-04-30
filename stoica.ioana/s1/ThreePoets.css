@@ -11,8 +11,29 @@
 #middle { 
     margin: 0px 0px 10px 20px;
     float: right;
+    font-family: serif;
+    font-size: 18px;
 }
 
 #content-head{
     margin-top: 5px;
+}
+
+.buttons {
+    font-size: 24px;
+    font-family: serif;
+    cursor: pointer;
+	text-align: center;
+	color: rgb(61, 60, 60);
+	padding: 6px 25px 6px 25px;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 150px;
+    height: 40px;
+    margin: 5px 0px 5px 5px;
+    background-image: linear-gradient(to bottom, rgb(216, 216, 216), white);
+}
+
+#footer {
+    font-size: 12px;
 }
