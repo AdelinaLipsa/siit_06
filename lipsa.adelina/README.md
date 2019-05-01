@@ -29,7 +29,7 @@
 <p>
     <h2 align="center">Session 4</h2>
     <ul align="center" type="none">
-        <li><a href="s4/teme s4.js">Tema S4 - JS Basics 02</a></li>
+        <li><a href="s4/teme s4.js" target ="_blank">Tema S4 - JS Basics 02</a></li>
         </ul>
         </p>
  <p>
