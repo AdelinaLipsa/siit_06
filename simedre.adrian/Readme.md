@@ -32,3 +32,4 @@
     - [Tema DOM 01 - afisare tabel](https://miualinionut.github.io/siit_06/simedre.adrian/s5/index.html)
     - [Tema DOM 01 - validare formular](https://miualinionut.github.io/siit_06/simedre.adrian/s5/index3.html)
     - [Tema DOM 01 - tebele si imagini](https://miualinionut.github.io/siit_06/simedre.adrian/s5/index2.html)
+    - [Exercitiu DOM: comments](https://miualinionut.github.io/siit_06/simedre.adrian/s5/index4.html)
