@@ -44,16 +44,17 @@ function awesome (a,b) {
 console.log (awesome(a,b));
 
 //5.O functie care intoarce suma primelor N numere naturale pozitive
-var N= 2;
 
-function input(N) {
+var res = (n * (n+1)) / 2;
+
+function input(n) {
     var sum=0;
-    for (var i=1; i<=N; i++){
-        sum= sum + i; // sum+= i;
+    for (var i=1; i<=n; i++){
+        sum+= i; 
     }
     return sum;
 }
-console.log(input(N));
+console.log(input(n));
 
 //6.O functie care verifica daca N este numar prim (restul impartirii la 1 si la N ==0)
 var n= 23;
@@ -64,7 +65,6 @@ function nrPrim (n) {
 }
 console.log (nrPrim(n));
 
-//formula matematica n(n+1)/2
 
 //7.O functie care intoarce suma primelor N numere prime
 function allPrimes (num) {
@@ -126,24 +126,8 @@ function largestNum(arr) {
 }
 console.log(largestNum(arr));
 
-// method without Math.max
-var array = [100, 55, 34, 102, -1, -5, 10, 233]
-function findmax(array){
+//12.O functie care intoarce suma dintre max si min, dintr-un array primit ca parametru
 
-    var max = 0;
-    var a =  array.length;
-    for(var i=0; i<a; i++) {
-    if (array[i]>max) {
-    max=array[i];
-    }
-}
-return max;
-}
-console.log(findmax(array));
-
-//O functie care intoarce suma dintre max si min, dintr-un array primit ca parametru
-
-//Varianta usoara #1
 var array = [100, 55, 34, 102, -1, -5, 10, 233]
 
 function sumMinMax(array) {
@@ -158,21 +142,6 @@ function sumMinMax(array) {
     return sum;
 }
 console.log(sumMinMax(array));
-
-// #2 care produce cele mai mici erori cu valori mai mari recomandat de MDN
-/* function arrayMax(array) {
-    return array.reduce(function (a, b) {
-        return Math.max(a, b);
-    });
-
-    function arrayMin(array) {
-        return array.reduce(function (a, b) {
-            return Math.min(a, b);
-        });
-        sum = Math.max(a,b) + Math.min(a,b);
-    } 
-}
-*/
 
 
 //13. O functie care verifica daca exista duplicate intr-un array primit ca parametru
@@ -209,13 +178,12 @@ function multiply (array)  {
 }
 console.log(multiply(array));
 
-//15.//O functie care verifica daca un string primit ca parametru este palindrom (inversul == originalul, ex: abcba == abcba, abca != acba
+//15.O functie care verifica daca un string primit ca parametru este palindrom (inversul == originalul, ex: abcba == abcba, abca != acba
 function palindrome(str) {
     var re = /[^A-Za-z0-9]/g;   //RegExp to remove unwanted characters 
     str = str.toLowerCase().replace(re, '');//Lowercase the string
-    var len = str.length; //length = 30
-    for (var i = 0; i < len / 2; i++) {
-        if (str[i] !== str[len - 1 - i]) {
+    for (var i = 0; i < str.length / 2; i++) {
+        if (str[i] !== str[str.length - 1 - i]) {
             return false;
         }
     }

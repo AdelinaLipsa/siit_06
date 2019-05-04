@@ -1,13 +1,11 @@
 //1.O functie care primeste un sir de caractere si returneaza cifrele din sirul respectiv
 var num = "abc3dba67a9";
-var temp = num.match(/\d/g);
-temp = temp.join("");
+var temp = num.match(/\d/g).join("");
 console.log(temp);
 
 //2.O functie care primeste un sir de caractere si returneaza doar literele din sirul respectiv
 var txt = "abc3dba67a9";
-var temp = txt.match(/[a-zA-Z]+/g);
-temp = temp.join("");
+var temp = txt.match(/[a-zA-Z]+/g).join("");
 console.log(temp);
 
 //3.O functie care primeste un sir de caractere si returneaza primele 5 litere(daca exista)
@@ -17,7 +15,7 @@ console.log(firstFive);
 
 //4.O functie care primeste o lista de siruri de caractere si returneaza sirurile concatenate
 var str = ['14$', '54&%', '3432', '%%%', 'abc'];
-var temp = str.join('14$', '54&%', '3432', '%%%', 'abc');
+var temp = str.concat('14$', '54&%', '3432', '%%%', 'abc');
 console.log(temp);
 
 //5.O functie care primeste o lista de siruri de caractere si returneaza cifrele din toate sirurile
@@ -52,7 +50,7 @@ function factorial(num) {
     if (num === 0) {
         return 1;
     }
-    return num * factorial(num - 1);
+    return num * factorial(num - 1); //using recursive function
 }
 console.log(factorial(2));
 
@@ -106,7 +104,7 @@ console.log(divisors(12));
 var arr = [1234321];
 
 function palindrom(arr) {
-    var removeChar = arr.toString('').replace(/[^A-Z0-9]/ig, "").toLowerCase();
+    var removeChar = arr.toString('').replace(/[^A-Z0-9]/ig, "");
     var checkPalindrome = removeChar.split('').reverse('').join('');
     if (removeChar === checkPalindrome) {
         return (arr + " is a palindrome.")
@@ -133,7 +131,7 @@ let even = n.filter((a) => a % 2 == 0).sort((a, b) => a - b);
 let sorted = even.concat(odds);
 console.log(sorted);
 
-//another method using ternary 
+//another method using .sort and ternary 
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 arr.sort((a, b) => (a % 2 - b % 2) || (a % 2 ? b - a : a - b))
 console.log(arr); // arr.sort( compareA || compare B)
