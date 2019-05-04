@@ -20,3 +20,7 @@
 # Tema_s4
 
 - [Tema JS part 2](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s4/index.html)
+
+# Tema_s5
+
+- [Tema DOM](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s5/index.html)

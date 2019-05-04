@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Cutive Mono', monospace;
+}
+
+img {
+    display: block;
+    padding: 0.5em;
+    width: 150px;
+    height: 100px;
+}
+
+input {
+    font-family: 'Cutive Mono', monospace;
+}
+
+.clearFix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+p {
+    margin-bottom: 0.3em;
+}
+
+form {
+    float: left;
+    border: 1px solid #a7a7a7;
+    padding: 1em;
+    box-shadow: 12px 12px rgb(236, 236, 236);
+}
+
+input {
+    margin-bottom: 1em;
+    padding: 0.4em;
+    border: 1px solid #a7a7a7;
+
+}
+
+table {
+    border: 1px solid #a7a7a7;
+    border-collapse: collapse;
+    box-shadow: 12px 12px rgb(236, 236, 236);
+}
+
+th {
+    text-align: left;
+    border-bottom: 1px solid #a7a7a7;
+    padding: 0.6em;
+    background: rgb(212, 243, 212);
+    cursor: pointer;
+}
+
+th:hover {
+    background: lightgreen;
+
+}
+
+thead td {
+    background: rgb(212, 243, 212);
+}
+
+td {
+    border-bottom: 1px solid #a7a7a7;
+    padding: 0.6em;
+}
+
+#error {
+    margin-bottom: 0.6em;
+    font-size: 90%;
+    height: 1em;
+    color: tomato;
+
+}
+
+#edit {
+    font-size: 80%;
+    font-weight: bold;
+    cursor: pointer;
+    background: rgb(204, 224, 238);
+    border-left: 1px solid #a7a7a7;
+}
+
+#edit:hover {
+    background: lightskyblue;
+}
+
+#delete {
+    font-size: 80%;
+    font-weight: bold;
+    cursor: pointer;
+    background: rgb(236, 201, 201);
+    border-left: 1px solid #a7a7a7
+}
+
+#delete:hover {
+    background: lightcoral;
+}
+
+#submit {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.4em;
+    background: rgb(212, 243, 212);
+    border: 1px solid #a7a7a7;
+}
+
+#submit:hover {
+    background: lightgreen;
+}
+
+#submit:active {
+    background: rgb(212, 243, 212);
+}
+
+#submit:focus {
+    outline: none;
+}
+
+.selected {
+    background: lightgreen;
+}
+
+.selectedRow {
+    background: rgb(204, 224, 238);
+    ;
+}
+
+.content {
+    /* border: 1px dashed; */
+    float: left;
+    padding: 1em;
+}
+
+.content div {
+    border: 1px solid #a7a7a7;
+    padding: 1em;
+    box-shadow: 12px 12px rgb(236, 236, 236);
+}
+
+.content div input:last-of-type {
+    margin-bottom: 0.2em;
+}
+
+.container {
+    padding: 1em;
+}
+
+#myTable2 td {
+    border: 1px solid #a7a7a7;
+    padding: 0;
+}
+
+.green {
+    background: rgb(212, 243, 212);
+}
+
+.red {
+    font-weight: bold;
+    color: lightcoral;
+}
+
+@media only screen and (max-width:1200px) {
+
+    .content:nth-of-type(2n+1) {
+        clear: left;
+    }
+}
