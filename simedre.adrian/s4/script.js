@@ -202,7 +202,6 @@ function sortAZ(){
     document.getElementById("demo15").innerHTML = "Rezultat:</br> "+ par.sort(numberAs) + "si" + impar.reverse();
 }
 // 14.O functie care primeste 2 parametri(un array si un numar). Folosind binary search verificati daca numarul primit ca parametru se gaseste in array. 
-// folosire numere cu mixte avem eroare
 function binar(){
     var a = document.getElementById("num17").value;
     var b = document.getElementById("num18").value;
@@ -216,7 +215,13 @@ function binar(){
     function numberAs(m,n) {
         return m-n;
     }
-    arr.sort(numberAs);
+    arr.sort(numberAs);    
+    function transformToNr(a) {
+        for(var i=0;i<a.length;i++) {
+            a[i] = Number(a[i]);
+        }
+    }
+    transformToNr(arr);
     document.getElementById("demo16").innerHTML = arr;
     function binary_Search(arr, x){
         var right = arr.length - 1;
@@ -241,7 +246,6 @@ function binar(){
     }
 }
 // 15. O functie care implementeaza binary search pentru a verifica daca un numar se regaseste intr-un array. Dupa ce se termina executia functiei trebuie sa puteti afisa de cate ori s-a apelat functia recursiv. (hint: puteti folosi 2 functii sau variabila globala)
-// folosire numere cu mixte avem eroare
 function binarShow(){
     var a = document.getElementById("num32").value;
     var b = document.getElementById("num25").value;
@@ -258,7 +262,19 @@ function binarShow(){
     }
     arr.sort(numberAs);
     document.getElementById("demo19").innerHTML = arr;
+    function transformToNr(a) {
+        for(var i=0;i<a.length;i++) {
+            a[i] = Number(a[i]);
+        }
+    }
+    function transformToNr(a) {
+        for(var i=0;i<a.length;i++) {
+            a[i] = Number(a[i]);
+        }
+    }
+    transformToNr(arr);
     function binary_Search(arr, x){
+        console.log(arr);
         var right = arr.length - 1;
         var left = 0;
         var mid = 0;

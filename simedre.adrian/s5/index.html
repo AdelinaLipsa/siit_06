@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tema S5</title>
+    <meta name="author" content="Adrian Simedre">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <h1>DOM: afisare tabel cu sortare</h1>
+    <form id="formClient">
+        <label for="nume">Nume</label>
+            <input type="text" id="nume" name="nume"></br>
+        <label for="prenume">Prenume</label>
+            <input type="text" id="prenume" name="prenume"></br>
+        <label for="varsta">Varsta</label>
+            <input type="text" id="varsta" name="varsta"></br>
+        <label for="telefon">Telefon</label>
+            <input type="text" id="telefon" name="telefon"></br>
+        <p id="error"></p>
+        <input type="submit" id ="submit" value="Add client">
+    </form>
+    <table id="clienti">
+        <tr>
+            <th id="nume" onclick="sortTable(0)">Nume</th>
+            <th id="prenume" onclick="sortTable(1)">Prenume</th>
+            <th id="varsta" onclick="sortTable(2)">Varsta</th>
+            <th id="telefon" onclick="sortTable(3)">Telefon</th>
+            <th>Stergere</th>
+        </tr>
+    </table>
+<hr>
+    <h1>DOM: validare formular</h1>
+    <p>Construiti in HTML si CSS un formular care sa contina 3 Input type text, 2 Selecturi 3 Checkboxuri, 3 Radio Buttons si un submit. Folositi cele invatate astazi si in orele precedente (atributul name, placeholder, class, id, etc, labeluri, color, backgroundColor, border, etc). </p>
+
+
+    
+
+</body>
+</html>

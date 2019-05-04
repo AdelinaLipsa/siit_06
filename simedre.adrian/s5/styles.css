@@ -1,0 +1,35 @@
+form{
+    margin-bottom: 20px;
+}
+input{
+    margin-bottom: 10px;
+}
+table{
+    padding: 3px;
+    border-collapse: collapse;
+}
+td{
+    border: 1px solid black;
+    padding: 3px;
+}
+th {
+    border: 1px solid black;
+    padding: 3px;
+}
+th:hover{
+    cursor: pointer;
+}
+.block{
+    width: 25%;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 10px 30px;
+    float: left;
+    margin: 40px;
+    text-align: center;
+    box-shadow: 10px 10px 20px #DDF2A1;
+    background-color: #86A136;
+}
+.clear{
+    clear: both;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercitiu DOM: comments</title>
+    <meta name="author" content="Adrian Simedre">
+    <style type="text/css">
+    body{
+        padding: 30px;    
+    }
+    input{
+        margin: 10px;
+    }
+    textarea{
+        margin: 10px;
+    }
+    button{
+        margin:10px;
+    }
+    .comment{
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-block;
+        margin: 20px;
+    }
+    .clear{
+        clear: both;
+    }
+	</style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+    <div id="commentsList">
+
+    </div>
+    <div>
+        <input type="text" id="subiect" placeholder="Subiect"></br>
+        <textarea type="text" id="descriere" placeholder="Descriere"></textarea></br>
+        <input type="text" id="nume" placeholder="Nume"></br>
+        <button onclick="showComment()">Save</button>
+    </div>
+
+    <script>
+        var newComments = [];
+        function showComment(){
+            var inputX = document.getElementById("subiect");
+            var x = document.getElementById("subiect").value;
+            var inputY = document.getElementById("descriere");
+            var y = document.getElementById("descriere").value;
+            var inputZ = document.getElementById("nume");
+            var z = document.getElementById("nume").value;
+            var show = document.getElementById("commentsList");
+            if (x == "" || y == "" || z == ""){
+                inputX.style.backgroundColor = "";
+                inputY.style.backgroundColor = "";
+                inputZ.style.backgroundColor = "";
+                if (x == ""){
+                    show.innerHTML = '<p class="error">Toate campurire sunt obligatorii!</p>';
+                    inputX.style.backgroundColor = "red";
+                } else if (y == ""){
+                    show.innerHTML = '<p class="error">Toate campurire sunt obligatorii!</p>';
+                    inputY.style.backgroundColor = "red";
+                } else if (z == ""){
+                    show.innerHTML = '<p class="error">Toate campurire sunt obligatorii!</p>';
+                    inputZ.style.backgroundColor = "red";
+                }
+            } else {
+                var newComment =    `<div class="comment">
+                                        <p><b>Subiect: </b>${x}<p>
+                                        <p><b>Descriere:</b></br>${y}</p>
+                                        <p><b>Autor: </b>${z}</p>
+                                    </div>
+                                    <div class="clear"></div>`;
+                newComments.push(newComment);
+                show.innerHTML = newComments.join("");
+            }
+        }
+    </script>
+</body>
+</html>
