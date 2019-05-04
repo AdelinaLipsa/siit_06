@@ -23,4 +23,4 @@
 
 # Tema_s5
 
-- [Tema DOM](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s5/index.html)
+- [Tema DOM](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s5)
