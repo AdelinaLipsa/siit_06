@@ -1,4 +1,4 @@
-
+"use strict";
 
 window.addEventListener("DOMContentLoaded", function () {
 
@@ -7,21 +7,15 @@ window.addEventListener("DOMContentLoaded", function () {
     var addBtn = document.getElementById("addBtn");
     var helper = document.getElementById("helper");
     var cancelBtn = document.getElementById("cancelBtn");
-    cancelBtn.style.display = "none"
     var phoneBook = document.querySelector(".phoneBook");
     var table = document.createElement("table");
     var thead = document.createElement("thead");
     var tbody = document.createElement("tbody");
     table.appendChild(thead);
-    thead.innerHTML = `<tr>
-        <th><span id="sortByName">Name</span></th>
-        <th><span id="sortByMobile">Mobile</span></th>
-        <th><span>Edit data</span></th>
-        </tr>`;
     table.appendChild(tbody);
     phoneBook.appendChild(table);
-    table.style.display = "none"
-
+    thead.innerHTML = `<tr><th><span id="sortByName">Name</span></th><th><span id="sortByMobile">Mobile</span></th><th><span>Edit data</span></th></tr>`;
+    
     addBtn.addEventListener("click", addContact);
     cancelBtn.addEventListener("click", cancel);
     mobile.addEventListener("keyup", addContact);
@@ -31,6 +25,8 @@ window.addEventListener("DOMContentLoaded", function () {
     table.addEventListener("click", editTable);
     table.addEventListener("click", sortPhoneBook);
 
+    cancelBtn.style.display = "none"
+    table.style.display = "none"
 
     var phoneBookData = [{ name: "John", mobile: "0722533633" }, { name: "Elsa", mobile: "0722133233" }, { name: "Kurt", mobile: "0722033833" }];
     var editMode;
@@ -39,8 +35,8 @@ window.addEventListener("DOMContentLoaded", function () {
     var sortPar = "name";
     sort(phoneBookData, sortDir, sortPar);
 
-    var nameArrow= document.getElementById("sortByName");
-    var mobileArrow= document.getElementById("sortByMobile");
+    var nameArrow = document.getElementById("sortByName");
+    var mobileArrow = document.getElementById("sortByMobile");
     nameArrow.classList.add("arrowUp");
 
 
@@ -86,7 +82,6 @@ window.addEventListener("DOMContentLoaded", function () {
         } else if (event.key == "Enter" || event.type == "click") {
             name.placeholder = "Input name!";
             mobile.placeholder = "Input mobile!";
-
         }
     }
 
@@ -95,7 +90,6 @@ window.addEventListener("DOMContentLoaded", function () {
 
         table.style.display = "table";
         tbody.innerHTML = "";
-
 
         for (var i = 0; i < arr.length; i++) {
 
@@ -138,7 +132,6 @@ window.addEventListener("DOMContentLoaded", function () {
                 tbody.innerHTML = "";
                 helper.innerText = "Phone book is empty!";
                 table.style.display = "none"
-
             }
         }
 
@@ -194,7 +187,7 @@ window.addEventListener("DOMContentLoaded", function () {
             sort(phoneBookData, sortDir, sortPar);
         }
         if (event.target.id == "sortByMobile") {
-            
+
             nameArrow.classList.remove("arrowDown");
             nameArrow.classList.remove("arrowUp");
 
@@ -234,13 +227,10 @@ window.addEventListener("DOMContentLoaded", function () {
                     }
                 }
             }
-
         }
         drawTable(phoneBookData);
         console.log(sortDir, sortPar);
     }
-
-
 });
 
 
