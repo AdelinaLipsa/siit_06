@@ -14,8 +14,8 @@ window.addEventListener("DOMContentLoaded", function () {
     sortBtn.addEventListener("click", sortTableData);
     deleteBtn.addEventListener("click", deleteMarked);
 
-    var itemList = [];
-
+    var itemList = [{itemName:"milk",buyed:false},{itemName:"flour",buyed:false},{itemName:"bread",buyed:false}];
+    
 
     function addItem() {
 
@@ -43,6 +43,7 @@ window.addEventListener("DOMContentLoaded", function () {
     table.classList.add("dataTable");
     document.querySelector(".container").appendChild(table);
     table.addEventListener("click", markAsBuyed);
+    drawTable();
 
 
     function drawTable() {
@@ -103,7 +104,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
                     if (direction == "ascending") {
 
-                        if (arr[i].itemName > arr[j].itemName) {
+                        if (arr[i].itemName.toLowerCase() > arr[j].itemName.toLowerCase()) {
                             var temp = arr[i];
                             arr[i] = arr[j];
                             arr[j] = temp;
@@ -111,7 +112,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
                     } else if (direction == "descending") {
 
-                        if (arr[i].itemName < arr[j].itemName) {
+                        if (arr[i].itemName.toLowerCase() < arr[j].itemName.toLowerCase()) {
                             var temp = arr[i];
                             arr[i] = arr[j];
                             arr[j] = temp;
