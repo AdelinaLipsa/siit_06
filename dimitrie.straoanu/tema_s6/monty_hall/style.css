@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+.container{
+    margin: auto;
+    display:table;
+    clear: both;;
+}
+.interface{
+    text-align: center;
+    margin: auto;
+    display:table;
+    clear: both;;
+}
+
+#startBtn{    
+    font-size: 2em;
+    padding:0.25em 1em;    
+    
+}
+#helper{    
+    margin-bottom: 1em;
+    font-size: 2em;
+    height:1em;
+}
+
+.door {
+    float:left;
+    text-align: center;
+    cursor: pointer;
+    border: 10px solid;
+    margin: 1em;    
+    background: lightcoral;
+    height: 20em;
+    width: 10em;
+}
+
+.doorName {
+    font-size: 5em;
+    margin:0;
+}
+
+.msg{
+    font-size:2em;
+}
