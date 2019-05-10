@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Valentina Vanu">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel= "stylesheet" href="shopping.css">
+        <title>Shopping List</title>
+
+    </head>
+    <body>
+        <div id="container">
+            <form>
+                <input type="text" id="item">
+                <input type="button" value="Add item" onclick="addItem()" id="key">
+            </form>
+            <div>
+                <button class="sortbutton" onclick="sortAsc()" >Sort Asc</button>
+                <button class="sortbutton" onclick="sortDesc()">Sort desc</button>
+            </div>
+            <table>
+                <thead id="head"></thead>
+                <tbody id ="body"></tbody>
+            </table>
+            <script src="shopping.js"></script>
+        </div>
+    </body>
+</html>
