@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Valentina Vanu">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel= "stylesheet" href="shoppingtest.css">
+        <title>Shopping List</title>
+        <style>
+            .bought {
+                text-decoration: line-through;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <input type="text" id="item">
+            <input type="button" value="Add item" onclick="addItem()" id="key">
+        </form>
+        <button onclick="sortAscending()">Sort Asc</button>
+        <button onclick="sortDescending()">Sort desc</button>
+        <table id="shoppingTable">
+            <thead id="head"></thead>
+            <tbody id ="body"></tbody>
+        </table>
+        <script src="shoppingtest.js"></script>
+    </body>
+</html>
