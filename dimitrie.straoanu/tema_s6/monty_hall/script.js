@@ -15,28 +15,18 @@ window.addEventListener("DOMContentLoaded", function () {
     var winningDoor;
     var selectedDoor;
     var openedDoor;
-    var gameStage;
-    console.log(gameStage);
-
+    var gameStage;  
 
     function startGame() {
 
-       
-
-            gameStage = 1;
-            winningDoor = randomWinningDoor();
-            helper.innerHTML = "Select a door.";
-            startbtn.innerHTML = "Reset"
-            var msg = document.querySelectorAll(".msg");
-            for (var i = 0; i < msg.length; i++) {
-                msg[i].innerHTML = "";
-            }
-
-            console.log(winningDoor);
-            console.log(gameStage);
-
-        
-
+        gameStage = 1;
+        winningDoor = randomWinningDoor();
+        helper.innerHTML = "Select a door.";
+        startbtn.innerHTML = "Reset"
+        var msg = document.querySelectorAll(".msg");
+        for (var i = 0; i < msg.length; i++) {
+            msg[i].innerHTML = "";
+        }
     }
 
     function randomWinningDoor() {
@@ -52,7 +42,6 @@ window.addEventListener("DOMContentLoaded", function () {
             helper.innerHTML = "Keep selection or try the other door.";
             openGoatDoor();
             gameStage = 2;
-            console.log(gameStage);
 
         } else if (gameStage == 2) {
 
@@ -61,13 +50,13 @@ window.addEventListener("DOMContentLoaded", function () {
                 helper.innerHTML = "You won!!!";
                 gameStage = null;
                 startbtn.innerHTML = "Play again"
-                console.log(gameStage);
+
             } else if (this.id != openedDoor) {
+                
                 this.querySelector(".msg").innerHTML = "GOAT";
                 helper.innerHTML = "You lost!!!";
                 gameStage = null;
                 startbtn.innerHTML = "Play again"
-                console.log(gameStage);
             }
         }
     }
