@@ -19,6 +19,16 @@
     button{
         margin:10px;
     }
+    #main{
+        border: 1px solid black;
+        padding: 30px;
+        border-radius: 20px;
+        background-color: black;
+        display: none;
+    }
+    h1{
+        color: white;
+    }
     .comment{
         padding: 20px;
         border: 1px solid black;
@@ -27,6 +37,7 @@
         margin-right: auto;
         display: inline-block;
         margin: 20px;
+        background-color: white;
     }
     .clear{
         clear: both;
@@ -35,8 +46,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 </head>
 <body>
-    <div id="commentsList">
-
+    <div id="main">
+        <h1>Comentarii:</h1>
+        <div id="commentsList">   
+        </div>
     </div>
     <div>
         <input type="text" id="subiect" placeholder="Subiect"></br>
@@ -55,6 +68,8 @@
             var inputZ = document.getElementById("nume");
             var z = document.getElementById("nume").value;
             var show = document.getElementById("commentsList");
+            var main = document.getElementById("main");
+            main.style.display = "block";
             if (x == "" || y == "" || z == ""){
                 inputX.style.backgroundColor = "";
                 inputY.style.backgroundColor = "";

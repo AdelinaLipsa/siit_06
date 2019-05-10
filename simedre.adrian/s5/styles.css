@@ -33,3 +33,9 @@ th:hover{
 .clear{
     clear: both;
 }
+.red {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
