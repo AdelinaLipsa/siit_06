@@ -191,3 +191,15 @@ function sort(a) {
 sort([3,1,2,5,4]);
 
 
+
+
+// Palindrom
+
+
+function palindrom(str){
+    var temp = str.split('').join('');
+    if (temp == str){
+        return true;
+    }
+    return false;
+}
