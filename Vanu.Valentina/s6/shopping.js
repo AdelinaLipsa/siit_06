@@ -1,12 +1,21 @@
 var index = 1;
 var sort = [];
 // var key = document.getElementById('key');
-var input = document.getElementById('item').value;
-                input.addEventListener("keyup", function (event){
-                    if(event.keyCode === 13){
-                        document.document.getElementById('key').click();
-                    }
-                });
+// var input = document.getElementById('item').value;
+//                 input.addEventListener("keyup", function (event){
+//                     if(event.keyCode === 13){
+//                         document.document.getElementById('key').click();
+//                     }
+//                 });
+document.getElementById('item').onkeypress = function(e){
+    if (!e) e = window.event;
+    var keyCode = e.keyCode || e.which;
+    if (keyCode == '13'){
+      // Enter pressed
+	  addItem();
+      return false;
+    }
+  }
 
 function bubbleSortAsc(arr) {
     var aux;
