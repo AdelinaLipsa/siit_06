@@ -4,8 +4,8 @@ window.addEventListener("DOMContentLoaded", function () {
 
     var inputField = document.getElementById("inputField");
     var addItemBtn = document.getElementById("addItemBtn");
-    var sortBtn = document.getElementById("sortBtn")
-    var deleteBtn = document.getElementById("deleteBtn")
+    var sortBtn = document.getElementById("sortBtn");
+    var deleteBtn = document.getElementById("deleteBtn");
     sortBtn.style.display = "none";
     deleteBtn.style.display = "none";
 
