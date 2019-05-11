@@ -1,25 +1,25 @@
-var listaClienti=[
+var listaClienti = [
     {
-        nume:"Nume1",
-        prenume:"Prenume1",
-        varsta:29,
-        telefon:["0758066000"],
+        nume: "Nume1",
+        prenume: "Prenume1",
+        varsta: 29,
+        telefon: ["0758066000"],
         initialOrder: 1
     },
     {
-        nume:"Nume3",
-        prenume:"Prenume3",
-        varsta:31,
-        telefon:["0758000000"],
+        nume: "Nume3",
+        prenume: "Prenume3",
+        varsta: 31,
+        telefon: ["0758000000"],
         initialOrder: 2
     },
     {
-        nume:"Nume2",
-        prenume:"Prenume2",
-        varsta:30,
-        telefon:["0758000000","0758000000"],
+        nume: "Nume2",
+        prenume: "Prenume2",
+        varsta: 30,
+        telefon: ["0758000000", "0758000000"],
         initialOrder: 3
-    }               
+    }
 ];
 
 // function tabel(listaClienti) {
@@ -72,14 +72,56 @@ var listaClienti=[
 // }
 // table(listaClienti);
 
-var k = '<tbody>'
-for(i = 0;i < listaClienti.length; i++){
-    k+= '<tr>';
-    k+= '<td>' + listaClienti[i].nume + '</td>';
-    k+= '<td>' + listaClienti[i].prenume + '</td>';
-    k+= '<td>' + listaClienti[i].varsta + '</td>';
-    k+= '<td>' + listaClienti[i].telefon + '</td>';
-    k+= '</tr>';
+// var k = '<tbody>'
+// for(i = 0;i < listaClienti.length; i++){
+//     k+= '<tr>';
+//     k+= '<td>' + listaClienti[i].nume + '</td>';
+//     k+= '<td>' + listaClienti[i].prenume + '</td>';
+//     k+= '<td>' + listaClienti[i].varsta + '</td>';
+//     k+= '<td>' + listaClienti[i].telefon + '</td>';
+//     k+= '</tr>';
+// }
+// k+='</tbody>';
+// document.getElementById('tableData').innerHTML = k;
+function draw() {
+    var table = document.getElementById('bodyTableClienti');
+    var listaRowAsHtml = '';
+    for (var i = 0; i < listaClienti.length; i++) {
+        var client = listaClienti[i];
+        var htmlRow = `
+            <tr>
+                <td class="c1">${client.nume}</td>
+                <td class="c2">${client.prenume}</td>
+                <td class="c3">${client.varsta}</td>
+                <td class="c4">${client.telefon}</td>
+            </tr>
+        `;
+        listaRowAsHtml += htmlRow;
+    }
+    table.innerHTML = listaRowAsHtml;
 }
-k+='</tbody>';
-document.getElementById('tableData').innerHTML = k;
+
+function coloreaza(className, culoare) {
+    var elements = document.getElementsByClassName(className);
+    var arr = Array.from(elements);
+    for (var i = 0; i < arr.length; i++) {
+        var element = arr[i];
+        element.classList.toggle(culoare);
+    }
+}
+
+window.addEventListener("load", function () {
+    draw();
+
+    var arrayOfTh = document.getElementsByTagName("th");
+    for (var i = 0; i < arrayOfTh.length; i++) {
+        var th = arrayOfTh[i];
+        th.addEventListener("click", function (b) {
+            var className = b.target.className;
+            console.log("AI DAT CLICK PE " + className);
+            coloreaza(className, "red");
+
+        })
+    }
+});
+
