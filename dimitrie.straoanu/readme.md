@@ -27,6 +27,6 @@
 
 # Tema_s6
 
-- [Shopping List](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s6/shopping_list/index.html)
+- [Shopping List](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s6/shopping_list)
 - [Phone Book](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s6/phone_book/index.html)
 - [Monty Hall](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s6/monty_hall/index.html)
