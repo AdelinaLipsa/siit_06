@@ -37,6 +37,7 @@ window.addEventListener("DOMContentLoaded", function () {
     function selectDoor() {
 
         if (gameStage == 1) {
+            
             selectedDoor = this.id;
             this.querySelector(".msg").innerHTML = "?";
             helper.innerHTML = "Keep selection or try the other door.";
@@ -46,13 +47,14 @@ window.addEventListener("DOMContentLoaded", function () {
         } else if (gameStage == 2) {
 
             if (this.id == winningDoor) {
+
                 this.querySelector(".msg").innerHTML = "CAR!!!";
                 helper.innerHTML = "You won!!!";
                 gameStage = null;
                 startbtn.innerHTML = "Play again"
 
             } else if (this.id != openedDoor) {
-                
+
                 this.querySelector(".msg").innerHTML = "GOAT";
                 helper.innerHTML = "You lost!!!";
                 gameStage = null;
@@ -76,7 +78,6 @@ window.addEventListener("DOMContentLoaded", function () {
             openedDoor = door.id;
 
         } else {
-
             var door = document.getElementById(goatDoors[0]);
             door.querySelector(".msg").innerHTML = "GOAT"
             openedDoor = door.id;

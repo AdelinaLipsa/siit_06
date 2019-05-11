@@ -16,11 +16,12 @@
     clear: both;;
 }
 
-#startBtn{    
+#startBtn{
+    cursor:pointer;    
     font-size: 2em;
     padding:0.25em 1em;    
-    
 }
+
 #helper{    
     margin-bottom: 1em;
     font-size: 2em;

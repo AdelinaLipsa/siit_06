@@ -24,3 +24,9 @@
 # Tema_s5
 
 - [Tema DOM](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s5/index.html)
+
+# Tema_s6
+
+- [Shopping List](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s6/shopping_list/index.html)
+- [Phone Book](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s6/phone_book/index.html)
+- [Monty Hall](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s6/monty_hall/index.html)
