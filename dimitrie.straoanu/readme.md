@@ -28,5 +28,6 @@
 # Tema_s6
 
 - [Shopping List](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s6/shopping_list)
-- [Phone Book](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s6/phone_book/index.html)
-- [Monty Hall](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s6/monty_hall/index.html)
+- [Phone Book](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s6/phone_book)
+- [Monty Hall](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s6/monty_hall)
+- [Tic Tac Toe](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s6/tictactoe)
