@@ -8,6 +8,7 @@
 html{
     max-height:100%;
 }
+
 body {
     height:100%;
     min-width:900px;
@@ -86,7 +87,6 @@ th {
     padding:0.3em;
     width: 10em;
     min-width: 8.5em;
-    
 }
 
 td{
@@ -97,7 +97,6 @@ td{
 
 input {
     padding: 0.3em;
-    
 }
 
 button {

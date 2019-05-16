@@ -3,13 +3,14 @@ window.addEventListener("DOMContentLoaded", function () {
     "use strict";
 
     var studentsList = [
-        { name: "John", grades: [9, 8, 6, 3], selected: false },
-        { name: "Teo", grades: [5, 6, 7, 2], selected: false },
-        { name: "Lars", grades: [9, 8, 9, 1], selected: false },
-        { name: "George", grades: [4, 7, 6, 1], selected: false }
+        { name: "John", grades: [9, 8, 6, 9], selected: false },
+        { name: "Teo", grades: [5, 6, 7, 4], selected: false },
+        { name: "Lars", grades: [9, 8, 9, 4], selected: false },
+        { name: "George", grades: [4, 7, 6, 7], selected: false }
     ];
     var selectedIndex;
     var oldIndex;
+    var sortOrder;
 
     var nameInput = document.getElementById("nameInput");
     var addStudentBtn = document.getElementById("addStudentBtn");
@@ -39,37 +40,28 @@ window.addEventListener("DOMContentLoaded", function () {
     drawStudentsTable();
 
     function studentNameInput(e) {
-
         if (nameInput.value && (e.target.id == "addStudentBtn" || e.key == "Enter")) {
             addStudent();
             drawStudentsTable();
             highlightRow();
         }
-        else if (e.target.innerHTML == "Show grades") {
+        else if (e.target.dataset.id == "showGrades") {
             selectStudent(e)
             showGrades();
             drawGradesTable();
             clearHighlight();
             highlightRow();
         }
-        else if (e.currentTarget.className == "sortBtn") {
-
-            if (e.currentTarget.id == "sortAverageDown") {
-                var sortOrder = "descending";
-            }
-            else if (e.currentTarget.id == "sortAverageUp") {
-                sortOrder = "ascending";
-            }
-            sortAverageGrade(sortOrder);
+        else if (e.currentTarget.dataset.id == "sortBtn") {
+            setSortOrder(e)
+            sortAverageGrade();
             drawStudentsTable();
             syncSelectedIndex()
             highlightRow();
         }
     }
 
-
     function studentGradeInput(e) {
-
         if (gradeInput.value && (e.target.id == "addGradeBtn" || e.key == "Enter")) {
             addGrade();
             drawGradesTable();
@@ -81,20 +73,14 @@ window.addEventListener("DOMContentLoaded", function () {
             hideGrades();
             clearHighlight();
         }
-        else if (e.currentTarget.className == "sortBtn") {
-            if (e.currentTarget.id == "sortGradesDown") {
-                var sortOrder = "descending";
-            }
-            else if (e.currentTarget.id == "sortGradesUp") {
-                sortOrder = "ascending";
-            }
-            sortStudentGrades(sortOrder);
+        else if (e.currentTarget.dataset.id == "sortBtn") {
+            setSortOrder(e);
+            sortStudentGrades();
             drawGradesTable();
         }
     }
 
     function selectStudent(e) {
-
         oldIndex = selectedIndex;
         selectedIndex = Number(e.target.dataset.index);
         studentsList[selectedIndex].selected = true;
@@ -104,43 +90,43 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function deselectStudent() {
-
         studentsList[selectedIndex].selected = false;
         selectedIndex = null;
         oldIndex = null;
     }
 
-    function sortAverageGrade(sortOrder) {
-
-        if (sortOrder == "ascending") {
-            
-            studentsList.sort(function (a, b) {
-                return averageGrade(a.grades) - averageGrade(b.grades);
-            });
-
+    function setSortOrder(e) {
+        if (e.currentTarget.id == "sortGradesDown" || e.currentTarget.id == "sortAverageDown") {
+            sortOrder = "descending";
         }
-        else if (sortOrder == "descending") {
-            
-            studentsList.sort(function (a, b) {
-                return averageGrade(b.grades) - averageGrade(a.grades);
-            });
-
+        else if (e.currentTarget.id == "sortGradesUp" || e.currentTarget.id == "sortAverageUp") {
+            sortOrder = "ascending";
         }
     }
 
-    function sortStudentGrades(sortOrder) {
+    function sortAverageGrade() {
+        if (sortOrder == "ascending") {
+            studentsList.sort(function (a, b) {
+                return averageGrade(a.grades) - averageGrade(b.grades);
+            });
+        }
+        else if (sortOrder == "descending") {
+            studentsList.sort(function (a, b) {
+                return averageGrade(b.grades) - averageGrade(a.grades);
+            });
+        }
+    }
 
+    function sortStudentGrades() {
         var grades = studentsList[selectedIndex].grades;
         if (sortOrder == "ascending") {
             grades.sort((a, b) => a - b);
-            
-        } else if(sortOrder == "descending"){
+        } else if (sortOrder == "descending") {
             grades.sort((a, b) => b - a);
         }
     }
 
     function addStudent() {
-
         var newStudent = {
             name: nameInput.value,
             grades: [],
@@ -151,7 +137,6 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function drawStudentsTable() {
-
         studentsTableBody.innerHTML = "";
         for (var i = 0; i < studentsList.length; i++) {
             studentsTableBody.innerHTML += `
@@ -159,7 +144,7 @@ window.addEventListener("DOMContentLoaded", function () {
                     <td class="spacer"></td>
                     <td>${studentsList[i].name}</td>
                     <td>${averageGrade(studentsList[i].grades)}</td>
-                    <td><button data-index ="${i}">Show grades</button></td>
+                    <td><button data-index ="${i}" data-id ="showGrades">Show grades</button></td>
                     <td class="spacer"></td>
                 </tr>
             `;
@@ -167,7 +152,6 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function addGrade() {
-
         var newGrade = Number(gradeInput.value);
         newGrade = Number(newGrade.toFixed(2));
         var grades = studentsList[selectedIndex].grades;
@@ -176,7 +160,6 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function drawGradesTable() {
-
         var grades = studentsList[selectedIndex].grades;
         gradesTableBody.innerHTML = "";
         for (var i = 0; i < grades.length; i++) {
@@ -189,7 +172,6 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function showGrades() {
-
         gradesWrapper.classList.remove("hide");
         gradesWrapper.classList.add("float");
         studentsWrapper.classList.add("float");
@@ -200,6 +182,7 @@ window.addEventListener("DOMContentLoaded", function () {
     function hideGrades() {
         gradesWrapper.classList.add("hide");
         studentsWrapper.classList.remove("float");
+        gradeInput.value = "";
     }
 
     function syncSelectedIndex() {
@@ -211,7 +194,6 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function highlightRow() {
-
         var rows = studentsTableBody.querySelectorAll("tr");
         for (var i = 0; i < rows.length; i++) {
             if (i == selectedIndex) {
@@ -221,7 +203,6 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function clearHighlight() {
-
         var rows = studentsTableBody.querySelectorAll(".highlight");
         for (var i = 0; i < rows.length; i++) {
             rows[i].classList.remove("highlight");
@@ -229,7 +210,6 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function averageGrade(arr) {
-
         if (arr.length == 0) return arr;
         var sum = 0;
         for (var i = 0; i < arr.length; i++) {
