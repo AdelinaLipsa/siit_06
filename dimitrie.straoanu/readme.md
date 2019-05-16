@@ -31,3 +31,7 @@
 - [Phone Book](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s6/phone_book)
 - [Monty Hall](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s6/monty_hall)
 - [Tic Tac Toe](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s6/tictactoe)
+
+# Tema_s7
+
+- [Catalog de note](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s7)

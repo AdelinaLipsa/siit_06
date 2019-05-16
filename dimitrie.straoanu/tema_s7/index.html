@@ -5,40 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title>Catalog de note</title>
-    <meta name="description" content="implementare tema saptamana 7">
+    <meta name="description" content="Implementare tema saptamana 7">
     <meta name="author" content="Dimitrie Straoanu">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/solid.css"
+        integrity="sha384-ioUrHig76ITq4aEJ67dHzTvqjsAP/7IzgwE7lgJcg2r7BRNGYSK0LwSmROzYtgzs" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css"
+        integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
 
 <body>
-    <div id="lista_elevi_wrapper" class="float">
-        <h1>Lista elevi</h1>
+    <div id="studentsWrapper">
+        <h2>Students list</h2>
         <div class="interface">
-            <input type="text" id="nume" autocomplete="off">
-            <button>Adauga elev</button>
+            <input type="text" id="nameInput" autocomplete="off">
+            <button id="addStudentBtn">Add student</button>
         </div>
         <table>
             <thead>
                 <tr>
-                    <th>Nume</th>
-                    <th>Medie</th>
+                    <th class="spacer"></th>
+                    <th>Name</th>
+                    <th>Average grade</th>
                     <th></th>
+                    <th class="spacer"></th>
+                </tr>
+                <tr>
+                    <th class="spacer"></th>
+                    <th></th>
+                    <th>
+                        <button id="sortAverageDown" class="sortBtn"><i class="fas fa-angle-down"></i></button><button
+                            id="sortAverageUp" class="sortBtn"><i class="fas fa-angle-up"></i></button>
+                    </th>
+                    <th></th>
+                    <th class="spacer"></th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody id="studentsTableBody"></tbody>
         </table>
     </div>
-    <div id="note_elev_wrapper" class="float">
-        <button id="hideBtn">Ascunde notele</button>
-        <h1>Note elev</h1>
+    <div id="gradesWrapper" class="hide">
+        <button id="hideGradesBtn">Hide grades</button>
+        <h2 id="gradesHeading">Student grades</h2>
         <div class="interface">
-            <input type="number" id="nota" autocomplete="off">
-            <button>Adauga nota</button>
+            <input type="number" id="gradeInput" autocomplete="off" min="0" max="10">
+            <button id="addGradeBtn">Add grades</button>
         </div>
         <table>
-            <thead><tr><th>Note</th></tr></thead>
-            
+            <thead>
+                <tr>
+                    <th>Grades</th>
+                </tr>
+                <tr>
+                    <th>
+                        <button id="sortGradesDown" class="sortBtn"><i class="fas fa-angle-down"></i></button><button
+                            id="sortGradesUp" class="sortBtn"><i class="fas fa-angle-up"></i></button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="gradesTableBody"></tbody>
         </table>
 
 
