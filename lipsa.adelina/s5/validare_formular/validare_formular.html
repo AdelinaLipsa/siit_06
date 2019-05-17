@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Validare Formular</title>
+  <link href="validare_formular.css" type="text/css" rel="stylesheet">
+  <script src="validare_formular.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Modak" rel="stylesheet">
+</head>
+
+<body>
+  <div id="wrapper">
+    <h2 class="header">Formular</h2>
+    <form>
+      <p>
+        <fieldset>
+          <legend>Title<abbr title="This field is mandatory">*</abbr></legend>
+          <input type="radio" required name="title" id="r1" value="Mr"><label for="r1">Mr.</label>
+          <input type="radio" required name="title" id="r2" value="Ms"><label for="r2">Ms.</label>
+          <input type="radio" required name="title" id="r3" value="Other"><label for="r2">Other</label>
+        </fieldset>
+      </p>
+      <p>
+        <label for="n1">How old are you?</label>
+        <input type="number" min="12" max="120" step="1" id="n1" name="age" pattern="\d+">
+      </p>
+      <p>
+        <fieldset>
+          <input type="checkbox" required name="job" value="Front End"><label for="c1">Front End</label>
+          <input type="checkbox" required name="job" value="Back End"><label for="c2">Back End</label>
+          <input type="checkbox" required name="job" value="Full Stack"><label for="c3">Full Stack</label>
+        </fieldset>
+      </p>
+      <p>
+        <label for="t1">What's your favorite fruit?<abbr title="This field is mandatory">*</abbr></label>
+        <input type="text" id="t1" name="fruit" list="l1" required
+          pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range">
+        <datalist id="l1">
+          <option>Banana</option>
+          <option>Cherry</option>
+          <option>Apple</option>
+          <option>Strawberry</option>
+          <option>Lemon</option>
+          <option>Orange</option>
+        </datalist>
+      </p>
+      <p>
+        <label for="t2">What's your favorite programming language?<abbr title="This field is mandatory">*</abbr></label>
+        <input type="text" id="t2" name="programming" list="l2" required
+          pattern="[Cc]| [Pp]ython | [Jj]avascript | [Pp]hp| [Rr]uby | [Ss]hell]">
+        <datalist id="l2">
+          <option>C</option>
+          <option>Python</option>
+          <option>Javascript</option>
+          <option>PHP</option>
+          <option>Ruby</option>
+          <option>Shell</option>
+        </datalist>
+      </p>
+      <p>
+        <label for="t3">What's your e-mail?</label>
+        <input type="email" id="t3" name="email">
+      </p>
+      <p>
+        <label for="t4">Leave a short message</label>
+        <textarea id="t4" name="msg" maxlength="140" rows="5"></textarea>
+      </p>
+      <p>
+        <button>Submit</button>
+      </p>
+    </form>
+</body>
+
+</html>
