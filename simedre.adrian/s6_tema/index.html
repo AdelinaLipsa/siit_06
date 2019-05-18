@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tema S6</title>
+    <meta name="author" content="Adrian Simedre">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <div class="agenda">
+        <h1>Agenda</h1>
+        <div class="agenda_block">
+            <form id="agenda_form">
+                <label for="nume">Nume:</label>
+                    <input type="text" id="nume" name="nume">
+                <label for="telefon">Telefon:</label>
+                    <input type="number" id="telefon" name="telefon"></br>
+                <p id="agenda_error"></p>
+                <input type="submit" id ="agenda_submit" value="ADAUGA CONTACT">
+            </form>
+        </div>
+        <div id="show_agenda" class="hidden">
+            <table id="table_agenda">
+            </table>
+        </div>
+    </div>
+    <div class="shoppingList">
+        <div class="shopping_block">
+        <h1>SHOPPING LIST</h1>
+        <form id="shopping_form">
+            <input type="text" id="product" name="product">
+            <input type="submit" id="shopping_submit" value="Add item">
+        </form>
+        <button id="asc">Sort asc</button>
+        <button id="dsc">Sort dsc</button>
+            <div id="show_shoppind" class="hidden">
+                <table id="table_shopping">
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="images">
+        <div class="block_img">
+            <h1>Pick a door</h1>
+            <p id="sold"></p>
+            <input type="number" id="bet" placeholder="Place your bet" value="">
+        </div>
+        <div class="display_img" id="image_div">
+            <div class="img_block"><img src="1.png" id="img1"></div>
+            <div class="img_block"><img src="2.png" id="img2"></div>
+            <div class="img_block"><img src="3.png" id="img3"></div>
+        </div>
+    </div>
+
+</body>
+</html>

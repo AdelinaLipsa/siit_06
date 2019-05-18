@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <title>Phone Book App</title>
+    <meta name="description" content="An useful phone book app">
+    <meta name="author" content="Dimitrie Straoanu">
+    <link href="https://fonts.googleapis.com/css?family=Mukta:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/solid.css" integrity="sha384-ioUrHig76ITq4aEJ67dHzTvqjsAP/7IzgwE7lgJcg2r7BRNGYSK0LwSmROzYtgzs" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>My Phone Book</h1>
+        </div>
+        <div class="inputElements">
+            <label for="name">Name:</label>
+            <input type="text" id="name" autocomplete="off" maxlength="25">
+            <label for="mobile">Mobile:</label>
+            <input type="text" id="mobile" autocomplete="off" maxlength="25">
+            <div class="buttons">
+                <button id="addBtn">Add contact</button>
+                <button id="cancelBtn">Cancel</button>
+            </div>
+            <p id="helper">Phone book is empty!</p>
+        </div>
+        <div class="phoneBook"></div>
+    </div>
+
+</body>
+
+</html>

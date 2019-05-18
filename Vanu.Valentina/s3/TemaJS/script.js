@@ -72,7 +72,6 @@ var natNr = function () {
     } else {
         alert("These are not natural numbers!\nPlease use natural numbers.");
     }
-
 }
 // ---------------------------------------------------
 var checkPrimNr = function () {

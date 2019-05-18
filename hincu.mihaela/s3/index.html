@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tema 3.</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+</head>
+
+
+<body>
+  <h1>Saptamana 3</h1>
+
+  <div id="wrapper">
+
+    <div class="space">
+      <button class="collapsible">
+        <h3> 1. </h3>
+        <p class="text">O functie care compara 2 valori si returneaza true daca sunt egale si false daca nu sunt egale.
+        </p>
+      </button>
+      <p class="content">
+        <strong> function compare(number1,number2){ <br>
+          &nbsp;&nbsp;if(number1 == number2) <br>
+          &nbsp;&nbsp;&nbsp; return true; <br>
+          &nbsp;&nbsp;else <br>
+          &nbsp;&nbsp;&nbsp; return false; <br>
+          };</strong>
+      </p>
+
+      <div>
+        <input id="option1.1" type="text">
+        <input id="option1.2" type="text">
+        <button onclick="compare()">Answer</button>
+        <input id="answer1" readonly="readonly" type="text">
+        <button onclick="myFunction('option1.1');myFunction('option1.2');myFunction('answer1')" type="button"> Clear
+        </button>
+      </div>
+    </div>
+
+    <div class="space">
+      <button class="collapsible">
+        <h3> 2. </h3>
+        <p class="text">O functie care compara 2 valori si returneaza -1 daca primul e mai mic ca al doilea, 0 daca sunt
+          egale si 1 daca primul e mai mare ca al doilea</p>
+      </button>
+      <p class="content">
+        <strong> function compare(number1,number2) { <br>
+          &nbsp;&nbsp; if (number1 &lt; number2) <br>
+          &nbsp;&nbsp;&nbsp; return -1; <br>
+          &nbsp;&nbsp; else if (number1 == number2) <br>
+          &nbsp;&nbsp;&nbsp; return 0; <br>
+          &nbsp;&nbsp;else<br>
+          &nbsp;&nbsp;&nbsp;return 1; <br>
+          };
+        </strong>
+      </p>
+
+      <div>
+        <input id="option2.1" type="text">
+        <input id="option2.2" type="text">
+        <button onclick="compare2()">Answer</button>
+        <input id="answer2" readonly="readonly" type="text">
+        <button onclick="myFunction('option2.1');myFunction('option2.2');myFunction('answer2')" type="button"> Clear
+        </button>
+      </div>
+
+    </div>
+
+    <div class="space">
+      <button class="collapsible">
+        <h3> 3. </h3>
+        <p class="text">O functie care primeste 2 valori si returneaza maximul dintre cele 2</p>
+      </button>
+      <p class="content">
+        <strong> function compare(number1,number2) { <br>
+          &nbsp;&nbsp;if (number1 &lt; number2) <br>
+          &nbsp;&nbsp;&nbsp; return number2; <br>
+          &nbsp;&nbsp; else <br>
+          &nbsp;&nbsp;&nbsp; return number1;<br>
+          };
+        </strong>
+      </p>
+
+      <div>
+        <input type="text" id="option3.1">
+        <input type="text" id="option3.2">
+        <button onclick="compare3()">Submit</button>
+        <input id="answer3" readonly="readonly" type="text">
+        <button onclick="myFunction('option3.1');myFunction('option3.2');myFunction('answer3')" type="button"> Clear
+        </button>
+      </div>
+    </div>
+
+
+    <div class="space">
+      <button class="collapsible">
+        <h3> 4. </h3>
+        <p class="text">O functie care primeste 2 valori si returneaza minimul dintre cele 2</p>
+      </button>
+      <p class="content">
+        <strong> function compare(number1,number2) { <br>
+          &nbsp;&nbsp;if (number1 &lt; number2) <br>
+          &nbsp;&nbsp;&nbsp; return number1; <br>
+          &nbsp;&nbsp; else <br>
+          &nbsp;&nbsp;&nbsp; return number2;<br>
+          };
+        </strong>
+      </p>
+
+      <div>
+        <input type="text" id="option4.1">
+        <input type="text" id="option4.2">
+        <button onclick="compare4()">Submit</button>
+        <input id="answer4" readonly="readonly" type="text">
+        <button onclick="myFunction('option4.1');myFunction('option4.2');myFunction('answer4')" type="button"> Clear
+        </button>
+      </div>
+    </div>
+
+
+
+    <div class="space">
+      <button class="collapsible">
+        <h3> 5. </h3>
+        <p class="text">O functie care intoarce suma primelor N numere naturale pozitive</p>
+      </button>
+      <p class="content">
+        <strong>
+
+          function sum(number) { <br>
+          var sum=0; <br>
+          &nbsp;&nbsp; for(var i=1; i &lt;=number; i++){ <br>
+          &nbsp;&nbsp;&nbsp; sum=sum+i; <br>
+          &nbsp;&nbsp; } <br>
+          &nbsp;&nbsp;return sum; <br>
+          };
+        </strong>
+      </p>
+
+      <div>
+        <input type="text" id="option5.1">
+
+        <button onclick="sum()">Submit</button>
+        <input id="answer5" readonly="readonly" type="text">
+        <button onclick="myFunction('option5.1');myFunction('answer5')" type="button"> Clear </button>
+      </div>
+    </div>
+
+
+
+    <div class="space">
+      <button class="collapsible">
+        <h3> 6. </h3>
+        <p class="text">O functie care verifica daca N este numar prim (restul impartirii la 1 si la N ==0)</p>
+      </button>
+      <p class="content">
+        <strong>
+          function prim(number) { <br>
+          var estePrim=true; <br>
+          &nbsp;&nbsp;for(var i=2; i&lt;=(number/2); i++) { <br>
+          &nbsp;&nbsp;&nbsp;if (number%i==0) <br>
+          &nbsp;&nbsp;&nbsp;&nbsp; estePrim=false; <br>
+          &nbsp;&nbsp; } <br>
+
+          if (estePrim==true) <br>
+          &nbsp;console.log ("E prim!"); <br>
+          else <br>
+          &nbsp;console.log ("Nu e prim!"); <br>
+          };
+
+        </strong>
+      </p>
+
+      <div>
+        <input type="text" id="option6.1">
+
+        <button onclick="prim()">Submit</button>
+        <input id="answer6" readonly="readonly" type="text">
+        <button onclick="myFunction('option6.1');myFunction('answer6')" type="button"> Clear </button>
+      </div>
+    </div>
+
+
+
+    <div class="space">
+      <button class="collapsible">
+        <h3> 7. </h3>
+        <p class="text">O functie care intoarce suma primelor N numere prime</p>
+      </button>
+      <p class="content">
+        <strong>
+
+
+          function sumP(n){ <br>
+          var sum=0;<br>
+          var isPrim;<br>
+          &nbsp;&nbsp;for(var i=1;i&lt;=n;i++){<br>
+          &nbsp; &nbsp;&nbsp;isPrim=true;<br>
+          &nbsp;&nbsp; &nbsp; for(var j=2; j&lt;=(i/2); j++) {<br>
+          &nbsp; &nbsp; &nbsp; &nbsp; if (i%j==0)<br>
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; isPrim=false;<br>
+          &nbsp; &nbsp; &nbsp; }<br>
+          &nbsp; &nbsp; &nbsp;if(isPrim==true)<br>
+          &nbsp; &nbsp; &nbsp; &nbsp;sum=sum+i;<br>
+          &nbsp; &nbsp; }<br>
+          return sum;<br>
+          }
+        </strong>
+      </p>
+
+      <div>
+        <input type="text" id="option7.1">
+
+        <button onclick="sumP()">Submit</button>
+        <input id="answer7" readonly="readonly" type="text">
+        <button onclick="myFunction('option7.1');myFunction('answer7')" type="button"> Clear </button>
+      </div>
+    </div>
+
+    <div class="space">
+      <button class="collapsible">
+        <h3> 8. </h3>
+        <p class="text">O functie care primeste un parametru de tip string si intoarce inversul acestuia (abc => cba)
+        </p>
+      </button>
+      <p class="content">
+        <strong>
+
+          function reverseString(str) { <br>
+          var stringRev=""; <br>
+          &nbsp;for(var i = 0; i &lt; str.length; i++) <br>
+          &nbsp; &nbsp;stringRev=str[i]+stringRev; <br>
+          return stringRev; <br>
+          }
+        </strong>
+      </p>
+
+      <div>
+        <input type="text" id="option8.1">
+
+        <button onclick="reverseString()">Submit</button>
+        <input id="answer8" readonly="readonly" type="text">
+        <button onclick="myFunction('option8.1');myFunction('answer8')" type="button"> Clear </button>
+      </div>
+    </div>
+
+
+    <div class="space">
+      <button class="collapsible">
+        <h3> 9. </h3>
+        <p class="text">O functie care intoarce produsul primelor N numere impare pozitive</p>
+      </button>
+      <p class="content">
+        <strong>
+
+          function prodImp(N){ <br>
+          var prod=1; <br>
+          &nbsp; for(var i=1;i &lt; =N;i=i+2) <br>
+          &nbsp;&nbsp;prod = prod * i; <br>
+          return prod; <br>
+          }
+
+        </strong>
+      </p>
+
+      <div>
+        <input type="text" id="option9.1">
+
+        <button onclick="prodImp()">Submit</button>
+        <input id="answer9" readonly="readonly" type="text">
+        <button onclick="myFunction('option9.1');myFunction('answer9')" type="button"> Clear </button>
+      </div>
+    </div>
+
+    <div class="space">
+      <button class="collapsible">
+        <h3 style="color:rgb(122, 14, 14)"> 10. </h3>
+        <p class="text">O functie care primeste 2 parametri(arr - array de nr intregi si x - numar) si verifica daca x
+          exista in array</p>
+      </button>
+      <p class="content">
+        <strong>
+          function verify(arr,x) { <br>
+          var exista=false; <br>
+          &nbsp;for (var i=0; i &lt; arr.length; i++) <br>
+          &nbsp;&nbsp; if (arr[i]== x) <br>
+          exista=true; <br>
+          &nbsp;if (exista == true) <br>
+          &nbsp;&nbsp;console.log("Exista"); <br>
+          &nbsp;else <br>
+          &nbsp;&nbsp; console.log("Nu exista"); <br>
+          };
+        </strong>
+      </p>
+
+      <div>
+        <input type="text" id="option10.1">
+        <input type="text" id="option10.2">
+        <button onclick="verify()">Submit</button>
+        <input id="answer10" readonly="readonly" type="text">
+        <button onclick="myFunction('option10.1');myFunction('option10.2');myFunction('answer10')" type="button"> Clear
+        </button>
+      </div>
+    </div>
+
+    <div class="space">
+      <button class="collapsible">
+        <h3 style="color:rgb(122, 14, 14)"> 11. </h3>
+        <p class="text">O functie care intoarce maximul dintr-un array primit ca parametru</p>
+      </button>
+      <p class="content">
+        <strong>
+          function maxArr(arr){ <br>
+          var max=arr[0]; <br>
+          &nbsp; for(var i=1;i &lt; arr.length;i++){ <br>
+          &nbsp;&nbsp; if(max &lt; arr[i]) <br>
+          &nbsp;&nbsp;&nbsp; max=arr[i]; <br>
+          }; <br>
+          &nbsp;return max; <br>
+          }; <br>
+        </strong>
+      </p>
+
+      <div>
+        <input type="text" id="option11.1">
+        <button onclick="maxArr()">Submit</button>
+        <input id="answer11" readonly="readonly" type="text">
+        <button onclick="myFunction('option11.1');myFunction('answer11')" type="button"> Clear </button>
+      </div>
+    </div>
+
+
+    <div class="space">
+      <button class="collapsible">
+        <h3 style="color:rgb(122, 14, 14)"> 12. </h3>
+        <p class="text">O functie care intoarce suma dintre max si min, dintr-un array primit ca parametru</p>
+      </button>
+      <p class="content">
+        <strong>
+          function sumMM(arr){ <br>
+          var min = arr[0]; <br>
+          var max = arr[0]; <br>
+          var sum; <br>
+
+          &nbsp;for(var i=1;i &lt; arr.length;i++){ <br>
+          &nbsp; &nbsp; if(min &gt; arr[i]) <br>
+          &nbsp; &nbsp; &nbsp; min=arr[i]; <br>
+          &nbsp; &nbsp; if(max &lt; arr[i]) <br>
+          &nbsp; &nbsp; &nbsp; max=arr[i]; <br>
+          } <br>
+          sum = min+max; <br>
+          return sum; <br>
+          }
+        </strong>
+      </p>
+
+      <div>
+        <input type="text" id="option12.1">
+
+        <button onclick="sumMM()">Submit</button>
+        <input id="answer12" readonly="readonly" type="text">
+        <button onclick="myFunction('option12.1');myFunction('answer12')" type="button"> Clear </button>
+      </div>
+    </div>
+
+
+    <div class="space">
+      <button class="collapsible">
+        <h3 style="color:rgb(122, 14, 14)"> 13. </h3>
+        <p class="text">O functie care verifica daca exista duplicate intr-un array primit ca parametru</p>
+      </button>
+      <p class="content">
+        <strong>
+          function dup(arr){ <br>
+          var exista = false; <br>
+          &nbsp; for(var i=0;i &lt; arr.length-1;i++) <br>
+          &nbsp; for(var j=i+1;j &lt; arr.length;j++) <br>
+          &nbsp;&nbsp; if(arr[i]==arr[j]) <br>
+          &nbsp; exista=true; <br>
+          if(exista == true) <br>
+          &nbsp; console.log("Exista duplicate in array"); <br>
+          else <br>
+          &nbsp; console.log("Nu exista duplicate"); <br>
+          }
+        </strong>
+      </p>
+
+      <div>
+        <input type="text" id="option13.1">
+
+        <button onclick="dup()">Submit</button>
+        <input id="answer13" readonly="readonly" type="text">
+        <button onclick="myFunction('option13.1');myFunction('answer13')" type="button"> Clear </button>
+      </div>
+    </div>
+
+    <div class="space">
+      <button class="collapsible">
+        <h3 style="color:rgb(122, 14, 14)"> 14. </h3>
+        <p class="text">O functie care intoarce produsul numerelor pozitive intr-un array primit ca parametru</p>
+      </button>
+      <p class="content">
+        <strong>
+          function prod(arr){ <br>
+          var prod = 1; <br>
+          &nbsp; for (i = 0; i &lt; arr.length; i++) { <br>
+          &nbsp; &nbsp; if(arr[i]&gt;0){ <br>
+          &nbsp; &nbsp; prod = prod * arr[i]; <br>
+          } <br>
+          } <br>
+          return prod; <br>
+          }
+        </strong>
+      </p>
+
+      <div>
+        <input type="text" id="option14.1">
+
+        <button onclick="prod()">Submit</button>
+        <input id="answer14" readonly="readonly" type="text">
+        <button onclick="myFunction('option14.1');myFunction('answer14')" type="button"> Clear </button>
+      </div>
+    </div>
+
+
+    <div class="space">
+      <button class="collapsible">
+        <h3> 15. </h3>
+        <p class="text">O functie care verifica daca un string primit ca parametru este palindrom (inversul ==
+          originalul, ex: abcba == abcba, abca != acba</p>
+      </button>
+      <p class="content">
+        <strong>
+          function isPalindrom(str) { <br>
+          var stringRev=""; <br>
+          &nbsp; for(var i = 0; i &lt; str.length; i++) { <br>
+          &nbsp;&nbsp; stringRev=str[i]+stringRev; <br>
+          } <br>
+          &nbsp;if(stringRev==str) <br>
+          console.log("Cuvantul este palindrom"); <br>
+          &nbsp;else <br>
+          console.log("Cuvantul nu este palindrom"); <br>
+          } <br>
+        </strong>
+      </p>
+
+      <div>
+        <input type="text" id="option15.1">
+        <button onclick="isPalindrom()">Submit</button>
+        <input id="answer15" readonly="readonly" type="text">
+        <button onclick="myFunction('option15.1');myFunction('answer15')" type="button"> Clear </button>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="jvs.js"></script>
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+
+    var slideIndex = 0;
+    showSlides();
+
+    function myFunction(y) {
+      var x = document.getElementById(y);
+      x.value = "";
+    }
+  </script>
+
+
+
+</body>

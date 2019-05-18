@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tema S4 - JS part 2</title>
+    <meta name="author" content="Dimitrie Straoanu">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Tema S4 - JS part 2</h1>
+        </div>
+    </div>
+
+    <div class="container clearFix">
+
+        <div class="col">
+            <div class="content">
+                <h2>01</h2>
+                <p>O functie care primeste un sir de caractere si returneaza cifrele din sirul respectiv.</p>
+                <h3>Input string</h3>
+                <input id="01_string" class="string" type="text" maxlength="25">
+                <p>Ex: ab43md0xl62dq234</p>
+                <button onclick="exe01()">Hocus pocus!</button>
+                <div class="result">
+                    <p id="01_result"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="content">
+                <h2>02</h2>
+                <p>O functie care primeste un sir de caractere si returneaza doar literele din sirul respectiv.</p>
+                <h3>Input string</h3>
+                <input id="02_string" class="string" type="text" maxlength="25">
+                <p>Ex: ab43md0xl62dq234</p>
+                <button onclick="exe02()">Hocus pocus!</button>
+                <div class="result">
+                    <p id="02_result"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="content">
+                <h2>03</h2>
+                <p>O functie care primeste un sir de caractere si returneaza primele N litere(daca exista).</p>
+                <h3>Input string</h3>
+                <input id="03_string" class="string" type="text" maxlength="25">
+                <p>Ex: ab43md0xl62dq234</p>
+                <h3>Input number</h3>
+                <input id="03_number" class="number" type="text" maxlength="3">
+                <p>Ex: 5</p>
+                <button onclick="exe03()">Hocus pocus!</button>
+                <div class="result">
+                    <p id="03_result"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="content">
+                <h2>04</h2>
+                <p>O functie care primeste o lista de siruri de caractere si returneaza sirurile concatenate.</p>
+                <h3>Input array</h3>
+                <input id="04_arr" class="arr" type="text" maxlength="50">
+                <p>Ex: dolphin,whale,octopus,shark</p>
+                <button onclick="exe04()">Hocus pocus!</button>
+                <div class="result">
+                    <p id="04_result"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="content">
+                <h2>05</h2>
+                <p>O functie care primeste o lista de siruri de caractere si returneaza cifrele din toate sirurile.</p>
+                <h3>Input array</h3>
+                <input id="05_arr" class="arr" type="text" maxlength="50">
+                <p>Ex: dol4phin,1whale,o3ctop0us,3401,shark</p>
+                <button onclick="exe05()">Hocus pocus!</button>
+                <div class="result">
+                    <p id="05_result"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="content">
+                <h2>06</h2>
+                <p>O functie care primeste o lista de siruri de caractere si returneaza lista de siruri de caractere
+                    inversate.</p>
+                <h3>Input array</h3>
+                <input id="06_arr" class="arr" type="text" maxlength="50">
+                <p>Ex: dolphin,whale,octopus,shark</p>
+                <button onclick="exe06()">Hocus pocus!</button>
+                <div class="result">
+                    <p id="06_result"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="content">
+                <h2>07</h2>
+                <p>Calculeaza factorialul unui numar.</p>
+                <h3>Input number</h3>
+                <input id="07_number" class="number" type="text" maxlength="2">
+                <p>Ex: 5</p>
+                <button onclick="exe07()">Hocus pocus!</button>
+                <div class="result">
+                    <p id="07_result"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="content">
+                <h2>08</h2>
+                <p>Calculeaza cel mai mare divizor comun al 2 numere.</p>
+                <h3>Input number</h3>
+                <input id="08_number1" class="number" type="text" maxlength="10">
+                <p>Ex: 84</p>
+                <h3>Input number</h3>
+                <input id="08_number2" class="number" type="text" maxlength="10">
+                <p>Ex: 196</p>
+                <button onclick="exe08()">Hocus pocus!</button>
+                <div class="result">
+                    <p id="08_result"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="content">
+                <h2>09</h2>
+                <p>Calculeaza cel mai mic multiplu comun al 2 numere.</p>
+                <h3>Input number</h3>
+                <input id="09_number1" class="number" type="text" maxlength="10">
+                <p>Ex: 84</p>
+                <h3>Input number</h3>
+                <input id="09_number2" class="number" type="text" maxlength="10">
+                <p>Ex: 196</p>
+                <button onclick="exe09()">Hocus pocus!</button>
+                <div class="result">
+                    <p id="09_result"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="content">
+                <h2>10</h2>
+                <p>Returneaza un array care sa contina toti divizorii unui numar.</p>
+                <h3>Input number</h3>
+                <input id="10_number" class="number" type="text" maxlength="10">
+                <p>Ex: 64</p>
+                <button onclick="exe10()">Hocus pocus!</button>
+                <div class="result">
+                    <p id="10_result"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="content">
+                <h2>11</h2>
+                <p>O functie care verifica daca un numar este palindrom.</p>
+                <h3>Input number</h3>
+                <input id="11_string" class="string" type="text" maxlength="25">
+                <p>Ex: 1234321</p>
+                <button onclick="exe11()">Hocus pocus!</button>
+                <div class="result">
+                    <p id="11_result"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="content">
+                <h2>12</h2>
+                <p>O functie care sorteaza numerele pare dintr-un sir de numere primit ca parametru.</p>
+                <h3>Input array</h3>
+                <input id="12_arr" class="arr" type="text" maxlength="50">
+                <p>Ex: 12,5,10,74,9,62,83,2,16,44,120</p>
+                <button onclick="exe12()">Hocus pocus!</button>
+                <div class="result">
+                    <p id="12_result"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="content">
+                <h2>13</h2>
+                <p>O functie care primeste ca parametru un array de numere. Aceasta sorteaza ascendent numerele pare si
+                    descendent numerele impare, in cadrul aceluiasi array primit ca parametru.</p>
+                <h3>Input array</h3>
+                <input id="13_arr" class="arr" type="text" maxlength="50">
+                <p>Ex: 24,5,11,74,9,61,1,27,2,16,35,44,90</p>
+                <button onclick="exe13()">Hocus pocus!</button>
+                <div class="result">
+                    <p id="13_result"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="content">
+                <h2>14</h2>
+                <p>O functie care primeste 2 parametri(un array si un numar). Folosind binary search verificati daca
+                    numarul primit ca parametru se gaseste in array.</p>
+                <h3>Input array</h3>
+                <input id="14_arr" class="arr" type="text" maxlength="50">
+                <p>Ex: 2,5,7,8,9,12,14,15,21,24,31,33,65</p>
+                <h3>Input number</h3>
+                <input id="14_number" class="number" type="text" maxlength="3">
+                <p>Ex: 31</p>
+                <button onclick="exe14()">Hocus pocus!</button>
+                <div class="result">
+                    <p id="14_result"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="content">
+                <h2>15</h2>
+                <p>O functie care implementeaza binary search pentru a verifica daca un numar se regaseste intr-un
+                    array. Dupa ce se termina executia functiei trebuie sa puteti afisa de cate ori s-a apelat functia
+                    recursiv.</p>
+                <h3>Input array</h3>
+                <input id="15_arr" class="arr" type="text" maxlength="50">
+                <p>Ex: 2,5,7,8,9,12,14,15,21,24,31,33,65</p>
+                <h3>Input number</h3>
+                <input id="15_number" class="number" type="text" maxlength="3">
+                <p>Ex: 31</p>
+                <button onclick="exe15()">Hocus pocus!</button>
+                <div class="result">
+                    <p id="15_result"></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

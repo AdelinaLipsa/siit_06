@@ -1,0 +1,9 @@
+8.O functie care primeste un parametru de tip string si intoarce inversul acestuia (abc => cba)
+
+function reverseString(str) {
+	var stringRev="";
+	for(var i = 0; i<str.length; i++) {
+		stringRev=str[i]+stringRev;
+}
+return stringRev;
+}

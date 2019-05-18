@@ -1,0 +1,30 @@
+.compare_grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 2px;
+}
+
+.inner_compare_grid1{
+	border: 1px solid black;
+	display: grid;
+	/*grid-template-columns: 1fr 1fr ;8*/
+	grid-template-columns: repeat(2, 1fr);
+
+	grid-gap: 1em;
+	grid-auto-rows: auto;
+
+
+}
+
+.padd{
+	padding: 1em 0 1em 0;
+}
+
+.inner_compare_grid2{
+	border: 1px solid black;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+#textt{
+	
+}

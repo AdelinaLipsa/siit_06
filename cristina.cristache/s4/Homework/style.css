@@ -1,0 +1,94 @@
+.wrapper1>div {
+    background-color: #eee;
+}
+
+.wrapper1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1ex;
+}
+
+.wrapper1>div:nth-child(odd) {
+    background-color: rgb(223, 193, 193);
+}
+
+.f1n3 {
+    display: grid;
+    grid-auto-rows: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.f1n3>div:nth-child(odd) {
+    background-color: rgb(165, 144, 240);
+}
+
+.func1 , .func3{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-items: center;
+    align-self: center;
+}
+
+
+/*--------------------------------------------------------------*/
+.wrapper2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1ex;
+}
+
+.wrapper2>div:nth-child(odd) {
+    background-color: rgb(168, 228, 145);
+}
+
+.wrapper3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: rgb(223, 81, 147);
+    grid-gap: 1ex;
+}
+
+.wrapper3>div:nth-child(odd) {
+    background-color: rgb(228, 145, 193);
+}
+
+/*------------------------------------------------------- */
+
+.wrapper4 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    
+}
+
+.wrapper4>div:nth-child(odd) {
+    background-color: #ddd;
+}
+
+.f9n11{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.f9n11>div:nth-child(odd) {
+    background-color: rgb(221, 221, 221)!important;
+}
+/*------------------------------------------------------*/
+
+.wrapper5{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background: red;
+}
+
+.f13n14n15{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    background: greenyellow;
+}
+
+.f13n14n15>div:nth-child(odd) {
+    background-color: rgb(77, 206, 109);
+}
+.f14n15{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
