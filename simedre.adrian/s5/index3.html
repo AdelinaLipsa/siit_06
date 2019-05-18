@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tema S5(3)</title>
+    <meta name="author" content="Adrian Simedre">
+	<style type="text/css">
+		body{
+			background-color: #9B7F00;
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		input{
+			margin-bottom: 10px;
+			padding: 10px;
+			border-radius: 10px;
+			background-color: #FFD92F;
+		}
+		button{
+			padding: 10px;
+			border-radius: 10px;
+			font-weight: bold;
+			margin-right: 20px;
+			background-color: #FCAF00;
+		}
+		button:hover{
+			cursor: pointer;
+			background-color: #C68A00;
+			color: white;
+		}
+		hr{
+			height: 5px;
+			background-color: grey;
+			border-radius: 5px;
+		}
+		textarea{
+			border-radius: 10px;
+			width: 300px;
+			height: 50px;
+			background-color: #FFD92F;
+		}
+		#textL{
+			width: auto;
+			height: 50px;
+			margin-top: 20px;
+			margin-bottom: 10px;
+			margin-left: 60%;
+			border: 1px solid grey;
+			border-radius: 10px;
+		}
+		.block{
+			width: 40%;
+			border: 1px solid black;
+			border-radius: 30px;
+			padding: 10px 30px;
+			float: left;
+			margin: 40px;
+			text-align: center;
+			box-shadow: 10px 10px 20px #FFF55B;
+			background-color: #9B9100;
+			font-weight: bold;
+		}
+		.clear{
+			clear: both;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+		<div class="block">
+				<p>1.Pastrati doar 2 inputuri si colorati ambele inputuri verzi daca valoarea din casuta 1 si din casuta 2 sunt egale</p>
+				<input type="number" id="input1"></br>
+				<input type="number" id="input2"></br>
+				<button onclick="ver()">Verifica</button>
+				<p id="rez1"></p>
+			</div>
+			<div class="block">
+				<p>2.Pastrati doar 2 inputuri si colorati inputul care are valoarea mai mare. Daca sunt egale, colorati-le pe ambele</p>
+				<input type="number" id="input3"></br>
+				<input type="number" id="input4"></br>
+				<button onclick="def()">Verifica</button>
+				<p id="rez2"></p>
+			</div>
+			<div class="clear"></div>
+			<div class="block">
+				<p>3.Pastrati doar 3 inputuri si afisati in al 3-lea input valoarea inputului mai mare dintre primul si al doilea</p>
+				<input type="number" id="input5"></br>
+				<input type="number" id="input6"></br>
+				<button onclick="A()">Verifica</button>
+				<input type="text" id="input7">
+				<p id="rez3"></p>
+			</div>
+			<div class="block">
+				<p>4.Pastrati doar 3 inputuri si afisati in al 3-lea input suma primului + celui de-al 2-lea  input </p>
+				<input type="number" id="input8"></br>
+				<input type="number" id="input9"></br>
+				<button onclick="S()">Suma este:</button>
+				<input type="text" id="input10">
+			</div>
+			<div class="clear"></div>
+			<div class="block">
+				<p>5.Pastrati doar 1 input si afisati intr-un span/div in coltul dreapta jos, lungimea sirului de caractere tastat.</p>
+				<textarea id="input11" onfocus="T()"></textarea>
+				<div id="textL"></div>
+			</div>
+			<div class="block">
+				<p>6.Plecand de la ex 5, limitati numarul de caractere la 10. In momentul in care am ajuns la 10, inrositi counterul si folosind event.preventDefault() pe evenimentul onkeypress opriti utilizatorul sa mai introduca caractere in plus</p>
+				<input type="text" id="input12" onkeydown="limit()" onkeyup="limit()">
+				<p id="rez4"></p>
+			</div>
+			<div class="clear"></div>
+			<div class="block">
+				<p>7.Pastrati doar 1 input si folosind event.preventDefault pe evenimentul onkeypress, opriti utilizatorul sa mai introduca orice altceva decat numere. (tip: puteti sa gasiti caracterul tastat in event.key)</p>
+				<input type="text" id="input13">
+				<p id="rez5"></p>
+			</div>
+
+	<script type="text/javascript">
+		// ex 1.
+		function ver(){
+			var x = document.getElementById("input1").value;
+			var y = document.getElementById("input2").value;
+			var inputX = document.getElementById("input1");
+			var inputY = document.getElementById("input2");
+			if (x == y){
+				document.getElementById("rez1").innerHTML = "Cela doua valori " + x + " si " + y + " sunt egale.";
+				inputX.style.backgroundColor = "green";
+				inputY.style.backgroundColor = "green";
+			} else {
+				document.getElementById("rez1").innerHTML = "Cela doua valori " + x + " si " + y + " nu sunt egale.";
+				inputX.style.backgroundColor = "red";
+				inputY.style.backgroundColor = "red";
+			}
+		}
+		// ex 2.
+		function def(){
+			var x = document.getElementById("input3").value;
+			var y = document.getElementById("input4").value;
+			var inputX = document.getElementById("input3");
+			var inputY = document.getElementById("input4");
+			if (x > y){
+				document.getElementById("rez2").innerHTML = x + " este mai mare decat " + y;
+				inputX.style.backgroundColor = "green";
+				inputY.style.backgroundColor = "transparent";
+			} else if (x < y){
+				document.getElementById("rez2").innerHTML = x+ " este mai mic decat " + y;
+				inputX.style.backgroundColor = "transparent";
+				inputY.style.backgroundColor = "green";
+			} else {
+				document.getElementById("rez2").innerHTML = "Cele doua valori sunt egale.";
+				inputX.style.backgroundColor = "lightgreen";
+				inputY.style.backgroundColor = "lightgreen";
+			}
+		}
+		// ex 3.
+		function A(){
+			var x = document.getElementById("input5").value;
+			var y = document.getElementById("input6").value;
+			var z = document.getElementById("input7").value;
+			var inputX = document.getElementById("input5");
+			var inputY = document.getElementById("input6");
+			var inputZ = document.getElementById("input7");
+			if (x > y){
+				document.getElementById("rez3").innerHTML = x + " este mai mare decat " + y;
+				inputZ.value = x;
+				inputX.style.backgroundColor = "lightgreen";
+				inputY.style.backgroundColor = "transparent";
+				inputZ.style.backgroundColor = "lightgreen";
+				document.getElementById("input7").disabled = true;
+			} else if (x < y){
+				document.getElementById("rez3").innerHTML = x + " este mai meic decat " + y;
+				inputZ.value = y;
+				inputX.style.backgroundColor = "transparent";
+				inputY.style.backgroundColor = "lightgreen";
+				inputZ.style.backgroundColor = "lightgreen";
+				document.getElementById("input7").disabled = true;
+			} else {
+				document.getElementById("rez3").innerHTML = "Cele doua valori sunt egale.";
+				inputZ.value = "Valorile sunt egale";
+				inputX.style.backgroundColor = "transparent";
+				inputY.style.backgroundColor = "transparent";
+				inputZ.style.backgroundColor = "#FF5858";
+				document.getElementById("input7").disabled = true;
+			}
+		}
+		// ex 4.
+		function S(){
+			var x = document.getElementById("input8").value;
+			var y = document.getElementById("input9").value;
+			var z = document.getElementById("input10").value;
+			var inputX = document.getElementById("input8");
+			var inputY = document.getElementById("input9");
+			var inputZ = document.getElementById("input10");
+			inputZ.value = Number(x) + Number(y);
+			inputZ.style.backgroundColor = "lightgreen";
+			document.getElementById("input10").disabled = true;
+		}
+		// ex 5.
+		function T(){
+			var x = document.getElementById("input11");
+			var y = document.getElementById("textL");
+				//y = x.split('');
+				//y = y.length;
+				//document.getElementById("textL").innerHTML = "Numarul de caractere introdus este de: " + y;
+				x.onkeyup = function() {
+  					y.innerHTML = "Numarul de caractere introdus este de: " + x.value.length;
+				}
+		}
+		// ex 6.
+		function limit(){
+			var X = document.getElementById("input12");
+    		var max_chars = 10;
+    		if(X.value.length > max_chars) {
+        		X.value = X.value.substr(0, max_chars);
+        		document.getElementById("rez4").innerHTML ="Limita de caractere este de " + max_chars;
+    		}
+		}
+		// ex 7.
+		$(document).ready(function(){
+  			$("#input13").keypress(function(e){
+	    			var keyCode = e.which;
+	    			/*
+	    			8 - (backspace)
+	    			32 - (space)
+	    			48-57 - (0-9)Numbers
+	    			*/
+    			if ( (keyCode != 8 || keyCode ==32 ) && (keyCode < 48 || keyCode > 57)) { 
+      				e.preventDefault();
+      				document.getElementById("rez5").innerHTML ="Singurele caractere acceptate sunt cifre.";
+    			}
+  			});
+  			$("#input13").keypress(function(e){
+    			var keyCode = e.which;
+				/* 
+				48-57 - (0-9)Numbers
+			    65-90 - (A-Z)
+			    97-122 - (a-z)
+			    8 - (backspace)
+			    32 - (space)
+			    */
+			    // Not allow special 
+    			if ( !( (keyCode >= 48 && keyCode <= 57) 
+      				||(keyCode >= 65 && keyCode <= 90) 
+      				|| (keyCode >= 97 && keyCode <= 122) ) 
+      				&& keyCode != 8 && keyCode != 32) {
+      					e.preventDefault();
+    			}
+  			});
+		});
+	</script>
+</body>
+</html>	

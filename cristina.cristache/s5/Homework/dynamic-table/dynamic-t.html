@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="dynamic-t.js"></script>
+    <style>
+        .type{
+            margin: 0 0 3px 0;
+        }
+    </style>
+    <title>Dynamic Table</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align:center; margin:1em 0 1em 0;">
+            Dynamic HTML Table
+        </h1>
+        <form>
+            <div><input class="type" type="text" id="" placeholder="Nume"><p id="verifyName" style="float:right"></p></div>
+            <div><input class="type" type="text" id="" placeholder="Prenume"><p id="verifySurname" style="float:right"></p></div>
+            <div><input class="type" type="text" id="" placeholder="Varsta"><p id="verifyAge" style="float:right"></p></div>
+            <div><input class="type" type="text" id="" placeholder="Telefon"><p id="verifyPhone" style="float:right"></p></div>
+            <button>
+                Send
+            </button>
+        </form>
+        <table class="table table-stripped">
+            <thead>
+                <tr>
+                    <th onclick="sortByKeyAsc(this,'initialOrder')" scope="col" class="header">#</th>
+                    <th onclick="sortByKeyAsc(this,'nume')" class="header">Nume</th>
+                    <th onclick="sortByKeyAsc(this,'prenume')" class="header">Prenume</th>
+                    <th onclick="sortByKeyAsc(this,'varsta')" class="header">Varsta</th>
+                    <th onclick="sortByKeyAsc(this,'telefon')" class="header">Telefon</th>
+
+                </tr>
+            </thead>
+            <tbody id="table">
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

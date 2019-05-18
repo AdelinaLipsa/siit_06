@@ -1,0 +1,21 @@
+#banner{
+    background-color: #38558F;
+    width: 100%;
+    height: 12%;
+    position: fixed;
+    top: 5px;
+    left: 0px;
+    
+}
+
+#logo{
+    height: 85%;
+    position: absolute;
+    bottom: 0px;
+    float: left;
+    
+}
+
+#input1{
+    float: left;
+}
