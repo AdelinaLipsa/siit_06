@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+   
+    
+        
+      
+    
+}
+
+.mainbody {
+    border: 2px solid black;   
+    height: 1080px;  
+    border-radius: 20px;
+    background-image: url(./png/coffe.jpg)
+}
+
+.head {
+   
+    background-color: red;
+    border: 1px solid purple ;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
+}
+.head li {
+    font-size: 20px;
+    list-style: circle;
+    display: inline-block;
+    margin: 30px;
+    
+}
+.maincontent {
+    border: 1px solid black;
+    background-color: rgb(44, 145, 24);
+    margin-left: 10%;
+    width: 50%;
+    height: 180px;
+        
+    padding-top: 0px;  
+    color: #384300;
+    
+}
+
+.titlu {
+    text-align: left;
+    margin: 60px 20px 30px 70px;
+}
+.titlu p {
+    margin-top: 10px;
+}
+.maincontent2  {
+    
+        border: 1px solid black;
+        background-color: rgb(88, 88, 88);
+        
+        width: 70%;
+        height: 180px;
+             
+        
+        color: #384300;
+        
+    
+}

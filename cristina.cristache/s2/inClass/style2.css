@@ -1,0 +1,29 @@
+#divLayout{
+    margin-top: 10%;
+}
+
+#divLayout div{
+    border: 1px solid black;
+    margin: 1px;
+}
+
+#bodyContainer{
+    width: 100%;
+}
+#bodyLeft{
+    float: left;
+    width: 49.4%;
+}
+
+#bodyRight{
+    float: left;
+    width: 49.4%;
+}
+#header{
+   width: 100%;
+}
+
+#navbar{
+    border: 1px solid black;
+    width: 100%;
+}

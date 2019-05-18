@@ -1,0 +1,24 @@
+10.O functie care primeste 2 parametri(arr - array de nr intregi si x - numar) si verifica daca x exista in array
+	
+function verify(arr,x) { 
+
+	var exista=false;
+	
+	for (var i=0; i<arr.length; i++) {
+
+		if (arr[i]==x)
+		
+exista=true;
+
+	}
+;
+
+	if (exista==true)
+
+		console.log("Exista");
+
+	else
+
+		console.log("Nu exista");
+
+};

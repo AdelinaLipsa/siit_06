@@ -1,5 +1,5 @@
 #body{
-    margin: 0 auto;
+    margin: 0px;
 }
 
 #navbar{
@@ -9,9 +9,9 @@
 }
 
 #bluebar{
+    background-color: blue
+}
+.row{
     width: 100%;
-    height: 5%;
-    background-color: blue;
-    text-align: left;
-    margin-top: 0px;
+    margin: 0 auto; 
 }

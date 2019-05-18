@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+}
+
+h1,
+h2,
+p {
+    padding: 0.4em;
+    margin-bottom: 1em;
+}
+
+h1 {
+    text-transform: uppercase;
+    background: rgb(218, 247, 210);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    background: #e4e4e4;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+.clearFix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+    margin: 1em;
+    /* border: 1px dashed; */
+}
+
+.col {
+    float: left;
+    width: 33.33%;
+}
+
+.content {
+    margin: 1em;
+    padding: 1em;
+    background: lightgray;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    width: 100px;
+    padding: 0.5em;
+    font-weight: 900;
+    background: rgb(218, 247, 210);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button:focus {
+    outline: none;
+}
+
+.col:nth-of-type(3n+1) {
+    clear: left;
+}
+
+@media only screen and (max-width:1150px) and (min-width:640px) {
+
+    .col:nth-of-type(3n+1) {
+        clear: none;
+    }
+
+    .col:nth-of-type(2n+1) {
+        clear: left;
+    }
+
+    .col {
+        float: left;
+        width: 50%;
+    }
+
+}
+
+@media only screen and (max-width:639px) {
+
+    .col:nth-of-type(3n+1) {
+        clear: none;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .col {
+        float: left;
+        width: 100%;
+    }
+
+}
