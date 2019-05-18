@@ -1,0 +1,133 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.agenda{
+    background-color: #FFE8A8;
+    margin: 0;
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+}
+h1{
+    font-size: 50px;
+}
+.agenda_block{
+    background-color: orange;
+    font-size: 20px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+input{
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 5px;
+}
+#agenda_submit{
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: 1px solid blue;
+    cursor: pointer;
+}
+#agenda_error{
+    font-weight: bold;
+    color: red;
+}
+#show_agenda{
+    background-color: orange;
+    font-size: 20px;
+    width: 50%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.hidden{
+    display: none;
+}
+.show{
+    display: block;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+td, th{
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+#edit, #delete{
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+.shoppingList{
+    background-color: #BB9ECB;
+    margin: 0;
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+}
+.shopping_block{
+    background-color: white;
+    font-size: 20px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#shopping_submit{
+    padding: 10px;
+    background-color: lightgreen;
+    color: black;
+    border: 1px solid lightgreen;
+    cursor: pointer;
+}
+#asc, #dsc{
+    background-color: #BB9ECB;
+    padding: 5px;
+    border-radius: 5px;
+}
+#mark{
+    background-color: pink;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.marked{
+    text-decoration: line-through;
+}
+.images{
+    background-color: #FFE873;
+    margin: 0;
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+}
+.display_img, .block_img{
+    background-color: white;
+    font-size: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.img_block{
+    display: inline;
+    margin-left: 60px;
+    margin-right: 60px;
+    cursor: pointer;
+}
