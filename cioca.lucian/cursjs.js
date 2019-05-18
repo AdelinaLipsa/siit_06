@@ -225,3 +225,141 @@ function fibonacci(nr) {
     else return fibonacci(nr-1)+fibonacci(nr-2);
     
 }
+
+
+
+
+
+////test 2
+
+
+
+
+// 1. Scrieti o functie JS care primeste ca parametrii doua numere si returneaza media aritmetica a acestora.
+function avgTwoNumbers(a, b) {
+    var c = a+b;
+    return c/2;
+}
+
+// 2. Scrieti o functie JS care primeste ca parametru un array de numere si returneaza media aritmetica a acestora.
+function avgMultipleNumbers(arrayNr) {
+    var s = 0; 
+
+    for ( var i = 0; i < arrayNr.length; i++){
+        s = s + arrayNr[i];
+    }
+    return s/arrayNr.length
+}
+
+// 3. Scrieti o functie JS care primeste ca parametru un array de numere si returneaza suma numerelor impare din array.
+function sumOfTheOddNumbers(arrayNr) {
+    var s = 0;
+    for ( var i = 0; i < arrayNr.length; i++){
+        if (arrayNr[i] % 2 != 0){
+            s = s + arrayNr[i];
+        }
+    }
+    return s;
+}
+
+// 4. Scrieti o functie JS care primeste ca parametru un string si returneaza numarul aparitiilor literei \"m\".
+function noOfOccurance(str) {
+var nr = 0;
+for ( var i = 0; i < str.length; i++){
+    if ( str[i] == "m"){
+        nr ++;
+    }
+}
+return nr;
+}
+
+// 5. Scrieti o functie JS care primeste ca parametru un array de numere nesortate de la 1 la n si returneaza unicul numar lipsa.
+function missingNumber(nr, arrayNr) {
+    var nrSum = 0;
+    var arraySum = 0;
+
+    for ( var i = 1; i <= nr; i++){
+        nrSum = nrSum + i;
+    }
+    for ( var j = 0; j < arrayNr.length; j++){
+        arraySum = arraySum + arrayNr[j];
+    }
+return nrSum-arraySum;
+}
+
+// 6. Scrieti o functie JS care primeste ca parametru un string si ii dubleaza litera \"b\" si returneaza noul string.
+// Exemplu: pentru stringul \"biblioteca\" va returna \"bbibblioteca\"
+function doubleB(str) {
+    var newStr = "";
+    for ( var i = 0 ; i< str.length; i++){
+        if ( str[i] == "b"){
+            newStr = newStr + str[i] + "b";
+        } else {
+            newStr = newStr + str[i];
+        }
+    }
+    return newStr;
+}
+
+// 7. Scrieti o functie JS care primeste ca parametru un string si elimina toate aparitiile literelor \"a\", \"r\" si \"m\" si returneaza stringul rezultat.
+//Exemplu: pentru stringul \"important\" va returna \"iportnt\"
+function eliminateARM(str) {
+    var newStr = "";
+    for ( var i = 0; i < str.length; i++){
+        if( str[i] != "a" && str[i] != "r" && str[i] != "m"){
+            newStr = newStr + str[i];
+        }
+    }
+    return newStr;
+}
+
+// 8. Scrieti o functie JS care primeste ca parametru un numar si returneaza cifrele acestuia intr-un array.
+function digitsOfNumber(nr) {
+    var a = [];
+    var nrSTring = "";
+    if (nr < 0){
+        nr = nr * (-1);
+    }
+    nrSTring = nrSTring + nr;
+    for (var i = 0; i < nrSTring.length; i++){
+        a.push(nrSTring[i]);
+    }
+    return a;
+}
+
+// 9. Scrieti o functie JS care primeste ca parametru un numar si verifica daca este palindrom.
+// Va returna true sau false.
+// Exemplu: \"12321\" este palindrom \"12345\" nu este palindrom
+function isPalindrom(nr) { 
+var nrSTring = "";
+if (nr < 0){
+    nr = nr * (-1);
+}
+nrSTring = nrSTring + nr;
+var palindrom = "";
+
+for (var i = nrSTring.length-1; i >= 0; i--){
+    palindrom += nrSTring[i];
+}
+if ( palindrom == nrSTring){
+    return true;
+}
+else {
+    return false;
+}
+}
+
+// 10. Scrieti o functie JS care primeste ca parametru un array de numere si returneaza acel array sortat descrescator.
+function sortDesc(arrayNr) {
+
+    for ( var i = 0; i< arrayNr.length -1; i++){
+        for ( var j = i; j < arrayNr.length; j++ ){
+            if (arrayNr[i]<arrayNr[j]){
+                var x = arrayNr[i];
+                arrayNr[i]=arrayNr[j];
+                arrayNr[j]= x;
+            }
+        }
+    }
+    return arrayNr;
+}
