@@ -34,4 +34,4 @@
 
 # Tema_s7
 
-- [Catalog de note](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s7)
+- [Catalog de note](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s7/index.html)
