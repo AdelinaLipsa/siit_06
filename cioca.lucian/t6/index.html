@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="mainContent">
+        <h3 class="margiN">Shopping List</h3>
+        <div class="margiN">
+            <input type="text" id="myInput" placeholder="Title...">
+            <button onclick="newElement()" class="addBtn">Add item</button>
+        </div>
+        
+        <div class="margiN">
+            <button class="sortBtn" onclick="sortList()">Sort Asc</button>
+            <button class="sortBtn" onclick="sortListD()">Sort Desc</button>
+        </div>
+        
+        <div class="pDescription margiN">
+                <p class="pItem"><b>Ithem Description</b></p>
+                <p><b>Actions</b></p>
+        </div>
+        
+        <ul id="myUL">
+            
+        </ul>
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+
+</html>

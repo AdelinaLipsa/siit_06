@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <h1 class="titlu">Comments List</h1>
+
+    <h3 class="titluComment">Demo Comment 1</h3>
+
+    <p class="text">Demo Content for comment 1 <b>Ion Pop</b> </p>
+
+
+    <h3 class="titluComment">Demo Comment 2</h3>
+
+    <p class="text">Demo Content for comment 2 <b>Ion Pop</b> </p>
+
+
+    <h3 class="titluComment" id="titluIn"></h3>
+
+    <p class="text" id="BodyIn"> </p>
+
+
+    <input type='text' name='Title' id='titlu' placeholder="Title" /><br />
+    <textarea name='Body' id='Body' placeholder="Body"></textarea><br />
+    <input type='text' name='Author' id='author' placeholder="Author" /><br />
+    <button onclick="myFunction()" id="saveBtn" type='submit'>Save </button>
+
+
+    <script>
+
+        function myFunction() {
+            var x = document.getElementById("titlu").value;
+            document.getElementById("titluIn").innerHTML = x;
+            var y = document.getElementById("Body").value;
+            var z = document.getElementById("author").value;
+            document.getElementById("BodyIn").innerHTML = y + " " + z.bold();
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

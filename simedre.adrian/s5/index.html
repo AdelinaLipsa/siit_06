@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tema S5</title>
+    <meta name="author" content="Adrian Simedre">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <h1>DOM: afisare tabel cu sortare</h1>
+    <form id="formClient">
+        <label for="nume">Nume</label>
+            <input type="text" id="numeNew" name="nume"></br>
+        <label for="prenume">Prenume</label>
+            <input type="text" id="prenumeNew" name="prenume"></br>
+        <label for="varsta">Varsta</label>
+            <input type="text" id="varstaNew" name="varsta"></br>
+        <label for="telefon">Telefon</label>
+            <input type="text" id="telefonNew" name="telefon"></br>
+        <p id="error"></p>
+        <input type="submit" id ="submit" value="Add client">
+    </form>
+    <table id="clienti">
+        <thead>
+        <tr>
+            <th id="nume">Nume</th>
+            <th id="prenume">Prenume</th>
+            <th id="varsta">Varsta</th>
+            <th id="telefon">Telefon</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody id="clientiBody">
+            
+        </tbody>
+    </table>
+</body>
+</html>
