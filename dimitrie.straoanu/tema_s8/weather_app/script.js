@@ -2,6 +2,7 @@
 
 window.addEventListener("DOMContentLoaded", function () {
     document.getElementById("currentWeatherBtn").addEventListener("click", getGeolocation);
+    document.getElementById("addressInput").addEventListener("keyup", getGeolocation);
     document.getElementById("forecastWeatherBtn").addEventListener("click", getForecastWeather);
 });
 
@@ -17,29 +18,32 @@ function initMap() {
     });
 }
 
-function getGeolocation() {
-    var address = document.getElementById("addressInput").value;
-    if (address) {
-        var request = new XMLHttpRequest();
-        request.addEventListener("load", function () {
-            if (this.readyState === 4 && this.status === 200) {
-                var response = JSON.parse(this.responseText);
-                console.log("Data from geolocation api: ", response);
-                if (response.status === "OK") {
-                    formattedAddress = response.results[0].formatted_address;
-                    geolocation = response.results[0].geometry.location;
-                    getCurrentWeather();
-                } else {
-                    document.getElementById("addressInput").value = "";
-                    document.getElementById("addressInput").placeholder = "Location not found.";
-                    console.log("Location not found");
+function getGeolocation(e) {
+    console.log(e.type, e.key);
+    if (e.type === "click" || e.key === "Enter") {
+        var address = document.getElementById("addressInput").value;
+        if (address) {
+            var request = new XMLHttpRequest();
+            request.addEventListener("load", function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    var response = JSON.parse(this.responseText);
+                    console.log("Data from geolocation api: ", response);
+                    if (response.status === "OK") {
+                        formattedAddress = response.results[0].formatted_address;
+                        geolocation = response.results[0].geometry.location;
+                        getCurrentWeather();
+                    } else {
+                        document.getElementById("addressInput").value = "";
+                        document.getElementById("addressInput").placeholder = "Location not found.";
+                        console.log("Location not found");
+                    }
                 }
-            }
-            else
-                console.log("Error getting geolocation");
-        });
-        request.open("GET", `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyAS2Qo6BaWe_XrgIg-_ZSqJRY1IbgsZ6PU`);
-        request.send();
+                else
+                    console.log("Error getting geolocation");
+            });
+            request.open("GET", `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyAS2Qo6BaWe_XrgIg-_ZSqJRY1IbgsZ6PU`);
+            request.send();
+        }
     }
 }
 
