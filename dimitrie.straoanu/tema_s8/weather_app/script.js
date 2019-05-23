@@ -81,37 +81,46 @@ function getForecastWeather() {
 function displayForecastWeather() {
     var forecastWeatherDetails = document.getElementById("forecastWeatherDetails");
     forecastWeatherDetails.innerHTML = "";
-    var firstItemTime = forecastWeather.list[0].dt_txt;
-    var firstItemDay = firstItemTime.match(/\d*[-]\d*[-]\d*/)[0];
-    var myHtml = `<div class="col"><h4>${firstItemDay}</h4>`;
+    var time = forecastWeather.list[0].dt_txt;
+    var day = time.match(/\d*[-]\d*[-]\d*/)[0];
+    var hour = time.match(/\d*[:]\d*/)[0];
+    var myHtml = `
+    <div class="col">
+        <h4>${day}</h4>
+        <ul>
+            <li><img src="https://openweathermap.org/img/w/${forecastWeather.list[0].weather[0].icon}.png"></li>
+            <li>Hour: <b>${hour}</b></li>
+            <li>Description: <b>${forecastWeather.list[0].weather[0].description}</b></li>
+            <li>Temperature: <b>${forecastWeather.list[0].main.temp}</b></li>
+        </ul>
+    `;
     for (var i = 1; i < forecastWeather.list.length; i++) {
-        var nextItemTime = forecastWeather.list[i].dt_txt;
-        var nextItemDay = nextItemTime.match(/\d*[-]\d*[-]\d*/)[0];
-        var hour = nextItemTime.match(/\d*[:]\d*/)[0];
-        if (firstItemDay !== nextItemDay) {
+        var previousDay = day;
+        time = forecastWeather.list[i].dt_txt;
+        day = time.match(/\d*[-]\d*[-]\d*/)[0];
+        hour = time.match(/\d*[:]\d*/)[0];
+        if (previousDay !== day) {
             myHtml += `
             </div>
-            <div class="col"><h4>${nextItemDay}</h4>
-            <ul>
-            <li><img src="https://openweathermap.org/img/w/${forecastWeather.list[i].weather[0].icon}.png"></li>
-            <li>Hour: <b>${hour}</b></li>
-            <li>Description: <b>${forecastWeather.list[i].weather[0].description}</b></li>
-            <li>Temperature: <b>${forecastWeather.list[i].main.temp}</b></li>
-            </ul>
+                <div class="col"><h4>${day}</h4>
+                <ul>
+                    <li><img src="https://openweathermap.org/img/w/${forecastWeather.list[i].weather[0].icon}.png"></li>
+                    <li>Hour: <b>${hour}</b></li>
+                    <li>Description: <b>${forecastWeather.list[i].weather[0].description}</b></li>
+                    <li>Temperature: <b>${forecastWeather.list[i].main.temp}</b></li>
+                </ul>
             `;
         }
         else {
             myHtml += `
             <ul>
-            <li><img src="https://openweathermap.org/img/w/${forecastWeather.list[i].weather[0].icon}.png"></li>
-            <li>Hour: <b>${hour}</b></li>
-            <li>Description: <b>${forecastWeather.list[i].weather[0].description}</b></li>
-            <li>Temperature: <b>${forecastWeather.list[i].main.temp}</b></li>
+                <li><img src="https://openweathermap.org/img/w/${forecastWeather.list[i].weather[0].icon}.png"></li>
+                <li>Hour: <b>${hour}</b></li>
+                <li>Description: <b>${forecastWeather.list[i].weather[0].description}</b></li>
+                <li>Temperature: <b>${forecastWeather.list[i].main.temp}</b></li>
             </ul>
             `;
-        }
-        firstItemTime = nextItemTime;
-        firstItemDay = nextItemDay;
+        }        
     }
     myHtml += `</div>`;
     forecastWeatherDetails.innerHTML = myHtml;
