@@ -1,9 +1,9 @@
 "use strict";
 
 window.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("currentWeatherBtn").addEventListener("click", getGeolocation)
-    document.getElementById("forecastWeatherBtn").addEventListener("click", getForecastWeather)
-})
+    document.getElementById("currentWeatherBtn").addEventListener("click", getGeolocation);
+    document.getElementById("forecastWeatherBtn").addEventListener("click", getForecastWeather);
+});
 
 var geolocation;
 var formattedAddress;
@@ -31,12 +31,12 @@ function getGeolocation() {
                     getCurrentWeather();
                 } else{
                     document.getElementById("addressInput").value =""; 
-                    document.getElementById("addressInput").placeholder ="Location not found."  
+                    document.getElementById("addressInput").placeholder ="Location not found.";
                     console.log("Location not found");
                 }
             }
             else
-                console.log("Error getting geolocation")
+                console.log("Error getting geolocation");
         });
         request.open("GET", `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyD8-qhO3bBwCbYWjcQ_3IQOh8p1xUEii64`);
         request.send();
@@ -54,7 +54,7 @@ function getCurrentWeather() {
             console.log("Error getting current weather");
         }
     });
-    request.open("GET", `https://api.openweathermap.org/data/2.5/weather?appid=69518b1f8f16c35f8705550dc4161056&units=metric&lat=${geolocation.lat}&lon=${geolocation.lng}`)
+    request.open("GET", `https://api.openweathermap.org/data/2.5/weather?appid=69518b1f8f16c35f8705550dc4161056&units=metric&lat=${geolocation.lat}&lon=${geolocation.lng}`);
     request.send();
 }
 
@@ -69,13 +69,13 @@ function getForecastWeather() {
             console.log("Error getting forecast weather");
         }
     });
-    request.open("GET", `https://api.openweathermap.org/data/2.5/forecast?appid=69518b1f8f16c35f8705550dc4161056&units=metric&lat=${geolocation.lat}&lon=${geolocation.lng}`)
+    request.open("GET", `https://api.openweathermap.org/data/2.5/forecast?appid=69518b1f8f16c35f8705550dc4161056&units=metric&lat=${geolocation.lat}&lon=${geolocation.lng}`);
     request.send();
 }
 
 function displayForecastWeather() {
-    var el = document.getElementById("forecastWeatherDetails");
-    el.innerHTML = "";
+    var forecastWeatherDetails = document.getElementById("forecastWeatherDetails");
+    forecastWeatherDetails.innerHTML = "";
     var firstItemTime = forecastWeather.list[0].dt_txt;
     var firstItemDay = firstItemTime.match(/\d*[-]\d*[-]\d*/)[0];
     var myHtml = `<div class="col"><h4>${firstItemDay}</h4>`;
@@ -109,21 +109,20 @@ function displayForecastWeather() {
         firstItemDay = nextItemDay;
     }
     myHtml += `</div>`;
-    el.innerHTML = myHtml;
+    forecastWeatherDetails.innerHTML = myHtml;
 }
 
 function clearForecastWeather(){
-    var el = document.getElementById("forecastWeatherDetails");
-    el.innerHTML = "";
+    var forecastWeatherDetails = document.getElementById("forecastWeatherDetails");
+    forecastWeatherDetails.innerHTML = "";
 }
-
 
 function displayCurrentWeather() {
     clearForecastWeather();
     var address = document.getElementById("address");
     address.innerText = `Location: ${formattedAddress}`;
-    var el = document.getElementById("currentWeatherDetails");
-    el.innerHTML = `
+    var currentWeatherDetails = document.getElementById("currentWeatherDetails");
+    currentWeatherDetails.innerHTML = `
     <img src="http://openweathermap.org/img/w/${currentWeather.weather[0].icon}.png">
     <ul>
     <li>Description: <b>${currentWeather.weather[0].description}</b></li>
@@ -134,11 +133,9 @@ function displayCurrentWeather() {
     <li>Max temp: <b>${currentWeather.main.temp_max}</b></li>
     </ul>
     `;
-    console.log(formattedAddress)
+    console.log(formattedAddress);
     console.log(currentWeather.weather[0].description);
     console.log(currentWeather.main.temp);
     initMap();
     document.getElementById('map').classList.remove("hidden");
 }
-
-
