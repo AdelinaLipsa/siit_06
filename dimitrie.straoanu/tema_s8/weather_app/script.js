@@ -38,7 +38,7 @@ function getGeolocation() {
             else
                 console.log("Error getting geolocation");
         });
-        request.open("GET", `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyD8-qhO3bBwCbYWjcQ_3IQOh8p1xUEii64`);
+        request.open("GET", `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyAS2Qo6BaWe_XrgIg-_ZSqJRY1IbgsZ6PU`);
         request.send();
     }
 }
