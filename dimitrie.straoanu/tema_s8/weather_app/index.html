@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>Weather App</title>
+    <meta name="description" content="A simple and very useful weather app">
+    <meta name="author" content="Dimitrie Straoanu">
+    <link href="https://fonts.googleapis.com/css?family=Sarala:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8-qhO3bBwCbYWjcQ_3IQOh8p1xUEii64" async
+        defer></script>
+</head>
+
+<body>
+    <div class="appContainer">
+        <div class="userInterface">
+            <h1>My Weather App</h1>
+            <div>
+                <input type="text" id="addressInput">
+                <button id="currentWeatherBtn">Show weather</button>
+                <button id="forecastWeatherBtn">Show forecast weather</button>
+            </div>
+        </div>
+        <div class="currentWeather">
+            <h3>Weather now<span id="address"></span></h3>
+            <div>
+                <div id="currentWeatherDetails"></div>
+                <div id="map" class="hidden"></div>
+            </div>
+        </div>
+        <div class="forecastWeather">
+            <h3>Weather forecast</h3>
+            <div id="forecastWeatherDetails"></div>
+        </div>
+    </div>
+</body>
+
+</html>

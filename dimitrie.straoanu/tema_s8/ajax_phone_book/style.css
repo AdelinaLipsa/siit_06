@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #333;
+}
+
+#addBtn,
+#cancelBtn {
+    padding: 0.25em 1em;
+    min-width: 5em;
+}
+
+#sortByName, #sortByMobile{
+    cursor: pointer;
+}
+
+#sortByName:hover, #sortByMobile:hover{
+    color:rgb(203, 243, 177);
+}
+
+#helper {
+    height: 1.5em;
+    margin-top: 1em;
+}
+
+.container {
+    background: rgb(127, 107, 128);
+    padding: 1.5em;
+    display: table;
+    text-align: center;
+    margin: 1em auto;
+
+}
+
+.header {
+    color: white;
+    background: #493657;
+    margin-bottom: 1em;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.inputElements {
+    background: white;
+    padding: 1.5em;
+    min-width: 36em;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.buttons {
+    margin-top: 1em;
+}
+
+.editMode {
+    background: rgb(207, 238, 207);
+}
+
+button {
+    border: none;
+    background: rgb(127, 107, 128);
+    cursor: pointer;
+    padding: 0 0.4em;
+    color: white;
+}
+
+button:hover {
+    background: #493657;
+}
+
+button:focus {
+    outline: none;
+}
+
+button[data-type="delete"] {
+    background: rgb(180, 61, 46);
+}
+
+button[data-type="delete"]:hover {
+    background: rgb(134, 21, 6);
+}
+
+input {
+    width: 15em;
+    padding: 0.2em;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 1em;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+th {
+    background: #493657;
+    color: white;
+    padding: 0.5em 1em;
+    min-width: 12em;
+}
+
+td {
+    padding: 0.3em 1em;
+}
+
+tr {
+    border-bottom: 1px solid lightgrey;
+    background: white;
+}
+
+tr:last-of-type {
+    border-bottom: none;
+}
+
+
+
+label[for="mobile"] {
+    margin-left: 1em;
+}
+
+.arrowUp::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight:900;
+    content:"\f0aa";
+    margin-right: 0.5em;
+}
+
+.arrowDown::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight:900;
+    content:"\f0ab";
+    margin-right: 0.5em;
+}
