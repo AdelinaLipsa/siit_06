@@ -28,8 +28,6 @@ window.addEventListener("DOMContentLoaded", function () {
     cancelBtn.style.display = "none"
     table.style.display = "none"
 
-
-
     var phoneBookData;
     var editMode;
     var contactIndex;
@@ -98,9 +96,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function editTable(event) {
-        console.log(event.target);
         var type = event.target.dataset.type;
-
         if (type == "delete") {
             if (editMode == true) {
                 helper.innerText = "Exit edit mode!";
@@ -143,8 +139,6 @@ window.addEventListener("DOMContentLoaded", function () {
         editMode = false;
         cancelBtn.style.display = "none"
         helper.innerText = "";
-
-
         var tableRows = table.querySelectorAll("tr");
         for (var i = 0; i < tableRows.length; i++) {
             tableRows[i].classList.remove("editMode");
@@ -176,7 +170,6 @@ window.addEventListener("DOMContentLoaded", function () {
             if (!editMode) {
                 nameArrow.classList.remove("arrowDown");
                 nameArrow.classList.remove("arrowUp");
-
                 if (sortDir == "ascending") {
                     sortDir = "descending";
                     mobileArrow.classList.remove("arrowUp");
@@ -190,26 +183,19 @@ window.addEventListener("DOMContentLoaded", function () {
                 sort(phoneBookData, sortDir, sortPar);
             } else
                 helper.innerText = "Exit edit mode!";
-
         }
-
     }
 
     function sort(arr, sortDir, sortPar) {
-
         for (var i = 0; i < arr.length; i++) {
             for (var j = i + 1; j < arr.length; j++) {
-
                 if (sortDir == "ascending") {
-
                     if (arr[i][1][sortPar].toLowerCase() > arr[j][1][sortPar].toLowerCase()) {
                         var temp = arr[i];
                         arr[i] = arr[j];
                         arr[j] = temp;
                     }
-
                 } else if (sortDir == "descending") {
-
                     if (arr[i][1][sortPar].toLowerCase() < arr[j][1][sortPar].toLowerCase()) {
                         var temp = arr[i];
                         arr[i] = arr[j];
@@ -219,7 +205,6 @@ window.addEventListener("DOMContentLoaded", function () {
             }
         }
         drawTable(phoneBookData);
-        console.log(sortDir, sortPar);
     }
 
     function loadDatabase() {
@@ -251,7 +236,6 @@ window.addEventListener("DOMContentLoaded", function () {
                     cancelBtn.style.display = "none"
                     editMode = false;
                 }
-                console.log("Data sent");
                 loadDatabase();
             } else
                 console.log("Error");
@@ -268,7 +252,6 @@ window.addEventListener("DOMContentLoaded", function () {
         var xhr = new XMLHttpRequest();
         xhr.addEventListener("load", function () {
             if (this.readyState === 4 && this.status === 200) {
-                console.log("Data sent");
                 loadDatabase();
             } else
                 console.log("Error");
