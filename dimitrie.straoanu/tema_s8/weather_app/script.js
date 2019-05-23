@@ -24,14 +24,14 @@ function getGeolocation() {
         request.addEventListener("load", function () {
             if (this.readyState === 4 && this.status === 200) {
                 var response = JSON.parse(this.responseText);
-                console.log("Data from geolocation api: ",response);
+                console.log("Data from geolocation api: ", response);
                 if (response.status === "OK") {
                     formattedAddress = response.results[0].formatted_address;
                     geolocation = response.results[0].geometry.location;
                     getCurrentWeather();
-                } else{
-                    document.getElementById("addressInput").value =""; 
-                    document.getElementById("addressInput").placeholder ="Location not found.";
+                } else {
+                    document.getElementById("addressInput").value = "";
+                    document.getElementById("addressInput").placeholder = "Location not found.";
                     console.log("Location not found");
                 }
             }
@@ -48,7 +48,7 @@ function getCurrentWeather() {
     request.addEventListener("load", function () {
         if (this.readyState === 4 && this.status === 200) {
             currentWeather = JSON.parse(this.responseText);
-            console.log("Data from weather api: ",currentWeather);
+            console.log("Data from weather api: ", currentWeather);
             displayCurrentWeather();
         } else {
             console.log("Error getting current weather");
@@ -59,18 +59,20 @@ function getCurrentWeather() {
 }
 
 function getForecastWeather() {
-    var request = new XMLHttpRequest();
-    request.addEventListener("load", function () {
-        if (this.readyState === 4 && this.status === 200) {
-            forecastWeather = JSON.parse(this.responseText);
-            console.log("Data from weather api: ",forecastWeather);
-            displayForecastWeather();
-        } else {
-            console.log("Error getting forecast weather");
-        }
-    });
-    request.open("GET", `https://api.openweathermap.org/data/2.5/forecast?appid=69518b1f8f16c35f8705550dc4161056&units=metric&lat=${geolocation.lat}&lon=${geolocation.lng}`);
-    request.send();
+    if (geolocation) {
+        var request = new XMLHttpRequest();
+        request.addEventListener("load", function () {
+            if (this.readyState === 4 && this.status === 200) {
+                forecastWeather = JSON.parse(this.responseText);
+                console.log("Data from weather api: ", forecastWeather);
+                displayForecastWeather();
+            } else {
+                console.log("Error getting forecast weather");
+            }
+        });
+        request.open("GET", `https://api.openweathermap.org/data/2.5/forecast?appid=69518b1f8f16c35f8705550dc4161056&units=metric&lat=${geolocation.lat}&lon=${geolocation.lng}`);
+        request.send();
+    }
 }
 
 function displayForecastWeather() {
@@ -112,7 +114,7 @@ function displayForecastWeather() {
     forecastWeatherDetails.innerHTML = myHtml;
 }
 
-function clearForecastWeather(){
+function clearForecastWeather() {
     var forecastWeatherDetails = document.getElementById("forecastWeatherDetails");
     forecastWeatherDetails.innerHTML = "";
 }
