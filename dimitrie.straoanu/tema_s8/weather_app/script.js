@@ -19,7 +19,6 @@ function initMap() {
 }
 
 function getGeolocation(e) {
-    console.log(e.type, e.key);
     if (e.type === "click" || e.key === "Enter") {
         var address = document.getElementById("addressInput").value;
         if (address) {
