@@ -88,7 +88,7 @@ function displayForecastWeather() {
             </div>
             <div class="col"><h4>${nextItemDay}</h4>
             <ul>
-            <li><img src="http://openweathermap.org/img/w/${forecastWeather.list[i].weather[0].icon}.png"></li>
+            <li><img src="https://openweathermap.org/img/w/${forecastWeather.list[i].weather[0].icon}.png"></li>
             <li>Hour: <b>${hour}</b></li>
             <li>Description: <b>${forecastWeather.list[i].weather[0].description}</b></li>
             <li>Temperature: <b>${forecastWeather.list[i].main.temp}</b></li>
@@ -98,7 +98,7 @@ function displayForecastWeather() {
         else {
             myHtml += `
             <ul>
-            <li><img src="http://openweathermap.org/img/w/${forecastWeather.list[i].weather[0].icon}.png"></li>
+            <li><img src="https://openweathermap.org/img/w/${forecastWeather.list[i].weather[0].icon}.png"></li>
             <li>Hour: <b>${hour}</b></li>
             <li>Description: <b>${forecastWeather.list[i].weather[0].description}</b></li>
             <li>Temperature: <b>${forecastWeather.list[i].main.temp}</b></li>
@@ -123,7 +123,7 @@ function displayCurrentWeather() {
     address.innerText = `Location: ${formattedAddress}`;
     var currentWeatherDetails = document.getElementById("currentWeatherDetails");
     currentWeatherDetails.innerHTML = `
-    <img src="http://openweathermap.org/img/w/${currentWeather.weather[0].icon}.png">
+    <img src="https://openweathermap.org/img/w/${currentWeather.weather[0].icon}.png">
     <ul>
     <li>Description: <b>${currentWeather.weather[0].description}</b></li>
     <li>Temperature: <b>${currentWeather.main.temp}</b></li>
