@@ -9,9 +9,9 @@
     <meta name="author" content="Dimitrie Straoanu">
     <link href="https://fonts.googleapis.com/css?family=Sarala:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8-qhO3bBwCbYWjcQ_3IQOh8p1xUEii64&libraries=places">
+    </script>
     <script src="script.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8-qhO3bBwCbYWjcQ_3IQOh8p1xUEii64" async
-        defer></script>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         <div class="userInterface">
             <h1>My Weather App</h1>
             <div>
-                <input type="text" id="addressInput">
+                <input type="text" id="queryInput" autofocus>
                 <button id="currentWeatherBtn">Show weather</button>
                 <button id="forecastWeatherBtn">Show forecast weather</button>
             </div>
