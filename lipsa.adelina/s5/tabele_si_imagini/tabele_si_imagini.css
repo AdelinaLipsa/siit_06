@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    padding: 0.5em;
+    width: 150px;
+    height: 100px;
+}
+
+td {
+    border: 1px solid #a7a7a7;
+    padding: 0;
+}
