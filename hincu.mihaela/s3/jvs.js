@@ -210,8 +210,6 @@ function sumMM(arr){
 function dup(arr){
  
     var exista = false;
-    // var arr=[];
-    // arr.push(document.getElementById("option13.1").value);
     arr=document.getElementById("option13.1").value;
         for(var i=0;i<arr.length-1;i++)
             for(var j=i+1;j<arr.length;j++)

@@ -1,0 +1,54 @@
+.mainContent {
+    margin: 0 auto;
+    width: 501px;
+}
+
+.lineThrough {
+    text-decoration: line-through;
+}
+
+.pDescription {
+    width: 100%;
+    display: inline-flex;
+}
+
+.pItem {
+    margin-right: 50px;
+}
+
+.addBtn {
+    border-radius: 1px;
+    background-color: #71fd95;
+    font-family: initial;
+}
+
+.margiN {
+    margin: 20px 20px;
+}
+   
+.sortBtn {
+    width: 74px;
+    height: 25px;
+    font-size: smaller;
+    background-color: #E19BFC;
+    border-radius: 5px;
+}
+
+.markedBtn {
+    width: 100px;
+    height: 25px;
+    font-size: 13px;
+    padding: 0;
+    background-color: #FF9797;
+    border-radius: 5px;
+    float: right;
+}
+
+.liItem {
+    margin: 5px;
+    list-style: none;
+}
+
+#myUL {
+    padding-left: 20px;
+}

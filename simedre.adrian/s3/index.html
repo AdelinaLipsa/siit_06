@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
     <title>Tema JS part 1</title>
     <meta name="author" content="Simedre Adrian">
@@ -9,7 +10,7 @@
 <body>
     <h1>Tema JS part 1</h1>
     <p>1.O functie care compara 2 valori si returneaza true daca sunt egale si false daca nu sunt egale</p>
-    <button onclick="show1()">Afiseaza functia</button></br>
+    <button onclick="show('show1')">Afiseaza functia</button></br>
     <div class="hiddendiv" id="show1">
         <p class="function">
             function compara1() {</br>
@@ -23,20 +24,20 @@
             }</br>
         </p>
     </div></br>
-    <input type="number" id="number1" value="">
-    <input type="number" id="number2" value=""></br>
+    <input type="number" id="number1" value="" placeholder="var x">
+    <input type="number" id="number2" value="" placeholder="var y"></br>
     <button onclick="compara1()">Verifica</button></br>
     <p id="demo1" class="result"></p>
 <hr>
     <p>2.O functie care compara 2 valori si returneaza -1 daca primul e mai mic ca al doilea, 0 daca sunt egale si 1 daca primul e mai mare ca al doilea</p>
-    <button onclick="show2()">Afiseaza functia</button></br>
+    <button onclick="show('show2')">Afiseaza functia</button></br>
     <div class="hiddendiv" id="show2">
         <p class="function">
             function compara2() {</br>
                 <spam class="tab1"></spam>var x = document.getElementById("number3").value;</br>
                 <spam class="tab1"></spam>var y = document.getElementById("number4").value;</br>
-                <spam class="tab1"></spam>if ( x < y ){</br></y>
-                    <spam class="tab2"></spam>document.getElementById("demo2").innerHTML = x+" < "+y+" = -1";</br>
+                <spam class="tab1"></spam>if ( x &#60; y ){</br></y>
+                    <spam class="tab2"></spam>document.getElementById("demo2").innerHTML = x+" &#60; "+y+" = -1";</br>
                 <spam class="tab1"></spam>} else if ( x == y ){</br>
                     <spam class="tab2"></spam>document.getElementById("demo2").innerHTML = x+" = "+y+" = 0";</br>
                 <spam class="tab1"></spam>} else if ( x > y ) {</br>
@@ -45,14 +46,13 @@
             }</br>
         </p>
     </div></br>
-    <input type="number" id="number3" value="">
-    <input type="number" id="number4" value=""></br>
+    <input type="number" id="number3" value="" placeholder="var x">
+    <input type="number" id="number4" value="" placeholder="var y"></br>
     <button onclick="compara2()">Verifica</button>
-    <p>Rezultat:</p>
     <p id="demo2" class="result"></p>
 <hr>
     <p>3.O functie care primeste 2 valori si returneaza maximul dintre cele 2</p>
-    <button onclick="show3()">Afiseaza functia</button></br>
+    <button onclick="show('show3')">Afiseaza functia</button></br>
     <div class="hiddendiv" id="show3">
         <p class="function">
             function compara3() {</br>
@@ -60,22 +60,21 @@
                 <spam class="tab1"></spam>var y = document.getElementById("number6").value;</br>
                 <spam class="tab1"></spam>if ( x > y ){</br>
                     <spam class="tab2"></spam>document.getElementById("demo3").innerHTML = x+" > "+y+" = " +x;</br>
-                <spam class="tab1"></spam>} else if ( x < y ){</br>
-                    <spam class="tab2"></spam>document.getElementById("demo3").innerHTML = x+" < "+y+" = " +y;</br>
-                <spam class="tab1"></spam>} else if ( x = y ){</br>
+                <spam class="tab1"></spam>} else if ( x &#60; y ){</br>
+                    <spam class="tab2"></spam>document.getElementById("demo3").innerHTML = x+" &#60; "+y+" = " +y;</br>
+                <spam class="tab1"></spam>} else if ( x == y ){</br>
                     <spam class="tab2"></spam>document.getElementById("demo3").innerHTML = "Cele doua valori nu trebuie sa fie egale!";</br>
                 <spam class="tab1"></spam>}</br>
             }</br>
         </p>
     </div></br>
-    <input type="number" id="number5" value="">
-    <input type="number" id="number6" value=""></br>
+    <input type="number" id="number5" value="" placeholder="var x">
+    <input type="number" id="number6" value="" placeholder="var y"></br>
     <button onclick="compara3()">Verifica</button>
-    <p>Rezultat:</p>
     <p id="demo3" class="result"></p>
 <hr>
     <p>4.O functie care primeste 2 valori si returneaza minimul dintre cele 2</p>
-    <button onclick="show4()">Afiseaza functia</button></br>
+    <button onclick="show('show4')">Afiseaza functia</button></br>
     <div class="hiddendiv" id="show4">
         <p class="function">
                 <spam class="tab1"></spam>function compara4() {</br>
@@ -83,29 +82,28 @@
                     <spam class="tab2"></spam>var y = document.getElementById("number8").value;</br>
                     <spam class="tab2"></spam>if ( x > y ){</br>
                         <spam class="tab3"></spam>document.getElementById("demo4").innerHTML = x+" > "+y+" = " +y;</br>
-                    <spam class="tab2"></spam>} else if ( x < y ){</br>
-                        <spam class="tab3"></spam>document.getElementById("demo4").innerHTML = x+" < "+y+" = " +x;</br>
-                    <spam class="tab2"></spam>} else if ( x = y ){</br>
+                    <spam class="tab2"></spam>} else if ( x &#60; y ){</br>
+                        <spam class="tab3"></spam>document.getElementById("demo4").innerHTML = x+" &#60; "+y+" = " +x;</br>
+                    <spam class="tab2"></spam>} else if ( x == y ){</br>
                         <spam class="tab3"></spam>document.getElementById("demo4").innerHTML = "Cele doua valori nu trebuie sa fie egale!";</br>
                     <spam class="tab2"></spam>}</br>
                 <spam class="tab1"></spam>}</br>
         </p>
     </div></br>
-    <input type="number" id="number7" value="">
-    <input type="number" id="number8" value=""></br>
+    <input type="number" id="number7" value="" placeholder="var x">
+    <input type="number" id="number8" value="" placeholder="var y"></br>
     <button onclick="compara4()">Verifica</button>
-    <p>Rezultat:</p>
     <p id="demo4" class="result"></p>
 <hr>
     <p>5.O functie care intoarce suma primelor N numere naturale pozitive</p>
-    <button onclick="show5()">Afiseaza functia</button></br>
+    <button onclick="show('show5')">Afiseaza functia</button></br>
     <div class="hiddendiv" id="show5">
         <p class="function">
             function suma1() {</br>
                 <spam class="tab1"></spam>var x = document.getElementById("number9").value;</br>
                 <spam class="tab1"></spam>var sum = 0;</br>
                 <spam class="tab1"></spam>var y = 1;</br>
-                <spam class="tab1"></spam>while ( y <= x ){</br>
+                <spam class="tab1"></spam>while ( y &#60;= x ){</br>
                     <spam class="tab2"></spam>sum = sum + y;</br>
                     <spam class="tab2"></spam>y = y + 1;</br>
                 <spam class="tab1"></spam>}</br>
@@ -113,20 +111,19 @@
             }
         </p>
     </div></br>
-    <input type="number" id="number9" value=""></br>
+    <input type="number" id="number9" value="" placeholder="var x"></br>
     <button onclick="suma1()">Verifica</button>
-    <p>Rezultat:</p>
     <p id="demo5" class="result"></p>
 <hr>
     <p>6.O functie care verifica daca N este numar prim (restul impartirii la 1 si la N ==0)</p>
-    <button onclick="show6()">Afiseaza functia</button></br>
+    <button onclick="show('show6')">Afiseaza functia</button></br>
     <div class="hiddendiv" id="show6">
         <p class="function">
             function prim() {</br>
                 <spam class="tab1"></spam>var n = document.getElementById("number10").value; </br>
                 <spam class="tab1"></spam>var divizori = 0</br>
                 <spam class="tab1"></spam>var d = 1</br>
-                <spam class="tab1"></spam>while (d <= n) {</br>
+                <spam class="tab1"></spam>while (d &#60;= n) {</br>
                     <spam class="tab2"></spam>if (n % d === 0) {</br>
                         <spam class="tab3"></spam>divizori++</br>
                     <spam class="tab2"></spam>}</br>
@@ -140,32 +137,31 @@
             }
         </p>
     </div></br>
-    <input type="number" id="number10" value=""></br>
+    <input type="number" id="number10" value="" placeholder="var n"></br>
     <button onclick="prim()">Verifica</button>
-    <p>Rezultat:</p>
     <p id="demo6" class="result"></p>
 <hr>
     <p>7.O functie care intoarce suma primelor N numere prime</p>
-    <button onclick="show7()">Afiseaza functia</button></br>
+    <button onclick="show('show7')">Afiseaza functia</button></br>
     <div class="hiddendiv" id="show7">
         <p class="function">
             function sumPrimes() {</br>
                 <spam class="tab1"></spam>var n = document.getElementById("number11").value; </br>
                 <spam class="tab1"></spam>let myArr = [];</br>
                 <spam class="tab1"></spam>function isPrime(n) {</br>
-                    <spam class="tab2"></spam>for(let i = 2; i < n; i++){</br>
+                    <spam class="tab2"></spam>for(let i = 2; i &#60; n; i++){</br>
                         <spam class="tab3"></spam>if(n % i === 0){</br>
                             <spam class="tab4"></spam>return false;</br>
                         <spam class="tab3"></spam>}</br>
                     <spam class="tab2"></spam>}</br>
                     <spam class="tab2"></spam>return n !== 1;</br>
                 <spam class="tab1"></spam>}</br>
-                <spam class="tab1"></spam>for(let j = 0; j<= n; j++){</br>
+                <spam class="tab1"></spam>for(let j = 0; j&#60;= n; j++){</br>
                     <spam class="tab2"></spam>if(isPrime(j)){</br>
                         <spam class="tab3"></spam>myArr.push(j);</br>
                     <spam class="tab2"></spam>}</br>
                 <spam class="tab1"></spam>}</br>
-                <spam class="tab1"></spam>for (var x = 0; x < myArr.length; x++){</br>
+                <spam class="tab1"></spam>for (var x = 0; x &#60; myArr.length; x++){</br>
                     <spam class="tab2"></spam>document.getElementById("demo7").innerHTML = "Numerele prime pana la "+n+" sumt : "+myArr;</br>
                 <spam class="tab1"></spam>}</br>
                 <spam class="tab1"></spam>let allSum = myArr.reduce((a,b)=> a + b);</br>
@@ -173,14 +169,13 @@
             }
         </p>
     </div></br>
-    <input type="number" id="number11" value=""></br>
+    <input type="number" id="number11" value="" placeholder="var n"></br>
     <button onclick="sumPrimes()">Verifica</button>
-    <p>Rezultat:</p>
     <p id="demo7" class="result"></p>
     <p id="demo8" class="result"></p>
 <hr>
     <p>8.O functie care primeste un parametru de tip string si intoarce inversul acestuia (abc => cba)</p>
-    <button onclick="show8()">Afiseaza functia</button></br>
+    <button onclick="show('show8')">Afiseaza functia</button></br>
     <div class="hiddendiv" id="show8">
         <p class="function">
             function reverseString() {</br>
@@ -193,19 +188,18 @@
             }
         </p>
     </div></br>
-    <input type="textarea" id="text1" value=""></br>
+    <input type="textarea" id="text1" value="" placeholder="var x"></br>
     <button onclick="reverseString()">Verifica</button>
-    <p>Rezultat:</p>
     <p id="demo9" class="result"></p>
 <hr>
     <p>9.O functie care intoarce produsul primelor N numere impare pozitive</p>
-    <button onclick="show9()">Afiseaza functia</button></br>
+    <button onclick="show('show9')">Afiseaza functia</button></br>
     <div class="hiddendiv" id="show9">
         <p class="function">
             function oddSum() {</br>
                 <spam class="tab1"></spam>var x = document.getElementById("number12").value;</br>
                 <spam class="tab1"></spam>var sum = 0;</br>
-                <spam class="tab1"></spam>for ( var i = 0; i <= x; i++){</br>
+                <spam class="tab1"></spam>for ( var i = 0; i &#60;= x; i++){</br>
                     <spam class="tab2"></spam>if (i % 2 != 0){</br>
                         <spam class="tab3"></spam>sum = sum + i;</br>
                     <spam class="tab2"></spam>}</br>
@@ -214,13 +208,12 @@
             }
         </p>
     </div></br>
-    <input type="number" id="number12" value=""></br>
+    <input type="number" id="number12" value="" placeholder="var x"></br>
     <button onclick="oddSum()">Verifica</button>
-    <p>Rezultat:</p>
     <p id="demo10" class="result"></p>
 <hr>
     <p>10.O functie care primeste 2 parametri(arr - array de nr intregi si x - numar) si verifica daca x exista in array</p>
-    <button onclick="show10()">Afiseaza functia</button></br>
+    <button onclick="show('show10')">Afiseaza functia</button></br>
     <div class="hiddendiv" id="show10">
         <p class="function">
             function ver(){</br>
@@ -251,18 +244,17 @@
         </p>
     </div></br>
     <p>Elementele din array</p>
-    <input type="text" id="text2" value="">
-    <input type="text" id="text3" value="">
-    <input type="text" id="text4" value="">
-    <input type="text" id="text5" value="">
+    <input type="text" id="text2" value="" placeholder="var x2">
+    <input type="text" id="text3" value="" placeholder="var x3">
+    <input type="text" id="text4" value="" placeholder="var x4">
+    <input type="text" id="text5" value="" placeholder="var x5">
     <p>Verifica daca array-ul nostru contine: </p>
-    <input type="text" id="text6" value=""></br>
+    <input type="text" id="text6" value="" placeholder="var x6"></br>
     <button onclick="ver()">Verifica</button>
-    <p>Rezultat:</p>    
     <p id="demo11" class="result"></p>
 <hr>
     <p>11.O functie care intoarce maximul dintr-un array primit ca parametru</p>
-    <button onclick="show11()">Afiseaza functia</button></br>
+    <button onclick="show('show11')">Afiseaza functia</button></br>
     <div class="hiddendiv" id="show11">
         <p class="function">
             function maxLenght(){</br>
@@ -283,22 +275,21 @@
                 <spam class="tab1"></spam>if ( x10 > 0 ){</br>
                     <spam class="tab2"></spam>xArray.push(x10);</br>
                 <spam class="tab1"></spam>}</br>
-                <spam class="tab1"></spam>var y = xArray.length;</br>
+                <spam class="tab1"></spam>var y = Math.max(...xArray);</br>
                 <spam class="tab1"></spam>document.getElementById("demo12").innerHTML = y;</br>
             }
         </p>
     </div></br>
     <p>Elementele din array</p>
-    <input type="text" id="text7" value="">
-    <input type="text" id="text8" value="">
-    <input type="text" id="text9" value="">
-    <input type="text" id="text10" value=""></br>
+    <input type="text" id="text7" value="" placeholder="var x7">
+    <input type="text" id="text8" value="" placeholder="var x8">
+    <input type="text" id="text9" value="" placeholder="var x9">
+    <input type="text" id="text10" value="" placeholder="var x10"></br>
     <button onclick="maxLenght()">Verifica</button>
-    <p>Rezultat:</p>
     <p id="demo12" class="result"></p>
 <hr>
     <p>12.O functie care intoarce suma dintre max si min, dintr-un array primit ca parametru</p>
-    <button onclick="show12()">Afiseaza functia</button></br>
+    <button onclick="show('show12')">Afiseaza functia</button></br>
     <div class="hiddendiv" id="show12">
         <p class="function">
             function sumMaxMin(){</br>
@@ -329,18 +320,17 @@
         </p>
     </div></br>
     <p>Elementele din array</p>
-    <input type="number" id="number13" value="">
-    <input type="number" id="number14" value="">
-    <input type="number" id="number15" value="">
-    <input type="number" id="number16" value=""></br>
+    <input type="number" id="number13" value="" placeholder="var x11">
+    <input type="number" id="number14" value="" placeholder="var x12">
+    <input type="number" id="number15" value="" placeholder="var x13">
+    <input type="number" id="number16" value="" placeholder="var x14"></br>
     <button onclick="sumMaxMin()">Verifica</button>
-    <p>Rezultat:</p>
     <p id="demo13" class="result"></p>
     <p id="demo14" class="result"></p>
     <p id="demo15" class="result"></p>
 <hr>
     <p>13.O functie care verifica daca exista duplicate intr-un array primit ca parametru</p>
-    <button onclick="show13()">Afiseaza functia</button></br>
+    <button onclick="show('show13')">Afiseaza functia</button></br>
     <div class="hiddendiv" id="show13">
         <p class="function">
             function duplicate(){</br>
@@ -363,7 +353,7 @@
                 <spam class="tab1"></spam>}</br>
                 <spam class="tab1"></spam>var sorted_xArray = xArray.slice().sort();</br>
                 <spam class="tab1"></spam>var result = [];</br>
-                <spam class="tab1"></spam>for ( var i = 0; i < sorted_xArray.length - 1; i++ ){</br>
+                <spam class="tab1"></spam>for ( var i = 0; i &#60; sorted_xArray.length - 1; i++ ){</br>
                     <spam class="tab2"></spam>if (sorted_xArray[ i + 1] == sorted_xArray[i]){</br>
                         <spam class="tab3"></spam>result.push(sorted_xArray[i]);</br>
                     <spam class="tab2"></spam>}</br>
@@ -376,19 +366,18 @@
             }
         </p>
     </div></br>
-    <input type="number" id="number17" value="">
-    <input type="number" id="number18" value="">
-    <input type="number" id="number19" value="">
-    <input type="number" id="number20" value=""></br>
+    <input type="number" id="number17" value="" placeholder="var x15">
+    <input type="number" id="number18" value="" placeholder="var x16">
+    <input type="number" id="number19" value="" placeholder="var x17">
+    <input type="number" id="number20" value="" placeholder="var x18"></br>
     <button onclick="duplicate()">Verifica</button>
-    <p>Rezultat:</p>    
     <p id="demo16" class="result"></p>
 <hr>
     <p>14.O functie care intoarce produsul numerelor pozitive intr-un array primit ca parametru</p>
-    <button onclick="show14()">Afiseaza functia</button></br>
+    <button onclick="show('show14')">Afiseaza functia</button></br>
     <div class="hiddendiv" id="show14">
         <p class="function">
-            function mySum(){</br>
+            function Myprod(){</br>
                 <spam class="tab1"></spam>var x19 = document.getElementById("number21").value;</br>
                 <spam class="tab1"></spam>var x20 = document.getElementById("number22").value;</br>
                 <spam class="tab1"></spam>var x21 = document.getElementById("number23").value;</br>
@@ -406,24 +395,23 @@
                 <spam class="tab1"></spam>if ( x22 > 0){</br>
                     <spam class="tab2"></spam>xArray.push(Number(x22));</br>
                 <spam class="tab1"></spam>}</br>
-                <spam class="tab1"></spam>var sum = 0;</br>
-                <spam class="tab1"></spam>for (var i = 0; i <= xArray.length - 1; i++) {</br>
-                    <spam class="tab2"></spam>sum = sum + xArray[i];</br>
+                <spam class="tab1"></spam>var prod = 0;</br>
+                <spam class="tab1"></spam>for (var i = 0; i &#60;= xArray.length - 1; i++) {</br>
+                    <spam class="tab2"></spam>prod = prod * xArray[i];</br>
                 <spam class="tab1"></spam>}</br>
-                <spam class="tab1"></spam>document.getElementById("demo17").innerHTML = sum;</br>
+                <spam class="tab1"></spam>document.getElementById("demo17").innerHTML = prod;</br>
             }
         </p>
     </div></br>
-    <input type="number" id="number21" value="">
-    <input type="number" id="number22" value="">
-    <input type="number" id="number23" value="">
-    <input type="number" id="number24" value=""></br>
-    <button onclick="mySum()">Verifica</button>
-    <p>Rezultat:</p>    
+    <input type="number" id="number21" value="" placeholder="var x19">
+    <input type="number" id="number22" value="" placeholder="var x20">
+    <input type="number" id="number23" value="" placeholder="var x21">
+    <input type="number" id="number24" value="" placeholder="var x22"></br>
+    <button onclick="myProd()">Verifica</button>
     <p id="demo17" class="result"></p>
 <hr>
     <p>15.O functie care verifica daca un string primit ca parametru este palindrom (inversul == originalul, ex: abcba == abcba, abca != acba</p>
-    <button onclick="show15()">Afiseaza functia</button></br>
+    <button onclick="show('show15')">Afiseaza functia</button></br>
     <div class="hiddendiv" id="show15">
         <p class="function">
             function isPalindrome (){</br>
@@ -439,9 +427,8 @@
             }
         </p>
     </div></br>
-    <input type="text" id="text11" value=""></br>
+    <input type="text" id="text11" value="" placeholder="var a"></br>
     <button onclick="isPalindrome()">Verifica</button>
-    <p>Rezultat:</p>    
     <p id="demo18" class="result"></p>
 </body>
 </html>
