@@ -17,7 +17,7 @@ function bubbleSortAsc(arr) {
                 arr[j] = aux;
             }
         }
-    }
+    } 
     return arr;
 }
 function bubbleSortDesc(arr) {

@@ -1,0 +1,67 @@
+button:visited{
+   border: none;
+}
+#wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#student_list_wrapper {
+    padding: 1em;
+    background-color: rgba(119, 128, 0, 0.24);
+}
+
+#student_grade_wrapper {
+    padding: 1em;
+    background-color: rgba(137, 43, 226, 0.322);
+    width: 50%;
+    height: 100vh;
+    margin-right: 0!important;
+}
+
+#name, #grade{
+    border: none;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.185);
+    background-color: rgba(119, 128, 0, 0);
+    margin-top: 2em;
+}
+#addStudentBtn, .cool-btn {
+    border: 1px solid rgba(128, 128, 128, 0.082);
+    color: rgba(1, 37, 4, 0.411);
+    background-color: transparent;
+    border-radius: 1rem;
+
+}
+#addGradeBtn, #hideBtn{
+    border: 1px solid rgba(114, 104, 104, 0.322);
+    color: rgba(17, 1, 16, 0.794);
+    background-color: transparent;
+    border-radius: 1rem;
+}
+ .students {
+    float: left;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+}
+
+.grades {
+    float: right;
+}
+
+.toggle {
+    display: none;
+}
+
+.resize {
+    width: 49.999%!important;
+}
+
+#sthead>tr>th, #studentsList>td {
+    padding: 2ex;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
