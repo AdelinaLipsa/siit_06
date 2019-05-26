@@ -18,3 +18,22 @@
 *[JS Part02](https://github.com/miualinionut/siit_06/blob/master/lipsa.adelina/s4/teme%20s4.js)
 
 #Session_05
+
+*[Comments list]()
+*[Formular si tabel]()
+*[Tabele si imagini]()
+
+#Session_06
+
+*[Agenda telefonica]()
+*[Shopping list]()
+*[Monty Hall]()
+*[Tic Tac Toe]()
+
+#Session_07
+
+*[Catalogul de note]()
+
+#Session_08
+
+*[Weather web app]()
