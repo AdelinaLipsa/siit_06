@@ -73,3 +73,5 @@ function sortDesc() {
 document.getElementById('addButton').addEventListener('click', addItem);
 document.getElementById('sort_asc').addEventListener('click', sortAsc);
 document.getElementById('sort_desc').addEventListener('click', sortDesc);
+
+
