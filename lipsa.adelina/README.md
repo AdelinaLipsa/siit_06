@@ -1,13 +1,13 @@
 # Session_01
 
-* [Old website](https://github.com/miualinionut/siit_06/blob/master/lipsa.adelina/s1/old-website.html)
-* [My city website](https://github.com/miualinionut/siit_06/blob/master/lipsa.adelina/s1/galati.city.homework/galati.html)
-* [3 poeti](https://github.com/miualinionut/siit_06/blob/master/lipsa.adelina/s1/3%20poeti/trei-poeti-home-page.html)
+* [Old website](https://miualinionut.github.io/siit_06/lipsa.adelina/s1/old-website.html)
+* [My city website](https://miualinionut.github.io/siit_06/lipsa.adelina/s1/galati.city.homework/galati.html)
+* [3 poeti](https://github.com/miualinionut.github.io/siit_06/lipsa.adelina/s1/3%20poeti/trei-poeti-home-page.html)
 
 # Session_02
 
-* [Fakebook](https://github.com/miualinionut/siit_06/blob/master/lipsa.adelina/s2/t8.html)
-* [Google](https://github.com/miualinionut/siit_06/blob/master/lipsa.adelina/s2/T9.html)
+* [Fakebook](https://miualinionut.github.io/siit_06/lipsa.adelina/s2/t8.html)
+* [Google](https://miualinionut.github.io/siit_06/lipsa.adelina/s2/T9.html)
 
 # Session_03
 
@@ -19,9 +19,9 @@
 
 # Session_05
 
-* [Comments list]()
-* [Formular si tabel]()
-* [Tabele si imagini]()
+* [Comments list](https://miualinionut.github.io/siit_06/lipsa.adelina/s5/comments/comments.html)
+* [Formular si tabel](https://miualinionut.github.io/siit_06/lipsa.adelina/s5/formular_tabel/index.html)
+* [Tabele si imagini](https://miualinionut.github.io/siit_06/adelina-lipsa-s8/lipsa.adelina/s5/tabele_si_imagini/tabele_si_imagini.html)
 
 # Session_06
 
