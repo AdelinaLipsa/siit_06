@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: inline-flex;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.content {
+    width: 100%;
+}
+
+#myForm {
+    display: inline-grid;
+    text-align: left;
+}
+
+#table {
+    border-collapse: collapse;
+}
+
+.delete {
+    background-color: red;
+    opacity: 0.6;
+    color: white;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
+th {
+    background-color: grey;
+}
+
+.edit {
+    background-color: green;
+    opacity: 0.6;
+    color: white;
+    cursor: pointer;
+    transition-duration: .3s;
+
+}
+
+.delete:hover,
+.edit:hover {
+    opacity: 1;
+}
+
+td,
+th {
+    text-align: left;
+    padding: 5px;
+}
+
+.white {
+    background-color: white;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+label,
+input {
+    text-transform: capitalize;
+    padding: 5px;
+}
+
+input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+#submit {
+    padding: 5px;
+    border: none;
+    background-color: rgb(1, 143, 143);
+    color: white;
+    opacity: 0.6;
+    font-weight: bold;
+    margin-top: 2.5px;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+#submit:hover {
+    opacity: 1;
+}
