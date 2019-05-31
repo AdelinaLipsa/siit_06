@@ -106,4 +106,5 @@ tr:nth-child(even) {
 
 .selected {
   background-color: rgb(98, 98, 245);
+  border:3px solid;
 }

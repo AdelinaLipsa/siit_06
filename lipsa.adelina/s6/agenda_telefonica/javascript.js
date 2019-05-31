@@ -1,4 +1,6 @@
-    var listaClienti = [{
+"use strict";   
+   
+   var listaClienti = [{
         nume: "Nume1",
         prenume: "Prenume1",
         telefon: ["0758066000"],
@@ -99,7 +101,7 @@ function tableClicked() {
   }
 
   // table edit
-  if (event.target.classList == "fas fa-edit") {
+  if (event.target.id == "fas fa-edit") {
 
     document.getElementById("numeInput").value = listaClienti[index].nume;
     document.getElementById("prenumeInput").value = listaClienti[index].prenume;
