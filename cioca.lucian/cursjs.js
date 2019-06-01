@@ -363,3 +363,33 @@ function sortDesc(arrayNr) {
     }
     return arrayNr;
 }
+
+class Chair {
+    constructor(culoare, metal, numarPicioare, tapiterie, greutate, inaltime){
+        this.color = culoare;
+        this.metal =metal;
+        this.legNumber = numarPicioare;
+        this.tapistry = tapiterie;
+        this.weight = greutate;
+        this.height = inaltime;
+    }
+
+    ajustHeight(newHeight){
+        this.height = newHeight;
+    }
+}
+
+function cursValutar() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 ) {
+          if(this.status == 200) {
+              this.responseText;
+          }else{
+              alert("a crapat");
+          }
+        }
+    };
+    xhttp.open("GET", "http://data.fixer.io/api/latest?access_key=bab6dc180ed5d2d17a7bd00df96ba187", true);
+    xhttp.send();
+  }
