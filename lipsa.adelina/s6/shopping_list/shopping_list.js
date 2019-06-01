@@ -1,11 +1,12 @@
-console.clear()
+console.clear();
 
-/*
- document.getElementById('#item').addEventListener('submit', function(e) {
-    search(document.getElementById('form'));
-    e.preventDefault();
-}, false); 
-*/
+$('#item').keydown(function (e) {
+  if (e.keyCode == 13) {
+      e.preventDefault();
+      addButton.click();
+  }
+});
+
 
 function addItem(e) {
   var list = document.getElementById("item").value;
@@ -69,7 +70,18 @@ function sortDesc() {
   }
 }
 
-
 document.getElementById('addButton').addEventListener('click', addItem);
 document.getElementById('sort_asc').addEventListener('click', sortAsc);
 document.getElementById('sort_desc').addEventListener('click', sortDesc);
+
+var xhttp= new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if(this.readyState == 4 && this.status ==200) {
+    responseFromServer = this.responseText;
+    console.log(responseFromServer);
+  }
+};
+xhttp.open("GET","https://siit-bucuresti-11fae.firebaseio.com/");
+xhttp.send();
+var obj=JSON.parse(responseFromServer);
+

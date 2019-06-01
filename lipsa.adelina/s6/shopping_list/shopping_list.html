@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
+    <title>Shopping list</title>
+    <link href="shopping_list.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <div id="container">
+        <div id="shopping_list">
+            <h2>YOUR SHOPPING LIST</h2>
+            <form>
+                <input type="text" id="item" placeholder="Type your items here...">
+                <button id="addButton" type="button">Add item</button>
+            </form>
+            <button id="sort_asc">Sort Asc</button>
+            <button id="sort_desc">Sort Desc</button>
+            <table id="table">
+                <thead id="thead"></thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+    <script src="shopping_list.js"></script>
+    <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                responseFromServer = this.responseText;
+                console.log(responseFromServer);
+            }
+        };
+        xhttp.open("GET", "https://siit-bucuresti-11fae.firebaseio.com/");
+        xhttp.send();
+        var obj = JSON.parse(responseFromServer);
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/6.0.4/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#reserved-urls -->
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+</body>
+
+</html>
+
