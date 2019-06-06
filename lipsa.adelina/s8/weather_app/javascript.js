@@ -7,30 +7,14 @@ $(document).ready(function () {
     }
   });
 
-  // limit the number input to 2 digits
-  function maxLengthCheck(object) {
-    if (object.value.length > object.maxLength)
-      object.value = object.value.slice(0, object.maxLength)
-  }
-
-  function isNumeric(evt) {
-    var theEvent = evt || window.event;
-    var key = theEvent.keyCode || theEvent.which;
-    key = String.fromCharCode(key);
-    var regex = /[0-6]|\./;
-    if (!regex.test(key)) {
-      theEvent.returnValue = false;
-      if (theEvent.preventDefault) theEvent.preventDefault();
-    }
-  }
-
   //----------------->toggle hide/show for the forecast
   $("#submitForecast").click(function () {
-    // assumes element with id='button'
     $("#row").toggle();
   });
-  $("#submitWeather").click(function () {
-    $("#map").toggle();
+
+  $("#submitCity").click(function () {
+      $("#showWeather").toggle();
+      $("#map-canvas").toggle();
   });
 
 });
@@ -118,48 +102,42 @@ function getForecast() {
 }
 
 
-  //-------------------------------------------->Google map
-  function init() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-      center: {
-        lat: 12.9715987,
-        lng: 77.59456269999998
-      },
-      zoom: 12
-    });
+//-------------------------------------------->Google map
+
+// -----         Loads the map once the page is loaded   ------- 
+google.maps.event.addDomListener(window, 'load', initialize);
+
+function initialize() {
+  var map = new google.maps.Map(document.getElementById("map-canvas"), {
+    center: {
+      lat: 30.2655498,
+      lng: -97.7452663
+    },
+    zoom: 12
+  });
+
+  var marker = new google.maps.Marker({
+    position: {
+      lat: 30.2655498,
+      lng: -97.7452663
+    },
+    map: map,
+    draggable: true
+  });
 
 
-    var searchBox = new google.maps.places.SearchBox(document.getElementById('city'));
-    google.maps.event.addListener(searchBox, 'places_changed', function () {
-      searchBox.set('map', null);
+  var searchBox = new google.maps.places.SearchBox(document.getElementById('city'));
 
+  google.maps.event.addDomListener(searchBox, 'places_changed', function () {
+    var places = searchBox.getPlaces();
+    var bounds = new google.maps.LatLngBounds();
+    var i, place;
 
-      var places = searchBox.getPlaces();
-
-      var bounds = new google.maps.LatLngBounds();
-      var i, place;
-      for (i = 0; place = places[i]; i++) {
-        (function (place) {
-          var marker = new google.maps.Marker({
-
-            position: place.geometry.location
-          });
-          marker.bindTo('map', searchBox, 'map');
-          google.maps.event.addListener(marker, 'map_changed', function () {
-            if (!this.getMap()) {
-              this.unbindAll();
-            }
-          });
-          bounds.extend(place.geometry.location);
-
-
-        }(place));
-
-      }
-      map.fitBounds(bounds);
-      searchBox.set('map', map);
-      map.setZoom(Math.min(map.getZoom(), 12));
-
-    });
-  }
-  google.maps.event.addDomListener(window, 'load', init);
+    for (i = 0; place = places[i]; i++) {
+      bounds.extend(place.geometry.location);
+      marker.setPosition(place.geometry.location);
+    }
+    map.fitBounds(bounds);
+    map.setZoom(15);
+  });
+}

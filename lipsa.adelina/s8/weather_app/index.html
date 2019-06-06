@@ -12,8 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDF8SftDsII2C3qM45D9BVQwXVlLbBcseY&libraries=places"></script>
- 
+
 </head>
 
 <body>
@@ -25,38 +24,39 @@
     <div class="input-zone">
         <h3>Enter city name</h3>
         <input type="text" name="city" id="city" placeholder="City name">
-        <button id="submitCity" class="btn-primary">Search city</button>
+        <button id="submitCity" class="btn-primary">Show current weather</button>
         <button id="submitForecast" class="btn-secondary">Show forecast</button>
         <div id="error"></div>
     </div>
     <div id="currentWeather">
-        <div id="showWeather"></div>
-        <div id="map" class="hidden"></div>
+        <div id="showWeather" class="hidden"></div>
+        <div id="map-canvas" class="hidden"></div>
     </div>
 
-        <div id="row" class="hidden">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Hour</th>
-                        <th>Day</th>
-                        <th>Icon</th>
-                        <th>Weather</th>
-                        <th>Description</th>
-                        <th>Min temperature</th>
-                        <th>Max temperature</th>
-                        <th>Pressure</th>
-                        <th>Humidity</th>
-                        <th>Wind speed</th>
-                    </tr>
-                </thead>
-                <tbody id="forecastWeather"></tbody>
-            </table>
-        </div>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js" type="text/javascript"></script>
-        <script src="javascript.js" type="text/javascript"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.9.0/d3.min.js"></script>
-        </script>
+    <div id="row" class="hidden">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Hour</th>
+                    <th>Day</th>
+                    <th>Icon</th>
+                    <th>Weather</th>
+                    <th>Description</th>
+                    <th>Min temperature</th>
+                    <th>Max temperature</th>
+                    <th>Pressure</th>
+                    <th>Humidity</th>
+                    <th>Wind speed</th>
+                </tr>
+            </thead>
+            <tbody id="forecastWeather"></tbody>
+        </table>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbc3bOqJ4MEXAnXWfGRPvM8CkZegllpjM&libraries=places&callback=initialize " async defer></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js" type="text/javascript"></script>
+    <script src="javascript.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.9.0/d3.min.js"></script>
+    </script>
 </body>
 
 </html>
