@@ -3,7 +3,6 @@ var phoneInput = document.getElementById("phone");
 var contactList = document.getElementById("contactList").innerHTML;
 var addBtn = document.getElementById("addButton");
 var backBtn = document.getElementById("backBtn");
-
 var contacts = [];
 var contact;
 var edit = false;
@@ -11,13 +10,17 @@ var contactIndex = 0;
 var editIdentifier;
 
 
-phoneInput.addEventListener("keyup", function (event) {
-    if (event.target.value === NaN) {
+
+
+phoneInput.addEventListener("keypress", function (event) {
+    if (event.which < 48 || event.which > 57) {
         event.preventDefault();
     }
+    if (event.keyCode == 13) {
+        event.preventDefault();
+        addGradeBtn.click();
+    }
 });
-
-phoneInput.addEventListener("keypress", onEnter)
 
 backBtn.addEventListener("click", goBack);
 
@@ -28,8 +31,8 @@ function onEnter(e) {
 
     }
 }
+
 function grab(index) {
-    //addBtn.innerHTML = "Save";
     edit = true;
     document.getElementById("name").value = contacts[index].name;
     document.getElementById("phone").value = contacts[index].phone;

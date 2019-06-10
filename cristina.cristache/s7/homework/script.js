@@ -57,16 +57,17 @@ function getStudent() {
 }
 
 function draw() {
+
     document.getElementById("sthead").innerHTML = `<tr"><th>Name</th><th>Average grade</th><th></th></tr>`;
 
     for (i = 0; i < students.length; i++) {
-        studentsList.innerHTML += `
-                <tr>
-                    <td>${students[i].name}</td>
-                    <td id = "${i}"></td>
-                    <td><button onclick = "displayGrades(${i})" class ="cool-btn">Display grades</button></td>
-                </tr>
-                `;
+        document.getElementById("studentsList").innerHTML += `
+                    <tr>
+                        <td>${students[i].name}</td>
+                        <td id = "${i}"></td>
+                        <td><button onclick = "displayGrades(${i})" class ="cool-btn">Display grades</button></td>
+                    </tr>
+                    `;
     }
 }
 
@@ -79,10 +80,10 @@ function addStudent(event) {
 
 function displayGrades(index) {
     studentIdentifier = index;
-    document.getElementById("grade").value = '';
-    document.getElementById("gtbody").innerHTML = '';
     studentsWrapper.classList.add("resize");
     gradesWrapper.classList.remove("toggle");
+    document.getElementById("grade").value = '';
+    document.getElementById("gtbody").innerHTML = '';
     document.getElementById("gradesH").innerHTML = `Student Grade: ${students[index].name}`;
     if (students[index].grades.length > 0) {
         drawGrades();
@@ -117,26 +118,20 @@ function hide() {
     studentsWrapper.classList.remove("resize");
 }
 
-function quickSort(arr) {
-    var pivot = arr.pop([arr.length - 1 / 2]);
-    var left = [];
-    var right = [];
-    var newArray = [];
 
+function bubbleSort(arr, dir) {
+    var aux;
 
-    if (arr.length <= 1) {
-        return arr;
-    } else {
-        for (var i = 0; i < arr.length; i++) {
-            if (arr[i].averageGrade() <= pivot.averageGrade()) {
-                left.push(arr[i]);
-            } else {
-                right.push(arr[i]);
+    if(dir==="asc"){
+        for (var i = 0; i < arr.length - 1; i++) {
+            for (var j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    aux = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = aux;
+                }
             }
         }
     }
-    return newArray.concat(quickSort(left), pivot, quickSort(right));
-
 }
-
 
