@@ -1,7 +1,7 @@
 # Session_01
 
 - [Old website](https://miualinionut.github.io/siit_06/lipsa.adelina/s1/old-website.html)
-- [3 poets](https://miualinionut.github.io/siit_06/lipsa.adelina/s1/3 poeti/trei-poeti-home-page.html)
+- [3 poets](https://miualinionut.github.io/siit_06/lipsa.adelina/s1/3%20poeti/trei-poeti-home-page.html)
 - [My hometown](https://miualinionut.github.io/siit_06/lipsa.adelina/s1/galati.city.homework/galati.html)
 
 # Session_02
