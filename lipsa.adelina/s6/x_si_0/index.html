@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    <script src="javascript.js"></script>
+</head>
+
+<body>
+    <div class="row">
+
+        <div class="col-xs-6 col-sm-4"></div>
+
+        <div class="col-xs-6 col-sm-4">
+
+            <div class="page-header">
+                <h1>TicTacToe</h1>
+            </div>
+            <form id="player_select">
+                <p class="text-center">
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="X"><strong>[X]</strong></input>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="O"><strong>[O]</strong></input>
+                    </label>&nbsp;
+                    <!-- <button type="button" class="btn btn-success" id="start">
+            <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+            &nbsp;Start
+          </button> -->
+                    <table class="table text-center">
+                        <tr>
+                            <td>
+                                WINS:&nbsp;
+                                <strong>Player [X]:</strong>&nbsp;
+                                <span id="x-score" class="badge">0</span>&nbsp;
+                                <strong>Player [O]:</strong>&nbsp;
+                                <span id="o-score" class="badge">0</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <p class="text-center">
+                        <button type="button" class="btn btn-success" id="start">
+                            <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                            &nbsp;Start game
+                        </button>
+                        &nbsp;
+                        <button type="button" class="btn btn-danger" id="stop">
+                            <span class="glyphicon glyphicon-stop" aria-hidden="true"></span>
+                            &nbsp;Stop game
+                        </button>
+                        &nbsp;
+                        <button type="button" class="btn btn-warning" id="reset">
+                            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                            &nbsp;Reset game
+                        </button>
+                    </p>
+                </p>
+            </form>
+            &nbsp;
+            <table class="table table-bordered text-center" style="box-shadow: 5px 10px; background-color: lightblue;">
+
+                <tr>
+                    <td id="0" class="cells" style="border-width: medium;">
+                        <h1>&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+                    </td>
+                    <td id="1" class="cells" style=" border-width: medium">
+                        <h1>&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+                    </td>
+                    <td id="2" class="cells" style=" border-width: medium">
+                        <h1>&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td id="3" class="cells" style=" border-width: medium">
+                        <h1>&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+                    </td>
+                    <td id="4" class="cells">
+                        <h1>&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+                    </td>
+                    <td id="5" class="cells" style=" border-width: medium">
+                        <h1>&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td id="6" class="cells" style=" border-width: medium">
+                        <h1>&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+                    </td>
+                    <td id="7" class="cells" style=" border-width: medium">
+                        <h1>&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+                    </td>
+                    <td id="8" class="cells" style=" border-width: medium">
+                        <h1>&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+                    </td>
+                </tr>
+
+            </table>
+
+            <div class="col-xs-6 col-sm-4"></div>
+
+        </div>
+
+    </div>
+    <footer>Made with &hearts; by Adelina Lipsa</footer>
+
+</body>
+
+</html>
