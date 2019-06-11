@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-height: 100%;
+    font-family: 'Dosis', sans-serif;
+}
+
+
+body {
+    min-width:900px;
+    height:100%;
+
+}
+
+#studentsWrapper {
+    text-align: center;
+    height: 100%;
+    position: relative;
+    padding-bottom: 100em;
+    margin-bottom: -100em;
+    overflow: hidden;
+    background-color: lightseagreen;
+
+}
+h2 {
+    font-size: 50px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+td {
+    height: 40px;
+}
+
+table {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top:50px;
+}
+th {
+    text-align: center;
+    padding:0.3em;
+    font-size: 25px;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.float {
+    float: left;
+    width: 50%;
+}
+
+#gradesWrapper {
+    text-align: center;
+    height: 100%;
+    position: relative;
+    padding-bottom: 100em;
+    margin-bottom: -100em;
+    overflow: hidden;
+    height:100%;
+    background-color: lightgreen;
+
+
+}
+
+#hideGradesBtn {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+}
+
+input{
+border-radius: 50px;
+border:none;
+height: 30px;
+width: 150px;
+}
+
+
+button {
+    border-radius: 50px;
+    width: 100px;
+    border:none;
+    height: 30px;
+}
+button:hover {
+    color:white;
+    background-color: rgb(27, 145, 139);
+    border:none;
+}
