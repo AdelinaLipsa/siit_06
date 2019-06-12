@@ -265,7 +265,7 @@ $(document).ready(function(event) {
   
       // if option is empty string
       if (option !== "X" && option !== "O") {
-        alert("Must click on Player X or Player O"); return;
+        alert("You must choose between X or O to start the game"); return;
       }
   
       // option for player1

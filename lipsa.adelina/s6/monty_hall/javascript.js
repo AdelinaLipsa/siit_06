@@ -16,11 +16,9 @@ function init() {
     reset = document.querySelector(".button");
     gameMode = 1;
 
-    // randomDoor = choices[Math.floor(Math.random() * choices.length)];
     instructions.innerHTML = `Welcome to the Monty Hall Problem for your chance to win a car! <br> Click a door, any door, to start the game!`;
     choice = [door1, door2, door3];
     initEventListeners();
-
 };
 
 
