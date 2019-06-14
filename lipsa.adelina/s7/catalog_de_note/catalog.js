@@ -30,10 +30,10 @@ window.addEventListener('DOMContentLoaded', function () {
     ];
 
     // prevent enter from submitting/refreshing
-    $("#namesInput").keypress(function (event) {
+  document.getElementById("namesInput").addEventListener("click", function (event) {
         if (event.keyCode == 13) {
             event.preventDefault();
-            $("#addStudentBtn").click();
+            document.getElementById("#addStudentBtn").click();
         }
     });
 
