@@ -8,6 +8,7 @@
     <meta name="keywords" content="HTML,CSS,JavaScript">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda telefonica</title>
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
     <link href="stylesheet.css" rel="stylesheet" type="text/css">
     <script src="javascript.js" defer></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/solid.css"
@@ -21,32 +22,35 @@
 </head>
 
 <body>
-    <h1 id="header"><i class="fas fa-phone-square"></i>&nbsp;Phone book</h1>
+    <h1 id="header"><i class="fas fa-phone-square"></i>&nbsp;Agenda telefonica</h1>
     <div id="wrapper">
         <div class="input">
             <form id="myForm">
                 <p>Nume:</p>
-                <input type="text" id="nameInput">
+                <input type="text" id="numeInput">
                 <p>Prenume:</p>
-                <input type="text" id="lastNameInput">
+                <input type="text" id="prenumeInput">
                 <p>Telefon:</p>
-                <input type="text" id="phoneInput">
-                <input type="submit" id="submit" value="ADD CONTACT">
+                <input type="text" id="telefonInput">
+                <input type="submit" id="submit" value="ADAUGA CONTACT">
+                <p><span id="message"></span></p>
             </form>
         </div>
         <div>
             <table id="table">
                 <thead id="thead">
                     <tr>
-                        <th id="name">Nume <i class="fas fa-sort"></i></th>
-                        <th id="lastName">Prenume <i class="fas fa-sort"></i></th>
-                        <th id="phone">Telefon <i class="fas fa-sort"></i></th>
+                        <th id="nume">Nume <i class="fas fa-sort"></i></th>
+                        <th id="prenume">Prenume <i class="fas fa-sort"></i></th>
+                        <th id="telefon">Telefon <i class="fas fa-sort"></i></th>
                         <th colspan="2"></th>
                     </tr>
                 </thead>
                 <tbody id="tableBody"></tbody>
             </table>
         </div>
+        <h2>Baza de date</h2>
+        <div id="firebase"></div>
     </div>
 </body>
 

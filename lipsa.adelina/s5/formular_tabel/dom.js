@@ -18,6 +18,13 @@ var listaClienti = [{
     varsta: 30,
     telefon: ["0758000000", "0758000000"],
     initialOrder: 3
+  },
+  {
+    nume: "Nume4",
+    prenume: "Prenume4",
+    varsta: 30,
+    telefon: ["0758000000", "0758000000"],
+    initialOrder: 4
   }
 ];
 
@@ -29,7 +36,7 @@ function arataDateleDinTabel(arr) {
 
   for (var i = 0; i < arr.length; i++) {
 
-    tableData += `<tr><td>${arr[i].nume}</td><td>${arr[i].prenume}</td><td>${arr[i].varsta}</td><td>${arr[i].telefon}</td><td id="edit"><i class="fas fa-edit"></i></td><td id="delete"><i class="fas fa-minus-circle"></i></td></tr>`;
+    tableData += `<tr><td>${arr[i].nume}</td><td>${arr[i].prenume}</td><td>${arr[i].varsta}</td><td>${arr[i].telefon}</td><td id="edit"><b>Editeaza</b></td><td id="delete"><b>Sterge</b></td></tr>`;
   }
   tableBody.innerHTML = tableData;
 }

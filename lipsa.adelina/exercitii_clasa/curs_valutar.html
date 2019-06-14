@@ -1,0 +1,98 @@
+!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        var ratesToday = undefined;
+        var ratesYesterday = undefined;
+        var time;
+        var yesterday;
+        var str = '';
+
+
+        function cursValutarAzi() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+
+                if (this.readyState === 4) {
+                    if (this.status == 200) {
+                        ratesToday = JSON.parse(this.responseText);
+                        if (ratesYesterday != undefined) {
+                            draw();
+                        }
+                    } else {
+                        alert("a crapat");
+                    }
+                    time = ratesToday.timestamp * 1000;
+                    time = new Date(time);
+                    let year = time.getFullYear();
+                    let month = time.getMonth() + 1;
+                    let day = time.getDate();
+                    time = day + "-" + month + "-" + year;
+                    document.getElementById("date").innerHTML = time;
+                }
+            };
+            xhttp.open("GET", "http://data.fixer.io/api/latest?access_key=bab6dc180ed5d2d17a7bd00df96ba187", true);
+            xhttp.send();
+        };
+
+        yesterday = new Date();
+        yesterday = new Date(yesterday.getTime() - 86400000);
+        var m = yesterday.getMonth() + 1;
+        var d = yesterday.getDate();
+        if (d < 10) {
+            d = "0" + d;
+        }
+        if (m < 10) {
+            m = "0" + m;
+        }
+        yesterday = yesterday.getFullYear() + "-" + m + "-" + d;
+
+
+        function cursValutarIeri() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+
+                if (this.readyState === 4) {
+                    if (this.status == 200) {
+                        console.log(JSON.parse(this.responseText));
+                        ratesYesterday = JSON.parse(this.responseText);
+                        if (ratesToday != undefined) {
+                            draw();
+                        }
+                    } else {
+                        alert("a crapat");
+                    }
+
+                }
+
+            };
+
+            xhttp.open("GET", "http://data.fixer.io/api/" + yesterday + "?access_key=bab6dc180ed5d2d17a7bd00df96ba187", true);
+            xhttp.send();
+        }
+
+
+        function draw() {
+            for (var key in ratesToday.rates) {
+                console.log(ratesToday.rates[key]);
+                if (ratesToday.rates[key] < ratesYesterday.rates[key]) {
+                    str += `<li>${key}: ${ratesToday.rates[key]}down</li> `
+                } else if (ratesToday.rates[key] > ratesYesterday.rates[key]) {
+                    str += `<li>${key}: ${ratesToday.rates[key]} up</li>`
+                } else {
+                    str += `<li>${key}: ${ratesToday.rates[key]} same</li>`
+                }
+
+            }
+            document.getElementById("listaBNR").innerHTML = str;
+        }
+    </script>
+</head>
+
+<body onload="cursValutarAzi(); cursValutarIeri()">
+    <p>Curs valutar pentru: <span id="date"></span></p>
+    <ul id="listaBNR"></ul>
+</body>
+
+</html>

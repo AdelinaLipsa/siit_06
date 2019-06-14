@@ -1,0 +1,33 @@
+body {
+    padding-top: 10px;
+    background-color: lightcoral;
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  
+  table {
+    table-layout: fixed;
+  }
+  
+  td {
+    cursor: pointer;
+  }
+  
+  .page-header {
+      background-color: lightblue;
+      border: 10px solid white;
+      padding:5px;
+      text-align: center;
+      box-shadow: 5px 10px;
+
+  }
+
+  .badge{
+    border: 1px solid white;
+    padding:5px;
+    color:black;
+    background-color: white;
+  }
+

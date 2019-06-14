@@ -60,11 +60,11 @@ td {
 }
 
 .selected {
-    background-color: #3b5998 ;
+    background-color: lightblue ;
 }
 
 .selectedRow {
-  background-color: #3b5998 ;
+  background-color: lightblue ;
 }
 
 #edit {
@@ -73,7 +73,7 @@ td {
 }
 
 #edit:hover {
-  background: lightskyblue;
+  background: lightgreen;
 }
 
 #delete {

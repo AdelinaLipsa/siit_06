@@ -96,7 +96,7 @@ text-align: left;
 
 
 #showWeather {
-  margin-left: 50px;
+  margin-left: 150px;
   background-color: #1CB5E0;
   border-radius:25px;
   width: 20%;
@@ -138,15 +138,20 @@ tr:nth-child(even) {
   display:none;
 }
 
-#map {
+#map-canvas {
   border-radius: 15px;
-  width: 70%;
+  width: 65%;
   height: 420px;
   float: right;
   margin-right: 5%;
-  border:1px solid black;
+  margin-bottom: 40px;
+
 }
 
 #row{
   margin-top: 20px;
+}
+
+
+#firebase {
 }
