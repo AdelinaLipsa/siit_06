@@ -187,26 +187,74 @@
  }
 
  // ---------------------->initialize firebase
-var firebaseConfig = {
-  apiKey: "AIzaSyAWtlQTGbFjhKQnKGyOtWKxLtYjPhkPbTY",
-  authDomain: "testing-project-75edf.firebaseapp.com",
-  databaseURL: "https://testing-project-75edf.firebaseio.com",
-  projectId: "testing-project-75edf",
-  storageBucket: "testing-project-75edf.appspot.com",
-  messagingSenderId: "260504032711",
-  appId: "1:260504032711:web:e4eccf6c85a9f9f5"
-};
-firebase.initializeApp(firebaseConfig);
+ var firebaseConfig = {
+   apiKey: "AIzaSyAWtlQTGbFjhKQnKGyOtWKxLtYjPhkPbTY",
+   authDomain: "testing-project-75edf.firebaseapp.com",
+   databaseURL: "https://testing-project-75edf.firebaseio.com",
+   projectId: "testing-project-75edf",
+   storageBucket: "testing-project-75edf.appspot.com",
+   messagingSenderId: "260504032711",
+   appId: "1:260504032711:web:e4eccf6c85a9f9f5"
+ };
+ firebase.initializeApp(firebaseConfig);
 
-var rootRef = firebase.database().ref().child("clients");
-$('#submit').click(function(){
-  rootRef.push().set({ // without push() the database is just being overwritten
+ var rootRef = firebase.database().ref().child("clients");
+ $('#submit').click(function () {
+   rootRef.push().set({ // without push() the database is just being overwritten
 
-    nume:$('#numeInput').val(),
-    prenume:$('#prenumeInput').val(),
-    telefon:$('#telefonInput').val()
+     nume: $('#numeInput').val(),
+     prenume: $('#prenumeInput').val(),
+     telefon: $('#telefonInput').val()
 
+   });
+ })
+
+/*
+ ----------------------->load database
+ firebase.database().ref('clients/').on('value', function (snapshot) {
+   writeList(snapshot.val());
+ });
+
+ function writeList(rootRef) {
+   for (var key in rootRef) {
+     if (rootRef.hasOwnProperty(key)) {
+       var str; 
+       str += '<tr>';
+       str += "<td>" + rootRef.nume + "</td>";
+       str += "<td> " + rootRef.prenume + "</td>";
+       str += "<td>" + rootRef.telefon + "</td>";
+       str += '</tr>';
+
+     }
+   }
+   $('#tableBody').html(str);
+ }
+*/
+//--------------------------> LOAD DATABASE IN CONSOLE
+$(function(){
+  //just make a variable to keep track of the data coming from Firebase
+  var data =[];
+  
+  //create a new connection to firebase
+  var rootRef = firebase.database().ref().child("clients");
+	
+  //listen to data updates from firebase
+  rootRef.on("value", function(snapshot){
+    console.log(snapshot.val() );
+    //when data updates at Firebase,it gets put in the DATA variable
+    data = snapshot.val();
+  })
+
+//---------show the data in the page 
+const object = document.getElementById("firebase");
+rootRef.on("value", snap => {
+  object.innerText = JSON.stringify(snap.val(), null, 3);
 });
-})
+/*
+document.getElementById("firebase").innerHTML = `
+  <h1 class="app-title">Number of clients (${rootRef.length} results)</h1>
+  <p class="footer">These ${rootRef.length} clients were added recently. Check back soon for updates.</p>
+`;*/
+});
+ 
 
-// ----------------------->load database

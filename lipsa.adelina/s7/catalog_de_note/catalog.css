@@ -19,7 +19,7 @@ body {
     position: relative;
     padding-bottom: 100em;
     margin-bottom: -100em;
-    overflow: hidden;
+    overflow: auto;
     background-color: lightseagreen;
 
 }
@@ -41,7 +41,7 @@ table {
 }
 th {
     text-align: center;
-    padding:0.3em;
+    padding:4px;
     font-size: 25px;
 
 }
@@ -61,7 +61,7 @@ th {
     position: relative;
     padding-bottom: 100em;
     margin-bottom: -100em;
-    overflow: hidden;
+    overflow: auto;
     height:100%;
     background-color: lightgreen;
 

@@ -61,7 +61,7 @@ function initEventListeners() {
                         door.classList.add("car");
                         door.setAttribute("style", "border: 1vmin solid green");
 
-                        instructions.innerHTML = `You've won yourself a brand new car!`;
+                        instructions.innerHTML = `You've won yourself a brand new epic Dacia 1300!`;
 
 
                         // removes car 
@@ -81,7 +81,7 @@ function initEventListeners() {
                         door.classList.remove("style");
                         door.classList.add("goat");
                         door.setAttribute("style", "border: 1vmin solid #e10505");
-                        instructions.innerHTML = `I hear goats like hay!`;
+                        instructions.innerHTML = `I hear goats like haaay!`;
 
                         // adds car to remainder in array
                         choice[0].classList.remove("style");
@@ -98,7 +98,6 @@ function initEventListeners() {
     });
 
     reset.addEventListener("click", function () {
-        //This is a great example of how to use a loop
         gameMode = 1;
         choice = [door1, door2, door3];
         choice.forEach((door) => {

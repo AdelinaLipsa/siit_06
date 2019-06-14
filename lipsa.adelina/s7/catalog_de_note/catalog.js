@@ -77,7 +77,7 @@ window.addEventListener('DOMContentLoaded', function () {
         <td></td>
         <td>${studentsList[i].name}</td>
         <td>${averageGrade(studentsList[i].grades)}</td>
-        <td><button data-index ="${i}" data-id ="showGrades"><b>Show grades</b></button></td>
+        <td><button data-index ="${i}" data-id ="showGrades">Show grades</button></td>
         <td></td>
         </tr>
         `;
@@ -127,8 +127,6 @@ window.addEventListener('DOMContentLoaded', function () {
             drawGradesTable();
         } else if (event.currentTarget.dataset.id == "sortBtn") {
             drawStudentTable();
-            sortingOrder(event);
-            sortingAverageGrades();
         }
     }
 
@@ -183,38 +181,7 @@ window.addEventListener('DOMContentLoaded', function () {
             hideGrades();
         } else if (event.currentTarget.dataset.id == "sortBtn") {
             drawGradesTable();
-            sortingOrder(event);
-            sortingGrades();
-        }
-    }
 
-    function sortingOrder(event) {
-        if (event.currentTarget.id == "sortGradesDown" || event.currentTarget.id == "sortAverageDown") {
-            sortingNaming = "descending";
-        } else if (event.currentTarget.id == "sortGradesUp" || event.currentTarget.id == "sortAverageUp") {
-            sortingNaming = "ascending";
-        }
-    }
-
-    function sortingAverageGrades() {
-        var grades = studentsList[newIndex].grades;
-        if (sortingNaming == "ascending") {
-            grades.sort((a, b) => a - b);
-        } else if (sortingNaming == "descending") {
-            grades.sort((a, b) => b - a);
-        }
-    }
-
-
-    function sortingGrades() {
-        if (sortingNaming == "ascending") {
-            studentsList.sort(function (a, b) {
-                return averageGrade(a.grades) - averageGrade(b.grades);
-            });
-        } else if (sortingNaming == "descending") {
-            studentsList.sort(function (a, b) {
-                return averageGrade(b.grades) - averageGrade(a.grades);
-            });
         }
     }
 });
