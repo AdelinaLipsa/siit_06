@@ -28,7 +28,13 @@
 
 - [Agenda telefonica](https://miualinionut.github.io/siit_06/lipsa.adelina/s6/agenda_telefonica/index.html)
 - [Shopping list](https://miualinionut.github.io/siit_06/lipsa.adelina/s6/shopping_list/shopping_list.html)
+- [Monty Hall](https://miualinionut.github.io/siit_06/lipsa.adelina/s6/monty_hall/index.html)
+- [Tic Tac Toe](https://miualinionut.github.io/siit_06/lipsa.adelina/s6/x_si_0/index.html)
 
 # Session_07
+- [Catalog de note](https://miualinionut.github.io/siit_06/lipsa.adelina/s7/catalog_de_note/catalog.html)
 
 # Session_08
+- [Weather app](https://miualinionut.github.io/siit_06/lipsa.adelina/s8/weather_app/index.html)
+- [Agenda telefonica firebase](https://miualinionut.github.io/siit_06/lipsa.adelina/s8/agenda_telefonica_firebase/index.html)
+- [Shopping list firebase](https://miualinionut.github.io/siit_06/lipsa.adelina/s8/shopping_list_firebase/shopping_list.html)
