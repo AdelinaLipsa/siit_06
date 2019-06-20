@@ -48,7 +48,8 @@ function addItem() {
 
 inputItem.addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
-        document.addButton.click();
+        event.preventDefault();
+        document.querySelector('#addButton').click();
         
     }
 });

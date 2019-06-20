@@ -6,7 +6,7 @@ var today = new Date();
 var timestamp = today.getTime();
 var coordonates;
 
-document.getElementById("currentWeatherBtn").addEventListener("click", fetchWeatherNow);
+document.getElementById("currentWeatherBtn").addEventListener("click", fetchWeatherNow, initMap);
 document.getElementById("forecastBtn").addEventListener("click", fetchForecast);
 $("#searchTerm").keypress(function (event) {
     if (event.keyCode == 13) {

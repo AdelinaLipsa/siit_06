@@ -10,7 +10,7 @@
     <title>phoneBook</title>
 </head>
 
-<body>
+<body onload="getContacts()">
     <div id="wrapper">
         <div id="input-wrapper">
             <div id="input">
@@ -25,9 +25,10 @@
                 </div>
             </div>
             <div class="buttons">
-                <button onclick="addContact()" id="addButton">Add Contact</button>
-                <button class="toggleBack" id="backBtn" style="float: right">Back</button>
+                <button onclick="addContact()" id="addBtn">Add Contact</button>
+                <button class="toggle" id="backBtn" style="float: right">Back</button>
             </div>
+            <p  id="none"></p>
         </div>
 
         <div class = "toggle" id="contacts-wrapper">

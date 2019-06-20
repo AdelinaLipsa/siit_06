@@ -1,6 +1,5 @@
 var gradesWrapper = document.getElementById("student_grade_wrapper");
 var studentsWrapper = document.getElementById("student_list_wrapper");
-var studentName = document.getElementById("name").value = '';
 var studentGrade = document.getElementById("grade").value
 var studentThead = document.getElementById("sthead");
 var displayGradesBtn = document.getElementById("displayGradesBtn");
@@ -11,8 +10,10 @@ var studentIdentifier;
 var student;
 var students = [];
 var averageGrades = [];
-
-addStudentBtn.addEventListener("click", addStudent)
+// document.querySelector('[students]').addEventListener("mouseenter",()=>{
+//     event.target.style.backgroundColor = "green";
+// });
+addStudentBtn.addEventListener("click", addStudent);
 addGradeBtn.addEventListener("click", addGrades);
 document.getElementById("name").addEventListener("keypress", onEnter);
 document.getElementById("grade").addEventListener("keypress", function (event) {
@@ -53,21 +54,23 @@ function onEnter(event) {
 function getStudent() {
     let studentName = document.getElementById("name").value;
     student = new Student(studentName, []);
-    students.push(student);
+    if (document.getElementById("name").value != '') {
+        students.push(student);
+
+    }
 }
 
 function draw() {
 
-    document.getElementById("sthead").innerHTML = `<tr"><th>Name</th><th>Average grade</th><th></th></tr>`;
-
+    document.querySelector("#sthead").classList.remove("toggle");
     for (i = 0; i < students.length; i++) {
         document.getElementById("studentsList").innerHTML += `
-                    <tr>
-                        <td>${students[i].name}</td>
-                        <td id = "${i}"></td>
-                        <td><button onclick = "displayGrades(${i})" class ="cool-btn">Display grades</button></td>
-                    </tr>
-                    `;
+                <tr >
+                    <td>${students[i].name}</td>
+                    <td id = "${i}"></td>
+                    <td><button onclick = "displayGrades(${i})" class ="cool-btn">Display grades</button></td>
+                </tr>
+                `;
     }
 }
 
@@ -108,7 +111,7 @@ function addGrades(event) {
     let intGrade = parseInt(studentGrade)
     students[studentIdentifier]['grades'].push(intGrade);
     drawGrades();
-    document.getElementById(`${studentIdentifier}`).innerHTML = `${students[studentIdentifier].averageGrade()}`;
+    document.getElementById(`${studentIdentifier}`).innerHTML = `${(students[studentIdentifier].averageGrade()).toFixed(2)}`;
     document.getElementById("grade").value = '';
     averageGrades.push(students[studentIdentifier].averageGrade());
 }
@@ -119,10 +122,10 @@ function hide() {
 }
 
 
-function bubbleSort(arr, dir) {
+function sort(elem, arr) {
     var aux;
+    if (elem.hasAttribute('asc')) {
 
-    if(dir==="asc"){
         for (var i = 0; i < arr.length - 1; i++) {
             for (var j = i + 1; j < arr.length; j++) {
                 if (arr[i] > arr[j]) {
@@ -132,6 +135,18 @@ function bubbleSort(arr, dir) {
                 }
             }
         }
+        return arr;
+    } else if (elem.hasAttribute('desc')) {
+        for (var i = 0; i < arr.length - 1; i++) {
+            for (var j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    aux = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = aux;
+                }
+            }
+        }
+        return arr;
     }
 }
 

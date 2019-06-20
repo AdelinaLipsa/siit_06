@@ -18,19 +18,12 @@ phoneInput.addEventListener("keypress", function (event) {
     }
     if (event.keyCode == 13) {
         event.preventDefault();
-        addGradeBtn.click();
+        addBtn.click();
     }
 });
 
 backBtn.addEventListener("click", goBack);
 
-function onEnter(e) {
-    if (event.keyCode == 13) {
-        event.preventDefault();
-        addBtn.click();
-
-    }
-}
 
 function grab(index) {
     edit = true;
