@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Mukta', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: table;
+  margin: 2em auto;
+  background: lightcoral;
+  padding: 1.5em;
+  text-align: center;
+
+}
+
+.header {
+  background: rgb(70, 70, 70);
+  color:white;
+  margin-bottom: 1.5em;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3)
+}
+
+.dataTable {
+  margin: auto;
+  margin-top:1em;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.dataTable tr {
+  border-top: 1px solid lightgray;
+  background: white;
+}
+
+.dataTable tr:first-of-type {
+  color: white;
+  background: rgb(70, 70, 70);
+  font-weight: bold;
+  border-top: none;
+}
+
+.dataTable th {
+  padding: 0.8em 1.2em;
+  width:10em;
+}
+
+.dataTable td {
+  padding: 0.8em 1.2em;
+}
+
+.dataTable td:nth-of-type(3n+1) {
+  font-weight: bold;
+  border-right: 1px solid lightgray;
+  padding:0em;
+  width:2.5em;
+  
+}
+
+.dataTable button {
+  cursor: pointer;
+}
+
+.inputElements {
+  display: inline-block;
+
+}
+
+.buyed {
+  text-decoration: line-through;
+  color: rgb(190, 190, 190);
+
+}
+
+button {
+  font-weight: bold;
+  border: none;
+  padding: 0.5em 1em;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(255, 220, 125);
+}
+
+button:focus {
+  outline: none;
+}
+
+.editTable{
+  margin-top:1.5em;
+}
+
+#inputField {
+  width: 15em;
+  padding: 0.5em;
+  border: none;
+}
+
+#inputField:focus {
+  outline: none;
+}
+
+#inputField::placeholder {
+  color:rgb(190, 190, 190);
+}
+
+#deleteBtn{
+  margin-left: 0.5em;
+}
+#deleteBtn:hover{
+  background: rgb(139, 0, 46);
+  color: white;  
+}
+
+#addItemBtn {
+  margin-left: 0.5em;
+}
+
+span{
+  font-size:150%;
+  color:white;
+}

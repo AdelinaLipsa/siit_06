@@ -1,42 +1,40 @@
-<body>
-<p align= "center">
-    <img src="https://image.flaticon.com/icons/png/128/84/84471.png" height:"30" weight:"30" alt= "dev image">
-    <a href="https://github.com/ScarletStarlet15"><h1 align="center">Lipsa Adelina</h1></a>
-</p> 
-<p align="center">
-    <h2 align="center">Session 1 </h2>
-    <ul align="center" type="none">
-    <li><a href="s1/t01.html" target="_blank">Tema 1 </a></li>
-    <li><a href="s1/old-website.html" target="_blank"> Old Website </a></li>
-    <li><a href="s1/trei-poeti-home-page.html" target="_blank"> 3 Poeti</a></li>
-    <li><a href="s1/galati.html" target="_blank"> My city's Website</a></li>
-    </ul>
-    </p>
-    <p>
-    <h2 align="center">Session 2 </h2>
-    <ul align="center" type="none">
-        <li><a href="s2/t8.html" target ="_blank">Fakebook</a></li>
-        <li><a href="s2/t9.html" target ="_blank">Google</a></li>
-    </ul>
-</p>
-<p>
-    <h2 align="center">Session 3 </h2>
-    <ul align="center" type="none">
-        <li><a href="s3/teme s3.js" target ="_blank">Tema S3- JS Basics 01</a></li>
-        <li><a href="s3/bubble-sort.js" target ="_blank">Bubble Sort JS</a></li>
-    </ul>
-</p>     
-<p>
-    <h2 align="center">Session 4</h2>
-    <ul align="center" type="none">
-        <li><a href="s4/teme s4.js" target ="_blank">Tema S4 - JS Basics 02</a></li>
-        </ul>
-        </p>
- <p>
-    <h2 align="center">Session 5</h2>
-    <ul align="center" type="none">
-        <li><a href="s5/dom.js">DOM 01: comments Assignment</a></li>
-        </ul>
-        </p>
-</body>
-</html>
+# Session_01
+
+- [Old website](https://miualinionut.github.io/siit_06/lipsa.adelina/s1/old-website.html)
+- [3 poets](https://miualinionut.github.io/siit_06/lipsa.adelina/s1/3%20poeti/trei-poeti-home-page.html)
+- [My hometown](https://miualinionut.github.io/siit_06/lipsa.adelina/s1/galati.city.homework/galati.html)
+
+# Session_02
+
+- [Fakebook](https://miualinionut.github.io/siit_06/lipsa.adelina/s2/T9.html)
+- [Google](https://miualinionut.github.io/siit_06/lipsa.adelina/s2/t8.html)
+
+# Session_03
+
+- [Js Functions_01](https://github.com/miualinionut/siit_06/blob/master/lipsa.adelina/s3/teme%20S3.js)
+- [Bubble Sort](https://github.com/miualinionut/siit_06/blob/master/lipsa.adelina/s3/bubble-sort.js)
+
+# Session_04
+
+- [JS Functions_02](https://github.com/miualinionut/siit_06/blob/master/lipsa.adelina/s4/teme%20s4.js)
+
+# Session_05
+
+- [Comments](https://miualinionut.github.io/siit_06/lipsa.adelina/s5/comments/comments.html)
+- [Formular si tabel](https://miualinionut.github.io/siit_06/lipsa.adelina/s5/formular_tabel/index.html)
+- [Tabele si imagini](https://miualinionut.github.io/siit_06/lipsa.adelina/s5/tabele_si_imagini/tabele_si_imagini.html)
+
+# Session_06
+
+- [Agenda telefonica](https://miualinionut.github.io/siit_06/lipsa.adelina/s6/agenda_telefonica/index.html)
+- [Shopping list](https://miualinionut.github.io/siit_06/lipsa.adelina/s6/shopping_list/shopping_list.html)
+- [Monty Hall](https://miualinionut.github.io/siit_06/lipsa.adelina/s6/monty_hall/index.html)
+- [Tic Tac Toe](https://miualinionut.github.io/siit_06/lipsa.adelina/s6/x_si_0/index.html)
+
+# Session_07
+- [Catalog de note](https://miualinionut.github.io/siit_06/lipsa.adelina/s7/catalog_de_note/catalog.html)
+
+# Session_08
+- [Weather app](https://miualinionut.github.io/siit_06/lipsa.adelina/s8/weather_app/index.html)
+- [Agenda telefonica firebase](https://miualinionut.github.io/siit_06/lipsa.adelina/s8/agenda_telefonica_firebase/index.html)
+- [Shopping list firebase](https://miualinionut.github.io/siit_06/lipsa.adelina/s8/shopping_list_firebase/shopping_list.html)

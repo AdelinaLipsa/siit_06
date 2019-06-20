@@ -1,5 +1,5 @@
-var Tema9=function(N) { var a=1;
-    for (i=0; i<=N; i++) {
-if(i%2==1){
-    a=a*i;}}
-    console.log(a)}
+var T9=function(n) {
+    prod=1;
+    for ( x=1; x<n*2; x+=2) {
+    prod*=x}
+    console.log(sum)}

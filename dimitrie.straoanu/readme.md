@@ -20,3 +20,24 @@
 # Tema_s4
 
 - [Tema JS part 2](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s4/index.html)
+
+# Tema_s5
+
+- [Tema DOM](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s5)
+
+# Tema_s6
+
+- [Shopping List](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s6/shopping_list)
+- [Phone Book](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s6/phone_book)
+- [Monty Hall](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s6/monty_hall)
+- [Tic Tac Toe](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s6/tictactoe)
+
+# Tema_s7
+
+- [Catalog de note](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s7/index.html)
+
+# Tema_s8
+
+- [Weather App](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s8/weather_app)
+- [Catalog de note (promises+firebase)](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s8/catalog_note)
+- [Phone Book (ajax+firebase)](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s8/ajax_phone_book)

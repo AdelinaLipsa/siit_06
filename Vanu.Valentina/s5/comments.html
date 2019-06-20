@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Valentina Vanu">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel= "stylesheet" href="comments.css">
+        <title>Comments</title>
+    </head>
+    <body>
+            <div id="container">
+                <h1>Comments List</h1>
+                <div class= "demo">
+                    <p class="title">Demo Comment 1</p>
+                    <p class="message">Demo Content 1 : <strong>Ion Pop</strong></p>
+                    <p class="title">Demo Comment 2</p>
+                    <p class="message">Demo Content 2 : <strong>Ion Pop</strong></p>
+                    <div id="display"></div>
+                </div>
+                <div id="input">
+                    <div>
+                        <input type="text" id="title" placeholder="Title">
+                    </div>
+                        <input type="text" id="message" placeholder="Message" cols="5">
+                    <div>
+                        <input type="text" id="author" placeholder="Author">
+                    </div>
+                    <button id="key" onclick = "showDiv()">Send</button>
+                </div>
+                <script src="comments.js"></script>
+            </div>
+    </body>
+</html>

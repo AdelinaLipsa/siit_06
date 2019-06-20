@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Agenda telefonica">
+    <meta name="author" content="Adelina Lipsa">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda telefonica</title>
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    <script src="javascript.js" defer></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/solid.css"
+        integrity="sha384-ioUrHig76ITq4aEJ67dHzTvqjsAP/7IzgwE7lgJcg2r7BRNGYSK0LwSmROzYtgzs" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css"
+        integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    <h1 id="header"><i class="fas fa-phone-square"></i>&nbsp;Agenda telefonica</h1>
+    <div id="wrapper">
+        <div class="input">
+            <form id="myForm">
+                <p>Nume:</p>
+                <input type="text" id="numeInput">
+                <p>Prenume:</p>
+                <input type="text" id="prenumeInput">
+                <p>Telefon:</p>
+                <input type="text" id="telefonInput">
+                <input type="submit" id="submit" value="ADAUGA CONTACT">
+                <p><span id="message"></span></p>
+            </form>
+        </div>
+        <div>
+            <table id="table">
+                <thead id="thead">
+                    <tr>
+                        <th id="nume">Nume <i class="fas fa-sort"></i></th>
+                        <th id="prenume">Prenume <i class="fas fa-sort"></i></th>
+                        <th id="telefon">Telefon <i class="fas fa-sort"></i></th>
+                        <th colspan="2"></th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+        <h2>Baza de date</h2>
+        <div id="firebase"></div>
+    </div>
+</body>
+
+</html>

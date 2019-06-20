@@ -13,11 +13,11 @@ function compara2() {
     var x = document.getElementById("number3").value;
     var y = document.getElementById("number4").value;
     if ( x < y ){
-        document.getElementById("demo2").innerHTML = x+" < "+y+" = -1";
+        document.getElementById("demo2").innerHTML = "Rezultat:</br> "+ x+" < "+y+" = -1";
     } else if ( x == y ){
-        document.getElementById("demo2").innerHTML = x+" = "+y+" = 0";
+        document.getElementById("demo2").innerHTML = "Rezultat:</br> "+ x+" = "+y+" = 0";
     } else if ( x > y ) {
-        document.getElementById("demo2").innerHTML = x+" > "+y+" = 1";
+        document.getElementById("demo2").innerHTML = "Rezultat:</br> "+ x+" > "+y+" = 1";
     }
 }
 // 3.O functie care primeste 2 valori si returneaza maximul dintre cele 2
@@ -25,11 +25,11 @@ function compara3() {
     var x = document.getElementById("number5").value;
     var y = document.getElementById("number6").value;
     if ( x > y ){
-        document.getElementById("demo3").innerHTML = x+" > "+y+" = " +x;
+        document.getElementById("demo3").innerHTML = "Rezultat:</br> "+ x+" > "+y+" = " +x;
     } else if ( x < y ){
-        document.getElementById("demo3").innerHTML = x+" < "+y+" = " +y;
-    } else if ( x = y ){
-        document.getElementById("demo3").innerHTML = "Cele doua valori nu trebuie sa fie egale!";
+        document.getElementById("demo3").innerHTML = "Rezultat:</br> "+ x+" < "+y+" = " +y;
+    } else if ( x == y ){
+        document.getElementById("demo3").innerHTML = "Rezultat:</br> "+ "Cele doua valori nu trebuie sa fie egale!";
     }
 }
 // 4.O functie care primeste 2 valori si returneaza minimul dintre cele 2
@@ -37,11 +37,11 @@ function compara4() {
     var x = document.getElementById("number7").value;
     var y = document.getElementById("number8").value;
     if ( x > y ){
-        document.getElementById("demo4").innerHTML = x+" > "+y+" = " +y;
+        document.getElementById("demo4").innerHTML = "Rezultat:</br> "+ x+" > "+y+" = " +y;
     } else if ( x < y ){
-        document.getElementById("demo4").innerHTML = x+" < "+y+" = " +x;
-    } else if ( x = y ){
-        document.getElementById("demo4").innerHTML = "Cele doua valori nu trebuie sa fie egale!";
+        document.getElementById("demo4").innerHTML = "Rezultat:</br> "+ x+" < "+y+" = " +x;
+    } else if ( x == y ){
+        document.getElementById("demo4").innerHTML = "Rezultat:</br> "+ "Cele doua valori nu trebuie sa fie egale!";
     }
 }
 // 5.O functie care intoarce suma primelor N numere naturale pozitive
@@ -53,7 +53,7 @@ function suma1() {
         sum = sum + y;
         y = y + 1;
     }
-    document.getElementById("demo5").innerHTML = sum;
+    document.getElementById("demo5").innerHTML = "Rezultat:</br> "+ sum;
 }
 // 6.O functie care verifica daca N este numar prim (restul impartirii la 1 si la N ==0)
 function prim() {
@@ -67,9 +67,9 @@ function prim() {
 		d++
 	}
 	if (divizori === 2) {
-        document.getElementById("demo6").innerHTML = n + " este prim!";
+        document.getElementById("demo6").innerHTML = "Rezultat:</br> "+ n + " este prim!";
 	} else {
-        document.getElementById("demo6").innerHTML = n + " nu este prim!";
+        document.getElementById("demo6").innerHTML = "Rezultat:</br> "+ n + " nu este prim!";
 	}
 }
 // 7.O functie care intoarce suma primelor N numere prime
@@ -90,7 +90,7 @@ function sumPrimes() {
         }
     }
     for (var x = 0; x < myArr.length; x++){
-        document.getElementById("demo7").innerHTML = "Numerele prime pana la "+n+" sumt : "+myArr;
+        document.getElementById("demo7").innerHTML = "Rezultat:</br> "+ "Numerele prime pana la "+n+" sumt : "+myArr;
     }
     let allSum = myArr.reduce((a,b)=> a + b);
     document.getElementById("demo8").innerHTML = "Suma numerelor este: "+allSum;
@@ -102,7 +102,7 @@ function reverseString() {
     for (var i = x.length - 1; i >= 0; i--){
         y += x[i];
     }
-    document.getElementById("demo9").innerHTML = y;
+    document.getElementById("demo9").innerHTML = "Rezultat:</br> "+ y;
 }
 //9.O functie care intoarce produsul primelor N numere impare pozitive
 function oddSum() {
@@ -113,7 +113,7 @@ function oddSum() {
             sum = sum + i;
         }
     }
-    document.getElementById("demo10").innerHTML = sum;
+    document.getElementById("demo10").innerHTML = "Rezultat:</br> "+ sum;
 }
 //10.O functie care primeste 2 parametri(arr - array de nr intregi si x - numar) si verifica daca x exista in array
 // adaugam valorile primite intr-un array
@@ -138,9 +138,9 @@ function ver(){
     }
     // verificam daca valoarea noua se afla in array sau nu
     if ( xArray.includes(x6) == true ){
-        document.getElementById("demo11").innerHTML = "Valoarea "+ x6 + " se afla in array.";
+        document.getElementById("demo11").innerHTML = "Rezultat:</br> "+ "Valoarea "+ x6 + " se afla in array.";
     } else {
-        document.getElementById("demo11").innerHTML = "Valoarea "+ x6 + " nu se afla in array";
+        document.getElementById("demo11").innerHTML = "Rezultat:</br> "+ "Valoarea "+ x6 + " nu se afla in array";
     }
 }
 //11.O functie care intoarce maximul dintr-un array primit ca parametru
@@ -164,8 +164,8 @@ function maxLenght(){
         xArray.push(x10);
     }
     // afisare
-    var y = xArray.length;
-    document.getElementById("demo12").innerHTML = y;
+    var y = Math.max(...xArray);
+    document.getElementById("demo12").innerHTML = "Rezultat:</br> "+ y;
 }
 //12.O functie care intoarce suma dintre max si min, dintr-un array primit ca parametru
 function sumMaxMin(){
@@ -190,7 +190,7 @@ function sumMaxMin(){
     var y = Math.max(...xArray);
     var z = Math.min(...xArray);
     var x = y + z;
-    document.getElementById("demo13").innerHTML = "Valoarea minima introdusa este "+z;
+    document.getElementById("demo13").innerHTML = "Rezultat:</br> "+ "Valoarea minima introdusa este "+z;
     document.getElementById("demo14").innerHTML = "Valoarea maxima introdusa este "+y;
     document.getElementById("demo15").innerHTML = "Suma dintre max si min este: "+x;
 }
@@ -221,14 +221,14 @@ function duplicate(){
         }
     }
     if ( result.length > 0 ){ 
-        document.getElementById("demo16").innerHTML = "Avem dublura / dubluri: "+result;
+        document.getElementById("demo16").innerHTML = "Rezultat:</br> "+ "Avem dublura / dubluri: "+result;
     } else {
-        document.getElementById("demo16").innerHTML = "Nu avem dubluri";
+        document.getElementById("demo16").innerHTML = "Rezultat:</br> "+ "Nu avem dubluri";
     }
 
 }
 //14.O functie care intoarce produsul numerelor pozitive intr-un array primit ca parametru
-function mySum(){
+function myProd(){
     var x19 = document.getElementById("number21").value;
     var x20 = document.getElementById("number22").value;
     var x21 = document.getElementById("number23").value;
@@ -247,11 +247,11 @@ function mySum(){
     if ( x22 > 0){
         xArray.push(Number(x22));
     }
-    var sum = 0;
+    var prod = 1;
     for (var i = 0; i <= xArray.length - 1; i++) {
-        sum = sum + xArray[i];
+        prod = prod * xArray[i];
     }
-    document.getElementById("demo17").innerHTML = sum;
+    document.getElementById("demo17").innerHTML = "Rezultat:</br> "+ prod;
 }
 //15.O functie care verifica daca un string primit ca parametru este palindrom (inversul == originalul, ex: abcba == abcba, abca != acba
 function isPalindrome (){
@@ -260,130 +260,17 @@ function isPalindrome (){
     var lowRegA = a.toLowerCase().replace(b, '');
     var reverseA = lowRegA.split('').reverse().join('');
     if ( reverseA === lowRegA ){
-        document.getElementById("demo18").innerHTML = "Valoarea " + a + " este palindrom.";
+        document.getElementById("demo18").innerHTML = "Rezultat:</br> "+ "Valoarea " + a + " este palindrom.";
     } else {
-        document.getElementById("demo18").innerHTML = "Valoarea " + a + " nu este palindrom.";
+        document.getElementById("demo18").innerHTML = "Rezultat:</br> "+ "Valoarea " + a + " nu este palindrom.";
     }
 }
 
 
 
 
-
-function show1(){
-    var x = document.getElementById("show1");
-    if (x.className.indexOf("show") == -1) {
-        x.className += " show";
-    } else { 
-        x.className = x.className.replace("show", "hiddendiv");
-    }
-}
-function show2(){
-    var x = document.getElementById("show2");
-    if (x.className.indexOf("show") == -1) {
-        x.className += " show";
-    } else { 
-        x.className = x.className.replace("show", "hiddendiv");
-    }
-}
-function show3(){
-    var x = document.getElementById("show3");
-    if (x.className.indexOf("show") == -1) {
-        x.className += " show";
-    } else { 
-        x.className = x.className.replace("show", "hiddendiv");
-    }
-}
-function show4(){
-    var x = document.getElementById("show4");
-    if (x.className.indexOf("show") == -1) {
-        x.className += " show";
-    } else { 
-        x.className = x.className.replace("show", "hiddendiv");
-    }
-}
-function show5(){
-    var x = document.getElementById("show5");
-    if (x.className.indexOf("show") == -1) {
-        x.className += " show";
-    } else { 
-        x.className = x.className.replace("show", "hiddendiv");
-    }
-}
-function show6(){
-    var x = document.getElementById("show6");
-    if (x.className.indexOf("show") == -1) {
-        x.className += " show";
-    } else { 
-        x.className = x.className.replace("show", "hiddendiv");
-    }
-}
-function show7(){
-    var x = document.getElementById("show7");
-    if (x.className.indexOf("show") == -1) {
-        x.className += " show";
-    } else { 
-        x.className = x.className.replace("show", "hiddendiv");
-    }
-}
-function show8(){
-    var x = document.getElementById("show8");
-    if (x.className.indexOf("show") == -1) {
-        x.className += " show";
-    } else { 
-        x.className = x.className.replace("show", "hiddendiv");
-    }
-}
-function show9(){
-    var x = document.getElementById("show9");
-    if (x.className.indexOf("show") == -1) {
-        x.className += " show";
-    } else { 
-        x.className = x.className.replace("show", "hiddendiv");
-    }
-}
-function show10(){
-    var x = document.getElementById("show10");
-    if (x.className.indexOf("show") == -1) {
-        x.className += " show";
-    } else { 
-        x.className = x.className.replace("show", "hiddendiv");
-    }
-}
-function show11(){
-    var x = document.getElementById("show11");
-    if (x.className.indexOf("show") == -1) {
-        x.className += " show";
-    } else { 
-        x.className = x.className.replace("show", "hiddendiv");
-    }
-}
-function show12(){
-    var x = document.getElementById("show12");
-    if (x.className.indexOf("show") == -1) {
-        x.className += " show";
-    } else { 
-        x.className = x.className.replace("show", "hiddendiv");
-    }
-}
-function show13(){
-    var x = document.getElementById("show13");
-    if (x.className.indexOf("show") == -1) {
-        x.className += " show";
-    } else { 
-        x.className = x.className.replace("show", "hiddendiv");
-    }
-}
-function show14(){
-    var x = document.getElementById("show14");
-    if (x.className.indexOf("show") == -1) {
-        x.className += " show";
-    } else { 
-        x.className = x.className.replace("show", "hiddendiv");
-    }
-}
-function show15(){
-    var x = document.getElementById("show15");
+function show(id){
+    var x = document.getElementById(id);
     if (x.className.indexOf("show") == -1) {
         x.className += " show";
     } else { 

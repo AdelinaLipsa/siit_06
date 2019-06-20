@@ -17,7 +17,7 @@ function bubbleSortAsc(arr) {
                 arr[j] = aux;
             }
         }
-    } 
+    }
     return arr;
 }
 function bubbleSortDesc(arr) {
@@ -49,7 +49,7 @@ function addItem() {
 inputItem.addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
         event.preventDefault();
-        document.querySelector('#addButton').click();
+        document.querySelector("#addButton").click();
         
     }
 });
@@ -62,16 +62,6 @@ function bought(index) {
         selectedItem.classList.add("bought")
     }
 }
-
-///jquery
-// function bought(element) {
-//     let prevEl = $(element).prev();
-//     if(prevEl.hasClass("bought")){
-//         prevEl.removeClass('bought')
-//     }else{
-//         prevEl.addClass('bought')
-//     }
-// }
 
 function sortAsc() {
     bubbleSortAsc(sorting);
@@ -95,5 +85,3 @@ function sortDesc() {
     }
     //alert(sortingAsc)
 }
-
-
