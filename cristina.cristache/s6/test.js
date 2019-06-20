@@ -35,7 +35,6 @@ function getMaxNumber(arrayNr) {
         if (no > greater) {
             greater = no;
         }
-
     }
     return greater;
 }
@@ -66,8 +65,8 @@ function factorial(nr) {
 // Exemplu: pentru [23, 8, 13, 14, 9, 88, 19, 20, 46, 10] va returna [8, 14, 88]
 function displayFirst3EvenNumbers(arrayNr) {
     let evens = [];
-    for (i = 0;evens.length<3; i++) {
-        if (arrayNr[i]%2==0){
+    for (i = 0; evens.length < 3; i++) {
+        if (arrayNr[i] % 2 == 0) {
             evens.push(arrayNr[i])
         }
     }
@@ -78,11 +77,10 @@ function displayFirst3EvenNumbers(arrayNr) {
 // Functia returneaza true daca este palindrom si false daca nu este palindrom.
 // Exemplu: pentru capac va returna true; pentru copac va returna false
 function palindrom(str) {
-    
-    for (let i = 0; i <str.length/2 ; i++) {
-        if (str[i]!=str[str.length-1-i]){
+    for (let i = 0; i < str.length / 2; i++) {
+        if (str[i] != str[str.length - 1 - i]) {
             return false;
-        } 
+        }
     }
     return true;
 }
@@ -93,14 +91,32 @@ function palindrom(str) {
 function displayPrimeNumbers(arrayNr) {
     let primes = [];
 
-
+    function isPrime(num) {
+        for (var i = 2; i < num; i++)
+            if (num % i === 0) return false;
+        return true;
+    }
+    for (i = 0; i < arrayNr.length; i++) {
+        if (isPrime(arrayNr[i])) primes.push(arrayNr[i]);
+    }
+    return primes;
 }
 // 9. Scrieti o functie JS care sorteaza crescator elementele pe randurile unei matrice primite ca parametru si returneaza matricea sortata. Hint: bubble sort.
 // Exemplu: pentru [[34, 12, 44], [87, 23, 56], [50, 1, 0]] va returna [[12, 34, 44], [23, 56, 87], [0, 1, 50]]
 function sortAsc(matrix) {
-
-
-
+    for(i=0;i<matrix.length;i++){
+        for(j=0;j<matrix[i].length-1;j++){
+           for(x=j+1;x<matrix[i].length;x++){
+            let aux;
+            if(matrix[i][j]>matrix[i][x]){
+                aux = matrix[i][j];
+                matrix[i][j] = matrix[i][x];
+                matrix[i][x] = aux;
+            }
+           }
+        }
+    }
+    return matrix;
 }
 
 // 10. Scrieti o functie JS care returneaza numarul din sirul lui Fibonacci pentru o valoare data nr.

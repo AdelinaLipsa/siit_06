@@ -78,9 +78,10 @@ function sortByKeyAsc(element, column) {
     }
 };
 
-/*function deleteRow(index) {
+function deleteRow(index) {
     listaClienti.splice(index, 1);
-};*/
+    drawTable(listaClienti);
+};
 
 /*function verifyForm(){
     let name = document.getElementById("name");

@@ -1,0 +1,54 @@
+ul {
+    list-style-type: none;
+}
+
+th {
+    padding: 4.1em;
+    text-align: center;
+}
+
+#location{
+    padding: 1em 0 1em  2em;
+}
+
+input {
+    width: 50%;
+}
+
+.input-area {
+    margin: 2em 0 4em 0;
+}
+
+/* .line{
+    border-bottom: 1px solid black;
+} */
+
+#map {
+    height: 300px;
+    width: 95%;
+    margin: 1em 0 10px 10px;
+}
+
+.toggle {
+    display: none!important;
+}
+
+#weatherNow {
+    height: 300px;
+    border-radius: 10px;
+    margin: 1em 20px 0 35px;
+}
+
+#header {
+    height: 200px;
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: rgba(173, 204, 237, 0.267);
+}
+
+#headers {
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;
+}

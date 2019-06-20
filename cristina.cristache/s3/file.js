@@ -164,7 +164,6 @@ function checkString(str){
 		return true;
 	} else{
 		return false;
-	}
-
-		
+	}	
 }
+

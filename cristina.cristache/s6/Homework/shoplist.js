@@ -85,5 +85,3 @@ function sortDesc() {
     }
     //alert(sortingAsc)
 }
-
-

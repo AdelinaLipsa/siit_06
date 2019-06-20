@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>phoneBook</title>
+</head>
+
+<body onload="getContacts()">
+    <div id="wrapper">
+        <div id="input-wrapper">
+            <div id="input">
+                <div id="nameInput">
+                    <label for="name">Name: </label>
+                    <input id="name" type="text">
+                </div>
+                <div id="phoneInput">
+                    <label for="phone">Phone: </label>
+                    <input id="phone" type="text">
+
+                </div>
+            </div>
+            <div class="buttons">
+                <button onclick="addContact()" id="addBtn">Add Contact</button>
+                <button class="toggle" id="backBtn" style="float: right">Back</button>
+            </div>
+            <p  id="none"></p>
+        </div>
+
+        <div class = "toggle" id="contacts-wrapper">
+            <table>
+                <thead id="thead"></thead>
+                <tbody id="contactList"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+body {
+    background-color: rgb(208, 199, 245);
+}
+
+.toggle, .toggleBack {
+    display: none;
+}
+
+th, td {
+    border-bottom: 1pt solid rgba(74, 74, 75, 0.027);
+    text-align: center;
+    padding: 2px 20px;
+}
+
+#wrapper {
+    margin: 5% 10% 5% 10%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    row-gap: 1ex;
+}
+
+#name {
+    background-color: pink;
+}
+
+.buttons {
+    width: auto;
+    height: auto;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    align-content: center;
+}
+
+#addButton, #backBtn {
+    width: 55px!important;
+    border-radius: 10px;
+    margin: 15px 0 20px 0;
+    width: 30%;
+    padding: 0.5ex;
+    font-size: .9ex;
+    /* box-shadow: none; */
+}
+
+#addButton {
+    margin-left: 20%;
+}
+
+#input-wrapper {
+    background-color: rgba(29, 1, 21, 0.274);
+    display: grid;
+    grid-auto-rows: 1fr 1fr;
+    padding: 20px 70px 20px 70px;
+    border-radius: 10px;
+    width: 40%;
+}
+
+/* #input-wrapper>td {
+    color: white;
+} */
+
+#contacts-wrapper {
+    padding: 20px 70px 20px 70px;
+    border-radius: 10px;
+    background-color: hsla(0, 0%, 0%, 0.075);
+    width: 40%;
+}
+
+#name, #phone {
+    margin: 5px;
+    border-radius: 5px;
+}

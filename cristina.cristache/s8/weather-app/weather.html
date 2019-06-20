@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="weather.css">
+    <title>Weather App 2.0</title>
+</head>
+
+<body>
+
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="header" class="col-md-12 ">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center input-area">
+                    <input id="searchTerm" placeholder="Search by city or zip code..." type="text">
+                    <button id="currentWeatherBtn">Search</button>
+                    <button id="forecastBtn">Get Forecast</button>
+                  
+                </div>
+            </div>
+            <div class="row" id="currentWeather">
+                <div class="col-md-4" id="weatherNow">
+                    <h5 id="location"> 
+
+                    </h5>
+                    <ul>
+                        <img id="img" src="">
+                        <li id="description"></li>
+                        <li id="humidity"></li>
+                        <li id="pressure"></li>
+                        <li id="temp"></li>
+                        <li id="maxTemp"></li>
+                        <li id="minTemp"></li>
+                    </ul>
+                </div>
+
+                <div id="map" class="col-md-7 toggle"></div>
+            </div>
+
+
+            <!-- <table>
+                    <thead id="headers">
+                       
+                    </thead>
+                    <tbody id="forecast">
+                        
+                    </tbody>
+                </table> -->
+            <div class="row">
+                <div class="col-md-12">
+                    <table>
+                        <thead>
+                            <tr  id="headers"></tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+            <div class="row" id="forecast">
+                <div id="dayzero" class="col-md-2 line"></div>
+                <div id="dayone" class="col-md-2 line"></div>
+                <div id="daytwo" class="col-md-2 line"></div>
+                <div id="daythree" class="col-md-2 line"></div>
+                <div id="dayfour" class="col-md-2 line"></div>
+                <div id="dayfive" class="col-md-2 line"></div>
+            </div>
+
+        </div>
+        <script src="weather.js"></script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxp15zkOn0kw3iR11ZUdJ_4c2lE1TvrF4&callback=initMap&libraries=places"></script>
+
+    </body>
+</body>
+
+</html>
