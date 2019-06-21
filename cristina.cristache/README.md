@@ -15,4 +15,16 @@
 <ul>
 <li><a href="<a href="https://github.com/miualinionut/siit_06/blob/master/cristina.cristache/s4/Homework/file.js">Tema JS part 2</a>
 </ul>
+  
+<h1>Week #5</h1>
+<ul>
+<li><a href="<a href="https://miualinionut.github.io/siit_06/cristina.cristache/s5/Homework/img-table/index.html">Tabele si Imagini</a>
+<li><a href="<a href="https://miualinionut.github.io/siit_06/cristina.cristache/s5/comments.html">Comments</a>
+</ul>
+
+<h1>Week #6</h1>
+<ul>
+<li><a href="<a href="https://miualinionut.github.io/siit_06/cristina.cristache/s6/phonebook/phone-book.html">Agenda Telefonica</a>
+<li><a href="<a href="https://miualinionut.github.io/siit_06/cristina.cristache/s6/Homework/shoplist.html">Lista de Cumparaturi</a>
+</ul>
 
