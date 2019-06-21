@@ -1,0 +1,26 @@
+[{
+    "name": "Peter",
+    "grades": [10, 10, 10, 10, 10],
+    "selected": false
+},
+{
+    "name": "Stark",
+    "grades": [10, 10, 10, 9, 7],
+    "selected": false
+},
+{
+    "name": "Thanos",
+    "grades": [3, 5, 9, 7, 10],
+    "selected": false
+},
+{
+    "name": "Hulk",
+    "grades": [2, 2, 2, 2, 10],
+    "selected": false
+},
+{
+    "name": "Thor",
+    "grades": [10, 5, 9, 4, 10],
+    "selected": false
+}
+]
