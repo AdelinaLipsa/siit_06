@@ -108,12 +108,12 @@ function drawGrades() {
 
 function addGrades(event) {
     let studentGrade = document.getElementById("grade").value;
-    let intGrade = parseInt(studentGrade)
+    let intGrade = parseInt(studentGrade);
     students[studentIdentifier]['grades'].push(intGrade);
-    drawGrades();
-    document.getElementById(`${studentIdentifier}`).innerHTML = `${(students[studentIdentifier].averageGrade()).toFixed(2)}`;
+    students[studentIdentifier].average = students[studentIdentifier].averageGrade();
     document.getElementById("grade").value = '';
-    averageGrades.push(students[studentIdentifier].averageGrade());
+    drawGrades();
+    draw();
 }
 
 function hide(event) {
