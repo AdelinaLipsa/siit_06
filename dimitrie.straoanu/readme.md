@@ -41,3 +41,8 @@
 - [Weather App](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s8/weather_app)
 - [Catalog de note (promises+firebase)](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s8/catalog_note)
 - [Phone Book (ajax+firebase)](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s8/ajax_phone_book)
+
+# Tema_s9
+
+- [Restaurant-Meniu](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s9)
+- [Restaurant-Admin](https://miualinionut.github.io/siit_06/dimitrie.straoanu/tema_s9/pages/admin.html)
