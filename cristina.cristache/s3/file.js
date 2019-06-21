@@ -135,9 +135,14 @@ function minMaxSum(arr){
 
 //Exercitiul #13//
 function checkForClone(arr){
-	for(i=0; i<arr.length-1; i++){
-
-	}
+	for(var i = 0; i < arr.length-1; i++) {
+        for(var j = i; j < arr.length; j++) {
+            if(i != j && arr[i] == arr[j]) {
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 
