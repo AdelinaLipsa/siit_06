@@ -31,6 +31,6 @@
 <h1>Week #8</h1>
 <ul>
 <li><a href="https://miualinionut.github.io/siit_06/cristina.cristache/s8/weather-app/weather.html">Weather App</a>
-<li><a href="https://miualinionut.github.io/siit_06/cristina.cristache/s8/firebase/phoneBook/index.html">Phoneboot to Firebase</a>
+<li><a href="https://miualinionut.github.io/siit_06/cristina.cristache/s8/firebase/phoneBook/index.html">Phonebook to Firebase(fetch)</a>
 </ul>
 
