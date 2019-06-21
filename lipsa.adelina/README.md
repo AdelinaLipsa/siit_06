@@ -36,4 +36,5 @@
 
 # Session_08
 - [Weather app](https://miualinionut.github.io/siit_06/lipsa.adelina/s8/weather_app/index.html)
+- [Agenda Telefonica Promises](https://miualinionut.github.io/siit_06/lipsa.adelina/s8/agenda_telefonica_firebase/index.html)
 - [Shopping list firebase](https://miualinionut.github.io/siit_06/lipsa.adelina/s8/shopping_list_firebase/shopping_list.html)
