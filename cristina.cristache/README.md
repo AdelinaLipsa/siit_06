@@ -13,6 +13,7 @@
   
 <h1>Week #4</h1>
 <ul>
+  <li><a href="https://github.com/miualinionut/siit_06/blob/master/cristina.cristache/s4/FizzBuzz/file.js">FizzBuzz</a>
 <li><a href="https://github.com/miualinionut/siit_06/blob/master/cristina.cristache/s4/Homework/file.js">Tema JS part 2</a>
 </ul>
   
