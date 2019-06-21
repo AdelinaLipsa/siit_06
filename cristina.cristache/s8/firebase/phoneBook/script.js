@@ -47,14 +47,14 @@ function draw() {
 }
 
 function removeContact(index) {
-    // contacts.splice(index, 1);
-    fetch(`https://phonebook-abd02.firebaseio.com/${index}.json`, {
-        method: 'delete',
-        body: JSON.stringify(contacts[editIndex]),
-    });
-    document.getElementById("contactList").innerHTML = '';
-    setTimeout(getContacts, 500);
-
+    if (confirm("Sure you want to delete?")) {
+        fetch(`https://phonebook-abd02.firebaseio.com/${index}.json`, {
+            method: 'delete',
+            body: JSON.stringify(contacts[editIndex]),
+        });
+        document.querySelector("#contactList").innerHTML = '';
+        setTimeout(getContacts, 500);
+    }
 }
 
 function addContact() {
@@ -115,5 +115,4 @@ function getContacts() {
                 document.querySelector("#none").innerHTML = 'No one in your contact list yet :(';
             }
         });
-
 }
