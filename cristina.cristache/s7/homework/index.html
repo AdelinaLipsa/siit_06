@@ -23,10 +23,11 @@
                 <input type="button" id="addStudentBtn" value="Add Student">
             </form>
             <table>
+               
                 <thead id="sthead" class="toggle">
                     <tr>
                         <th>Name</th>
-                        <th id="averageGrade">Average grade<i onclick="sort(event, arr)" sort="asc" class="fas fa-graduation-cap"></i></th>
+                        <th id="averageGrade" >Average grade</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -45,7 +46,7 @@
             <form>
                 <label for="grade">Grade: </label>
                 <input type="text" id="grade">
-                <input type="button" id="addGradeBtn" value="Add Grade">
+                <input type="button" id="addGradeBtn" value="Add Grade"><button id="hideBtn" onclick="hide()">Hide Grades</button>
             </form>
             <table>
                 <thead id="gthead">
@@ -55,10 +56,9 @@
 
                 </tbody>
             </table>
-            <button id="hideBtn" onclick="hide()">Hide Grades</button>
+            
         </div>
     </div>
     <script src="script.js"></script>
 </body>
-
 </html>
