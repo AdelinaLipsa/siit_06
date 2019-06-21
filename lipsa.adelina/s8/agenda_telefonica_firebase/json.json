@@ -1,0 +1,38 @@
+[
+  {
+    "nume": "Nume1",
+    "prenume": "Prenume1",
+    "telefon": [
+      "0758066000"
+    ]
+  },
+  {
+    "nume": "Nume3",
+    "prenume": "Prenume3",
+    "telefon": [
+      "0758000000"
+    ]
+  },
+  {
+    "nume": "Nume2",
+    "prenume": "Prenume2",
+    "telefon": [
+      "0758000000",
+      "0758000000"
+    ]
+  },
+  {
+    "nume": "Nume4",
+    "prenume": "Prenume4",
+    "telefon": [
+      "075803481"
+    ]
+  },
+  {
+    "nume": "Nume5",
+    "prenume": "Prenume5",
+    "telefon": [
+      "07942990220"
+    ]
+  }
+]

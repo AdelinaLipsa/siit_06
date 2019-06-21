@@ -1,260 +1,148 @@
- var listaClienti = [{
-     nume: "Nume1",
-     prenume: "Prenume1",
-     telefon: ["0758066000"],
-     initialOrder: 1
-   },
-   {
-     nume: "Nume3",
-     prenume: "Prenume3",
-     telefon: ["0758000000"],
-     initialOrder: 2
-   },
-   {
-     nume: "Nume2",
-     prenume: "Prenume2",
-     telefon: ["0758000000", "0758000000"],
-     initialOrder: 3
-   },
-   {
-     nume: "Nume4",
-     prenume: "Prenume4",
-     telefon: ["075803481"],
-     initialOrder: 4
-   },
-   {
-     nume: "Nume5",
-     prenume: "Prenume5",
-     telefon: ["07942990220"],
-     initialOrder: 5
-   }
- ];
+ var clienti = [];
+ var indexEdit = -1;
+
+ function ajax(url, method, body, callback, callbackError) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4) {
+      if (this.status == 200) {
+        if (typeof callback === "function") {
+          callback(this.responseText);
+        }
+      } else {
+        if (typeof callbackError === "function") {
+          callbackError(this.responseText);
+        }
+      }
+    }
+  };
+  xhttp.open(method, url, true);
+  xhttp.send(body);
+ }
+ 
+  async function ajaxPromise(url, method, body) {
+    return new Promise(function (resolve, reject) {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4) {
+          if (this.status == 200) {
+            resolve(this.responseText);
+          } else {
+            reject(this);
+          }
+        }
+      };
+      xhttp.open(method, url, true);
+      xhttp.send(body);
+    });
+  }
+
+  async function getClients(){
+    var responseText = await ajaxPromise("https://testing-project-75edf.firebaseio.com/.json", "GET");
+    window.clienti = JSON.parse(responseText);
+    showDataInTable();
+    console.log(clienti);
+
+  }
 
  //drawing the table
- function showDataInTable(arr) {
-   var tableBody = document.getElementById('tableBody');
-   var tableData = "";
+ function showDataInTable() {
+var str= "";
+for( var i in clienti){
+  str += `
+  <tr>
+  <td class="nume">${clienti[i].nume}</td>
+  <td class="prenume">${clienti[i].prenume}</td>
+  <td class="telefon">${clienti[i].telefon}</td>
+  <td>
+  <div class="editBtn" onclick="edit('${i}')"><button>Editeaza</button></div>
+  </td>
+  <td>
+  <div class="deleteBtn" onclick="del('${i}')"><button>Sterge</button></div>
+  </td>
+  </tr>
+  `;
+} 
+document.querySelector("table tbody").innerHTML = str;
+}
 
-   for (var i = 0; i < arr.length; i++) {
-     tableData += `
-    <tr>
-    <td>${listaClienti[i].nume}</td>
-    <td>${listaClienti[i].prenume}</td>
-    <td>${listaClienti[i].telefon}</td>
-    <td id="modifica">Modifica</td>
-    <td id="sterge">Sterge</td>
-    </tr>
-    `;
-   }
-   tableBody.innerHTML = tableData;
- }
- showDataInTable(listaClienti);
 
- //writing the sorting function
- function sort(arr, parameter, sortDirection) {
+async function addClient(event,form) {
+  event.preventDefault();
+  var obj = {
+    nume: form.querySelector("[name=\"nume\"]").value,
+    prenume: form.querySelector("[name=\"prenume\"]").value,
+    telefon: form.querySelector("[name=\"telefon\"]").value
+  };
 
-   for (var i = 0; i < arr.length; i++) {
-
-     for (var j = i + 1; j < arr.length; j++) {
-
-       if (sortDirection === "up") {
-
-         if (arr[i][parameter] > arr[j][parameter]) {
-           var temp = arr[i];
-           arr[i] = arr[j];
-           arr[j] = temp;
-         }
-       } else if (sortDirection === "down") {
-
-         if (arr[i][parameter] < arr[j][parameter]) {
-           var temp = arr[i];
-           arr[i] = arr[j];
-           arr[j] = temp;
-         }
-       }
-     }
-   }
-   showDataInTable(arr);
- }
- //table click event
- document.getElementById("table").addEventListener("click", tableClicked);
-
- var sortDirection;
- var index;
- var editingTable;
-
- function tableClicked() {
-
-   //table delete
-   function delClient(arr, index) {
-     arr.splice(index, 1);
-   }
-
-   index = Number(event.target.parentElement.rowIndex - 1);
-
-   if (event.target.id == "sterge") {
-
-     delClient(listaClienti, index);
-     showDataInTable(listaClienti);
-   }
-
-   // table edit
-   if (event.target.id == "modifica") {
-     document.getElementById("numeInput").value = listaClienti[index].nume;
-     document.getElementById("prenumeInput").value = listaClienti[index].prenume;
-     document.getElementById("telefonInput").value = listaClienti[index].telefon;
-     document.getElementById("submit").value = "SALVEAZA";
-   }
-
-   //table sorting
-   if (event.target.tagName == "TH") {
-
-     var headers = document.getElementsByTagName("th");
-
-     for (var i = 0; i < headers.length; i++) {
-
-       headers[i].classList.remove("selected");
-     }
-
-     event.target.classList.add("selected");
-
-     if (sortDirection == "up") sortDirection = "down";
-     else sortDirection = "up";
-
-     var parameter = event.target.id;
-     sort(listaClienti, parameter, sortDirection);
-
-   }
- }
-
- // when form is clicked
- document.getElementById("myForm").addEventListener("click", formClicked);
-
- function formClicked() {
-
-   //add client or edit existing
-   if (event.target.id == "submit") {
-
-     event.preventDefault();
-
-     var nume = document.getElementById("numeInput").value;
-     var prenume = document.getElementById("prenumeInput").value;
-     var telefon = document.getElementById("telefonInput").value;
-     telefon = telefon.split(",");
-
-     if (nume && prenume && telefon) {
-
-       if (editingTable == true) {
-
-         listaClienti[index].nume = nume;
-         listaClienti[index].prenume = prenume;
-         listaClienti[index].telefon = telefon;
-         document.getElementById("submit").value = "ADAUGA CONTACT";
-         editingTable = false;
-
-       } else {
-
-         var newClient = {
-           nume: nume,
-           prenume: prenume,
-           telefon: telefon
-         }
-         listaClienti.push(newClient);
-       }
-
-       //redraw the table
-       showDataInTable(listaClienti);
-
-       //reset input fields
-       document.getElementById("numeInput").value = "";
-       document.getElementById("prenumeInput").value = "";
-       document.getElementById("telefonInput").value = "";
-
-     } else {
-       alert("CAMPURI INCOMPLETE!");
-     }
-   }
- }
-
- //make sure telefonInput gets numbers 
- document.getElementById("telefonInput").addEventListener("keydown", checkInput);
- document.getElementById("telefonInput").addEventListener("input", checkInput);
-
- function checkInput() {
-   if (/[^0-9]/.test(event.key) && event.keyCode !== 8) {
-     event.preventDefault();
-   }
- }
-
- // ---------------------->initialize firebase
- var firebaseConfig = {
-   apiKey: "AIzaSyAWtlQTGbFjhKQnKGyOtWKxLtYjPhkPbTY",
-   authDomain: "testing-project-75edf.firebaseapp.com",
-   databaseURL: "https://testing-project-75edf.firebaseio.com",
-   projectId: "testing-project-75edf",
-   storageBucket: "testing-project-75edf.appspot.com",
-   messagingSenderId: "260504032711",
-   appId: "1:260504032711:web:e4eccf6c85a9f9f5"
- };
- firebase.initializeApp(firebaseConfig);
-
- var rootRef = firebase.database().ref().child("clients");
- $('#submit').click(function () {
-   rootRef.push().set({ // without push() the database is just being overwritten
-
-     nume: $('#numeInput').val(),
-     prenume: $('#prenumeInput').val(),
-     telefon: $('#telefonInput').val()
-
-   });
- })
-
-/*
- ----------------------->load database
- firebase.database().ref('clients/').on('value', function (snapshot) {
-   writeList(snapshot.val());
- });
-
- function writeList(rootRef) {
-   for (var key in rootRef) {
-     if (rootRef.hasOwnProperty(key)) {
-       var str; 
-       str += '<tr>';
-       str += "<td>" + rootRef.nume + "</td>";
-       str += "<td> " + rootRef.prenume + "</td>";
-       str += "<td>" + rootRef.telefon + "</td>";
-       str += '</tr>';
-
-     }
-   }
-   $('#tableBody').html(str);
- }
-*/
-//--------------------------> LOAD DATABASE IN CONSOLE
-$(function(){
-  //just make a variable to keep track of the data coming from Firebase
-  var data =[];
-  
-  //create a new connection to firebase
-  var rootRef = firebase.database().ref().child("clients");
-	
-  //listen to data updates from firebase
-  rootRef.on("value", function(snapshot){
-    console.log(snapshot.val() );
-    //when data updates at Firebase,it gets put in the DATA variable
-    data = snapshot.val();
-  })
-
-//---------show the data in the page 
-const object = document.getElementById("firebase");
-rootRef.on("value", snap => {
-  object.innerText = JSON.stringify(snap.val(), null, 3);
-});
-/*
-document.getElementById("firebase").innerHTML = `
-  <h1 class="app-title">Number of clients (${rootRef.length} results)</h1>
-  <p class="footer">These ${rootRef.length} clients were added recently. Check back soon for updates.</p>
-`;*/
-});
+  if(indexEdit === -1){
+    await ajaxPromise("https://testing-project-75edf.firebaseio.com/.json", "POST", JSON.stringify(obj))
+  } else {
+    await ajaxPromise(`https://testing-project-75edf.firebaseio.com/${indexEdit}.json`, "PUT", JSON.stringify(obj));
+  }
+  getClients();
+  form.reset();
+}
  
+function edit(idx) {
+  var form = document.querySelector("#myForm");
+  form.querySelector("[name=\"nume\"]").value = clienti[idx].nume;
+  form.querySelector("[name=\"prenume\"]").value = clienti[idx].prenume;
+  form.querySelector("[name=\"telefon\"]").value = clienti[idx].telefon;
+  form.querySelector("[name=\"submit\"]").value = "SALVEAZA";
+  indexEdit = idx;
+}
 
+async function del(idx) {
+  if (confirm(`Are you sure you want to delete ${clienti[idx].nume} ?`)) {
+    await ajaxPromise(`https://testing-project-75edf.firebaseio.com/${idx}.json`, "DELETE");
+    getClients();
+  }
+}
+
+document.getElementById("telefonInput").addEventListener("keydown", checkInput);
+ document.getElementById("telefonInput").addEventListener("input", checkInput);
+ function checkInput() {
+  if (/[^0-9]/.test(event.key) && event.keyCode !== 8) {
+    event.preventDefault();
+  }
+}
+
+function sort(ascending, columnClassName, tableId)
+		{
+			var tbody = document.getElementById(tableId).getElementsByTagName("tbody")[0];
+			var rows = tbody.getElementsByTagName("tr");
+			
+			var unsorted = true;
+			
+			while(unsorted)
+			{
+				unsorted = false
+				
+				for (var r = 0; r < rows.length - 1; r++)
+				{
+					var row = rows[r];
+					var nextRow = rows[r+1];
+					
+					var value = row.getElementsByClassName(columnClassName)[0].innerHTML;
+					var nextValue = nextRow.getElementsByClassName(columnClassName)[0].innerHTML;
+					
+					value = value.replace(',', ''); // in case a comma is used in float number
+					nextValue = nextValue.replace(',', '');
+					
+					if(!isNaN(value))
+					{
+						value = parseFloat(value);
+						nextValue = parseFloat(nextValue);
+					}
+					
+					console.log(value);
+					
+					if (ascending ? value > nextValue : value < nextValue)
+					{
+						tbody.insertBefore(nextRow, row);
+						unsorted = true;
+					}
+				}
+			}
+		};

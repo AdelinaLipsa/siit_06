@@ -17,22 +17,21 @@
         integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/2926c10e78.js"></script>
+
 
 
 </head>
 
-<body>
+<body onload="getClients();">
     <h1 id="header"><i class="fas fa-phone-square"></i>&nbsp;Agenda telefonica</h1>
     <div id="wrapper">
         <div class="input">
-            <form id="myForm">
-                <p>Nume:</p>
-                <input type="text" id="numeInput">
-                <p>Prenume:</p>
-                <input type="text" id="prenumeInput">
-                <p>Telefon:</p>
-                <input type="text" id="telefonInput">
-                <input type="submit" id="submit" value="ADAUGA CONTACT">
+            <form id="myForm" onsubmit="addClient(event,this);">
+                <input type="text" id="numeInput" name="nume" placeholder="NUME...">
+                <input type="text" id="prenumeInput" name="prenume" placeholder="PRENUME...">
+                <input type="text" id="telefonInput" name="telefon" placeholder="TELEFON...">
+                <input type="submit" id="submit" value="ADAUGA CONTACT" name="submit">
                 <p><span id="message"></span></p>
             </form>
         </div>
@@ -40,17 +39,18 @@
             <table id="table">
                 <thead id="thead">
                     <tr>
-                        <th id="nume">Nume <i class="fas fa-sort"></i></th>
-                        <th id="prenume">Prenume <i class="fas fa-sort"></i></th>
-                        <th id="telefon">Telefon <i class="fas fa-sort"></i></th>
+                        <th id="nume">Nume <a href="javascript:sort(true, 'nume', 'table');" ><i class="far fa-hand-point-up"></i></a>
+                            <a href="javascript:sort(false, 'nume', 'table');" ><i class="far fa-hand-point-down"></i></a></th>
+                        <th id="prenume">Prenume <a href="javascript:sort(true, 'prenume', 'table');" ><i class="far fa-hand-point-up"></i></a>
+                            <a href="javascript:sort(false, 'prenume', 'table');" ><i class="far fa-hand-point-down"></i></a></th>
+                        <th id="telefon">Telefon <a href="javascript:sort(true, 'telefon', 'table');" ><i class="far fa-hand-point-up"></i></a>
+                            <a href="javascript:sort(false, 'telefon', 'table');" ><i class="far fa-hand-point-down"></i></a></th>
                         <th colspan="2"></th>
                     </tr>
                 </thead>
                 <tbody id="tableBody"></tbody>
             </table>
         </div>
-        <h2>Baza de date</h2>
-        <div id="firebase"></div>
     </div>
 </body>
 
