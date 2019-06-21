@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', function () {
     ];
 
     // prevent enter from submitting/refreshing
-  document.getElementById("namesInput").addEventListener("click", function (event) {
+    document.getElementById("namesInput").addEventListener("click", function (event) {
         if (event.keyCode == 13) {
             event.preventDefault();
             document.getElementById("#addStudentBtn").click();
@@ -76,7 +76,7 @@ window.addEventListener('DOMContentLoaded', function () {
         <tr>
         <td></td>
         <td>${studentsList[i].name}</td>
-        <td>${averageGrade(studentsList[i].grades)}</td>
+        <td class="note">${averageGrade(studentsList[i].grades)}</td>
         <td><button data-index ="${i}" data-id ="showGrades">Show grades</button></td>
         <td></td>
         </tr>
@@ -133,7 +133,7 @@ window.addEventListener('DOMContentLoaded', function () {
     function addGrade() {
         if (gradesInput.value <= 10) {
             var newGrade = Number(gradesInput.value);
-            newGrade = Number(newGrade.toFixed(2));
+            newGrade = newGrade.toFixed(2);
             var grades = studentsList[newIndex].grades;
             grades.push(newGrade);
             gradesInput.value = "";
@@ -147,7 +147,7 @@ window.addEventListener('DOMContentLoaded', function () {
         for (var i = 0; i < grades.length; i++) {
             gradesTableBody.innerHTML += `
             <tr>
-            <td>${grades[i]}</td>
+            <td class="note2">${grades[i]}</td>
             </tr>
             `;
         }
@@ -185,3 +185,35 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
+function sort(ascending, columnClassName, tableId) {
+    var tbody = document.getElementById(tableId).getElementsByTagName("tbody")[0];
+    var rows = tbody.getElementsByTagName("tr");
+
+    var unsorted = true;
+
+    while (unsorted) {
+        unsorted = false
+
+        for (var r = 0; r < rows.length - 1; r++) {
+            var row = rows[r];
+            var nextRow = rows[r + 1];
+
+            var value = row.getElementsByClassName(columnClassName)[0].innerHTML;
+            var nextValue = nextRow.getElementsByClassName(columnClassName)[0].innerHTML;
+
+            value = value.replace(',', ''); // in case a comma is used in float number
+            nextValue = nextValue.replace(',', '');
+
+            if (!isNaN(value)) {
+                value = parseFloat(value);
+                nextValue = parseFloat(nextValue);
+            }
+
+            if (ascending ? value > nextValue : value < nextValue) {
+                tbody.insertBefore(nextRow, row);
+                unsorted = true;
+            }
+        }
+    }
+};

@@ -31,9 +31,9 @@
                 <tr>
                     <th></th>
                     <th></th>
-                    <th><button id="sortAverageDown" data-id="sortBtn" class="sortBtn"><i
-                                class="fas fa-sort-numeric-down"></i></button><button id="sortAverageUp"
-                            data-id="sortBtn" class="sortBtn"><i class="fas fa-sort-numeric-up"></i></button>
+                    <th><a href="javascript:sort(false, 'note', 'table');"><button id="sortAverageDown" data-id="sortBtn" class="sortBtn"><i class="far fa-hand-point-down"></i></button></a>
+                                <a href="javascript:sort(true, 'note', 'table');"><button id="sortAverageUp"
+                                    data-id="sortBtn" class="sortBtn"><i class="far fa-hand-point-up"></i></button></a>
                     </th>
                     <th></th>
                     <th></th>
@@ -49,14 +49,15 @@
             <input type="number" id="gradesInput" autocomplete="off" min="1" max="10">
             <button id="addGradesBtn">Add grade</button>
         </div>
-        <table>
+        <table id="otherTable">
             <thead>
                 <tr>
                     <th>Grades</th>
                 </tr>
                 <tr>
                     <th>
-                        <button id="sortGradesDown" data-id="sortBtn" class="sortBtn"><i class="fas fa-sort-numeric-down"></i></button><button id="sortGradesUp" data-id="sortBtn" class="sortBtn"><i class="fas fa-sort-numeric-up"></i></button>
+                        <a href="javascript:sort(false, 'note2', 'otherTable');"><button id="sortGradesDown" data-id="sortBtn" class="sortBtn"><i class="far fa-hand-point-down"></i></button></a>
+                        <a href="javascript:sort(true, 'note2', 'otherTable');"><button id="sortGradesUp" data-id="sortBtn" class="sortBtn"><i class="far fa-hand-point-up"></i></button></a>
                     </th>
                 </tr>
             </thead>
