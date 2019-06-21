@@ -116,7 +116,8 @@ function addGrades(event) {
     averageGrades.push(students[studentIdentifier].averageGrade());
 }
 
-function hide() {
+function hide(e) {
+    e.preventDefault();
     gradesWrapper.classList.add("toggle");
     studentsWrapper.classList.remove("resize");
 }
