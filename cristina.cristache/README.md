@@ -29,6 +29,12 @@
 <li><a href="https://miualinionut.github.io/siit_06/cristina.cristache/s6/Homework/shoplist.html">Sopping List</a>
 </ul>
 
+
+<h1>Week #7</h1>
+<ul>
+<li><a href="https://miualinionut.github.io//siit_06/cristina.cristache/s7/homework/index.html">Catalog de Note</a>
+</ul>
+
 <h1>Week #8</h1>
 <ul>
 <li><a href="https://miualinionut.github.io/siit_06/cristina.cristache/s8/weather-app/weather.html">Weather App</a>
