@@ -117,6 +117,18 @@ function lcm(num1, num2) {
 
 //Exercitiul 10
 
+function allD(nr) {
+    var allD = [];
+    for (i = nr; i > 0; i--) {
+        if (i !== nr && i !== 1) {
+            if (nr % i === 0) {
+                allD.push(i);
+            }
+        }
+    }
+    return allD;
+}
+
 //Exercitiul 11
 function palidrom(arr) {
     var revertedArr = [];
@@ -131,10 +143,21 @@ function palidrom(arr) {
 
 //Exercitiul 12//
 function sortTheEvens(arr) {
-    evens = [];
+    var evens = [];
+    var aux;
     for (i = 0; i < arr.length; i++) {
-        if (arr % 2 == 0) {
-            evens += arr[i];
+        if (arr[i] % 2 == 0) {
+            evens.push(arr[i]);
+        }
+    }
+
+    for (var i = 0; i < evens.length - 1; i++) {
+        for (var j = i + 1; j < evens.length; j++) {
+            if (evens[i] > evens[j]) {
+                aux = evens[i];
+                evens[i] = evens[j];
+                evens[j] = aux;
+            }
         }
     }
     return evens;
@@ -143,29 +166,52 @@ function sortTheEvens(arr) {
 
 //Exercitiul 13//
 function difficultSort(arr) {
-    var pivot = arr.pop([arr.length - 1 / 2]);
-    var left = [];
-    var right = [];
-    weirdSorted = [];
-    if (arr.length <= 1) {
-        return arr;
-    }
-    for (i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 == 0) {
-            if (arr[i] <= pivot) {
-                left.push(arr[i]);
-            } else {
-                right.push(arr[i]);
-            }
-        }
-        if (arr[i] % 2 != 0) {
-            if (arr[i] <= pivot) {
-                left.push(arr[i]);
-            } else {
-                right.push(arr[i]);
-            }
-        }
-    }
-    return weirdSorted.concat(difficultSort(right), pivot, difficultSort(left));
+    var aux;
 
-} // Really need some serious review from you, Alin, here on this one >> weird weird weird!!!!
+    for (var i = 0; i < arr.length - 1; i++) {
+        for (var j = i + 1; j < arr.length; j++) {
+            if (arr[i] > arr[j]) {
+                if (arr[i] % 2 === 0 && arr[j] % 2 === 0) {
+                    aux = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = aux;
+                }
+            } else if (arr[i] < arr[j]) {
+                if (arr[i] % 2 !== 0 && arr[j] % 2 !== 0) {
+                    aux = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = aux;
+                }
+            }
+        }
+    }
+    return arr;
+}
+
+// Really need some serious review from you, Alin, here on this one >> weird weird weird!!!!
+
+
+//Exercitiul 14
+
+function FindNo(arr, nr) {
+    if (arr.length == 0) {
+        return false;
+    } else {
+        var indxMid = arr.length / 2;
+        var mid = arr[indxMid];
+        if (mid == x) {
+            return true;
+        } else {
+            var arr_left = [...arr].splice(0, indxMid); //.splice[), changes the value
+            var arr_right = [...arr].splice(indxMid, arr.length - 1);
+            if (x < mid) {
+                return binarySearch(arr_left, x);
+            } else {
+                return binarySearch(arr_right, x);
+            }
+        }
+    }
+}
+
+
+

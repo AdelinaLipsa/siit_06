@@ -10,9 +10,8 @@ var studentIdentifier;
 var student;
 var students = [];
 var averageGrades = [];
-// document.querySelector('[students]').addEventListener("mouseenter",()=>{
-//     event.target.style.backgroundColor = "green";
-// });
+
+document.getElementById("name").focus();
 addStudentBtn.addEventListener("click", addStudent);
 addGradeBtn.addEventListener("click", addGrades);
 document.getElementById("name").addEventListener("keypress", onEnter);
@@ -28,9 +27,10 @@ document.getElementById("grade").addEventListener("keypress", function (event) {
 
 
 class Student {
-    constructor(name, grade) {
+    constructor(name, grade, average) {
         this.name = name;
         this.grades = grade;
+        this.average = average;
     }
 }
 
@@ -39,7 +39,7 @@ Student.prototype.averageGrade = function () {
     this.grades.forEach(element => {
         sum += element;
     });
-    return sum / this.grades.length;
+    return (sum / this.grades.length).toFixed(2);
 };
 
 function onEnter(event) {
@@ -53,21 +53,23 @@ function onEnter(event) {
 
 function getStudent() {
     let studentName = document.getElementById("name").value;
-    student = new Student(studentName, []);
-    if (document.getElementById("name").value != '') {
+
+    if (studentName !== "") {
+        student = new Student(studentName, []);
         students.push(student);
 
     }
 }
 
 function draw() {
-
-    document.querySelector("#sthead").classList.remove("toggle");
+    document.getElementById("studentsList").innerHTML = '';
+    if (students.length > 0) document.querySelector("#sthead").classList.remove("toggle");
     for (i = 0; i < students.length; i++) {
+        let average = students[i].average === undefined ? '' : students[i].average;
         document.getElementById("studentsList").innerHTML += `
                 <tr >
                     <td>${students[i].name}</td>
-                    <td id = "${i}"></td>
+                    <td id = "${i}">${average}</td>
                     <td><button onclick = "displayGrades(${i})" class ="cool-btn">Display grades</button></td>
                 </tr>
                 `;
@@ -76,12 +78,12 @@ function draw() {
 
 function addStudent(event) {
     getStudent();
-    document.getElementById("studentsList").innerHTML = '';
     draw();
     document.getElementById("name").value = '';
 }
 
 function displayGrades(index) {
+    document.getElementById("grade").focus();
     studentIdentifier = index;
     studentsWrapper.classList.add("resize");
     gradesWrapper.classList.remove("toggle");
@@ -111,42 +113,61 @@ function addGrades(event) {
     let intGrade = parseInt(studentGrade)
     students[studentIdentifier]['grades'].push(intGrade);
     drawGrades();
-    document.getElementById(`${studentIdentifier}`).innerHTML = `${(students[studentIdentifier].averageGrade()).toFixed(2)}`;
+    students[studentIdentifier].average = students[studentIdentifier].averageGrade();
+    draw();
     document.getElementById("grade").value = '';
-    averageGrades.push(students[studentIdentifier].averageGrade());
+
 }
 
-function hide() {
+function hide(event) {
+    event.preventDefault();
     gradesWrapper.classList.add("toggle");
     studentsWrapper.classList.remove("resize");
 }
 
 
-function sort(elem, arr) {
-    var aux;
-    if (elem.hasAttribute('asc')) {
+function sortUp(arr) {
 
-        for (var i = 0; i < arr.length - 1; i++) {
-            for (var j = i + 1; j < arr.length; j++) {
-                if (arr[i] > arr[j]) {
-                    aux = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = aux;
-                }
+    var pivot = arr.pop([arr.length - 1 / 2]);
+    var left = [];
+    var right = [];
+    var newArray = [];
+
+
+    if (arr.length <= 1) {
+        return arr;
+    } else {
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i].average <= pivot) {
+                left.push(arr[i]);
+            } else {
+                right.push(arr[i]);
             }
         }
-        return arr;
-    } else if (elem.hasAttribute('desc')) {
-        for (var i = 0; i < arr.length - 1; i++) {
-            for (var j = i + 1; j < arr.length; j++) {
-                if (arr[i] > arr[j]) {
-                    aux = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = aux;
-                }
-            }
-        }
-        return arr;
     }
+    window.students = newArray.concat(quickSort(left), pivot, quickSort(right));
+    draw();
 }
 
+function sortDown(arr) {
+    var pivot = arr.pop([arr.length - 1 / 2]);
+    var left = [];
+    var right = [];
+    var newArray = [];
+
+
+    if (arr.length <= 1) {
+        return arr;
+    } else {
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i].average >= pivot) {
+                left.push(arr[i]);
+            } else {
+                right.push(arr[i]);
+            }
+            
+        }
+    }
+    window.students = newArray.concat(quickSort(left), pivot, quickSort(right));
+    draw();
+}

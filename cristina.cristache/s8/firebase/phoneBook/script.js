@@ -27,14 +27,15 @@ function grab(index) {
 
 
 }
-function goBack(event) {
-    document.getElementById("name").value = '';
-    document.getElementById("phone").value = '';
+function goBack(e) {
+    document.querySelector("#name").value = '';
+    document.querySelector("#phone").value = '';
     document.querySelector('#addBtn').innerHTML = "Add Contact";
     document.querySelector('#backBtn').classList.add("toggle");
     editIndex = -1;
 }
 function draw() {
+    document.querySelector("#contactList").innerHTML = '';
     document.querySelector("#thead").innerHTML = `<tr class="border_bottom"><th>Name</th><th>Phone</th><th></th><th></th></tr>`;
     for (i in contacts) {
         document.querySelector("#contactList").innerHTML += ` <tr class="border_bottom">
@@ -47,14 +48,15 @@ function draw() {
 }
 
 function removeContact(index) {
-    // contacts.splice(index, 1);
-    fetch(`https://phonebook-abd02.firebaseio.com/${index}.json`, {
-        method: 'delete',
-        body: JSON.stringify(contacts[editIndex]),
-    });
-    document.getElementById("contactList").innerHTML = '';
-    setTimeout(getContacts, 500);
-
+    if (confirm("Sure you want to delete?")) {
+        fetch(`https://phonebook-abd02.firebaseio.com/${index}.json`, {
+            method: 'delete',
+            body: JSON.stringify(contacts[editIndex]),
+        }).then(()=>{
+            getContacts();
+        })
+       
+    }
 }
 
 function addContact() {
@@ -75,11 +77,9 @@ function addContact() {
             .then(response => {
                 return response.json()
             })
-            .then(response => {
-                console.log(response);
+            .then(() => {
+               getContacts()
             });
-        document.getElementById("contactList").innerHTML = '';
-        setTimeout(getContacts, 10)
         document.querySelector("#name").value = '';
         document.querySelector("#phone").value = '';
     } else {
@@ -88,13 +88,14 @@ function addContact() {
         fetch(`https://phonebook-abd02.firebaseio.com/${editIndex}.json`, {
             method: 'put',
             body: JSON.stringify(contacts[editIndex]),
+        }).then(()=>{
+            getContacts();
         });
-
-        document.getElementById("contactList").innerHTML = '';
-        setTimeout(getContacts, 700);
         document.querySelector("#name").value = '';
         document.querySelector("#phone").value = '';
         document.querySelector("#addBtn").innerHTML = "Add Contact";
+        document.querySelector("#backBtn").classList.add('toggle');
+        editIndex=-1;
     }
 }
 

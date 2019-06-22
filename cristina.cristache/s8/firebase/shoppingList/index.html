@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping List to Firebase</title>
+    <style>
+        body {
+            background-color: rgb(47, 241, 255);
+        }
+
+        #wrapper {
+            height: auto;
+            margin: 2% 10% 0 10%;
+            display: grid;
+            grid-template-rows: 1fr;
+            justify-items: center;
+            background-color: white;
+            border-radius: 20px;
+        }
+
+        .bought {
+            text-decoration: line-through;
+        }
+
+        #boughtButton {
+            background-color: pink;
+            border-radius: 5px;
+        }
+
+        .sorting {
+            margin: 10px 0 5px 0;
+            border-radius: 5px;
+            background-color: rgb(177, 116, 233);
+        }
+
+        #addButton {
+            border-radius: 5px;
+            height: 23px;
+            margin-left: 5px;
+            background-color: aqua;
+        }
+        #deleteButton{
+            background-color: rgb(179, 19, 45);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body onload="getList()">
+    <div id="wrapper">
+        <div>
+            <h1>SHOPPING LIST</h1>
+            <form>
+                <input id="input" type="text">
+                <input onclick="addItem();" id="addButton" type="button" value="Add Item">
+            </form>
+            <!-- <button id="asc" asc='true' class="sorting" onclick="sortAsc()">Sort asc</button>
+            <button id="desc" desc='true' class="sorting" onclick="sortDesc()">Sort desc</button> -->
+            <table>
+                <thead id="thead"></thead>
+                <tbody id="theList"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
