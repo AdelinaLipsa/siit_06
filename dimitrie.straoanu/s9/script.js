@@ -3,57 +3,88 @@ document.getElementById('submit').addEventListener('click', submit);
 var oldRates;
 var rates;
 var ratesArr = [];
-cursValutarOld();
+var promises;
+
+cursValutarOld()
+    .then(function (response) {
+        oldRates = response.rates;
+        // console.log(response);
+        // console.log(oldRates);
+        return cursValutar();
+    })
+    .then(function (response) {
+        rates = response.rates;
+        // console.log(response);
+        // console.log(rates);
+        draw(response);
+    })
+    .catch(function (err) {
+        console.log(err)
+    });
+
 
 function submit() {
     var firstDate = document.getElementById('firstDate').value;
     var secondDate = document.getElementById('secondDate').value;
     if (firstDate && secondDate) {
         ratesArr = [];
-        cursValutarCustom(firstDate);
-        cursValutarCustom(secondDate);
+        Promise.all([cursValutarCustom(firstDate), cursValutarCustom(secondDate)])
+            .then(function (response) {               
+                drawCustom(response);
+            })
+            .catch(function(err){
+                console.log(err)
+            });
     }
 }
 
 function cursValutarCustom(date) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState === 4) {
-            if (this.status == 200) {
-                var response = JSON.parse(this.responseText);
-                var rates = response.rates;
-                console.log(date, rates);
-                ratesArr.push(rates);
-                if (ratesArr.length === 2) {
-                    drawCustom(ratesArr);
-                }
+    return new Promise(function (resolve, reject) {
 
-            } else {
-                alert("a crapat");
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState === 4) {
+                if (this.status == 200) {
+                    /*var response = JSON.parse(this.responseText);
+                    var rates = response.rates;
+                    console.log(date, rates);
+                    ratesArr.push(rates);
+                    if (ratesArr.length === 2) {
+                        drawCustom(ratesArr);
+                    }*/
+                    resolve(JSON.parse(this.responseText));
+                } else {
+                    reject(this);
+                }
             }
-        }
-    };
-    xhttp.open("GET", `http://data.fixer.io/api/${date}?access_key=bab6dc180ed5d2d17a7bd00df96ba187`, true);
-    xhttp.send();
+        };
+        xhttp.open("GET", `http://data.fixer.io/api/${date}?access_key=bab6dc180ed5d2d17a7bd00df96ba187`, true);
+        xhttp.send();
+    });
 }
 
 function cursValutar() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState === 4) {
-            if (this.status == 200) {
-                var response = JSON.parse(this.responseText);
-                rates = response.rates;
-                console.log(response);
-                console.log(rates);
-                draw(response);
-            } else {
-                alert("a crapat");
+    return new Promise(function (resolve, reject) {
+
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState === 4) {
+                if (this.status == 200) {
+                    /*var response = JSON.parse(this.responseText);
+                    rates = response.rates;
+                    console.log(response);
+                    console.log(rates);
+                    draw(response);*/
+                    resolve(JSON.parse(this.responseText));
+                } else {
+                    reject(this);
+                }
             }
-        }
-    };
-    xhttp.open("GET", "http://data.fixer.io/api/latest?access_key=bab6dc180ed5d2d17a7bd00df96ba187", true);
-    xhttp.send();
+        };
+        xhttp.open("GET", "http://data.fixer.io/api/latest?access_key=bab6dc180ed5d2d17a7bd00df96ba187", true);
+        xhttp.send();
+    });
 }
 
 function cursValutarOld() {
@@ -68,21 +99,25 @@ function cursValutarOld() {
     var requestDate = `${year}-${month}-${day}`;
 
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState === 4) {
-            if (this.status == 200) {
-                var response = JSON.parse(this.responseText)
-                oldRates = response.rates;
-                console.log(response);
-                console.log(oldRates);
-                cursValutar();
-            } else {
-                alert("a crapat");
+    return new Promise(function (resolve, reject) {
+
+        xhttp.onreadystatechange = function () {
+            if (this.readyState === 4) {
+                if (this.status == 200) {
+                    /*var response = JSON.parse(this.responseText);
+                    oldRates = response.rates;
+                    console.log(response);
+                    console.log(oldRates);
+                    cursValutar();*/
+                    resolve(JSON.parse(this.responseText));
+                } else {
+                    reject(this);
+                }
             }
-        }
-    };
-    xhttp.open("GET", `http://data.fixer.io/api/${requestDate}?access_key=bab6dc180ed5d2d17a7bd00df96ba187`, true);
-    xhttp.send();
+        };
+        xhttp.open("GET", `http://data.fixer.io/api/${requestDate}?access_key=bab6dc180ed5d2d17a7bd00df96ba187`, true);
+        xhttp.send();
+    });
 }
 
 function draw(obj) {
@@ -116,8 +151,8 @@ function draw(obj) {
 
 function drawCustom(arr) {
     console.log(arr);
-    var rates = arr[0];
-    var oldRates = arr[1];
+    var rates = arr[0].rates;
+    var oldRates = arr[1].rates;
     var lista = document.getElementById('lista');
     lista.innerHTML = '';
     var html = `

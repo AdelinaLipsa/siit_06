@@ -1,0 +1,44 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid black;
+}
+
+.brain {
+    width: 40px;
+}
+
+.tag {
+    border: 1px solid orange;
+    border-radius: 15px;
+    padding: 3px 7px;
+}
+
+.editBtn {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(./pencil-edit-button.svg);
+
+}
+
+.delBtn {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(./rubbish-bin.svg);
+}
+
+.hidden{
+    display: none;
+}
