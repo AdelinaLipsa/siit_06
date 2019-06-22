@@ -393,3 +393,27 @@ function cursValutar() {
     xhttp.open("GET", "http://data.fixer.io/api/latest?access_key=bab6dc180ed5d2d17a7bd00df96ba187", true);
     xhttp.send();
   }
+
+const delayedUpperCase = (param) => {
+    new Promise(
+        (resolve, reject) => {
+            setTimeout(() => {
+                (typeof param === 'string') ?
+                    resolve(param.toUpperCase()) :
+                    reject(param);
+            }, 500);
+        });
+};
+
+function delayedUperCase(param){
+    retrun new Promise(function(resolve, reject){
+        setTimeout(function(){
+            if(typeof param==='srting'){
+                resolve(val.toUpperCase());
+            }else{
+                reject(param);
+            }
+        }, 500);
+    })
+       
+}
