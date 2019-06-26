@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+input{
+    width:40px;
+}
+
+#mainContainer {
+    margin: auto;
+    width: 600px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pic {
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.picDetails {
+    border: 1px solid black;
+    width: 400px;
+    overflow: hidden;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.content {
+    
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+}
