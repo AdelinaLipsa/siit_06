@@ -32,9 +32,15 @@
 - [Tic Tac Toe](https://miualinionut.github.io/siit_06/lipsa.adelina/s6/x_si_0/index.html)
 
 # Session_07
+
 - [Catalog de note](https://miualinionut.github.io/siit_06/lipsa.adelina/s7/catalog_de_note/catalog.html)
 
 # Session_08
+
 - [Weather app](https://miualinionut.github.io/siit_06/lipsa.adelina/s8/weather_app/index.html)
 - [Agenda Telefonica Promises](https://miualinionut.github.io/siit_06/lipsa.adelina/s8/agenda_telefonica_promises/index.html)
 - [Shopping list firebase](https://miualinionut.github.io/siit_06/lipsa.adelina/s8/shopping_list_firebase/shopping_list.html)
+
+# Session_08
+- [Meniu Restaurant](https://miualinionut.github.io/siit_06/lipsa.adelina/s9/restaurant_menu/meniu_preparate.html)
+- [Meniu Restaurant - Admin]()
