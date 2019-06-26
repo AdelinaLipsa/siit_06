@@ -2,6 +2,7 @@ let database;
 
 getData('https://my-online-store-2bdc4.firebaseio.com/my_products/.json')
     .then(function (response) {
+        console.log(response)
         if (response.status === 200)
             return response.json();
         else
@@ -25,7 +26,10 @@ document.querySelector('#adminBtn').addEventListener('click', function () {
 });
 
 function getData(url, method, body) {
-    return fetch(url, { method, body });
+    return fetch(url, {
+        method,
+        body
+    });
 }
 
 function draw(obj) {
@@ -33,12 +37,12 @@ function draw(obj) {
     let html = '';
     for (let key in obj) {
         html += `
-            <div class="content">
+            <div class="product">
                 <div class="pic">
                     <img src="${obj[key].pic}">
                 </div>
                 <p><b>${obj[key].name}</b></p>
-                <span>${obj[key].price} lei</span>
+                <span>${obj[key].price} euro</span>
                 <button class="detailsBtn" data-id="${key}">Details</button>
             </div>    
         `;
