@@ -36,7 +36,7 @@ function arataDateleDinTabel(arr) {
 
   for (var i = 0; i < arr.length; i++) {
 
-    tableData += `<tr><td>${arr[i].nume}</td><td>${arr[i].prenume}</td><td>${arr[i].varsta}</td><td>${arr[i].telefon}</td><td id="edit"><b>Editeaza</b></td><td id="delete"><b>Sterge</b></td></tr>`;
+    tableData += `<tr><td>${arr[i].nume}</td><td>${arr[i].prenume}</td><td>${arr[i].varsta}</td><td>${arr[i].telefon}</td><td id="edit">Editeaza</td><td id="delete">Sterge</td></tr>`;
   }
   tableBody.innerHTML = tableData;
 }
