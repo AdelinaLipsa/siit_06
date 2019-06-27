@@ -1,18 +1,18 @@
 let url = new URL(document.URL);
 let id = url.searchParams.get('id');
-
-getData(`https://my-online-store-2bdc4.firebaseio.com/my_products/${id}.json`)
+let sufficientStock;
+let product;
+let cart;
+initCart();
+showLoading();
+getProductData()
     .then(function (response) {
         return response.json();
     })
-    .then(function (product) {
-        draw(product);
-        document.querySelector('#addBtn').addEventListener('click', function () {
-            let qty = Number(document.querySelector('#qtyInput').value);
-            console.log(qty);
-            addToCart(product, qty, id);
-        });
-
+    .then(function (data) {
+        product = data;
+        draw();
+        addListeners();
     })
 
 document.querySelector('#cartBtn').addEventListener('click', function () {
@@ -23,44 +23,91 @@ document.querySelector('#backBtn').addEventListener('click', function () {
     location.assign('../index.html');
 });
 
+function showLoading() {
+    document.querySelector('#mainContainer').innerHTML = '<img src="../assets/loading.gif">';
+}
 
-function getData(url, method, body) {
-    return fetch(url, {
-        method,
-        body
+function addListeners() {
+    document.querySelector('#addBtn').addEventListener('click', function () {
+        addToCart();
+        popup();
+        document.querySelector('.qtyInput').value = 1;
+
+    });
+    document.querySelector('.increaseBtn').addEventListener('click', function () {
+        let qty = Number(document.querySelector('.qtyInput').value);
+        qty++;
+        document.querySelector('.qtyInput').value = qty;
+
+    });
+    document.querySelector('.decreaseBtn').addEventListener('click', function () {
+        let qty = Number(document.querySelector('.qtyInput').value);
+        if (qty > 1) {
+            qty--;
+            document.querySelector('.qtyInput').value = qty;
+        }
+    });
+
+}
+
+function popup() {
+    let popup = document.createElement('div');
+    popup.classList.add('popup');
+    if (sufficientStock)
+        popup.innerHTML = '<p>Products added to your cart!</p>';
+        else
+        popup.innerHTML = '<p>Insufficient stock!</p>';
+
+    document.querySelector('body').appendChild(popup);
+    setTimeout(function () {
+        document.body.removeChild(popup);
+    }, 2000);
+}
+
+function getProductData() {
+    return fetch(`https://my-online-store-2bdc4.firebaseio.com/my_products/${id}.json`, {
+        method: 'GET'
     });
 }
 
-function addToCart(product, qty, id) {
-    let cart;
+function initCart() {
     if (localStorage.getItem('cart'))
         cart = JSON.parse(localStorage.getItem('cart'));
     else
         cart = {};
-
-    if (cart.hasOwnProperty(id))
-        cart[id].qty += qty;
-    else {
-        product.qty = qty;
-        cart[id] = product;
-    }
-    localStorage.setItem('cart', JSON.stringify(cart));
-    console.log(cart);
 }
 
+function addToCart() {
+    let qty = Number(document.querySelector('.qtyInput').value);
+    let cartQty = (cart[id]) ? cart[id].qty : 0;
+    if (product.stock >= (cartQty + qty)) {
+        sufficientStock = true;
+        if (cart[id])
+            cart[id].qty += qty;
+        else {
+            product.qty = qty;
+            cart[id] = product;
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+    } else {
+        sufficientStock = false;
+    }
+}
 
-function draw(obj) {
+function draw() {
     document.querySelector('#mainContainer').innerHTML = '';
     let html = `
             <div class="picDetails">
-                <img src="${obj.pic}">
+                <img src="${product.pic}">
             </div>
             <div class="content">
-                <p><b>${obj.name}</b></p>
-                <p>${obj.desc}</p>
-                <p>Price: ${obj.price} euro</p>
-                <p>Stock: ${obj.stock} pcs</p>
-                <input id="qtyInput" type="number" value="1" autofocus>
+                <p><b>${product.name}</b></p>
+                <p>${product.desc}</p>
+                <p>Price: ${product.price} euro</p>
+                <p>Stock: ${product.stock} pcs</p>
+                <button class ="decreaseBtn">-</button>
+                <input class ="qtyInput" type="text" value="1" disabled>
+                <button class ="increaseBtn">+</button>
                 <button id="addBtn">Add to cart</button>
             </div>    
         `;

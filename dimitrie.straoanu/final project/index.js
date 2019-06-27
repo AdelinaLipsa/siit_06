@@ -1,8 +1,9 @@
 let database;
 
-getData('https://my-online-store-2bdc4.firebaseio.com/my_products/.json')
+document.querySelector('#mainContainer').innerHTML = '<img src="./assets/loading.gif">';
+
+getProductData('https://my-online-store-2bdc4.firebaseio.com/my_products/.json')
     .then(function (response) {
-        console.log(response)
         if (response.status === 200)
             return response.json();
         else
@@ -25,7 +26,7 @@ document.querySelector('#adminBtn').addEventListener('click', function () {
     location.assign('./pages/admin.html');
 });
 
-function getData(url, method, body) {
+function getProductData(url, method, body) {
     return fetch(url, {
         method,
         body
@@ -60,11 +61,11 @@ function addListeners() {
 }
 
 class Product {
-    constructor(name, pic, desc, price, qty) {
+    constructor(name, pic, desc, price, stock) {
         this.name = name;
         this.pic = pic;
         this.desc = desc;
         this.price = price;
-        this.qty = qty;
+        this.stock = stock;
     }
 }

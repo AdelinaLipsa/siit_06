@@ -2,35 +2,51 @@
     box-sizing: border-box;
 }
 
+a{
+    color:darkblue;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
 img {
     display: block;
+    max-width: 100%;
+    margin: auto;
+}
+
+
+table {
+    text-align: center;
+    border-collapse: collapse;
     width: 100%;
 }
 
-input{
-    width:40px;
-}
-
-table{
-    text-align: center;
-    border-collapse: collapse;
-    width:100%;
-}
-
-tr{
+tr {
     border-bottom: 1px solid lightgray;
 }
 
-td{
+td {
     padding: 5px;
+}
+
+button {
+    cursor: pointer;
 }
 
 #mainContainer {
     margin: auto;
     width: 600px;
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+.qtyInput {
+    text-align: center;
+    width: 40px;
 }
 
 .pic {
@@ -40,6 +56,7 @@ td{
 }
 
 .picDetails {
+    padding: 10px;
     border: 1px solid black;
     width: 60%;
     overflow: hidden;
@@ -47,24 +64,39 @@ td{
 
 .header {
     text-align: center;
+    padding-top:20px;
     margin-bottom: 16px;
 }
 
-.content {   
-    width:40%; 
+.content {
+    width: 40%;
     text-align: center;
     padding: 10px;
     border: 1px solid black;
 }
 
-.product{
-    width:30%;
+.product {
+    width: 30%;
     text-align: center;
     border: 1px solid black;
     padding: 10px;
-
 }
 
-.cartDetails{
+.cartDetails {
     text-align: center;
 }
+
+.popup {
+    width:100%;
+    text-align: center;
+    background: rgba(95, 95, 95, 0.5);
+    padding: 10px;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.popup p{
+    margin: 0;
+}
+
