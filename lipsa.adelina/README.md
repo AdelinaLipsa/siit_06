@@ -43,4 +43,4 @@
 
 # Session_08
 - [Meniu Restaurant](https://miualinionut.github.io/siit_06/lipsa.adelina/s9/restaurant_menu/meniu_preparate.html)
-- [Meniu Restaurant - Admin]()
+- [Meniu Restaurant - Admin](https://miualinionut.github.io/siit_06/lipsa.adelina/s9/restaurant_menu_admin/admin.html)
