@@ -1,4 +1,4 @@
-var menu=[];
+/*var menu=[];
 var indexEdit = -1;
 
 function ajax(url, method, body, callback, callbackError) {
@@ -76,3 +76,52 @@ async function add(event, form) {
     getMenu();
     form.reset();
 }
+*/
+
+let url = new URL(document.URL);
+let firebaseId = url.searchParams.get('id');
+var form=document.querySelector("#addForm");
+document.querySelector('#cancelBtn').addEventListener('click', function () {
+    window.open('admin.html', '_self');
+});
+
+fetch(`https://meniu-restaurant-9a3ab.firebaseio.com/menu/${firebaseId}.json`)
+    .then(response => {
+        if (response.status === 200)
+            return response.json();
+        else
+            console.log(response.status);
+    })
+    .then(result => {
+        form.querySelector("[name=\"nume\"]").value = result.nume;
+        form.querySelector("[name=\"url\"]").value = result.imagine;
+        form.querySelector("[name=\"ingrediente\"]").value = result.ingrediente;
+        form.querySelector("[name=\"preparare\"]").value = result.reteta;
+    })
+    .catch(err => console.log(err));
+
+document.querySelector('#saveBtn').addEventListener('click', function () {
+
+    let nume = form.querySelector("[name=\"nume\"]").value;
+    let imagine = form.querySelector("[name=\"url\"]").value;
+    let ingrediente = form.querySelector("[name=\"ingrediente\"]").value;
+    let reteta = form.querySelector("[name=\"preparare\"]").value;
+
+    if (nume && imagine && ingrediente && reteta) {
+
+        let newItem = {
+            nume,
+            imagine,
+            ingrediente,
+            reteta
+        };
+
+        fetch(`https://meniu-restaurant-9a3ab.firebaseio.com/menu/${firebaseId}.json`, {
+            method: 'PUT',
+            body: JSON.stringify(newItem)
+        })
+            .then(() => window.open('admin.html', '_self'))
+            .catch(err => console.log(err));
+    } else
+        document.querySelector('#error').innerHTML = 'Toate campurile sunt obligatorii!';
+});

@@ -12,10 +12,10 @@
 
 </head>
 
-<body onload="getMenu();">
+<body>
     <h1>Restaurant romanesc - Admin</h1>
     <div>
-        <form onsubmit="add(event,this);" id="addForm">
+        <form id="addForm">
             Nume:<br/>
             <input type="text" name="nume"><br>
             URL Imagine:<br/>
@@ -24,8 +24,9 @@
             <textarea type="text" name="ingrediente" rows="5" cols="80"></textarea><br>
             Mod de preparare:<br/>
             <textarea type="text" name="preparare" rows="5" cols="80"></textarea><br>
-            <input type="submit" name="submit" value="Salveaza preparat" id="saveBtn">
+            <input type="submit" name="submit" value="Salveaza preparat" id="saveBtn"><br/>
             <input type="button" name="cancel" value="Inapoi la meniu" id="cancelBtn">
+            <div id="error"></div>
         </form>
     </div>
 

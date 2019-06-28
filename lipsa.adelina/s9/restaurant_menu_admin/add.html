@@ -14,7 +14,7 @@
 <body onload="getMenu();">
     <h1>Restaurant romanesc - Admin</h1>
     <div>
-        <form onsubmit="add(event,this);">
+        <form onsubmit="add(event,this);" class="form">
             Nume:<br/>
             <input type="text" name="nume"><br>
             URL Imagine:<br/>
@@ -23,7 +23,7 @@
             <textarea rows="5" cols="80" type="text" name="ingrediente"></textarea><br>
             Mod de preparare:<br/>
             <textarea rows="5" cols="80" type="text" name="preparare"></textarea><br>
-            <input type="submit" name="submit" value="Adauga preparat" id="addBtn">
+            <input type="submit" name="submit" value="Adauga preparat" id="addBtn"><br/>
             <input type="button" name="cancel" value="Inapoi la meniu" id="cancelBtn">
         </form>
     </div>
