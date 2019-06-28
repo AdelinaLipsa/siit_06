@@ -41,6 +41,6 @@
 - [Agenda Telefonica Promises](https://miualinionut.github.io/siit_06/lipsa.adelina/s8/agenda_telefonica_promises/index.html)
 - [Shopping list firebase](https://miualinionut.github.io/siit_06/lipsa.adelina/s8/shopping_list_firebase/shopping_list.html)
 
-# Session_08
+# Session_09
 - [Meniu Restaurant](https://miualinionut.github.io/siit_06/lipsa.adelina/s9/restaurant_menu/meniu_preparate.html)
 - [Meniu Restaurant - Admin](https://miualinionut.github.io/siit_06/lipsa.adelina/s9/restaurant_menu_admin/admin.html)
