@@ -1,5 +1,3 @@
-console.clear();
-
 $('#item').keydown(function (e) {
   if (e.keyCode == 13) {
     e.preventDefault();
@@ -8,19 +6,84 @@ $('#item').keydown(function (e) {
 });
 
 
-function addItem(e) {
-  var list = document.getElementById("item").value;
-  var table = "<tr><td class='listedItem'>" + list + "</td><td><button class='buy'>Mark as bought</button></td>";
-  document.getElementById('thead').innerHTML = "<tr><td><b>Item description<b><td><b>Action</b></td></tr>";
-  document.getElementById('tbody').innerHTML += table;
+var lista = [];
+var indexEdit = -1;
+
+function ajax(url, method, body, callback, callbackError) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4) {
+      if (this.status == 200) {
+        if (typeof callback === "function") {
+          callback(this.responseText);
+        }
+      } else {
+        if (typeof callbackError === "function") {
+          callbackError(this.responseText);
+        }
+      }
+    }
+  };
+  xhttp.open(method, url, true);
+  xhttp.send(body);
 }
 
+async function ajaxPromise(url, method, body) {
+  return new Promise(function (resolve, reject) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4) {
+        if (this.status == 200) {
+          resolve(this.responseText);
+        } else {
+          reject(this);
+        }
+      }
+    };
+    xhttp.open(method, url, true);
+    xhttp.send(body);
+  });
+}
+
+async function getLista() {
+  var responseText = await ajaxPromise("https://shopping-list-4a820.firebaseio.com/.json", "GET");
+  window.lista = JSON.parse(responseText);
+  draw();
+}
+
+function draw() {
+  var html = "";
+  for (var i in lista) {
+    html += `
+  <tr>
+  <td class="listedItem">${lista[i].shoppings}</td>
+  <td><button class="buy">Strike</button></td>
+  </tr>
+  `;
+    document.getElementById('thead').innerHTML = "<tr><td>Item description<td>Action</td></tr>";
+  }
+  document.querySelector("table tbody").innerHTML = html;
+}
+
+
+async function add(event, form) {
+  event.preventDefault();
+  var obj = {
+    shoppings: form.querySelector("[name=\"items\"]").value
+  }
+  if (indexEdit === -1) {
+    await ajaxPromise("https://shopping-list-4a820.firebaseio.com/.json", "POST", JSON.stringify(obj))
+  } else {
+    await ajaxPromise(`https://shopping-list-4a820.firebaseio.com/${indexEdit}.json`, "PUT",
+      JSON.stringify(obj))
+  }
+  getLista();
+  form.reset();
+}
 
 $(document).on('click', '.buy', function (e) {
   $(e.target).closest('tr').find('.listedItem').toggleClass('bought'); //.addClass('bought);
 });
-
-
 
 function sortAsc() {
   var table, rows, switching, i, x, y, shouldSwitch;
@@ -70,29 +133,5 @@ function sortDesc() {
   }
 }
 
-document.getElementById('addButton').addEventListener('click', addItem);
 document.getElementById('sort_asc').addEventListener('click', sortAsc);
 document.getElementById('sort_desc').addEventListener('click', sortDesc);
-
-
-
-// --------------> firebase  realtime database
-var config = {
-  apiKey: "AIzaSyBxXULV9ZJ0oF2JFwXoAvPYcCKF5XXl0KY",
-  authDomain: "shopping-list-4a820.firebaseapp.com",
-  databaseURL: "https://shopping-list-4a820.firebaseio.com",
-  projectId: "shopping-list-4a820",
-  storageBucket: "shopping-list-4a820.appspot.com",
-  messagingSenderId: "378312213961",
-  appId: "1:378312213961:web:1c0f37ec363d300b"
-};
-firebase.initializeApp(config);
-
-var rootRef = firebase.database().ref();
-
-$('#addButton').click(function () {
-  rootRef.push().set({
-
-    shoppings: $('#item').val()
-  });
-});
