@@ -38,8 +38,8 @@
 # Session_08
 
 - [Weather app](https://miualinionut.github.io/siit_06/lipsa.adelina/s8/weather_app/index.html)
-- [Agenda Telefonica Promises](https://miualinionut.github.io/siit_06/lipsa.adelina/s8/agenda_telefonica_promises/index.html)
-- [Shopping list firebase](https://miualinionut.github.io/siit_06/lipsa.adelina/s8/shopping_list_firebase/shopping_list.html)
+- [Agenda Telefonica Promises/Firebase](https://miualinionut.github.io/siit_06/lipsa.adelina/s8/agenda_telefonica_promises/index.html)
+- [Shopping list Promises/Firebase](https://miualinionut.github.io/siit_06/lipsa.adelina/s8/shopping_list_firebase/shopping_list.html)
 
 # Session_09
 - [Meniu Restaurant](https://miualinionut.github.io/siit_06/lipsa.adelina/s9/restaurant_menu/meniu_preparate.html)
