@@ -1,11 +1,14 @@
 let cart;
+let database;
 initCart();
-checkStock();
-drawCart();
-document.querySelector('table').addEventListener('click', modifyQty);
+showLoading();
 document.querySelector('#backBtn').addEventListener('click', function () {
     location.assign('../index.html');
 });
+checkStock()
+    .then(function () {
+        drawCart();
+    });
 
 function initCart() {
     if (localStorage.getItem('cart'))
@@ -14,12 +17,18 @@ function initCart() {
         cart = {};
 }
 
+function showLoading() {
+    document.querySelector('#mainContainer').innerHTML = '<img src="../assets/loading.gif">';
+}
+
 function modifyQty() {
     if (event.target.classList.contains('increaseBtn')) {
         let id = event.target.dataset.id;
-        cart[id].qty++;
-        localStorage.setItem('cart', JSON.stringify(cart));
-        drawCart();
+        if (database[id].stock > cart[id].qty) {
+            cart[id].qty++;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            drawCart();
+        }
     }
     if (event.target.classList.contains('decreaseBtn')) {
         let id = event.target.dataset.id;
@@ -39,7 +48,23 @@ function modifyQty() {
 
 function drawCart() {
     if (Object.keys(cart).length > 0) {
-        let html = '';
+        let html = `
+        <table>
+        <thead>
+            <tr>
+                <th>Product name</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Subtotal</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        </table>
+        <div class="cartDetails"></div>
+        `;
+        document.querySelector('#mainContainer').innerHTML = html;
+        html='';
         let totalProducts = 0;
         let totalPrice = 0;
         for (let key in cart) {
@@ -70,6 +95,8 @@ function drawCart() {
         `;
         document.querySelector('.cartDetails').innerHTML = html;
         document.querySelector('#orderBtn').addEventListener('click', placeOrder);
+        document.querySelector('table').addEventListener('click', modifyQty);
+
     } else {
         document.querySelector('table').innerHTML = 'Shopping cart is empty!';
         document.querySelector('.cartDetails').innerHTML = '';
@@ -79,19 +106,29 @@ function drawCart() {
 function placeOrder() {}
 
 function checkStock() {
-    if (Object.keys(cart).length > 0) {
-        fetch(`https://my-online-store-2bdc4.firebaseio.com/my_products/.json`)
-            .then(function (response) {
-                return response.json();
-            }).then(function (database) {
-                for (let key in cart) {
-                    if (cart[key].qty > database[key].stock) {
-                        console.log(`${cart[key].name} - Not enough stock!`);
-                    } else {
-                        console.log(`${cart[key].name} - Ok!`);
+    return new Promise(function (resolve, reject) {
+        if (Object.keys(cart).length > 0) {
+            fetch(`https://my-online-store-2bdc4.firebaseio.com/my_products/.json`)
+                .then(function (response) {
+                    return response.json();
+                }).then(function (data) {
+                    database = data;
+                    for (let key in cart) {
+                        if (database[key].stock === 0) {
+                            console.log(`${cart[key].name} - Out of stock! - Product deleted!`);
+                            delete cart[key];
+                        } else if (cart[key].qty > database[key].stock) {
+                            console.log(`${cart[key].name} - Not enough stock! - Qty adjusted!`);
+                            cart[key].qty = database[key].stock;
+                        } else {
+                            console.log(`${cart[key].name} - Stock ok!`);
+                        }
+                        localStorage.setItem('cart', JSON.stringify(cart));
+                        resolve();
                     }
-                }
-
-            })
-    }
+                });
+        } else {
+            resolve();
+        }
+    });
 }

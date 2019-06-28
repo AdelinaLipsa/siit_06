@@ -32,13 +32,16 @@ function addListeners() {
         addToCart();
         popup();
         document.querySelector('.qtyInput').value = 1;
-
+        draw();
+        addListeners();
     });
     document.querySelector('.increaseBtn').addEventListener('click', function () {
         let qty = Number(document.querySelector('.qtyInput').value);
-        qty++;
-        document.querySelector('.qtyInput').value = qty;
-
+        let cartQty = (cart[id]) ? cart[id].qty : 0;
+        if (product.stock > (cartQty + qty)) {
+            qty++;
+            document.querySelector('.qtyInput').value = qty;
+        }
     });
     document.querySelector('.decreaseBtn').addEventListener('click', function () {
         let qty = Number(document.querySelector('.qtyInput').value);
@@ -53,10 +56,11 @@ function addListeners() {
 function popup() {
     let popup = document.createElement('div');
     popup.classList.add('popup');
+
     if (sufficientStock)
-        popup.innerHTML = '<p>Products added to your cart!</p>';
-        else
-        popup.innerHTML = '<p>Insufficient stock!</p>';
+        popup.innerHTML = `<p>Product <b>${product.name}</b> added to your cart!</p>`;
+    else
+        popup.innerHTML = '<p>Max quantity available already in cart!</p>';
 
     document.querySelector('body').appendChild(popup);
     setTimeout(function () {
@@ -95,7 +99,6 @@ function addToCart() {
 }
 
 function draw() {
-    document.querySelector('#mainContainer').innerHTML = '';
     let html = `
             <div class="picDetails">
                 <img src="${product.pic}">
@@ -105,11 +108,36 @@ function draw() {
                 <p>${product.desc}</p>
                 <p>Price: ${product.price} euro</p>
                 <p>Stock: ${product.stock} pcs</p>
-                <button class ="decreaseBtn">-</button>
-                <input class ="qtyInput" type="text" value="1" disabled>
-                <button class ="increaseBtn">+</button>
-                <button id="addBtn">Add to cart</button>
-            </div>    
         `;
+    if (cart[id] && product.stock === cart[id].qty)
+        html += `
+            <button class ="decreaseBtn" disabled>-</button>
+            <input class ="qtyInput" type="text" disabled>
+            <button class ="increaseBtn" disabled>+</button>
+            <button id="addBtn" disabled>Add to cart</button>
+            <h3>Max quantity available already in cart!</h3>
+        </div>
+        `;
+
+    else if (product.stock > 0) {
+        html += `
+            <button class ="decreaseBtn">-</button>
+            <input class ="qtyInput" type="text" value="1" disabled>
+            <button class ="increaseBtn">+</button>
+            <button id="addBtn">Add to cart</button>
+        </div>    
+        `;
+    } else
+        html += `
+            <h3>Product out of stock!</h3>
+            <button class ="decreaseBtn" disabled>-</button>
+            <input class ="qtyInput" type="text" disabled>
+            <button class ="increaseBtn" disabled>+</button>
+            <button id="addBtn" disabled>Add to cart</button>
+        </div>
+        `;
+
+
+
     document.querySelector('#mainContainer').innerHTML = html;
 }
