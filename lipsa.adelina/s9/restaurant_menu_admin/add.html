@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meniu Restaurant</title>
+    <meta name="author" content="Lipsa Adelina">
+    <link href="add.css" rel="stylesheet" type="text/css">
+    <script src="add.js" defer></script>
+</head>
+
+<body onload="getMenu();">
+    <h1>Restaurant romanesc - Admin</h1>
+    <div>
+        <form onsubmit="add(event,this);" class="form">
+            Nume:<br/>
+            <input type="text" name="nume"><br>
+            URL Imagine:<br/>
+            <input type="url" name="url"><br>
+            Ingrediente:<br/>
+            <textarea rows="5" cols="80" type="text" name="ingrediente"></textarea><br>
+            Mod de preparare:<br/>
+            <textarea rows="5" cols="80" type="text" name="preparare"></textarea><br>
+            <input type="submit" name="submit" value="Adauga preparat" id="addBtn"><br/>
+            <input type="button" name="cancel" value="Inapoi la meniu" id="cancelBtn">
+        </form>
+    </div>
+</body>
+
+</html>
