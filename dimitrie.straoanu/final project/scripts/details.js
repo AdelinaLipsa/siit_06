@@ -107,7 +107,7 @@ function draw() {
                 <p><b>${product.name}</b></p>
                 <p>${product.desc}</p>
                 <p>Price: ${product.price} euro</p>
-                <p>Stock: ${product.stock} pcs</p>
+                <p>Stock: ${(product.stock<=0)?0:product.stock} pcs</p>
         `;
     if (cart[id] && product.stock === cart[id].qty)
         html += `
@@ -118,7 +118,6 @@ function draw() {
             <h3>Max quantity available already in cart!</h3>
         </div>
         `;
-
     else if (product.stock > 0) {
         html += `
             <button class ="decreaseBtn">-</button>
@@ -136,8 +135,5 @@ function draw() {
             <button id="addBtn" disabled>Add to cart</button>
         </div>
         `;
-
-
-
     document.querySelector('#mainContainer').innerHTML = html;
 }

@@ -91,19 +91,16 @@ function drawCart() {
             <p>Taxes: 0 %</p>
             <p>Shipping: 0 euro</p>
             <p><b>Total price: ${totalPrice} euro</b></p>
-            <button id="orderBtn">Place order</Button>
+            <button id="checkoutBtn">Checkout</Button>
         `;
         document.querySelector('.cartDetails').innerHTML = html;
-        document.querySelector('#orderBtn').addEventListener('click', placeOrder);
+        document.querySelector('#checkoutBtn').addEventListener('click', checkout);
         document.querySelector('table').addEventListener('click', modifyQty);
 
     } else {
-        document.querySelector('table').innerHTML = 'Shopping cart is empty!';
-        document.querySelector('.cartDetails').innerHTML = '';
+        document.querySelector('#mainContainer').innerHTML = 'Shopping cart is empty!';
     }
 }
-
-function placeOrder() {}
 
 function checkStock() {
     return new Promise(function (resolve, reject) {
@@ -114,7 +111,7 @@ function checkStock() {
                 }).then(function (data) {
                     database = data;
                     for (let key in cart) {
-                        if (database[key].stock === 0) {
+                        if (database[key].stock < 1) {
                             console.log(`${cart[key].name} - Out of stock! - Product deleted!`);
                             delete cart[key];
                         } else if (cart[key].qty > database[key].stock) {
@@ -131,4 +128,8 @@ function checkStock() {
             resolve();
         }
     });
+}
+
+function checkout() {
+    location.assign('./checkout.html');
 }

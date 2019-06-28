@@ -43,6 +43,11 @@ button {
     justify-content: space-evenly;
 }
 
+.expired{
+    text-align: center;
+
+}
+
 .qtyInput {
     text-align: center;
     width: 40px;
