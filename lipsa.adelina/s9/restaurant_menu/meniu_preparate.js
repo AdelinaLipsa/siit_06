@@ -1,3 +1,5 @@
+getMenu();
+
 function ajax(url, method, body, callback, callbackError) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
