@@ -31,6 +31,7 @@ function draw() {
     }
 }
 
+
 async function addItem() {
     getItem();
     await fetch("https://shoppinglist-eea00.firebaseio.com/.json", {
@@ -38,7 +39,6 @@ async function addItem() {
         body: JSON.stringify(window.item)
     }).then(() => {
         getList();
-        draw();
     })
 }
 

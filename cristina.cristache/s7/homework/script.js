@@ -39,7 +39,7 @@ Student.prototype.averageGrade = function () {
     this.grades.forEach(element => {
         sum += element;
     });
-    return (sum / this.grades.length).toFixed(2);
+    return parseFloat((sum / this.grades.length).toFixed(2));
 };
 
 function onEnter(event) {
@@ -128,46 +128,29 @@ function hide(event) {
 
 function sortUp(arr) {
 
-    var pivot = arr.pop([arr.length - 1 / 2]);
-    var left = [];
-    var right = [];
-    var newArray = [];
-
-
-    if (arr.length <= 1) {
-        return arr;
-    } else {
-        for (var i = 0; i < arr.length; i++) {
-            if (arr[i].average <= pivot) {
-                left.push(arr[i]);
-            } else {
-                right.push(arr[i]);
+    var aux;
+    for (var i = 0; i < arr.length - 1; i++) {
+        for (var j = i + 1; j < arr.length; j++) {
+            if (arr[i].average > arr[j].average) {
+                aux = arr[i];
+                arr[i] = arr[j];
+                arr[j] = aux;
             }
         }
     }
-    window.students = newArray.concat(quickSort(left), pivot, quickSort(right));
     draw();
 }
 
 function sortDown(arr) {
-    var pivot = arr.pop([arr.length - 1 / 2]);
-    var left = [];
-    var right = [];
-    var newArray = [];
-
-
-    if (arr.length <= 1) {
-        return arr;
-    } else {
-        for (var i = 0; i < arr.length; i++) {
-            if (arr[i].average >= pivot) {
-                left.push(arr[i]);
-            } else {
-                right.push(arr[i]);
+    var aux;
+    for (var i = 0; i < arr.length - 1; i++) {
+        for (var j = i + 1; j < arr.length; j++) {
+            if (arr[i].average < arr[j].average) {
+                aux = arr[i];
+                arr[i] = arr[j];
+                arr[j] = aux;
             }
-            
         }
     }
-    window.students = newArray.concat(quickSort(left), pivot, quickSort(right));
     draw();
 }

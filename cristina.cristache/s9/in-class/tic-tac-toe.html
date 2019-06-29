@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>X si 0</title>
+		<style>
+			img{
+				width:200px;
+				height:200px;
+			}
+			table{
+				border-collapse:collapse;
+			}
+		</style>
+		<script>
+			
+			function gameFinished(){
+				if(game.gameState[0][0]===game.gameState[0][1] && game.gameState[0][1]===game.gameState[0][2]  && game.gameState[0][2]!==-1|| 
+					game.gameState[1][0]===game.gameState[1][1] && game.gameState[1][1]===game.gameState[1][2]  && game.gameState[1][2]!==-1||
+					game.gameState[2][0]===game.gameState[2][1] && game.gameState[2][1]===game.gameState[2][2] && game.gameState[2][2]!==-1){
+					return true;
+				}
+				return false;
+			}
+			async function select(row,col){
+				if(game.gameState[row][col]!==-1){
+					return;
+				}
+				if(gameFinished()){
+					return;
+				}
+				if((game.playerXUid!==myId || game.player!==true) &&
+					(game.player0Uid!==myId || game.player!==false)){
+					return;
+				}
+				
+				
+				//document.querySelector(`tr:nth-of-type(${row+1}) td:nth-of-type(${col+1}) img`);
+				var img = document.querySelectorAll("table img")[row*3+col];
+				
+				if (game.player) {
+					img.src="x.png";
+				} else {
+					img.src="zero.jpg";
+				}
+				game.gameState[row][col]=game.player;
+				game.player=!game.player;
+				
+				await fetch(`https://x-si-0-cde03.firebaseio.com/gameState/${row}/${col}.json`, {
+					method:"PUT",
+					body:game.gameState[row][col]
+				});
+				await fetch(`https://x-si-0-cde03.firebaseio.com/player.json`, {
+					method:"PUT",
+					body:game.player
+				});
+				listenOtherPlayer();
+				
+			}
+			async function getGameState(){
+				console.log("eu ascult");
+				var response = await fetch("https://x-si-0-cde03.firebaseio.com/.json", {
+					method:"GET",
+					body:undefined
+				});
+				window.game = await response.json();
+				var imgs = document.querySelectorAll("table img");
+				for(var i=0;i<3;i++){
+					for(var j=0;j<3;j++){
+						if (game.gameState[i][j]===true) {
+							imgs[i*3+j].src="x.jpg";
+						} else if (game.gameState[i][j]===false){
+							imgs[i*3+j].src="zero.png";
+						}
+					}
+				}
+				if(window.game.playerXUid===myId && game.player===true){
+					stopListenOtherPlayer();
+				}else if(window.game.player0Uid===myId && game.player===false){
+					stopListenOtherPlayer();
+				} else {
+					stopListenOtherPlayer();
+					listenOtherPlayer();
+					if(window.game.playerXUid===undefined){
+						game.playerXUid = myId;
+						await fetch(`https://x-si-0-cde03.firebaseio.com/playerXUid.json`, {
+							method:"PUT",
+							body:JSON.stringify(myId)
+						});
+					}else if(window.game.player0Uid===undefined){
+						game.player0Uid = myId;
+						await fetch(`https://x-si-0-cde03.firebaseio.com/player0Uid.json`, {
+							method:"PUT",
+							body:JSON.stringify(myId)
+						});
+					} else{
+						//doar ma uit
+					}
+				}
+			}
+			function uuidv4(patern) {
+			  return patern.replace(/[xy]/g, function(c) {
+				var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+				return v.toString(16);
+			  });
+			}
+			function getMyId(){
+				if(localStorage.getItem("myId")===null){
+					window.myId = uuidv4('xxx-xxx-xxx');
+					localStorage.setItem("myId",myId);
+				}
+				window.myId=localStorage.getItem("myId")
+			}
+			function listenOtherPlayer(){
+				window.intervalIdx = setInterval(getGameState,5000);
+			}
+			function stopListenOtherPlayer(){
+				clearInterval(window.intervalIdx);
+			}
+		</script>
+	</head>
+	<body onload="getMyId();getGameState();">
+		<table border="1">
+			<tr>
+				<td onclick="select(0,0);"><img src="White.png" /></td>
+				<td onclick="select(0,1);"><img src="White.png" /></td>
+				<td onclick="select(0,2);"><img src="White.png" /></td>
+			</tr>
+			<tr>
+				<td onclick="select(1,0);"><img src="White.png" /></td>
+				<td onclick="select(1,1);"><img src="White.png" /></td>
+				<td onclick="select(1,2);"><img src="White.png" /></td>
+			</tr>
+			<tr>
+				<td onclick="select(2,0);"><img src="White.png" /></td>
+				<td onclick="select(2,1);"><img src="White.png" /></td>
+				<td onclick="select(2,2);"><img src="White.png" /></td>
+			</tr>
+		</table>
+	</body>
+</html>

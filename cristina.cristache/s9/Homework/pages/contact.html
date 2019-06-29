@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Contact</title>
+
+</head>
+
+<body>
+    <button id="contactBtn">Inapoi la Meniu</button>
+    <h1 class="contactH">Contact</h1>
+    <div class="contactMarg" id="map"></div>
+    <div class="contactMarg">
+        <p>the Park Restaurant:</p>
+        <br>
+        <p> NON SMOKING – Including IQOS & Electronic Cigarettes</p>
+        <br>
+        <p>Youth Park, Sector 4, Bucharest</p>
+        <p>+(40) 736936936 (on opening hours)</p>
+        <p>reservations@park-restaurant.ro</p>
+    </div>
+
+    <script>
+        document.querySelector('#contactBtn').addEventListener("click", () => {
+            window.location.assign("../index.html");
+        });
+
+        var map;
+        function initMap() {
+            var myCoordonates = { lat: 44.407998, lng: 26.104957 };
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: myCoordonates,
+                zoom: 15
+            });
+
+            var marker = new google.maps.Marker({
+                position: myCoordonates,
+                map: map,
+                title: 'Hello World!'
+            });
+
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxp15zkOn0kw3iR11ZUdJ_4c2lE1TvrF4&callback=initMap"
+        async defer></script>
+</body>
+
+</html>

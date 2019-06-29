@@ -1,0 +1,60 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.imgine {
+    height: 100px;
+    width: 100px;
+}
+
+span {
+    font-weight: bold;
+}
+
+table {
+    margin: 2em;
+}
+
+input {
+    margin-left: 2.6em;
+    width: 195px;
+}
+
+.toggle {
+    display: none;
+}
+
+#map {
+    width: 60%;
+    height: 40%;
+}
+
+.contactH {
+    font-weight: bold;
+    margin-left: 20%;
+}
+
+.contactMarg {
+    margin: 0 20% 0 20%;
+}
+
+#contactBtn {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    /* border-radius: 2em; */
+    background-color: rgba(0, 0, 0, 0.76);
+    color: rgb(160, 160, 160);
+    padding: .4em;
+}
+
+#editItem , #adminPage>button {
+    margin-left: 2.5em;
+}
+#ingredients,#recipe{
+    margin-left: 2.7em;
+    height: 20em;
+    width: 20em;
+}
