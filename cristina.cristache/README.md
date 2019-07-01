@@ -41,3 +41,9 @@
 <li><a href="https://miualinionut.github.io/siit_06/cristina.cristache/s8/firebase/phoneBook/index.html">Phonebook to Firebase(fetch)</a>
 </ul>
 
+<h1>Week #</h1>
+<ul>
+<li><a href="https://miualinionut.github.io/siit_06/cristina.cristache/s9/Homework/index.html">Restaurant Menu</a>
+<li><a href="https://miualinionut.github.io/siit_06/cristina.cristache/s9/Homework/pages/admin.html">Restaurant Admin</a>
+</ul>
+
