@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Online Shop</title>
+    <meta name="author" content="Lipsa Adelina">
+    <link href="../css/index.css" rel="stylesheet" type="text/css">
+    <script src="../js/index.js" defer></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/2926c10e78.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+<body onload="myFunction();">
+<!------HEADER-->
+    <div id="header">
+        <header><i class="fab fa-apple"></i><span>&nbspApple Store</span><button class="button"><i
+                    class="fas fa-shopping-cart"></i><span></span></button>
+            <button class="button"><i class="fas fa-lock"></i><span></span></button></header>
+    </div>
+<!-- VIDEO PLAYBACK -->
+    <video autoplay muted loop id="myVideo">
+        <source src="/lipsa.adelina/proiect_final/Introducing iPhone XS and iPhone XR — Apple.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+        <h1>New technology</h1>
+        <p>Three entirely new devices. iPhone XS, iPhone XS Max, and iPhone XR. All-screen. Faster, more advanced Face ID. The A12 Bionic, the smartest and most powerful chip ever in a smartphone. A breakthrough camera system with Portrait mode and new software-enhanced, adjustable depth of field. And so much more.
+        </p>
+        <button id="myBtn" onclick="videoPlay()">Pause</button><button id="mySecondBtn">See categories</button>
+    </div>
+    <!-- BOXSLIDER -->
+    <div id="boxSlider">
+        <ul class="bxslider">
+            <li><img class="slide" src="https://s12emagst.akamaized.net/layout/ro/images/db/48/71464.png" /></li>
+            <li><img class="slide" src="https://s12emagst.akamaized.net/layout/ro/images/db/47/71230.png" /></li>
+            <li><img class="slide" src="https://s12emagst.akamaized.net/layout/ro/images/db/48/71301.png" /></li>
+            <li><img class="slide" src="https://s12emagst.akamaized.net/layout/ro/images/db/47/70671.png" /></li>
+        </ul>
+    </div>
+    <!-- APPLE CATEGORIES -->
+    <section class="apple-categories">
+        <div class="apple-wrapper">
+            <div class="apple-item-box">
+                <div class="apple-row">
+                    <div class="col-sm-4">
+                        <a href="./phones.html" class="" style="text-decoration:none">
+                            <h2 class="category-title">Iphone</h2>
+                            <img src="https://s12emagst.akamaized.net/layout/ro/images/db/34/50902.png" class="">
+                        </a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="./ipads.html" class="" style="text-decoration:none">
+                            <h2 class="category-title">iPad</h2>
+                            <img src="https://s12emagst.akamaized.net/layout/ro/images/db/34/50899.png" class="">
+                        </a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="./mac.html" class="" style="text-decoration:none">
+                            <h2 class="category-title">Mac</h2>
+                            <img src="https://s12emagst.akamaized.net/layout/ro/images/db/34/50903.png" class="">
+                        </a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="./appletv.html" class="" style="text-decoration:none">
+                            <h2 class="category-title">Apple Tv</h2>
+                            <img src="https://s12emagst.akamaized.net/layout/ro/images/db/34/50904.png" class="">
+                        </a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="./music.html" class="" style="text-decoration:none">
+                            <h2 class="category-title">Music</h2>
+                            <img src="https://s12emagst.akamaized.net/layout/ro/images/db/34/50900.png" class="">
+                        </a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="./applewatch.html" class="" style="text-decoration:none">
+                            <h2 class="category-title">Apple Watch</h2>
+                            <img src="https://s12emagst.akamaized.net/layout/ro/images/db/34/50901.png" class="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- LOADER -->
+        <div class="loader">
+            <div class="loader-inner">
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
